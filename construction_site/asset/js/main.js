@@ -70,6 +70,17 @@ $(function () {
   });
 });
 
+$(function () {
+  $(".construction_site .tab_main > .tab_index li").click(function () {
+    $(".construction_site .tab_main > .tab_index li").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".construction_site .tab_sub > .tab_index li").click(function () {
+    $(".construction_site .tab_sub > .tab_index li").removeClass("active");
+    $(this).addClass("active");
+  });
+});
+
 // Datepicker
 $.datepicker.setDefaults({
   dateFormat: "yy-mm-dd",
