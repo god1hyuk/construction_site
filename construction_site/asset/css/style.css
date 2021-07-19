@@ -7,204 +7,6 @@
   background: #ced4e0;
 }
 
-/* 사이드 메뉴바 */
-.construction_site aside {
-  position: fixed;
-  width: 70px;
-  height: 100%;
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 400;
-  background: #2f313e;
-  z-index: 2;
-}
-.construction_site .side_menu li {
-  width: 100%;
-  font-size: 0.75rem;
-  color: #cdced8;
-  text-align: center;
-  border-bottom: 1px solid #8e8e8e;
-}
-.construction_site .side_menu a {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.construction_site .home {
-  height: 70px;
-  background-image: url(../images/icon/home_btn.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #20b5c8;
-}
-.construction_site .sideMenu_item {
-  background-repeat: no-repeat;
-  background-position: center 1rem;
-  box-shadow: 0px 0.2px 0.2px 0.1px rgba(0, 0, 0, 5);
-}
-.construction_site .sideMenu_item p {
-  font-size: 13px;
-  padding-top: 52px;
-  padding-bottom: 20px;
-  text-align: center;
-}
-.construction_site .sideMenu_item:not(:last-child):hover {
-  color: #000;
-  background-color: #fff;
-}
-.construction_site .sideMenu_item:not(:last-child).active {
-  color: #000 !important;
-  background-color: #fff !important;
-}
-.construction_site .cnstrst_manage {
-  background-image: url(../images/icon/side_menu1.png);
-}
-.construction_site .cnstrst_manage.active {
-  background-image: url(../images/icon/side_menu1_on.png) !important;
-}
-.construction_site .bldg_manage {
-  background-image: url(../images/icon/side_menu2.png);
-}
-.construction_site .bldg_manage.active {
-  background-image: url(../images/icon/side_menu2_on.png) !important;
-}
-.construction_site .acdnt_info {
-  background-image: url(../images/icon/side_menu3.png);
-}
-.construction_site .acdnt_info.active {
-  background-image: url(../images/icon/side_menu3_on.png) !important;
-}
-.construction_site .cctv {
-  background-image: url(../images/icon/side_menu4.png);
-}
-.construction_site .cctv.active {
-  background-image: url(../images/icon/side_menu4_on.png) !important;
-}
-.construction_site .advisory {
-  background-image: url(../images/icon/side_menu5.png);
-}.construction_site .advisory.active {
-  background-image: url(../images/icon/side_menu5_on.png) !important;
-}
-.construction_site .notice {
-  background-image: url(../images/icon/side_menu6.png);
-}
-.construction_site .notice.active {
-  background-image: url(../images/icon/side_menu6_on.png) !important;
-}
-/* 상황전파 */
-.construction_site li.acdnt_sprd {
-  border-bottom: none;
-  box-shadow: none ;
-}
-.construction_site .acdnt_sprd {
-  padding-top: 24px;
-}
-.construction_site .acdnt_sprd p {
-  width: 85%;
-  color: #fff;
-  margin: 0 auto;
-  margin-top: 8px;
-  padding: 5px 0;
-  background: #5479f7;
-  border-radius: 3px;
-}
-/* 야간 모드 */
-.construction_site .night_mode {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 1.1111vh;
-  width: 100%;
-}
-.construction_site .night_mode p {
-  color: #fff;
-  font-size: 0.875rem;
-  text-align: center;
-}
-.construction_site .switch_wrap {
-  position: relative;
-  text-align: center;
-}
-.construction_site .switch_btn {
-  position: absolute;
-  top: 30%;
-}
-.construction_site .switch_body {
-  margin-top: 0.625rem;
-}
-
-/* 헤더 */
-.construction_site header {
-  position: fixed;
-  width: 100%;
-  height: 70px;
-  color: #fff;
-  background: #192b80;
-  z-index: 1;
-}
-.construction_site header nav {
-  width: 100%;
-  margin-left: 104px;
-  margin-right: 34px;
-}
-.construction_site .title {
-  font-family: "NanumSquare";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 1.25rem;
-  margin-left: 19px;
-}
-.construction_site .sub_title p {
-  position: relative;
-  font-size: 0.875rem;
-}
-.construction_site .sub_title p::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  transform: translateY(-50%);
-  left: -0.75rem;
-  width: 5px;
-  height: 14px;
-  background: #9dd1ff;
-  border-radius: 2.5px;
-}
-.construction_site .sub_title span {
-  font-size: 1.125rem;
-  margin-left: 1.125rem;
-}
-.construction_site .logout {
-  margin: 0 2rem;
-}
-.construction_site .logout_icon {
-  width: 2.25rem;
-  height: 2.25rem;
-  background-image: url(../images/icon/logout.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #979fc6;
-  margin-right: 0.5rem;
-  border-radius: 100px;
-}
-.construction_site .logout.active .logout_icon {
-  background-image: url(../images/icon/logout_on.png);
-}
-.construction_site .go_map button {
-  width: 7rem;
-  height: 2.25rem;
-  font-weight: bold;
-  font-size: 0.875rem;
-  color: #fff;
-  padding: 0;
-  background: #3b4b93;
-  border: 1px solid #fff;
-  border-radius: 3px;
-}
-.construction_site .go_map button img {
-  padding-left: 0.5rem;
-}
-
 /* 메인 컨텐츠 */
 .construction_site .main_content {
   width: 100%;
@@ -212,7 +14,7 @@
   padding-top: 3.7037vh;
 }
 
-.construction_site .today {
+.construction_site .day_stats {
   width: 100%;
   height: 24.2593vh;
   font-family: "NotoSansKR";
@@ -220,44 +22,43 @@
   font-weight: 700;
   background: #fff;
   border: 2px solid #5479f7;
-  border-top: none;
   border-radius: 5px;
   box-shadow: 0px 0px 5px 3px #8e8e8e;
 }
-.construction_site .today_header {
+.construction_site .d_stats_header {
   height: 20%;
   background: #5479f7;
 }
-.construction_site .today_title {
+.construction_site .d_stats_title {
   color: #fff;
 }
-.construction_site .today_title h3 {
+.construction_site .d_stats_title h3 {
   font-size: 22px;
   font-weight: bold;
-  margin-right: 0.75rem;
+  margin-right: 12px;
 }
-.construction_site .today_title span {
+.construction_site .d_stats_title span {
   font-weight: 400;
   font-size: 13px;
   padding: 0.4630vh 0.9259vh;
   background: #3f5bb9;
 }
-.construction_site .today_lists {
+.construction_site .d_stats_lists {
   height: 80%;
   padding: 1.3889vh;
 }
-.construction_site .today_lists ul {
+.construction_site .d_stats_lists ul {
   position: relative;
   height: 100%;
 }
-.construction_site .today_lists li {
+.construction_site .d_stats_lists li {
   width: 50%;
   height: 50%;
   padding-top: 0.4630vh;
   padding-bottom: 0.9259vh;
   text-align: center;
 }
-.construction_site .today_lists ul::before {
+.construction_site .d_stats_lists ul::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -267,7 +68,7 @@
   height: 1px;
   background: #a5b7d0;
 }
-.construction_site .today_lists ul::after {
+.construction_site .d_stats_lists ul::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -277,20 +78,20 @@
   height: 100%;
   background: #a5b7d0;
 }
-.construction_site .today_lists strong {
+.construction_site .d_stats_lists strong {
   font-family: "NotoSansKR";
   font-style: normal;
   font-weight: 700;
-  font-size: 2.375rem;
+  font-size: 38px;
   color: #3978fc;
 }
-.construction_site .today_lists span {
+.construction_site .d_stats_lists span {
   font-weight: 400;
   margin-left: 8px;
 }
-.construction_site .today_lists p {
+.construction_site .d_stats_lists p {
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 14px;
   padding-top: 0.6944vh;
 }
 
@@ -306,7 +107,8 @@
   font-family: "NanumSquare";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 1.8519vh;
 }
 
 .construction_site .start_status_chart,
@@ -361,7 +163,7 @@
 .construction_site .area_info {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-top: 5px solid #28344c;
   background: #28344c;
   border-radius: 5px;
@@ -369,19 +171,123 @@
 }
 /* 날씨 정보 */
 .construction_site .area_info .weather_wrap {
+  height: 19.0741vh;
+  /* padding-top: 2.7778vh; */
+  padding-top: 30px;
+  /* padding-bottom: 3.8889vh; */
+  padding-bottom: 42px;
   background: #fff;
+}
+.construction_site .weather_wrap .area_name {
+  width: 35%;
+  text-align: center
+}
+.construction_site .weather_wrap .area_name h5 {
+  position: relative;
+  font-family: "NanumSquare";
+  font-style: normal;
+  font-weight: 900;
+  /* font-size: 30px; */
+  font-size: 22.5px;
+}
+.construction_site .weather_wrap .area_name h5::before {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+  background: #3978fc;
+  border-radius: 2.5px;
+}
+.construction_site .weather_wrap .weather {
+  width: 65%;
+  position: relative;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 400;
+  padding-right: 20px;
+}
+.construction_site .weather_wrap .storm {
+  font-size: 13px;
+  color: #fff;
+  margin-right: 3px;
+  padding: 3px 10px;
+  background: #28344c;
+  border-radius: 5px 5px 0 0;
+}
+.construction_site .weather_wrap .storm:hover {
+  background: #000;
+  cursor: pointer;
+}
+.construction_site .weather ul {
+  width: 100%;
+  color: #fff;
+  padding: 15px 0;
+  background: cornflowerblue;
+  border-radius: 5px;
+}
+.construction_site .weather_wrap .weather li {
+  width: 33.3333%;
+}
+.construction_site .weather_wrap .weather li:nth-child(2) {
+  border-left: 1px solid #7ba6ff;
+  border-right: 1px solid #7ba6ff;
+}
+.construction_site .weather_wrap .weather li p.day {
+  font-size: 15px;
+}
+.construction_site .weather_wrap .weather li.today p.day {
+  color: #009bff;
+  margin: 0 30px;
+  background: #fff;
+  border-radius: 50px;
+}
+.construction_site .weather_main {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.construction_site .weather_wrap .weather_main p.temperture strong {
+  font-size: 30px;
+  color: #fffc00;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.construction_site .weather_wrap .weather_main p.temperture {
+  font-size: 15px;
+}
+.construction_site .weather_main p.rain {
+  font-size: 14px;
+}
+.construction_site .weather .storm_alert {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  height: calc(100% - 23px);
+  background-image: url(../images/storm_alert.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 5px;
 }
 
 /* 탭 전환 */
 .construction_site .area_info .tab_main > .tab_index {
-  width: 80%;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  width: 95%;
   margin: 0 auto;
   margin-top: 20px;
 }
 .construction_site .area_info .tab_main > .tab_index li {
   width: 100%;
   color: #fff;
-  margin: 0 5px;
+  margin: 0 4px;
   padding: 10px 0;
   background: #3b4a6a;
   border-radius: 3px 3px 0 0;
@@ -400,6 +306,9 @@
 }
 
 /* 안전사고 발생 현황 */
+.construction_site .area_info .inspection ul {
+  padding-top: 30px;
+}
 .construction_site .area_info .inspection .circle {
   width: 130px;
   height: 130px;
@@ -418,8 +327,16 @@
 }
 
 /* 서브 탭 전환 */
+.construction_site .area_info .safechk_occu {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
 .construction_site .area_info .safechk_wrap {
+  margin-top: 16px;
   background: #ecf1f9;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
 }
 .construction_site .area_info .tab_sub {
   width: 80%;

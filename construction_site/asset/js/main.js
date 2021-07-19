@@ -1,5 +1,6 @@
+let count = 0;
+
 $(function () {
-  let count = 0;
   $(".construction_site .switch_wrap").click(function () {
     if (count % 2 === 0) {
       $(this).css("transform", "scaleX(-1)");
@@ -78,5 +79,20 @@ $(function () {
   $(".construction_site .tab_sub > .tab_index li").click(function () {
     $(".construction_site .tab_sub > .tab_index li").removeClass("active");
     $(this).addClass("active");
+  });
+});
+
+
+
+$(function () {
+  $('.construction_site .weather .storm').click(function () {
+    if (count % 2 === 0) {
+      $(this).children("span").text('날씨');
+      $('.construction_site .weather .storm_alert').css('display', 'block');
+    } else {
+      $(this).children("span").text('태풍');
+      $('.construction_site .weather .storm_alert').css('display', 'none');
+    }
+    count ++;
   });
 });
