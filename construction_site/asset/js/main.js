@@ -96,3 +96,36 @@ $(function () {
     count ++;
   });
 });
+
+$(function () {
+  const gradient = {
+    start: [
+      "rgb(125,179,241)", 
+      "rgb(31,203,192)", 
+      "rgb(140,217,0)", 
+      "rgb(241,181,20)", 
+      "rgb(250,108,62)"
+    ],
+    end: [
+      "linear-gradient(180deg, rgba(125,179,241,1) 0%, rgba(86,130,232,1) 100%)", 
+      "linear-gradient(180deg, rgba(31,203,192,1) 0%, rgba(21,169,154,1) 100%)", 
+      "linear-gradient(180deg, rgba(140,217,0,1) 0%, rgba(96,191,0,1) 100%)", 
+      "linear-gradient(180deg, rgba(241,181,20,1) 0%, rgba(231,132,14,1) 100%)", 
+      "linear-gradient(180deg, rgba(250,108,62,1) 0%, rgba(246,73,42,1) 100%)"
+    ],
+  };
+  let optionValue;
+  $(".construction_site .map_option li").click(function () {
+    optionValue = this.value;
+    $(this).css("background", gradient.start[optionValue]).css("background", gradient.end[optionValue]).css("color", "#fff");
+    $(this).children("label").css("border", "none");
+    $(this).children(".option_text").children(".checking").css("border", "none").css("background-color", "#fff").css("background-image", "url(asset/images/icon/check" + optionValue + ".png");
+  });
+});
+
+
+// $(function () {
+//   $(".construction_site .map_option li").click(function () {
+
+//   });
+// });

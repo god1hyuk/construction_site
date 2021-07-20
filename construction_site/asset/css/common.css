@@ -1,3 +1,36 @@
+html,body {
+  height: 100%;
+}
+body {
+  /* font-family: "NotoSansKR", "돋움", Dotum, sans-serif; */
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400; 
+  -webkit-text-size-adjust: none;
+}
+
+/* fonts */
+/* Noto Sans CJK kr */
+.nt_b {
+  font-weight: 700;
+}
+.nt_m {
+  font-weight: 500;
+}
+
+/* NanumSquare */
+.ns_exb {
+  font-family: "NanumSquare", "sans-serif";
+  font-weight: 900;
+}
+.ns_b {
+  font-family: "NanumSquare", "sans-serif";
+  font-weight: 600;
+}
+.ns_rg {
+  font-family: "NanumSquare", "sans-serif";
+}
+
 /* flex */
 .d-flex {
   display: -webkit-box;
@@ -97,3 +130,4 @@
 .text-center {
   text-align: center;
 }
+

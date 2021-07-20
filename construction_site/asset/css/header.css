@@ -5,16 +5,12 @@
     position: fixed;
     width: 70px;
     height: 100%;
-    font-family: "NotoSansKR";
-    font-style: normal;
-    font-weight: 400;
     background: #2f313e;
     z-index: 2;
   }
   .construction_site .side_menu li {
     width: 100%;
     color: #cdced8;
-    text-align: center;
     border-bottom: 1px solid #8e8e8e;
   }
   .construction_site .side_menu a {
@@ -41,7 +37,6 @@
     padding: 0;
     padding-top: 52px;
     padding-bottom: 20px;
-    text-align: center;
   }
   .construction_site .sideMenu_item:not(:last-child):hover {
     color: #000;
@@ -114,15 +109,13 @@
   .construction_site .night_mode p {
     color: #fff;
     font-size: 14px;
-    text-align: center;
   }
   .construction_site .switch_wrap {
     position: relative;
-    text-align: center;
   }
   .construction_site .switch_btn {
     position: absolute;
-    top: 30%;
+    top: 35%;
   }
   .construction_site .switch_body {
     margin-top: 0.625rem;
@@ -143,9 +136,6 @@
     margin-right: 34px;
   }
   .construction_site .title {
-    font-family: "NanumSquare";
-    font-style: normal;
-    font-weight: 900;
     font-size: 20px;
     margin-left: 19px;
   }
