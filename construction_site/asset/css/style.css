@@ -18,7 +18,7 @@
   background: #fff;
   border: 2px solid #5479f7;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 3px #8e8e8e;
+  box-shadow: 0px 1px 10px rgba(35, 31, 32, 0.3);
 }
 .construction_site .d_stats_header {
   height: 20%;
@@ -35,7 +35,7 @@
 .construction_site .d_stats_title span {
   font-weight: 400;
   font-size: 13px;
-  padding: 0.4630vh 0.9259vh;
+  padding: 0.463vh 0.9259vh;
   background: #3f5bb9;
 }
 .construction_site .d_stats_lists {
@@ -50,7 +50,7 @@
 .construction_site .d_stats_lists li {
   width: 50%;
   height: 50%;
-  padding-top: 0.4630vh;
+  padding-top: 0.463vh;
   padding-bottom: 0.9259vh;
 }
 .construction_site .d_stats_lists ul::before {
@@ -88,7 +88,7 @@
 .construction_site .d_stats_lists p {
   font-weight: 400;
   font-size: 1.2963vh;
-  padding-top: 0.4630vh;
+  padding-top: 0.463vh;
 }
 
 /* 건축물 착공 현황 & 안전사고 피해현황 */
@@ -113,7 +113,7 @@
   background: #fff;
   border-top: 5px solid #3978fc;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 3px #8e8e8e;
+  box-shadow: 0px 1px 10px rgba(35, 31, 32, 0.3);
 }
 .construction_site .start_status_chart {
   height: 19.2593vh;
@@ -162,10 +162,12 @@
   width: 100%;
   height: 100%;
   border-top: 4px solid;
+  z-index: 3;
 }
 .construction_site .map_option input[type="checkbox"] {
   /* 체크박스 커스텀 */
-  display:none;
+  display: none;
+  position: absolute;
 }
 .construction_site .map_option li:first-child label {
   border-color: #7d96f1;
@@ -186,14 +188,13 @@
   margin: 0 15px;
 }
 
-
 /* 지역별 현황 영역 */
 .construction_site .area_info {
   width: 100%;
   height: 100%;
   border-top: 5px solid #28344c;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 3px #8e8e8e;
+  box-shadow: 0px 1px 10px rgba(35, 31, 32, 0.3);
 }
 /* 날씨 정보 */
 .construction_site .area_info .weather_wrap {
@@ -204,14 +205,14 @@
 }
 .construction_site .weather_wrap .area_name {
   width: 35%;
-  text-align: center
+  text-align: center;
 }
 .construction_site .weather_wrap .area_name h5 {
   position: relative;
   font-size: 2.7778vh;
 }
 .construction_site .weather_wrap .area_name h5::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -230,7 +231,7 @@
   font-size: 1.2037vh;
   color: #fff;
   margin-right: 3px;
-  padding: 0.4630vh 10px;
+  padding: 0.463vh 10px;
   background: #28344c;
   border-radius: 5px 5px 0 0;
 }
@@ -243,8 +244,12 @@
   height: 11.6667vh;
   color: #fff;
   padding: 1.3889vh 0;
-  background: rgb(57,63,223);
-  background: linear-gradient(0deg, rgba(57,63,223,1) 0%, rgba(84,121,247,1) 100%);
+  background: rgb(57, 63, 223);
+  background: linear-gradient(
+    0deg,
+    rgba(57, 63, 223, 1) 0%,
+    rgba(84, 121, 247, 1) 100%
+  );
   border-radius: 5px;
 }
 .construction_site .weather_wrap .weather li {
@@ -331,8 +336,8 @@
   padding: 3.7037vh 2.7778vh;
 }
 .construction_site .area_info .inspection .circle {
-  width: 12.0370vh;
-  height: 12.0370vh;
+  width: 12.037vh;
+  height: 12.037vh;
   background: #eeeeee;
   border-radius: 100px;
 }
@@ -374,6 +379,7 @@
 }
 .construction_site .area_info .tab_sub > .tab_index li {
   width: 100%;
+  font-size: 1.6667vh;
   padding: 1.3889vh 0;
   border-bottom: 1px solid #c4ccd5;
   border-radius: 3px 3px 0 0;
@@ -422,8 +428,8 @@
 .construction_site .area_info .safechk_result span {
   font-size: 1.3889vh;
 }
-.construction_site .area_info .safechk_result span>sub{
-  display: inline-block; 
+.construction_site .area_info .safechk_result span > sub {
+  display: inline-block;
   width: 0.6481vh;
   height: 0.6481vh;
   margin-right: 0.8333vh;
@@ -431,16 +437,16 @@
   border-style: solid;
   border-radius: 100px;
 }
-.construction_site .safechk_result li:first-child span>sub {
+.construction_site .safechk_result li:first-child span > sub {
   border-color: #52e32e;
 }
-.construction_site .safechk_result li:nth-child(2) span>sub {
+.construction_site .safechk_result li:nth-child(2) span > sub {
   border-color: #ffd12a;
 }
-.construction_site .safechk_result li:nth-child(3) span>sub {
+.construction_site .safechk_result li:nth-child(3) span > sub {
   border-color: #34d2de;
 }
-.construction_site .safechk_result li:last-child span>sub {
+.construction_site .safechk_result li:last-child span > sub {
   border-color: #5a86e4;
 }
 .construction_site .area_info .safechk_result p {
@@ -448,5 +454,5 @@
 }
 .construction_site .area_info .safechk_result strong {
   color: #0172e0;
-  margin-right: 0.4630vh;
+  margin-right: 0.463vh;
 }

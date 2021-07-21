@@ -1,5 +1,5 @@
 let count = 0;
-
+// 야간모드 스위치
 $(function () {
   $(".construction_site .switch_wrap").click(function () {
     if (count % 2 === 0) {
@@ -60,6 +60,7 @@ $(function () {
   });
 });
 
+// 탭전환
 $(function () {
   $(".construction_site .tab_main > .tab_index li").click(function () {
     $(".construction_site .tab_main > .tab_index li").removeClass("active");
@@ -82,50 +83,73 @@ $(function () {
   });
 });
 
-
-
+// 날씨정보 영역
 $(function () {
-  $('.construction_site .weather .storm').click(function () {
+  $(".construction_site .weather .storm").click(function () {
     if (count % 2 === 0) {
-      $(this).children("span").text('날씨');
-      $('.construction_site .weather .storm_alert').css('display', 'block');
+      $(this).children("span").text("날씨");
+      $(".construction_site .weather .storm_alert").css("display", "block");
     } else {
-      $(this).children("span").text('태풍');
-      $('.construction_site .weather .storm_alert').css('display', 'none');
+      $(this).children("span").text("태풍");
+      $(".construction_site .weather .storm_alert").css("display", "none");
     }
-    count ++;
+    count++;
   });
 });
 
+// 지도영역 옵션
 $(function () {
-  const gradient = {
+  const optionColors = {
     start: [
-      "rgb(125,179,241)", 
-      "rgb(31,203,192)", 
-      "rgb(140,217,0)", 
-      "rgb(241,181,20)", 
-      "rgb(250,108,62)"
+      "rgb(125,179,241)",
+      "rgb(31,203,192)",
+      "rgb(140,217,0)",
+      "rgb(241,181,20)",
+      "rgb(250,108,62)",
     ],
     end: [
-      "linear-gradient(180deg, rgba(125,179,241,1) 0%, rgba(86,130,232,1) 100%)", 
-      "linear-gradient(180deg, rgba(31,203,192,1) 0%, rgba(21,169,154,1) 100%)", 
-      "linear-gradient(180deg, rgba(140,217,0,1) 0%, rgba(96,191,0,1) 100%)", 
-      "linear-gradient(180deg, rgba(241,181,20,1) 0%, rgba(231,132,14,1) 100%)", 
-      "linear-gradient(180deg, rgba(250,108,62,1) 0%, rgba(246,73,42,1) 100%)"
+      "linear-gradient(180deg, rgba(125,179,241,1) 0%, rgba(86,130,232,1) 100%)",
+      "linear-gradient(180deg, rgba(31,203,192,1) 0%, rgba(21,169,154,1) 100%)",
+      "linear-gradient(180deg, rgba(140,217,0,1) 0%, rgba(96,191,0,1) 100%)",
+      "linear-gradient(180deg, rgba(241,181,20,1) 0%, rgba(231,132,14,1) 100%)",
+      "linear-gradient(180deg, rgba(250,108,62,1) 0%, rgba(246,73,42,1) 100%)",
     ],
+    border: ["#7d96f1", "#22cbc2", "#8cd900", "#f1b514", "#fa6c3e"],
+    shadow: "0px 1px 5px rgba(35, 31, 32, 0.45)",
   };
   let optionValue;
   $(".construction_site .map_option li").click(function () {
     optionValue = this.value;
-    $(this).css("background", gradient.start[optionValue]).css("background", gradient.end[optionValue]).css("color", "#fff");
-    $(this).children("label").css("border", "none");
-    $(this).children(".option_text").children(".checking").css("border", "none").css("background-color", "#fff").css("background-image", "url(asset/images/icon/check" + optionValue + ".png");
+    if ($(this).children("input").is(":checked")) {
+      $(this)
+        .css("background", optionColors.start[optionValue])
+        .css("background", optionColors.end[optionValue])
+        .css("color", "#fff")
+        .css("box-shadow", optionColors.shadow);
+      $(this).children("label").css("border", "none");
+      $(this)
+        .children(".option_text")
+        .children(".checking")
+        .css("border-top", "none")
+        .css("background-color", "#fff")
+        .css(
+          "background-image",
+          "url(asset/images/icon/check" + optionValue + ".png"
+        );
+    } else {
+      $(this)
+        .css("background", "#fff")
+        .css("color", "#000")
+        .css("box-shadow", "none");
+      $(this)
+        .children("label")
+        .css("border-top", "4px solid" + optionColors.border[optionValue]);
+      $(this)
+        .children(".option_text")
+        .children(".checking")
+        .css("border", "1px solid #c4c6d1")
+        .css("background-color", "#f3f4f9")
+        .css("background-image", "none");
+    }
   });
 });
-
-
-// $(function () {
-//   $(".construction_site .map_option li").click(function () {
-
-//   });
-// });

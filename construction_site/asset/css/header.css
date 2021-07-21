@@ -2,199 +2,201 @@
 
 /* 사이드 메뉴바 */
 .construction_site aside {
-    position: fixed;
-    width: 70px;
-    height: 100%;
-    background: #2f313e;
-    z-index: 2;
-  }
-  .construction_site .side_menu li {
-    width: 100%;
-    color: #cdced8;
-    border-bottom: 1px solid #8e8e8e;
-  }
-  .construction_site .side_menu a {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .construction_site .home {
-    height: 70px;
-    background-image: url(../images/icon/home_btn.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #20b5c8;
-  }
-  .construction_site .sideMenu_item {
-    height: 80px;
-    background-repeat: no-repeat;
-    background-position: center 16px;
-    box-shadow: 0px 0.2px 0.2px 0.1px rgba(0, 0, 0, 5);
-  }
-  .construction_site .sideMenu_item p {
-    font-size: 13px;
-    padding: 0;
-    padding-top: 52px;
-    padding-bottom: 20px;
-  }
-  .construction_site .sideMenu_item:not(:last-child):hover {
-    color: #000;
-    background-color: #fff;
-  }
-  .construction_site .sideMenu_item:not(:last-child).active {
-    color: #000 !important;
-    background-color: #fff !important;
-  }
-  .construction_site .cnstrst_manage {
-    background-image: url(../images/icon/side_menu1.png);
-  }
-  .construction_site .cnstrst_manage.active {
-    background-image: url(../images/icon/side_menu1_on.png) !important;
-  }
-  .construction_site .bldg_manage {
-    background-image: url(../images/icon/side_menu2.png);
-  }
-  .construction_site .bldg_manage.active {
-    background-image: url(../images/icon/side_menu2_on.png) !important;
-  }
-  .construction_site .acdnt_info {
-    background-image: url(../images/icon/side_menu3.png);
-  }
-  .construction_site .acdnt_info.active {
-    background-image: url(../images/icon/side_menu3_on.png) !important;
-  }
-  .construction_site .cctv {
-    background-image: url(../images/icon/side_menu4.png);
-  }
-  .construction_site .cctv.active {
-    background-image: url(../images/icon/side_menu4_on.png) !important;
-  }
-  .construction_site .advisory {
-    background-image: url(../images/icon/side_menu5.png);
-  }.construction_site .advisory.active {
-    background-image: url(../images/icon/side_menu5_on.png) !important;
-  }
-  .construction_site .notice {
-    background-image: url(../images/icon/side_menu6.png);
-  }
-  .construction_site .notice.active {
-    background-image: url(../images/icon/side_menu6_on.png) !important;
-  }
-  /* 상황전파 */
-  .construction_site li.acdnt_sprd {
-    border-bottom: none;
-    box-shadow: none ;
-  }
-  .construction_site .acdnt_sprd {
-    padding-top: 1.2500vw;
-  }
-  .construction_site .acdnt_sprd p {
-    font-size: 13px;
-    color: #fff;
-    margin: 0 5px;
-    margin-top: 8px;
-    padding: 5px 0;
-    background: #5479f7;
-    border-radius: 3px;
-  }
-  /* 야간 모드 */
-  .construction_site .night_mode {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 1.1111vh;
-    width: 100%;
-  }
-  .construction_site .night_mode p {
-    color: #fff;
-    font-size: 14px;
-  }
-  .construction_site .switch_wrap {
-    position: relative;
-  }
-  .construction_site .switch_btn {
-    position: absolute;
-    top: 35%;
-  }
-  .construction_site .switch_body {
-    margin-top: 0.625rem;
-  }
-  
-  /* 헤더 */
-  .construction_site header {
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    color: #fff;
-    background: #192b80;
-    z-index: 1;
-  }
-  .construction_site header nav {
-    width: 100%;
-    margin-left: 104px;
-    margin-right: 34px;
-  }
-  .construction_site .title {
-    font-size: 20px;
-    margin-left: 19px;
-  }
-  .construction_site .sub_title p {
-    position: relative;
-    font-size: 0.875rem;
-  }
-  .construction_site .sub_title p::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateY(-50%);
-    left: -0.75rem;
-    width: 5px;
-    height: 14px;
-    background: #9dd1ff;
-    border-radius: 2.5px;
-  }
-  .construction_site .sub_title span {
-    font-size: 1.125rem;
-    margin-left: 1.125rem;
-  }
-  .construction_site .logout {
-    margin: 0 2rem;
-  }
-  .construction_site .logout_icon {
-    width: 2.25rem;
-    height: 2.25rem;
-    background-image: url(../images/icon/logout.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #979fc6;
-    margin-right: 0.5rem;
-    border-radius: 100px;
-  }
-  .construction_site .logout.active .logout_icon {
-    background-image: url(../images/icon/logout_on.png);
-  }
-  .construction_site .go_map button {
-    width: 7rem;
-    height: 2.25rem;
-    font-weight: bold;
-    font-size: 0.875rem;
-    color: #fff;
-    padding: 0;
-    background: #3b4b93;
-    border: 1px solid #fff;
-    border-radius: 3px;
-  }
-  .construction_site .go_map button img {
-    padding-left: 0.5rem;
-  }
+  position: fixed;
+  width: 70px;
+  height: 100%;
+  background: #2f313e;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 5);
+  z-index: 2;
+}
+.construction_site .side_menu li {
+  width: 100%;
+  color: #cdced8;
+  border-bottom: 1px solid #8e8e8e;
+}
+.construction_site .side_menu a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.construction_site .home {
+  height: 70px;
+  background-image: url(../images/icon/home_btn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #20b5c8;
+}
+.construction_site .sideMenu_item {
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center 16px;
+  box-shadow: 0px 0.2px 0.2px 0.1px rgba(0, 0, 0, 5);
+}
+.construction_site .sideMenu_item p {
+  font-size: 13px;
+  padding: 0;
+  padding-top: 52px;
+  padding-bottom: 20px;
+}
+.construction_site .sideMenu_item:not(:last-child):hover {
+  color: #000;
+  background-color: #fff;
+}
+.construction_site .sideMenu_item:not(:last-child).active {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+.construction_site .cnstrst_manage {
+  background-image: url(../images/icon/side_menu1.png);
+}
+.construction_site .cnstrst_manage.active {
+  background-image: url(../images/icon/side_menu1_on.png) !important;
+}
+.construction_site .bldg_manage {
+  background-image: url(../images/icon/side_menu2.png);
+}
+.construction_site .bldg_manage.active {
+  background-image: url(../images/icon/side_menu2_on.png) !important;
+}
+.construction_site .acdnt_info {
+  background-image: url(../images/icon/side_menu3.png);
+}
+.construction_site .acdnt_info.active {
+  background-image: url(../images/icon/side_menu3_on.png) !important;
+}
+.construction_site .cctv {
+  background-image: url(../images/icon/side_menu4.png);
+}
+.construction_site .cctv.active {
+  background-image: url(../images/icon/side_menu4_on.png) !important;
+}
+.construction_site .advisory {
+  background-image: url(../images/icon/side_menu5.png);
+}
+.construction_site .advisory.active {
+  background-image: url(../images/icon/side_menu5_on.png) !important;
+}
+.construction_site .notice {
+  background-image: url(../images/icon/side_menu6.png);
+}
+.construction_site .notice.active {
+  background-image: url(../images/icon/side_menu6_on.png) !important;
+}
+/* 상황전파 */
+.construction_site li.acdnt_sprd {
+  border-bottom: none;
+  box-shadow: none;
+}
+.construction_site .acdnt_sprd {
+  padding-top: 1.25vw;
+}
+.construction_site .acdnt_sprd p {
+  font-size: 13px;
+  color: #fff;
+  margin: 0 5px;
+  margin-top: 8px;
+  padding: 5px 0;
+  background: #5479f7;
+  border-radius: 3px;
+}
+/* 야간 모드 */
+.construction_site .night_mode {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.1111vh;
+  width: 100%;
+}
+.construction_site .night_mode p {
+  color: #fff;
+  font-size: 14px;
+}
+.construction_site .switch_wrap {
+  position: relative;
+}
+.construction_site .switch_btn {
+  position: absolute;
+  top: 35%;
+}
+.construction_site .switch_body {
+  margin-top: 0.625rem;
+}
+
+/* 헤더 */
+.construction_site header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  color: #fff;
+  background: #192b80;
+  z-index: 1;
+}
+.construction_site header nav {
+  width: 100%;
+  margin-left: 104px;
+  margin-right: 34px;
+}
+.construction_site .title {
+  font-size: 20px;
+  margin-left: 19px;
+}
+.construction_site .sub_title p {
+  position: relative;
+  font-size: 0.875rem;
+}
+.construction_site .sub_title p::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: -0.75rem;
+  width: 5px;
+  height: 14px;
+  background: #9dd1ff;
+  border-radius: 2.5px;
+}
+.construction_site .sub_title span {
+  font-size: 1.125rem;
+  margin-left: 1.125rem;
+}
+.construction_site .logout {
+  margin: 0 2rem;
+}
+.construction_site .logout_icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  background-image: url(../images/icon/logout.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #979fc6;
+  margin-right: 0.5rem;
+  border-radius: 100px;
+}
+.construction_site .logout.active .logout_icon {
+  background-image: url(../images/icon/logout_on.png);
+}
+.construction_site .go_map button {
+  width: 7rem;
+  height: 2.25rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #fff;
+  padding: 0;
+  background: #3b4b93;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+.construction_site .go_map button img {
+  padding-left: 0.5rem;
+}
 
 @media (max-height: 692px) {
-    .construction_site .sideMenu_item {
-        height: auto;
-    }
-    .construction_site .sideMenu_item p {
-        padding-top: 45px;
-        padding-bottom: 10px;
-    }
+  .construction_site .sideMenu_item {
+    height: auto;
+  }
+  .construction_site .sideMenu_item p {
+    padding-top: 45px;
+    padding-bottom: 10px;
+  }
 }
