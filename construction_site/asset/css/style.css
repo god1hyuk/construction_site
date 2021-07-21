@@ -1,7 +1,7 @@
 .construction_site {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #ced4e0;
 }
 
@@ -11,7 +11,6 @@
   height: 100%;
   padding-top: 3.7037vh;
 }
-
 .construction_site .day_stats {
   width: 100%;
   height: 24.2593vh;
@@ -28,13 +27,13 @@
   color: #fff;
 }
 .construction_site .d_stats_title h3 {
-  font-size: 22px;
+  font-size: 2.0370vh;
   font-weight: bold;
   margin-right: 12px;
 }
 .construction_site .d_stats_title span {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 1.2037vh;
   padding: 0.463vh 0.9259vh;
   background: #3f5bb9;
 }
@@ -74,9 +73,7 @@
   background: #a5b7d0;
 }
 .construction_site .d_stats_lists strong {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 700;
+  font-family: 'NotoSansKR-Bold';
   font-size: 3.5185vh;
   color: #3978fc;
 }
@@ -92,16 +89,8 @@
 }
 
 /* 건축물 착공 현황 & 안전사고 피해현황 */
-
-.construction_site .start_status,
-.construction_site .damage_status {
-  margin-top: 2.7778vh;
-}
-
 .construction_site .content_title {
-  font-family: "NanumSquare";
-  font-style: normal;
-  font-weight: 600;
+  font-family: 'NanumSquareB';
   font-size: 1.8519vh;
   padding-left: 7px;
 }
@@ -123,7 +112,6 @@
 }
 
 /* 지도 영역 */
-.construction_site .map_option form,
 .construction_site .map_option ul {
   height: 5vh;
 }
@@ -135,9 +123,6 @@
   background: #fff;
   border: 1px solid #000;
   border-radius: 2px;
-}
-.construction_site .map_option li:hover {
-  cursor: pointer;
 }
 .construction_site .map_option li .option_text {
   position: absolute;
@@ -164,8 +149,10 @@
   border-top: 4px solid;
   z-index: 3;
 }
+.construction_site .map_option li label:hover {
+  cursor: pointer;
+}
 .construction_site .map_option input[type="checkbox"] {
-  /* 체크박스 커스텀 */
   display: none;
   position: absolute;
 }
@@ -188,10 +175,110 @@
   margin: 0 15px;
 }
 
+.construction_site .map_view {
+  position: relative;
+  width: 100%;
+  height: 72.9630vh;
+  background-image: url(../images/map_view.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.construction_site .map_view .all_area {
+  position: absolute;
+  top: 5.5556vh;
+  left: 1.8519vh;
+  width: 11.1111vh;
+  height: 3.5185vh;
+  font-size: 1.4815vh;
+  background: #fff;
+  border: 1px solid #3978fc;
+  border-radius: 19px;
+  box-shadow: 0px 1px 4px 0px rgba(35, 31, 32, 0.35);
+}
+.construction_site .map_view .all_area img {
+  width: 1.8519vh;
+}
+.construction_site .map_view .zoom_btn {
+  position: absolute;
+  top: 5.5556vh;
+  right: 1.8519vh;
+  width: 3.7037vh;
+  overflow: hidden;
+  border: 1px solid #838598;
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
+}
+.construction_site .map_view .zoom_btn button {
+  width: 100%;
+  height: 3.7037vh;
+  background-color: #ecedf1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.2037vh;
+}
+.construction_site .map_view .zoom_btn button.zoom_in {
+  background-image: url(../images/icon/zoom_in.png);
+  border-bottom: 1px solid #838598;
+}
+.construction_site .map_view .zoom_btn button.zoom_in:hover {
+  background-color: #3978fc;
+  background-image: url(../images/icon/zoom_in_on.png);
+}
+.construction_site .map_view .zoom_btn button.zoom_out {
+  background-image: url(../images/icon/zoom_out.png);
+}
+.construction_site .map_view .zoom_btn button.zoom_out:hover {
+  background-color: #3978fc;
+  background-image: url(../images/icon/zoom_out_on.png);
+}
+
+.construction_site .map_view .total {
+  position: absolute;
+  bottom: 2.7778vh;
+  right: 0;
+  width: 11.1111vh;
+  height: 7.7778vh;
+  background: #485a7f;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.45) inset;
+}
+.construction_site .map_view .total p {
+  font-size: 1.4815vh;
+  color: #ffd12a;
+}
+.construction_site .map_view .total span {
+  font-size: 3.1481vh;
+  color: #fff;
+}
+
+.construction_site .map_wrap .institutions {
+  background: #eceff4;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.construction_site .map_wrap .institutions .slide_wrap {
+  padding: 1.8519vh 0;
+}
+.construction_site .map_wrap .institutions ul {
+  width: 100%;
+}
+.construction_site .map_wrap .institutions li img {
+  display: block;
+  width: 12.037vh;
+}
+.construction_site .map_wrap .institutions .slide_btn {
+  padding: 0 30px;
+  background: transparent;
+}
+.construction_site .map_wrap .institutions .slide_btn img {
+  width: 0.8333vh;
+}
+
 /* 지역별 현황 영역 */
 .construction_site .area_info {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   border-top: 5px solid #28344c;
   border-radius: 5px;
   box-shadow: 0px 1px 10px rgba(35, 31, 32, 0.3);
@@ -235,6 +322,9 @@
   background: #28344c;
   border-radius: 5px 5px 0 0;
 }
+.construction_site .weather_wrap .storm img {
+  width: 1.2037vh;
+}
 .construction_site .weather_wrap .storm:hover {
   background: #000;
   cursor: pointer;
@@ -269,6 +359,9 @@
   padding: 0.2778vh 1.1111vh;
   background: #fff;
   border-radius: 50px;
+}
+.construction_site .weather_wrap .weather_main img {
+  width: 2.5vh;
 }
 .construction_site .weather_wrap .weather_main p.temperture strong {
   font-size: 2.7778vh;
@@ -330,6 +423,12 @@
   padding: 0 20px;
   background: #fff;
 }
+.construction_site .area_info .tab_main > .tab_content:not(.all) {
+  display: none;
+}
+.construction_site .area_info .tab_main > .tab_content.active {
+  display: block;
+}
 
 /* 안전사고 발생 현황 */
 .construction_site .area_info .inspection ul {
@@ -348,9 +447,7 @@
   border-radius: 100px;
 }
 .construction_site .area_info .inspection .circle .text_wrap strong {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 700;
+  font-family: 'NotoSansKR-Bold';
   font-size: 3.3333vh;
 }
 .construction_site .area_info .inspection .circle .text_wrap span {
@@ -380,6 +477,7 @@
 .construction_site .area_info .tab_sub > .tab_index li {
   width: 100%;
   font-size: 1.6667vh;
+  color: #4d4f5c;
   padding: 1.3889vh 0;
   border-bottom: 1px solid #c4ccd5;
   border-radius: 3px 3px 0 0;
@@ -395,6 +493,9 @@
 .construction_site .area_info .safechk_wrap .tab_content {
   padding: 1.8519vh 0;
   background: transparent;
+}
+.construction_site .area_info .safechk_wrap .common {
+  display: none;
 }
 .construction_site .area_info .safechk_circle {
   width: 13.5185vh;
@@ -417,6 +518,7 @@
 }
 .construction_site .area_info .safechk_result {
   width: 50%;
+  color: #4d4f5c;
   padding: 2.3148vh 22px;
   background: #fff;
   border: 1px solid #cfdae9;

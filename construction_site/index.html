@@ -7,8 +7,10 @@
       name="viewport"
       content="width=device-width,initial-scale=1,user-scalable=no"
     />
-    <title>Document</title>
-    <link rel="stylesheet" href="asset/css/fonts/_font.css" />
+    <title>서울시 민간건축공사장 안전관리 정보화시스템</title>
+    <link rel="icon" href="asset/images/icon/favicon.ico" />
+    <link rel="shortcut icon" href="asset/images/icon/favicon.ico" />
+    <link rel="stylesheet" href="asset/css/font.css" />
     <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
     <link rel="stylesheet" href="asset/css/layout_v8.0.5.css" />
     <link rel="stylesheet" href="asset/css/common.css" />
@@ -26,32 +28,32 @@
               <a href="index.html">
               </a>
             </li>
-            <li class="cnstrst_manage sideMenu_item" value="1">
+            <li class="cnstrst_manage sideMenu_item" value="0">
               <a href="javascript: void(0);">
                 <p>공사장관리</p>
               </a>
             </li>
-            <li class="bldg_manage sideMenu_item" value="2">
+            <li class="bldg_manage sideMenu_item" value="1">
               <a href="javascript: void(0);">
                 <p>건축물관리</p>
               </a>
             </li>
-            <li class="acdnt_info sideMenu_item" value="3">
+            <li class="acdnt_info sideMenu_item" value="2">
               <a href="javascript: void(0);">
                 <p>사고정보</p>
               </a>
             </li>
-            <li class="cctv sideMenu_item" value="4">
+            <li class="cctv sideMenu_item" value="3">
               <a href="javascript: void(0);">
                 <p>CCTV</p>
               </a>
             </li>
-            <li class="advisory sideMenu_item" value="5">
+            <li class="advisory sideMenu_item" value="4">
               <a href="javascript: void(0);">
                 <p>자문단관리</p>
               </a>
             </li>
-            <li class="notice sideMenu_item" value="6">
+            <li class="notice sideMenu_item" value="5">
               <a href="javascript: void(0);">
                 <p>알림마당</p>
               </a>
@@ -59,7 +61,7 @@
             <li class="acdnt_sprd">
               <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
               <a href="javascript: void(0);">
-                <p>상황전파</p>
+                <p class="text-center">상황전파</p>
               </a>
             </li>
           </ul>
@@ -89,7 +91,7 @@
             <a href="index.html">
               <img src="asset/images/logo.png" alt="서울시_로고_이미지" />
             </a>
-            <h1 class="title ns_exb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
+            <h1 class="title ns_eb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
           </div>
           <div class="nav_right d-flex">
             <div class="sub_title d-flex align-items-center">
@@ -106,7 +108,7 @@
                   <p>로그아웃</p></a
                 >
               </li>
-              <li class="go_map">
+              <li class="go_map nt_b">
                 <button
                   class="d-flex align-items-center justify-content-center"
                 >
@@ -128,7 +130,7 @@
           <div class="row">
 
             <div class="col-2 ml_30 mr_30">
-              <div class="status_wrap h_full">
+              <div class="status_wrap d-flex flex-column justify-content-between h_full">
                 <div class="day_stats nt_b">
                   <div class="d_stats_header d-flex align-items-center justify-content-center">
                     <div
@@ -139,8 +141,8 @@
                         justify-content-center
                       "
                     >
-                      <h3 class="nt_b">Today</h3>
-                      <span>안전사고</span>
+                      <h3>Today</h3>
+                      <span class="nt_rg">안전사고</span>
                     </div>
                   </div>
                   <div class="d_stats_lists d-flex align-items-center justify-content-center">
@@ -249,7 +251,7 @@
             </div>
 
             <div class="col-6">
-              <div class="map_wrap">
+              <div class="map_wrap h_full">
                 <div class="map_option">
                   <form action>
                     <ul class="d-flex text-center nt_b">
@@ -296,9 +298,60 @@
                     </ul>
                   </form>
                 </div>
-                <div class="map_view"></div>
+                <div class="map_view">
+                  <button class="all_area">
+                    <img src="asset/images/icon/all_area.png" alt="체크_아이콘" />
+                    <!-- <div></div> -->
+                    전체선택
+                  </button>
+                  <div class="zoom_btn d-flex flex-column">
+                    <button class="zoom_in"></button>
+                    <button class="zoom_out"></button>
+                  </div>
+                  <div class="total d-flex flex-column align-items-center justify-content-center">
+                    <p class="nt_b">Total</p>
+                    <span class="nt_bk">256</span>
+                  </div>
+                </div>
+                <div class="institutions">
+                  <div class="slide_wrap d-flex align-items-center justify-content-between">
+                    <button class="prev_btn slide_btn">
+                      <img src="asset/images/icon/prev_arrow.png" alt="이전화살표_아이콘" />
+                    </button>
+                    <ul class="d-flex align-items-center justify-content-between">
+                      <li>
+                        <a href="javascript: void(0);">
+                          <img src="asset/images/icon/institution0.jpg" alt="공공기관_링크" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript: void(0);">
+                          <img src="asset/images/icon/institution1.jpg" alt="공공기관_링크" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript: void(0);">
+                          <img src="asset/images/icon/institution2.jpg" alt="공공기관_링크" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript: void(0);">
+                          <img src="asset/images/icon/institution3.jpg" alt="공공기관_링크" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript: void(0);">
+                          <img src="asset/images/icon/institution4.jpg" alt="공공기관_링크" />
+                        </a>
+                      </li>
+                    </ul>
+                    <button class="next_btn slide_btn">
+                      <img src="asset/images/icon/next_arrow.png" alt="다음화살표_아이콘" />
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
+            </div>                                                      
 
             <div class="col-4 ml_30 mr_30">
               <div class="area_info d-flex flex-column justify-content-between">
@@ -310,7 +363,7 @@
                   "
                 >
                   <div class="area_name">
-                    <h5 class="ns_exb">강서구</h5>
+                    <h5 class="ns_eb">강서구</h5>
                   </div>
                   <div
                     class="
@@ -364,6 +417,7 @@
                     <li>중형</li>
                     <li>소형</li>
                   </ul>
+                  
                   <div class="all tab_content">
                     <div class="inspection">
                       <ul class="d-flex justify-content-center justify-content-between nt_rg">
@@ -527,11 +581,507 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="large tab_content">
+                    <div class="inspection">
+                      <ul class="d-flex justify-content-center justify-content-between nt_rg">
+                        <li
+                          class="
+                            insp_circle1
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center                
+                            "
+                          >
+                            <div><strong>12</strong><span>건</span></div>
+                            <p>점검계획</p>
+                          </div>
+                        </li>
+                        <li
+                          class="
+                            insp_circle2
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center
+                            "
+                          >
+                            <div><strong>5</strong><span>건</span></div>
+                            <p>점검완료</p>
+                          </div>
+                        </li>
+                        <li
+                          class="
+                            insp_circle3
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center
+                            "
+                          >
+                            <div><strong>7</strong><span>%</span></div>
+                            <p>점검비율</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="safechk_occu">
+                      <div class="title_wrap d-flex align-items-center">
+                        <img src="asset/images/icon/title_icon2.png" alt="타이틀_아이콘2" />
+                        <h2 class="content_title">안전사고 발생 현황</h2>
+                      </div>
+                      <div class="safechk_wrap">
+                        <div class="tab_wrap tab_sub">
+                          <ul class="tab_index d-flex justify-content-between text-center nt_b">
+                            <li class="active">유형별</li>
+                            <li>공종별</li>
+                          </ul>
+                          <div class="tab_content">
+                            <div
+                              class="
+                                type
+                                d-flex
+                                align-items-center
+                                justify-content-between
+                              "
+                            >
+                              <div
+                                class="
+                                  safechk_circle
+                                  d-flex
+                                  align-items-center
+                                  justify-content-center
+                                "
+                              >
+                                <div
+                                  class="
+                                    text_wrap
+                                    d-flex
+                                    flex-column
+                                    align-items-center
+                                    justify-content-center
+                                  "
+                                >
+                                  <strong class="nt_b">56</strong>
+                                  <p class="nt_m">건</p>
+                                </div>
+                              </div>
+                              <div class="safechk_result nt_rg">
+                                <ul>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>추락</span>
+                                    <p><strong>19</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>화재</span>
+                                    <p><strong>10</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>붕괴ㆍ도괴</span>
+                                    <p><strong>13</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>넘어짐</span>
+                                    <p><strong>14</strong>건</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="common"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="medium tab_content">
+                    <div class="inspection">
+                      <ul class="d-flex justify-content-center justify-content-between nt_rg">
+                        <li
+                          class="
+                            insp_circle1
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center                
+                            "
+                          >
+                            <div><strong>12</strong><span>건</span></div>
+                            <p>점검계획</p>
+                          </div>
+                        </li>
+                        <li
+                          class="
+                            insp_circle2
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center
+                            "
+                          >
+                            <div><strong>5</strong><span>건</span></div>
+                            <p>점검완료</p>
+                          </div>
+                        </li>
+                        <li
+                          class="
+                            insp_circle3
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center
+                            "
+                          >
+                            <div><strong>7</strong><span>%</span></div>
+                            <p>점검비율</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="safechk_occu">
+                      <div class="title_wrap d-flex align-items-center">
+                        <img src="asset/images/icon/title_icon2.png" alt="타이틀_아이콘2" />
+                        <h2 class="content_title">안전사고 발생 현황</h2>
+                      </div>
+                      <div class="safechk_wrap">
+                        <div class="tab_wrap tab_sub">
+                          <ul class="tab_index d-flex justify-content-between text-center nt_b">
+                            <li class="active">유형별</li>
+                            <li>공종별</li>
+                          </ul>
+                          <div class="tab_content">
+                            <div
+                              class="
+                                type
+                                d-flex
+                                align-items-center
+                                justify-content-between
+                              "
+                            >
+                              <div
+                                class="
+                                  safechk_circle
+                                  d-flex
+                                  align-items-center
+                                  justify-content-center
+                                "
+                              >
+                                <div
+                                  class="
+                                    text_wrap
+                                    d-flex
+                                    flex-column
+                                    align-items-center
+                                    justify-content-center
+                                  "
+                                >
+                                  <strong class="nt_b">56</strong>
+                                  <p class="nt_m">건</p>
+                                </div>
+                              </div>
+                              <div class="safechk_result nt_rg">
+                                <ul>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>추락</span>
+                                    <p><strong>19</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>화재</span>
+                                    <p><strong>10</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>붕괴ㆍ도괴</span>
+                                    <p><strong>13</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>넘어짐</span>
+                                    <p><strong>14</strong>건</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="common"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="small tab_content">
+                    <div class="inspection">
+                      <ul class="d-flex justify-content-center justify-content-between nt_rg">
+                        <li
+                          class="
+                            insp_circle1
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center                
+                            "
+                          >
+                            <div><strong>12</strong><span>건</span></div>
+                            <p>점검계획</p>
+                          </div>
+                        </li>
+                        <li
+                          class="
+                            insp_circle2
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center
+                            "
+                          >
+                            <div><strong>5</strong><span>건</span></div>
+                            <p>점검완료</p>
+                          </div>
+                        </li>
+                        <li
+                          class="
+                            insp_circle3
+                            circle
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <div
+                            class="
+                              text_wrap
+                              d-flex
+                              flex-column
+                              align-items-center
+                              justify-content-center
+                            "
+                          >
+                            <div><strong>7</strong><span>%</span></div>
+                            <p>점검비율</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="safechk_occu">
+                      <div class="title_wrap d-flex align-items-center">
+                        <img src="asset/images/icon/title_icon2.png" alt="타이틀_아이콘2" />
+                        <h2 class="content_title">안전사고 발생 현황</h2>
+                      </div>
+                      <div class="safechk_wrap">
+                        <div class="tab_wrap tab_sub">
+                          <ul class="tab_index d-flex justify-content-between text-center nt_b">
+                            <li class="active">유형별</li>
+                            <li>공종별</li>
+                          </ul>
+                          <div class="tab_content">
+                            <div
+                              class="
+                                type
+                                d-flex
+                                align-items-center
+                                justify-content-between
+                              "
+                            >
+                              <div
+                                class="
+                                  safechk_circle
+                                  d-flex
+                                  align-items-center
+                                  justify-content-center
+                                "
+                              >
+                                <div
+                                  class="
+                                    text_wrap
+                                    d-flex
+                                    flex-column
+                                    align-items-center
+                                    justify-content-center
+                                  "
+                                >
+                                  <strong class="nt_b">56</strong>
+                                  <p class="nt_m">건</p>
+                                </div>
+                              </div>
+                              <div class="safechk_result nt_rg">
+                                <ul>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>추락</span>
+                                    <p><strong>19</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>화재</span>
+                                    <p><strong>10</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>붕괴ㆍ도괴</span>
+                                    <p><strong>13</strong>건</p>
+                                  </li>
+                                  <li
+                                    class="
+                                      d-flex
+                                      align-items-center
+                                      justify-content-between
+                                    "
+                                  >
+                                    <span class="d-flex align-items-center"><sub></sub>넘어짐</span>
+                                    <p><strong>14</strong>건</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="common"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
+
           </div>
         </div>
+      </div>
+    
     </div>
 
     <!-- jQuery -->

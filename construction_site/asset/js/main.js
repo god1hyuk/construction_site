@@ -11,7 +11,7 @@ $(function () {
   });
 });
 
-// 메뉴 active
+// 헤더 메뉴 active
 $(function () {
   $(".construction_site .logout").mouseover(function () {
     $(this).addClass("active");
@@ -37,6 +37,10 @@ $(function () {
     $(this).children("img").attr("src", "asset/images/icon/go_map.png");
     $(this).css("background-color", "#3b4b93").css("color", "#fff");
   });
+});
+
+// 사이드 메뉴 active
+$(function () {
   let sideMenu_num;
   $(".construction_site .sideMenu_item").mouseover(function () {
     sideMenu_num = this.value;
@@ -57,43 +61,6 @@ $(function () {
   $(".construction_site .sideMenu_item").click(function () {
     $(".construction_site .sideMenu_item").removeClass("active");
     $(this).addClass("active");
-  });
-});
-
-// 탭전환
-$(function () {
-  $(".construction_site .tab_main > .tab_index li").click(function () {
-    $(".construction_site .tab_main > .tab_index li").removeClass("active");
-    $(this).addClass("active");
-  });
-  $(".construction_site .tab_sub > .tab_index li").click(function () {
-    $(".construction_site .tab_sub > .tab_index li").removeClass("active");
-    $(this).addClass("active");
-  });
-});
-
-$(function () {
-  $(".construction_site .tab_main > .tab_index li").click(function () {
-    $(".construction_site .tab_main > .tab_index li").removeClass("active");
-    $(this).addClass("active");
-  });
-  $(".construction_site .tab_sub > .tab_index li").click(function () {
-    $(".construction_site .tab_sub > .tab_index li").removeClass("active");
-    $(this).addClass("active");
-  });
-});
-
-// 날씨정보 영역
-$(function () {
-  $(".construction_site .weather .storm").click(function () {
-    if (count % 2 === 0) {
-      $(this).children("span").text("날씨");
-      $(".construction_site .weather .storm_alert").css("display", "block");
-    } else {
-      $(this).children("span").text("태풍");
-      $(".construction_site .weather .storm_alert").css("display", "none");
-    }
-    count++;
   });
 });
 
@@ -151,5 +118,63 @@ $(function () {
         .css("background-color", "#f3f4f9")
         .css("background-image", "none");
     }
+  });
+});
+
+// 지도영역 뷰
+$(function () {
+  $('.construction_site .map_view .all_area').click(function () {
+    switch (count % 2) {
+      case 0:
+          $(this)
+          .css("color", "#fff")
+          .css("background", "#3978fc");
+          $(this).children("img").attr("src", "asset/images/icon/all_area_on.png");
+        break;
+      default:
+          $(this)
+          .css("color", "#000")
+          .css("background", "#fff");
+          $(this).children("img").attr("src", "asset/images/icon/all_area.png");
+        break;
+      }
+      count++;
+  });
+});
+
+// 탭 전환
+$(function () {
+  $(".construction_site .tab_main > .tab_index li").click(function () {
+    $(".construction_site .tab_main > .tab_index li").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".construction_site .tab_sub > .tab_index li").click(function () {
+    $(".construction_site .tab_sub > .tab_index li").removeClass("active");
+    $(this).addClass("active");
+  });
+});
+
+$(function () {
+  $(".construction_site .tab_main > .tab_index li").click(function () {
+    $(".construction_site .tab_main > .tab_index li").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".construction_site .tab_sub > .tab_index li").click(function () {
+    $(".construction_site .tab_sub > .tab_index li").removeClass("active");
+    $(this).addClass("active");
+  });
+});
+
+// 날씨정보 영역
+$(function () {
+  $(".construction_site .weather .storm").click(function () {
+    if (count % 2 === 0) {
+      $(this).children("span").text("날씨");
+      $(".construction_site .weather .storm_alert").css("display", "block");
+    } else {
+      $(this).children("span").text("태풍");
+      $(".construction_site .weather .storm_alert").css("display", "none");
+    }
+    count++;
   });
 });

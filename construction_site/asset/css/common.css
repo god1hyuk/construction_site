@@ -1,34 +1,33 @@
 html,body {
-  height: 100%;
-}
-body {
-  /* font-family: "NotoSansKR", "돋움", Dotum, sans-serif; */
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 400; 
+  height: 100vh;
+  font-family: "NotoSansKR-Regular", sans-serif;
   -webkit-text-size-adjust: none;
 }
 
 /* fonts */
 /* Noto Sans CJK kr */
 .nt_b {
-  font-weight: 700;
+  font-family: 'NotoSansKR-Bold';
 }
 .nt_m {
-  font-weight: 500;
+  font-family: 'NotoSansKR-Medium';
+}
+.nt_rg {
+  font-family: 'NotoSansKR-Regular';
 }
 
 /* NanumSquare */
-.ns_exb {
-  font-family: "NanumSquare", "sans-serif";
-  font-weight: 900;
+.nt_bk {
+  font-family: 'NotoSansKR-Black';
+}
+.ns_eb {
+  font-family: 'NanumSquareEB';
 }
 .ns_b {
-  font-family: "NanumSquare", "sans-serif";
-  font-weight: 600;
+  font-family: 'NanumSquareB';
 }
 .ns_rg {
-  font-family: "NanumSquare", "sans-serif";
+  font-family: 'NanumSquareR';
 }
 
 /* flex */
@@ -73,7 +72,6 @@ body {
 
 /* Grid */
 .container {
-  height: 100%;
   padding-top: 70px;
   padding-left: 70px;
 }
@@ -121,7 +119,7 @@ body {
 }
 
 .w_full {
-  width: 100%;
+  width: 100% !important;
 }
 .h_full {
   height: 100% !important;
