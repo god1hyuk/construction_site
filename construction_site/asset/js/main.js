@@ -1,4 +1,4 @@
-let count = 0;
+var count = 0;
 // 야간모드 스위치
 $(function () {
   $(".construction_site .switch_wrap").click(function () {
@@ -41,7 +41,7 @@ $(function () {
 
 // 사이드 메뉴 active
 $(function () {
-  let sideMenu_num;
+  var sideMenu_num;
   $(".construction_site .sideMenu_item").mouseover(function () {
     sideMenu_num = this.value;
     $(this).css(
@@ -66,7 +66,7 @@ $(function () {
 
 // 지도영역 옵션
 $(function () {
-  const optionColors = {
+  var optionColors = {
     start: [
       "rgb(125,179,241)",
       "rgb(31,203,192)",
@@ -84,7 +84,7 @@ $(function () {
     border: ["#7d96f1", "#22cbc2", "#8cd900", "#f1b514", "#fa6c3e"],
     shadow: "0px 1px 5px rgba(35, 31, 32, 0.45)",
   };
-  let optionValue;
+  var optionValue;
   $(".construction_site .map_option li").click(function () {
     optionValue = this.value;
     if ($(this).children("input").is(":checked")) {
@@ -142,25 +142,45 @@ $(function () {
   });
 });
 
-// 탭 전환
-$(function () {
-  $(".construction_site .tab_main > .tab_index li").click(function () {
-    $(".construction_site .tab_main > .tab_index li").removeClass("active");
-    $(this).addClass("active");
+// 공공기관 링크 (슬라이더)
+$(document).ready(function() {
+  $('.slider').lightSlider({
+      item: 5,
+      loop: true,
+      pager: false,
+      slideMove: 1,
+      // easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+      speed:600,
+      responsive : [
+          {
+              breakpoint:800,
+              settings: {
+                  item:3,
+                  slideMove:1,
+                  slideMargin:6,
+                }
+          },
+          {
+              breakpoint:480,
+              settings: {
+                  item:2,
+                  slideMove:1
+                }
+          }
+      ]
   });
-  $(".construction_site .tab_sub > .tab_index li").click(function () {
-    $(".construction_site .tab_sub > .tab_index li").removeClass("active");
-    $(this).addClass("active");
-  });
+  $("#lightSlider a").addClass("d-flex justify-content-center");
 });
 
+// 탭 전환
 $(function () {
-  $(".construction_site .tab_main > .tab_index li").click(function () {
-    $(".construction_site .tab_main > .tab_index li").removeClass("active");
+  var tab_id;
+  $(".tab_main > .tab_index li").click(function () {
+    $(".tab_main > .tab_index li").removeClass("active");
     $(this).addClass("active");
   });
-  $(".construction_site .tab_sub > .tab_index li").click(function () {
-    $(".construction_site .tab_sub > .tab_index li").removeClass("active");
+  $(".tab_sub > .tab_index li").click(function () {
+    $(".tab_sub > .tab_index li").removeClass("active");
     $(this).addClass("active");
   });
 });

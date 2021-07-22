@@ -34,7 +34,7 @@ html,body {
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex !important;
+  display: flex;
 }
 .flex-row {
   flex-direction: row;
@@ -50,7 +50,7 @@ html,body {
   align-items: center;
 }
 .align-items-end {
-  -webkit-box-align: flex-end;
+  /* -webkit-box-align: flex-end; */
   -ms-flex-align: flex-end;
   align-items: flex-end;
 }
@@ -74,12 +74,12 @@ html,body {
 .container {
   padding-top: 70px;
   padding-left: 70px;
+  padding-right: 34px;
 }
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
 }
 .col-1 {
   width: calc(100% / 12);

@@ -91,9 +91,6 @@ a.a11y.voiceInfo {
   left: -9999px;
   overflow: hidden;
 }
-a:not(.a11y) {
-  display: inline-block;
-}
 
 /* Tag Layout 초기화 -------------------------------------------------------------------------------------------- */
 /* 폼요소 */

@@ -1,5 +1,6 @@
 /* 사이드 메뉴바 */
 .construction_site aside {
+  display: none;
   position: fixed;
   width: 70px;
   height: 100%;
@@ -127,7 +128,8 @@
 /* 헤더 */
 .construction_site header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
+  /* width: 100%; */
   height: 70px;
   color: #fff;
   background: #192b80;
@@ -164,6 +166,9 @@
 .construction_site .logout {
   margin: 0 2rem;
 }
+/* .construction_site .logout a {
+  display: flex;
+} */
 .construction_site .logout_icon {
   width: 2.25rem;
   height: 2.25rem;
