@@ -2,6 +2,11 @@ html,body {
   height: 100vh;
   font-family: "NotoSansKR-Regular", sans-serif;
   -webkit-text-size-adjust: none;
+  -ms-user-select: none; 
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* fonts */
@@ -50,7 +55,7 @@ html,body {
   align-items: center;
 }
 .align-items-end {
-  /* -webkit-box-align: flex-end; */
+  -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
 }
@@ -85,19 +90,19 @@ html,body {
   width: calc(100% / 12);
 }
 .col-2 {
-  width: calc(100% / 12 * 2);
+  width: calc(100% / 12 * 2 - 60px);
 }
 .col-3 {
   width: calc(100% / 12 * 3);
 }
 .col-4 {
-  width: calc(100% / 12 * 4);
+  width: calc(100% / 12 * 4 - 30px);
 }
 .col-5 {
   width: calc(100% / 12 * 5);
 }
 .col-6 {
-  width: calc(100% / 12 * 6);
+  width: calc(100% / 12 * 6 - 30px);
 }
 .col-7 {
   width: calc(100% / 12 * 7);

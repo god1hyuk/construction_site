@@ -72,7 +72,7 @@
           <p>야간모드</p>
           <div class="switch_wrap">
             <img class="switch_btn" src="asset/images/switch_btn.png" alt="스위치버튼_이미지" />
-            <img class="switch_body" src="asset/images/swich_body.png" alt="스위치바디_이미지" />
+            <div class="switch_body"></div>
           </div>
         </div>
       </aside>
@@ -109,13 +109,14 @@
         </nav>
       </header>
 
+      <!-- 메인 컨텐츠 -->
       <div class="main_content">
-        <!-- 메인 컨텐츠 -->
         <div class="container">
           <div class="row justify-content-between">
-
+            
             <div class="col-2 ml_30 mr_30">
               <div class="status_wrap d-flex flex-column justify-content-between h_full">
+                <!-- Today 안전사고 -->
                 <div class="day_stats nt_b">
                   <div class="d_stats_header d-flex align-items-center justify-content-center">
                     <div class="d_stats_title d-flex align-items-center justify-content-center">
@@ -144,61 +145,132 @@
                     </ul>
                   </div>
                 </div>
+                <!-- 건축물 착공 현황 -->
                 <div class="start_status">
                   <div class="title_wrap d-flex align-items-center">
                     <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘1" />
                     <h2 class="content_title">건축물 착공 현황</h2>
                   </div>
                   <div class="start_status_chart">
-                    <div class="chart_wrap">
-                      <div class="row">
-                        <div class="chart_x">
-                          <ul>
-                            <li>소형</li>
-                            <li>중형</li>
-                            <li>대형</li>
-                          </ul>
-                        </div>
-                        <div class="progress">
-                          <ul>
-                            <li class="progress_bar">
-                              <div class="progress_inner"></div>
-                            </li>
-                            <li class="progress_bar">
-                              <div class="progress_inner"></div>
-                            </li>
-                            <li class="progress_bar">
-                              <div class="progress_inner"></div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="chart_y">
-                        <ul class="d-flex">
-                          <li>0</li>
-                          <li>100%</li>
-                        </ul>
-                      </div>
+                    <div class="chart_wrap d-flex align-items-center justify-content-center text-center">
+                      <table>
+                        <colgroup>
+                          <col style="width: 20%">
+                          <col style="width: 80%">
+                        </colgroup>
+                        <tr>
+                          <th>소형</th>
+                          <td>
+                            <div class="progress">
+                              <div class="progress_bar pb_l"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>중형</th>
+                          <td>
+                            <div class="progress">
+                              <div class="progress_bar pb_m"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>대형</th>
+                          <td>
+                            <div class="progress">
+                              <div class="progress_bar pb_s"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span style="padding-left: 90%;">0</span>
+                          </td>
+                          <td>
+                            <span style="float: right;">100%</span>
+                          </td>
+                        </tr>
+                      </table>
                     </div>
                   </div>
                 </div>
+                <!-- 안전사고 피해현황 -->
                 <div class="damage_status">
                   <div class="title_wrap d-flex align-items-center">
                     <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘1" />
                     <h2 class="content_title">안전사고 피해현황</h2>
                   </div>
                   <div class="damage_status_chart">
-                    <div class="chart_wrap"></div>
+                    <div class="chart_wrap d-flex align-items-center justify-content-center text-center">
+                      <table>
+                        <colgroup>
+                          <col style="width: 20%">
+                          <col style="width: 26.6666%">
+                          <col style="width: 26.6666%">
+                          <col style="width: 26.6666%">
+                        </colgroup>
+                        <tr>
+                          <th></th>
+                          <td></td>
+                          <td>
+                            <div class="casualty_icon chart_icon"></div>
+                            <span>사상자</span>
+                          </td>
+                          <td>
+                            <div class="injured_icon chart_icon"></div>
+                            <span>부상자</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>40</th>
+                          <td colspan="3"></td>
+                        </tr>
+                        <tr>
+                          <th>30</th>
+                          <td colspan="3"></td>
+                        </tr>
+                        <tr>
+                          <th>20</th>
+                          <td colspan="3"></td>
+                        </tr>
+                        <tr>
+                          <th>10</th>
+                          <td>
+                            <div class="progress">
+                              <div class="progress_bar y_2018"></div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress_bar y_2019"></div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress_bar y_2020"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>0</th>
+                          <td>2018</td>
+                          <td>2019</td>
+                          <td>2020</td>
+                        </tr>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="col-6">
+              <!-- 지도 영역 -->
               <div class="map_wrap h_full">
+                <!-- 지도 옵션 -->
                 <div class="map_option">
                   <form action>
-                    <ul class="d-flex align-items-center justify-content-between nt_b text-center">
+                    <ul class="d-flex align-items-center nt_b text-center">
                       <li value="0">
                         <div class="option_text d-flex align-items-center justify-content-center">
                           <div class="checking"></div>
@@ -242,6 +314,7 @@
                     </ul>
                   </form>
                 </div>
+                <!-- 지도 보기 -->
                 <div class="map_view">
                   <button class="all_area">
                     <img src="asset/images/icon/all_area.png" alt="체크_아이콘" />
@@ -256,9 +329,12 @@
                     <span class="nt_bk">256</span>
                   </div>
                 </div>
-                <div class="institutions">
-
-                  <ul id="lightSlider" class="slider d-flex align-items-center justify-content-between">
+                <!-- 공공기관 링크 (슬라이더) -->
+                <div class="institutions d-flex align-items-center justify-content-between">
+                  <a class="prevBtn slideBtn">
+                    <img src="asset/images/icon/prev_arrow.png" alt="슬라이드_이전버튼" />
+                  </a>
+                  <ul id="lightSlider" class="slider">
                     <li>
                       <a href="javascript: void(0);">
                         <img src="asset/images/icon/institution0.jpg" alt="공공기관_로고" />
@@ -311,13 +387,17 @@
                       </a>
                     </li>
                   </ul>
-
+                  <a class="nextBtn slideBtn">
+                    <img src="asset/images/icon/next_arrow.png" alt="슬라이드_다음버튼">
+                  </a>
                 </div>
               </div>
             </div>                                                      
 
             <div class="col-4 ml_30">
+              <!-- 지역별 현황 영역 -->
               <div class="area_info h_full">
+                <!-- 날씨 정보 -->
                 <div class="weather_wrap d-flex align-items-center">
                   <div class="area_name">
                     <h5 class="ns_eb">강서구</h5>
@@ -356,6 +436,7 @@
                     <div class="storm_alert"></div>
                   </div>
                 </div>
+                <!-- 메인 탭 전환 -->
                 <div class="tab_wrap tab_main">
                   <ul class="tab_index d-flex justify-content-between text-center nt_b">
                     <li class="active">전체</li>
@@ -363,103 +444,103 @@
                     <li>중형</li>
                     <li>소형</li>
                   </ul>
-
-                    <div class="tab_content active">
-                      <div class="inspection">
-                        <ul class="d-flex justify-content-center justify-content-between nt_rg">
-                          <li class="insp_circle1 circle d-flex align-items-center justify-content-center">
-                            <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
-                              <div><strong>12</strong><span>건</span></div>
-                              <p>점검계획</p>
-                            </div>
-                          </li>
-                          <li class="insp_circle2 circle d-flex align-items-center justify-content-center">
-                            <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
-                              <div><strong>5</strong><span>건</span></div>
-                              <p>점검완료</p>
-                            </div>
-                          </li>
-                          <li
-                            class="insp_circle3 circle d-flex align-items-center justify-content-center">
-                            <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
-                              <div><strong>7</strong><span>%</span></div>
-                              <p>점검비율</p>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="safechk_occu">
-                        <div class="title_wrap d-flex align-items-center">
-                          <img src="asset/images/icon/title_icon2.png" alt="타이틀_아이콘2" />
-                          <h2 class="content_title">안전사고 발생 현황</h2>
-                        </div>
-                        <div class="safechk_wrap">
-                          <div class="tab_wrap tab_sub">
-                            <ul class="tab_index d-flex justify-content-between text-center nt_b">
-                              <li class="active">유형별</li>
-                              <li>공종별</li>
-                            </ul>
-                            <div class="tab_content d-flex align-items-center justify-content-between active">
-                              <div class="safechk_circle d-flex align-items-center justify-content-center">
-                                <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
-                                  <strong class="nt_b">56</strong>
-                                  <p class="nt_m">건</p>
-                                </div>
-                              </div>
-                              <div class="safechk_result nt_rg">
-                                <ul>
-                                  <li class="d-flex align-items-center justify-content-between">
-                                    <span class="d-flex align-items-center"><sub></sub>추락</span>
-                                    <p><strong>19</strong>건</p>
-                                  </li>
-                                  <li class="d-flex align-items-center justify-content-between">
-                                    <span class="d-flex align-items-center"><sub></sub>화재</span>
-                                    <p><strong>10</strong>건</p>
-                                  </li>
-                                  <li class="d-flex align-items-center justify-content-between">
-                                    <span class="d-flex align-items-center"><sub></sub>붕괴ㆍ도괴</span>
-                                    <p><strong>13</strong>건</p>
-                                  </li>
-                                  <li class="d-flex align-items-center justify-content-between">
-                                    <span class="d-flex align-items-center"><sub></sub>넘어짐</span>
-                                    <p><strong>14</strong>건</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="tab_content d-flex align-items-center justify-content-between">
-                              <div class="safechk_circle d-flex align-items-center justify-content-center">
-                                <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
-                                  <strong class="nt_b">32</strong>
-                                  <p class="nt_m">건</p>
-                                </div>
-                              </div>
-                              <div class="safechk_result nt_rg">
-                                <ul>
-                                  <li class="d-flex align-items-center justify-content-between">
-                                    <span class="d-flex align-items-center"><sub></sub>추락</span>
-                                    <p><strong>12</strong>건</p>
-                                  </li>
-                                  <li class="d-flex align-items-center justify-content-between">
-                                    <span class="d-flex align-items-center"><sub></sub>화재</span>
-                                    <p><strong>13</strong>건</p>
-                                  </li>
-                                  <li class="d-flex align-items-center justify-content-between">
-                                    <span class="d-flex align-items-center"><sub></sub>붕괴ㆍ도괴</span>
-                                    <p><strong>5</strong>건</p>
-                                  </li>
-                                  <li class="d-flex align-items-center justify-content-between">
-                                    <span class="d-flex align-items-center"><sub></sub>넘어짐</span>
-                                    <p><strong>7</strong>건</p>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            
+                  <div class="tab_content active">
+                    <div class="inspection">
+                      <ul class="d-flex justify-content-center justify-content-between nt_rg">
+                        <li class="insp_circle1 circle d-flex align-items-center justify-content-center">
+                          <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
+                            <div><strong>12</strong><span>건</span></div>
+                            <p>점검계획</p>
                           </div>
+                        </li>
+                        <li class="insp_circle2 circle d-flex align-items-center justify-content-center">
+                          <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
+                            <div><strong>5</strong><span>건</span></div>
+                            <p>점검완료</p>
+                          </div>
+                        </li>
+                        <li
+                          class="insp_circle3 circle d-flex align-items-center justify-content-center">
+                          <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
+                            <div><strong>7</strong><span>%</span></div>
+                            <p>점검비율</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- 안전사고 발생 현황 -->
+                    <div class="safechk_occu">
+                      <div class="title_wrap d-flex align-items-center">
+                        <img src="asset/images/icon/title_icon2.png" alt="타이틀_아이콘2" />
+                        <h2 class="content_title">안전사고 발생 현황</h2>
+                      </div>
+                      <div class="safechk_wrap">
+                        <div class="tab_wrap tab_sub">
+                          <ul class="tab_index d-flex justify-content-between text-center nt_b">
+                            <li class="active">유형별</li>
+                            <li>공종별</li>
+                          </ul>
+                          <div class="tab_content d-flex align-items-center justify-content-between active">
+                            <div class="safechk_circle d-flex align-items-center justify-content-center">
+                              <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
+                                <strong class="nt_b">56</strong>
+                                <p class="nt_m">건</p>
+                              </div>
+                            </div>
+                            <div class="safechk_result nt_rg">
+                              <ul>
+                                <li class="d-flex align-items-center justify-content-between">
+                                  <span class="d-flex align-items-center"><sub></sub>추락</span>
+                                  <p><strong>19</strong>건</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                  <span class="d-flex align-items-center"><sub></sub>화재</span>
+                                  <p><strong>10</strong>건</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                  <span class="d-flex align-items-center"><sub></sub>붕괴ㆍ도괴</span>
+                                  <p><strong>13</strong>건</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                  <span class="d-flex align-items-center"><sub></sub>넘어짐</span>
+                                  <p><strong>14</strong>건</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="tab_content d-flex align-items-center justify-content-between">
+                            <div class="safechk_circle d-flex align-items-center justify-content-center">
+                              <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
+                                <strong class="nt_b">32</strong>
+                                <p class="nt_m">건</p>
+                              </div>
+                            </div>
+                            <div class="safechk_result nt_rg">
+                              <ul>
+                                <li class="d-flex align-items-center justify-content-between">
+                                  <span class="d-flex align-items-center"><sub></sub>추락</span>
+                                  <p><strong>12</strong>건</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                  <span class="d-flex align-items-center"><sub></sub>화재</span>
+                                  <p><strong>13</strong>건</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                  <span class="d-flex align-items-center"><sub></sub>붕괴ㆍ도괴</span>
+                                  <p><strong>5</strong>건</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                  <span class="d-flex align-items-center"><sub></sub>넘어짐</span>
+                                  <p><strong>7</strong>건</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          
                         </div>
                       </div>
                     </div>
+                  </div>
 
                 </div>
               </div>

@@ -88,13 +88,12 @@
   padding-top: 0.463vh;
 }
 
-/* 건축물 착공 현황 & 안전사고 피해현황 */
+/* 건축물 착공 현황 & 안전사고 피해현황 공통 */
 .construction_site .content_title {
   font-family: 'NanumSquareB';
   font-size: 1.8519vh;
   padding-left: 7px;
 }
-
 .construction_site .start_status_chart,
 .construction_site .damage_status_chart {
   width: 100%;
@@ -104,11 +103,167 @@
   border-radius: 5px;
   box-shadow: 0px 1px 10px rgba(35, 31, 32, 0.3);
 }
+
+.construction_site .chart_wrap {
+  width: 100%;
+  height: 100%;
+}
+
+/* 건축물 착공 현황 */
 .construction_site .start_status_chart {
   height: 19.2593vh;
 }
+.construction_site .start_status_chart table {
+  position: relative;
+  width: 85%;
+  height: 70%;
+  font-size: 1.2037vh;
+}
+.construction_site .start_status_chart tr:not(:last-child) {
+  height: 30%;
+}
+.construction_site .start_status_chart tr:last-child {
+  height: 10%;
+}
+.construction_site .start_status_chart th {
+  border-right: 1px solid #82b7df;
+}
+.construction_site .start_status_chart tr:last-child td:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  border-top: 1px solid #82b7df;
+}
+.construction_site .start_status_chart .progress {
+  height: 55%;
+  background: #ebecee;
+}
+.construction_site .start_status_chart .progress_bar {
+  height: 100%;
+  background: #5180e3;
+  animation: progress1 1.2s ease-out;
+}
+@keyframes progress1 {
+  from {
+    width: 0%;
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.construction_site .start_status_chart .pb_l {
+  width: 55%;
+}
+.construction_site .start_status_chart .pb_m {
+  width: 85%;
+}
+.construction_site .start_status_chart .pb_s {
+  width: 25%;
+}
+
+/* 안전사고 피해현황 */
 .construction_site .damage_status_chart {
   height: 28.8889vh;
+}
+.construction_site .damage_status_chart table {
+  position: relative;
+  width: 85%;
+  height: 95%;
+  font-size: 1.2037vh;
+}
+.construction_site .damage_status_chart table::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 13%;
+  width: 1px;
+  height: 74%;
+  background: #82b7df;
+}
+.construction_site .damage_status_chart table::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 16.6666%;
+  width: 85%;
+  height: 1px;
+  background: #82b7df;
+}
+.construction_site .damage_status_chart tr {
+  height: 16.6666%;
+}
+.construction_site .damage_status_chart .chart_icon {
+  display: inline-block;
+  width: 8.82px;
+  height: 8.82px;
+}
+.construction_site .damage_status_chart .casualty_icon {
+  background: #9b7ddc;
+  border-radius: 100px;
+}
+.construction_site .damage_status_chart .injured_icon {
+  background: #62c6ff;
+}
+.construction_site .damage_status_chart th {
+  position: relative;
+}
+.construction_site .damage_status_chart tr:not(:nth-child(5)) th::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 1px;
+  background: #82b7df;
+}
+.construction_site .damage_status_chart tr:last-child th::after {
+  content: none;
+}
+.construction_site .damage_status_chart tr:not(:nth-child(5)) td {
+  border-bottom: 1px dashed #c6ddef;
+}
+.construction_site .damage_status_chart tr:last-child td {
+  border-bottom: none;
+}
+.construction_site .damage_status_chart tr:nth-child(5) td {
+  position: relative;
+  bottom: 0;
+}
+.construction_site .damage_status_chart .progress {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 400%;
+}
+.construction_site .damage_status_chart .progress_inner {
+  width: 100%;
+  height: 100%;
+}
+.construction_site .damage_status_chart .progress_bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #62c6ff;
+  animation: progress2 1s ease-out;
+}
+@keyframes progress2 {
+  from {
+    height: 0%;
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+.construction_site .damage_status_chart .y_2018 {
+  height: calc(32% * 3 - 2.3148vh);
+}
+.construction_site .damage_status_chart .y_2019 {
+  height: calc(22% * 3 - 2.3148vh);
+}
+.construction_site .damage_status_chart .y_2020 {
+  height: calc(25% * 3 - 2.3148vh);
 }
 
 /* 지도 영역 */
@@ -118,7 +273,7 @@
 }
 .construction_site .map_option li {
   position: relative;
-  width: 20%;
+  width: 18.588%;
   height: 100%;
   font-size: 1.6667vh;
   background: #fff;
@@ -173,9 +328,10 @@
   border-color: #fa6c3e;
 }
 .construction_site .map_option li:nth-child(2n) {
-  margin: 0 15px;
+  margin: 0 1.765%;
 }
 
+/* 지도 보기 */
 .construction_site .map_view {
   position: relative;
   width: 100%;
@@ -233,7 +389,6 @@
   background-color: #3978fc;
   background-image: url(../images/icon/zoom_out_on.png);
 }
-
 .construction_site .map_view .total {
   position: absolute;
   bottom: 2.7778vh;
@@ -252,21 +407,29 @@
   color: #fff;
 }
 
+/* 공공기관 링크 (슬라이더) */
 .construction_site .map_wrap .institutions {
   padding: 1.8519vh 0;
   background: #eceff4;
   border-radius: 3px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
-.construction_site .map_wrap .institutions .slider img {
-  width: 12.037vh;
+.construction_site .map_wrap .institutions .lSSlideOuter {
+  width: 88%;
+  margin: 0 auto;
 }
-.construction_site .map_wrap .institutions .slick-arrow {
-  padding: 0 30px;
-  background: transparent;
+.construction_site .map_wrap .institutions .slideBtn {
+  display: block;
+  width: 6%;
+  padding: 12px 0;
 }
-.slick-arrow {
-  position: relative;
+.construction_site .map_wrap .institutions .slideBtn:hover {
+  cursor: pointer;
+}
+.construction_site .map_wrap .institutions .slideBtn img {
+  display: block;
+  width: 0.8333vh;
+  margin: 0 auto;
 }
 
 /* 지역별 현황 영역 */
@@ -384,7 +547,7 @@
   border-radius: 5px;
 }
 
-/* 탭 전환 */
+/* 메인 탭 전환 */
 .construction_site .area_info .tab_main {
   background: #fff;
 }

@@ -64,6 +64,13 @@ $(function () {
   });
 });
 
+// 건축물 착공 현황
+// $(function () {
+//   $(".start_status_chart .progress_bar").css("width", "0").animate({
+//     width: "80%"
+//   }, 1200);
+// });
+
 // 지도영역 옵션
 $(function () {
   var optionColors = {
@@ -81,13 +88,19 @@ $(function () {
       "linear-gradient(180deg, rgba(241,181,20,1) 0%, rgba(231,132,14,1) 100%)",
       "linear-gradient(180deg, rgba(250,108,62,1) 0%, rgba(246,73,42,1) 100%)",
     ],
-    border: ["#7d96f1", "#22cbc2", "#8cd900", "#f1b514", "#fa6c3e"],
+    border: [
+      "4px solid #7d96f1",
+      "4px solid #22cbc2", 
+      "4px solid #8cd900", 
+      "4px solid #f1b514", 
+      "4px solid #fa6c3e"
+    ],
     shadow: "0px 1px 5px rgba(35, 31, 32, 0.45)",
   };
   var optionValue;
   $(".construction_site .map_option li").click(function () {
     optionValue = this.value;
-    if ($(this).children("input").is(":checked")) {
+    if ($(this).children("input[type='checkbox']").is(":checked")) {
       $(this)
         .css("background", optionColors.start[optionValue])
         .css("background", optionColors.end[optionValue])
@@ -101,8 +114,8 @@ $(function () {
         .css("background-color", "#fff")
         .css(
           "background-image",
-          "url(asset/images/icon/check" + optionValue + ".png"
-        );
+          "url(asset/images/icon/check" + optionValue + ".png)"
+          );
     } else {
       $(this)
         .css("background", "#fff")
@@ -110,7 +123,7 @@ $(function () {
         .css("box-shadow", "none");
       $(this)
         .children("label")
-        .css("border-top", "4px solid" + optionColors.border[optionValue]);
+        .css("border-top", optionColors.border[optionValue]);
       $(this)
         .children(".option_text")
         .children(".checking")
@@ -144,13 +157,13 @@ $(function () {
 
 // 공공기관 링크 (슬라이더)
 $(document).ready(function() {
-  $('.slider').lightSlider({
+  var slider = $('.slider').lightSlider({
       item: 5,
       loop: true,
       pager: false,
       slideMove: 1,
-      // easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-      speed:600,
+      easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+      speed: 600,
       responsive : [
           {
               breakpoint:800,
@@ -170,6 +183,12 @@ $(document).ready(function() {
       ]
   });
   $("#lightSlider a").addClass("d-flex justify-content-center");
+  $(".prevBtn").click(function () {
+    slider.goToPrevSlide();
+  });
+  $(".nextBtn").click(function () {
+    slider.goToNextSlide();
+  });
 });
 
 // 탭 전환
