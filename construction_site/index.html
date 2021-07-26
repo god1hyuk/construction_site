@@ -112,9 +112,9 @@
       <!-- 메인 컨텐츠 -->
       <div class="main_content">
         <div class="container">
-          <div class="row justify-content-between">
+          <div class="row">
             
-            <div class="col-2 ml_30 mr_30">
+            <div class="col-2">
               <div class="status_wrap d-flex flex-column justify-content-between h_full">
                 <!-- Today 안전사고 -->
                 <div class="day_stats nt_b">
@@ -222,19 +222,27 @@
                           </td>
                         </tr>
                         <tr>
-                          <th>40</th>
+                          <th>
+                            <p>40</p>
+                          </th>
                           <td colspan="3"></td>
                         </tr>
                         <tr>
-                          <th>30</th>
+                          <th>
+                            <p>30</p>
+                          </th>
                           <td colspan="3"></td>
                         </tr>
                         <tr>
-                          <th>20</th>
+                          <th>
+                            <p>20</p>
+                          </th>
                           <td colspan="3"></td>
                         </tr>
                         <tr>
-                          <th>10</th>
+                          <th>
+                            <p>10</p>
+                          </th>
                           <td>
                             <div class="progress">
                               <div class="progress_bar y_2018"></div>
@@ -252,7 +260,9 @@
                           </td>
                         </tr>
                         <tr>
-                          <th>0</th>
+                          <th>
+                            <p>0</p>
+                          </th>
                           <td>2018</td>
                           <td>2019</td>
                           <td>2020</td>
@@ -264,9 +274,9 @@
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-6 ml_30 mr_30">
               <!-- 지도 영역 -->
-              <div class="map_wrap h_full">
+              <div class="map_wrap d-flex flex-column justify-content-between h_full">
                 <!-- 지도 옵션 -->
                 <div class="map_option">
                   <form action>
@@ -318,7 +328,7 @@
                 <div class="map_view">
                   <button class="all_area">
                     <img src="asset/images/icon/all_area.png" alt="체크_아이콘" />
-                    전체선택
+                    전체지역
                   </button>
                   <div class="zoom_btn d-flex flex-column">
                     <button class="zoom_in"></button>
@@ -329,12 +339,12 @@
                     <span class="nt_bk">256</span>
                   </div>
                 </div>
-                <!-- 공공기관 링크 (슬라이더) -->
-                <div class="institutions d-flex align-items-center justify-content-between">
+                <!-- 공공기관 링크 PC버전 (슬라이더) -->
+                <div class="institutions_pc institutions d-flex align-items-center justify-content-between">
                   <a class="prevBtn slideBtn">
                     <img src="asset/images/icon/prev_arrow.png" alt="슬라이드_이전버튼" />
                   </a>
-                  <ul id="lightSlider" class="slider">
+                  <ul id="lightSlider" class="slider1">
                     <li>
                       <a href="javascript: void(0);">
                         <img src="asset/images/icon/institution0.jpg" alt="공공기관_로고" />
@@ -394,11 +404,11 @@
               </div>
             </div>                                                      
 
-            <div class="col-4 ml_30">
+            <div class="col-4">
               <!-- 지역별 현황 영역 -->
               <div class="area_info h_full">
                 <!-- 날씨 정보 -->
-                <div class="weather_wrap d-flex align-items-center">
+                <div class="weather_wrap d-flex align-items-center justify-content-between">
                   <div class="area_name">
                     <h5 class="ns_eb">강서구</h5>
                   </div>
@@ -444,7 +454,7 @@
                     <li>중형</li>
                     <li>소형</li>
                   </ul>
-                  <div class="tab_content active">
+                  <div class="tab_content">
                     <div class="inspection">
                       <ul class="d-flex justify-content-center justify-content-between nt_rg">
                         <li class="insp_circle1 circle d-flex align-items-center justify-content-center">
@@ -541,11 +551,73 @@
                       </div>
                     </div>
                   </div>
-
+                  
                 </div>
               </div>
             </div>
+            
+          </div>
+          <!-- 공공기관 링크 (슬라이더) -->
+          <div class="institutions_m institutions d-flex align-items-center justify-content-between">
+            <a class="prevBtn slideBtn">
+              <img src="asset/images/icon/prev_arrow.png" alt="슬라이드_이전버튼" />
+            </a>
+            <ul id="lightSlider" class="slider2">
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution0.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution1.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution2.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution3.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution4.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
 
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution0.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution1.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution2.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution3.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/institution4.jpg" alt="공공기관_로고" />
+                </a>
+              </li>
+            </ul>
+            <a class="nextBtn slideBtn">
+              <img src="asset/images/icon/next_arrow.png" alt="슬라이드_다음버튼">
+            </a>
           </div>
         </div>
       </div>

@@ -1,0 +1,292 @@
+@media (max-width: 1600px) {
+    /* common */
+    html,body {
+      height: auto;
+    }
+    .row {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .col-2 {
+      width: calc(100% / 12 * 4 - 30px);
+      height: 930px;
+    }
+    .col-4 {
+      width: calc(100%);
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+    .col-6 {
+      width: calc(100% / 12 * 8);
+      height: 930px;
+      margin-right: 0 !important;
+    }
+
+    /* 메인 컨텐츠 */
+
+    /* Today 안전사고 */
+    .construction_site .day_stats {
+        height: auto;
+    }
+    .construction_site .d_stats_header {
+        height: auto;
+    }
+    .construction_site .d_stats_title {
+        padding: 15px 0;
+    }
+    .construction_site .d_stats_title h3 {
+        font-size: 22px;
+    }.construction_site .d_stats_title span {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    .construction_site .d_stats_lists {
+        height: auto;
+        padding: 20px;
+    }
+    .construction_site .d_stats_lists li {
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+    .construction_site .d_stats_lists strong {
+        font-size: 38px;
+    }
+    .construction_site .d_stats_lists span {
+        font-size: 16px;
+    }
+    .construction_site .d_stats_lists p {
+        font-size: 13px;
+    }
+
+    /* 건축물 착공 현황 & 안전사고 피해현황 공통 */
+    .construction_site .content_title {
+        font-size: 20px;
+    }
+    .construction_site table th,
+    .construction_site table td {
+        font-size: 13px;
+    }
+
+    /* 건축물 착공 현황 */
+    .construction_site .start_status_chart {
+        height: 210px;
+    }
+
+    /* 안전사고 피해현황 */
+    .construction_site .damage_status_chart {
+        height: 306px;
+    }
+    .construction_site .damage_status_chart .chart_icon {
+        width: 9px;
+        height: 9px;
+    }
+
+    /* 지도 영역 */
+    .construction_site .map_wrap {
+        display: block;
+    }
+
+    /* 지도 옵션 */
+    .construction_site .map_option {
+        height: 6%;
+    }
+    .construction_site .map_option form,
+    .construction_site .map_option ul,
+    .construction_site .map_option li {
+        height: 100%;
+    }
+    .construction_site .map_option li {
+        font-size: 18px;
+    }
+    .construction_site .map_option li .checking {
+        width: 19px;
+        height: 19px;
+        margin-top: 4px;
+    }
+    
+    /* 지도 보기 */
+    .construction_site .map_view {
+        height: 94%;
+    }
+    .construction_site .map_view .all_area {
+        top: 60px;
+        left: 20px;
+        width: 120px;
+        height: 38px;
+        font-size: 16px;
+    }
+    .construction_site .map_view .all_area img {
+        width: 20px;
+        vertical-align: middle;
+    }
+    .construction_site .map_view .zoom_btn {
+        top: 60px;
+        right: 20px;
+        width: 40px;
+    }
+    .construction_site .map_view .zoom_btn button {
+        height: 40px;
+        background-size: 13px;
+    }
+    .construction_site .map_view .total {
+        bottom: 0;
+        width: 120px;
+        height: 84px;
+    }
+    .construction_site .map_view .total p {
+        font-size: 16px;
+    }
+    .construction_site .map_view .total span {
+        font-size: 34px;
+    }
+    
+    /* 공공기관 링크 PC 버전 (슬라이더) */
+    .construction_site .institutions_pc {
+        display: none;
+    }
+
+    /* 지역별 현황 */
+
+    /* 날씨 정보 */
+    .construction_site .area_info .weather_wrap {
+        padding-top: 14px;
+        padding-bottom: 42px;
+    }
+    .construction_site .weather_wrap .area_name {
+        width: 50% !important;  
+    }
+    .construction_site .weather_wrap .area_name h5 {
+        font-size: 30px;
+    }
+    .construction_site .weather_wrap .area_name h5::before {
+        width: 90px;
+    }
+    .construction_site .weather_wrap .weather {
+        width: 50% !important;
+    }
+    .construction_site .weather_wrap .storm {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    .construction_site .weather_wrap .storm img {
+        width: 13px;
+    }
+    .construction_site .weather ul {
+        height: 126px;
+        padding: 15px 0;
+    }
+    .construction_site .weather_wrap p.day {
+        font-size: 15px;
+    }
+    .construction_site .weather_wrap .weather li.today p.day {
+        padding: 3px 12px;
+    }
+    .construction_site .weather_wrap .weather_main img {
+        width: 27px;
+    }
+    .construction_site .weather_wrap .weather_main p.temperture strong {
+        font-size: 30px;
+    }
+    .construction_site .weather p.rain {
+        font-size: 14px;
+    }
+    .construction_site .weather .storm_alert {
+        height: 126px;
+    }
+    
+    /* 메인 탭 전환 */
+    .construction_site .area_info .tab_main > .tab_index {
+        font-size: 18px;
+        padding-top: 15px;
+    }
+    .construction_site .area_info .tab_main > .tab_content {
+        display: flex;
+        padding-top: 50px !important;
+        padding-bottom: 30px !important;
+    }
+    .construction_site .area_info .tab_main > .tab_index li {
+        width: 24.5%;
+        padding: 15px 0;
+    }
+    .construction_site .area_info .tab_main > .tab_index li:not(:last-child) {
+        margin-right: 0.6666%;
+    }
+    
+    /* 안전사고 발생 현황 */
+    .construction_site .area_info .inspection {
+        width: 50%;
+    }
+    .construction_site .area_info .inspection ul {
+        align-items: center;
+        height: 100%;
+        padding: 40px 66px;
+    }
+    .construction_site .area_info .inspection .circle {
+        width: 165px;
+        height: 165px;
+    }
+    .construction_site .area_info .inspection .circle .text_wrap strong {
+        font-size: 36px;
+      }
+      .construction_site .area_info .inspection .circle .text_wrap span {
+        font-size: 18px;
+      }
+      .construction_site .area_info .inspection .circle .text_wrap p {
+        font-size: 16px;
+      }
+    
+    /* 서브 탭 전환 */
+    .construction_site .area_info .safechk_occu {
+        width: 50%;
+        margin: 0 !important;
+    }
+    .construction_site .area_info .safechk_wrap {
+        margin-top: 15px;
+        padding-top: 40px;
+    }
+    .construction_site .area_info .tab_sub > .tab_index li {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+    .construction_site .tab_sub > .tab_content {
+        padding: 20px 0;
+    }
+    .construction_site .area_info .safechk_circle {
+        width: 146px;
+        height: 146px;
+    }
+    .construction_site .area_info .safechk_circle .text_wrap strong {
+        font-size: 30px;
+    }
+    .construction_site .area_info .safechk_circle .text_wrap p {
+        font-size: 18px;
+    }
+    .construction_site .area_info .safechk_result {
+        padding: 25px 22px;
+    }
+    .construction_site .area_info .safechk_result li:not(:last-child) {
+        padding-bottom: 25px;
+    }
+    .construction_site .area_info .safechk_result span {
+        font-size: 15px;
+    }
+    .construction_site .area_info .safechk_result span > sub {
+        width: 7px;
+        height: 7px;
+        margin-right: 9px;
+    }
+    .construction_site .area_info .safechk_result strong {
+        margin-right: 5px;
+    }
+
+    /* 공공기관 링크 모바일 버전 (슬라이더) */
+    .construction_site .institutions_m {
+        display: flex;
+        margin: 0 30px;
+        margin-bottom: 30px;
+        padding: 20px 0;
+    }
+    .construction_site .institutions_m .slideBtn img {
+        width: auto;
+    }
+}

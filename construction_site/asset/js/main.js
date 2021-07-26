@@ -159,39 +159,61 @@ $(function () {
 
 // 공공기관 링크 (슬라이더)
 $(document).ready(function() {
-  var slider = $('.slider').lightSlider({
+  // PC 버전
+  var slider = $('.slider1').lightSlider({
       item: 5,
       loop: true,
       pager: false,
       slideMove: 1,
       easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
       speed: 600,
-      responsive : [
-          {
-              breakpoint:800,
-              settings: {
-                  item:3,
-                  slideMove:1,
-                  slideMargin:6,
-                }
-          },
-          {
-              breakpoint:480,
-              settings: {
-                  item:2,
-                  slideMove:1
-                }
-          }
-      ]
   });
   $("#lightSlider a").addClass("d-flex justify-content-center");
-  $(".prevBtn").click(function () {
+  $(".institutions_pc .prevBtn").click(function () {
     slider.goToPrevSlide();
   });
-  $(".nextBtn").click(function () {
+  $(".institutions_pc .nextBtn").click(function () {
     slider.goToNextSlide();
   });
+  // 모바일 버전
+  $(document).ready(function() {
+    var slider = $('.slider2').lightSlider({
+        item: 5,
+        loop: true,
+        pager: false,
+        slideMove: 1,
+        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        speed: 600,
+        responsive : [
+            {
+                breakpoint:800,
+                settings: {
+                    item:3,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
+            }
+        ]
+    });
+    $(".institutions_m .prevBtn").click(function () {
+      slider.goToPrevSlide();
+    });
+    $(".institutions_m .nextBtn").click(function () {
+      slider.goToNextSlide();
+    });
+  });
 });
+
+
+
+
 
 // 탭 전환
 $(function () {

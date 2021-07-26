@@ -1,6 +1,7 @@
 html,body {
   height: 100vh;
   font-family: "NotoSansKR-Regular", sans-serif;
+  background: #ced4e0;
   -webkit-text-size-adjust: none;
   -ms-user-select: none; 
   -moz-user-select: -moz-none;
@@ -79,30 +80,32 @@ html,body {
 .container {
   padding-top: 70px;
   padding-left: 70px;
-  padding-right: 34px;
+  /* padding-right: 34px; */
 }
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  padding: 0 30px;
 }
 .col-1 {
   width: calc(100% / 12);
 }
 .col-2 {
-  width: calc(100% / 12 * 2 - 60px);
+  width: calc(100% / 12 * 2);
 }
 .col-3 {
   width: calc(100% / 12 * 3);
 }
 .col-4 {
-  width: calc(100% / 12 * 4 - 30px);
+  width: calc(100% / 12 * 4);
 }
 .col-5 {
   width: calc(100% / 12 * 5);
 }
 .col-6 {
-  width: calc(100% / 12 * 6 - 30px);
+  width: calc(100% / 12 * 6 - 60px);
 }
 .col-7 {
   width: calc(100% / 12 * 7);
