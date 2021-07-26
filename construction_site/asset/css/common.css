@@ -80,7 +80,6 @@ html,body {
 .container {
   padding-top: 70px;
   padding-left: 70px;
-  /* padding-right: 34px; */
 }
 .row {
   display: -webkit-box;
@@ -88,6 +87,7 @@ html,body {
   display: flex;
   width: 100%;
   padding: 0 30px;
+  padding-top: 2.7778vh;
 }
 .col-1 {
   width: calc(100% / 12);
@@ -135,5 +135,8 @@ html,body {
 
 .text-center {
   text-align: center;
+}
+.text-end {
+  text-align: end;
 }
 

@@ -1,5 +1,5 @@
 @media (max-width: 1600px) {
-    /* common */
+    /* 공통 영역 */
     html,body {
       height: auto;
     }
@@ -212,30 +212,29 @@
         margin-right: 0.6666%;
     }
     
-    /* 안전사고 발생 현황 */
     .construction_site .area_info .inspection {
         width: 50%;
     }
     .construction_site .area_info .inspection ul {
         align-items: center;
         height: 100%;
-        padding: 40px 66px;
+        padding: 40px 4.1250vw;
     }
     .construction_site .area_info .inspection .circle {
-        width: 165px;
-        height: 165px;
+        width: 10.3125vw;
+        height: 10.3125vw;
     }
     .construction_site .area_info .inspection .circle .text_wrap strong {
         font-size: 36px;
-      }
-      .construction_site .area_info .inspection .circle .text_wrap span {
+    }
+    .construction_site .area_info .inspection .circle .text_wrap span {
         font-size: 18px;
-      }
-      .construction_site .area_info .inspection .circle .text_wrap p {
+    }
+    .construction_site .area_info .inspection .circle .text_wrap p {
         font-size: 16px;
-      }
+    }
     
-    /* 서브 탭 전환 */
+    /* 안전사고 발생 현황 */
     .construction_site .area_info .safechk_occu {
         width: 50%;
         margin: 0 !important;
@@ -244,6 +243,8 @@
         margin-top: 15px;
         padding-top: 40px;
     }
+
+    /* 서브 탭 전환 */
     .construction_site .area_info .tab_sub > .tab_index li {
         font-size: 18px;
         padding: 15px 0;
@@ -288,5 +289,285 @@
     }
     .construction_site .institutions_m .slideBtn img {
         width: auto;
+    }
+}
+
+@media (max-width: 1240px) {
+    /* 공통 영역 */
+    .container {
+        padding-top: 100px;
+        padding-left: 0;
+    }
+    .row {
+        padding: 0;
+    }
+    .col-2, .col-4 {
+        height: auto;
+    }
+    .col-2 {
+        width: 100%;
+        background: #e1e2e5;
+    }
+    .col-4 {
+        width: 100%;
+        padding: 0 40px;
+    }
+    .col-6 {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    /* 메인 컨텐츠 */
+
+    /* Today 안전사고 */
+    .construction_site .day_stats_bg {
+        margin-top: 20px;
+        padding: 50px 40px;
+        background: #e9eef9;
+        border-bottom: 1px solid #8591aa;
+    }
+    .construction_site .d_stats_title h3 {
+        font-size: 32px;
+    }
+    .construction_site .d_stats_title span {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+    .construction_site .d_stats_lists {
+        padding: 30px;
+    }
+    .construction_site .d_stats_lists li {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    .construction_site .d_stats_lists strong {
+        font-size: 54px;
+    }
+    .construction_site .d_stats_lists span {
+        font-size: 20px;
+    }
+    .construction_site .d_stats_lists p {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    /* 건축물 착공 현황 & 안전사고 피해현황 공통 */
+    .construction_site .status_bg {
+        margin-top: 20px;
+        padding: 50px 40px;
+        background: #f4f6f9;
+        border-bottom: 1px solid #8591aa;
+    }
+    .construction_site .content_title {
+        font-size: 22px;
+    }
+    .construction_site .start_status_chart, 
+    .construction_site .damage_status_chart {
+        background: #f4f6f9;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .construction_site table th, .construction_site table td {
+        font-size: 20px;
+    }
+
+    /* 건축물 착공 현황 */
+    .construction_site .start_status_chart {
+        height: 300px;
+        margin-top: 56px;
+    }
+    .construction_site .start_status_chart table {
+        width: 100%;
+        height: 100%;
+    }
+    .construction_site .start_status_chart table col:first-child {
+        width: 10% !important;
+    }
+    .construction_site .start_status_chart table col:last-child {
+        width: 90% !important;
+    }
+    .construction_site .start_status_chart tr:last-child td:last-child {
+        width: 90%;
+    }
+
+    /* 안전사고 피해현황 */
+    .construction_site .damage_status_chart {
+        margin-top: 56px;
+    }
+    .construction_site .damage_status_chart .chart_icon {
+        margin: 0.1613vw 0;
+    }
+
+    /* 지도 영역 */
+    .construction_site .map_wrap {
+        padding: 0 40px;
+        padding-top: 50px;
+    }
+
+    /* 지역별 현황 */
+
+    /* 서브 탭 전환 */
+    .construction_site .area_info .safechk_circle {
+        width: 11.7742vw;
+        height: 11.7742vw;
+    }
+
+
+    /* 공공기관 링크 모바일 버전 (슬라이더) */
+    .construction_site .institutions_m {
+        margin: 0 40px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1125px) {
+    /* 지역별 현황 */
+    .construction_site .area_info .inspection ul {
+        padding: 40px 1.9531vw;
+    }
+    .construction_site .area_info .inspection .circle {
+        width: 11.7188vw;
+        height: 11.7188vw;
+    }
+    .construction_site .area_info .inspection .circle .text_wrap strong {
+        font-size: 3.2vw;
+    }
+    .construction_site .area_info .inspection .circle .text_wrap span {
+        font-size: 1.6vw;
+    }
+    .construction_site .area_info .inspection .circle .text_wrap p {
+        font-size: 1.4222vw;
+    }
+
+    /* 서브 탭 전환 */
+    .construction_site .area_info .safechk_circle .text_wrap strong {
+        font-size: 2.6667vw;
+    }
+    .construction_site .area_info .safechk_circle .text_wrap p {
+        font-size: 1.6vw;
+    }
+}
+
+@media (max-width: 800px) {
+    /* 공통 영역 */
+    .col-4 {
+        padding: 0 30px;
+    }
+    .col-6 {
+        height: 850px;
+    }
+
+    /* 메인 컨텐츠 */
+
+    /* Today 안전사고 */
+    .construction_site .day_stats_bg {
+        padding: 40px 30px;
+    }
+
+    /* 건축물 착공 현황 & 안전사고 피해현황 공통 */
+    .construction_site .status_bg {
+        padding: 40px 30px;
+    }
+
+    /* 지도 영역 */
+    .construction_site .map_wrap {
+        padding: 0 30px;
+        padding-top: 50px;
+    }
+    .construction_site .map_view .all_area {
+        top: 40px;
+    }
+    .construction_site .map_view .zoom_btn {
+        top: 40px;
+    }
+
+    /* 지역별 현황 */
+    .construction_site .area_info .tab_main > .tab_content {
+        flex-direction: column;
+    }
+    .construction_site .area_info .inspection {
+        width: 100%;
+    }
+    .construction_site .area_info .inspection ul {
+        padding: 40px 1.9531vw;
+    }
+    .construction_site .area_info .inspection .circle {
+        width: 22.5vw;
+        height: 22.5vw;
+    }
+    .construction_site .area_info .inspection .circle .text_wrap strong {
+        font-size: 6.25vw;
+    }
+    .construction_site .area_info .inspection .circle .text_wrap span {
+        font-size: 3.125vw;
+    }
+    .construction_site .area_info .inspection .circle .text_wrap p {
+        font-size: 2.75vw;
+    }
+
+    /* 안전사고 발생 현황 */
+    .construction_site .area_info .safechk_occu {
+        width: 100%;
+    }
+
+    /* 서브 탭 전환 */
+    .construction_site .area_info .safechk_circle {
+        width: 168px;
+        height: 168px;
+    }
+    .construction_site .area_info .safechk_circle .text_wrap strong {
+        font-size: 40px;
+    }
+    .construction_site .area_info .safechk_circle .text_wrap p {
+        font-size: 24px;
+    }
+
+    /* 공공기관 링크 모바일 버전 (슬라이더) */
+    .construction_site .institutions_m {
+        margin: 0 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 공통 영역 */
+    .col-4 {
+        padding: 0 25px;
+    }
+
+    .construction_site .day_stats_bg {
+        margin-top: 10px;
+        padding: 40px 25px;
+    }
+
+    .construction_site .status_bg {
+        margin-top: 10px;
+        padding: 40px 25px;
+    }
+
+    .construction_site .map_wrap {
+        padding: 0 25px;
+        padding-top: 30px;
+    }
+
+    .construction_site .weather_wrap .area_name {
+        width: 30% !important;
+    }
+    .construction_site .weather_wrap .weather {
+        width: 70% !important;
+    }
+
+    /* 공공기관 링크 모바일 버전 (슬라이더) */
+    .construction_site .institutions_m {
+        margin: 0 25px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 414px) {
+    /* 공통 영역 */
+    .container {
+        padding-top: 52px;
     }
 }

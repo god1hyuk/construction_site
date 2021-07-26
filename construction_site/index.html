@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="construction_site d-flex justify-content-between">
-      <!-- 사이드 메뉴 -->
+      <!-- 사이드 메뉴 (PC) -->
       <aside>
         <nav class="side_menu text-center nt_rg">
           <ul>
@@ -77,8 +77,8 @@
         </div>
       </aside>
 
-      <!-- 헤더 -->
-      <header class="d-flex">
+      <!-- 헤더 (PC) -->
+      <header class="header_pc d-flex">
         <nav class="d-flex align-items-center justify-content-between">
           <div class="logo_wrap d-flex align-items-center">
             <a href="index.html">
@@ -109,6 +109,16 @@
         </nav>
       </header>
 
+      <!-- 헤더 (테블릿 & 모바일) -->
+      <header class="header_m">
+        <div class="logo_wrap d-flex align-items-center">
+          <h1 class="title ns_eb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
+        </div>
+        <nav>
+          <button class="burger_btn"></button>
+        </nav>
+      </header>
+
       <!-- 메인 컨텐츠 -->
       <div class="main_content">
         <div class="container">
@@ -117,157 +127,163 @@
             <div class="col-2">
               <div class="status_wrap d-flex flex-column justify-content-between h_full">
                 <!-- Today 안전사고 -->
-                <div class="day_stats nt_b">
-                  <div class="d_stats_header d-flex align-items-center justify-content-center">
-                    <div class="d_stats_title d-flex align-items-center justify-content-center">
-                      <h3>Today</h3>
-                      <span class="nt_rg">안전사고</span>
+                <div class="day_stats_bg">
+                  <div class="day_stats nt_b">
+                    <div class="d_stats_header d-flex align-items-center justify-content-center">
+                      <div class="d_stats_title d-flex align-items-center justify-content-center">
+                        <h3>Today</h3>
+                        <span class="nt_rg">안전사고</span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="d_stats_lists d-flex align-items-center justify-content-center">
-                    <ul class="d-flex flex-wrap nt_rg">
-                      <li class="d-flex flex-column align-items-center justify-content-center">
-                        <div><strong>0</strong><span>건</span></div>
-                        <p>추락</p>
-                      </li>
-                      <li class="d-flex flex-column align-items-center justify-content-center">
-                        <div><strong>1</strong><span>건</span></div>
-                        <p>화재</p>
-                      </li>
-                      <li class="d-flex flex-column align-items-center justify-content-center">
-                        <div><strong>1</strong><span>건</span></div>
-                        <p>붕괴ㆍ도괴</p>
-                      </li>
-                      <li class="d-flex flex-column align-items-center justify-content-center">
-                        <div><strong>0</strong><span>건</span></div>
-                        <p>넘어짐(전도)</p>
-                      </li>
-                    </ul>
+                    <div class="d_stats_lists d-flex align-items-center justify-content-center">
+                      <ul class="d-flex flex-wrap nt_rg">
+                        <li class="d-flex flex-column align-items-center justify-content-center">
+                          <div><strong>0</strong><span>건</span></div>
+                          <p>추락</p>
+                        </li>
+                        <li class="d-flex flex-column align-items-center justify-content-center">
+                          <div><strong>1</strong><span>건</span></div>
+                          <p>화재</p>
+                        </li>
+                        <li class="d-flex flex-column align-items-center justify-content-center">
+                          <div><strong>1</strong><span>건</span></div>
+                          <p>붕괴ㆍ도괴</p>
+                        </li>
+                        <li class="d-flex flex-column align-items-center justify-content-center">
+                          <div><strong>0</strong><span>건</span></div>
+                          <p>넘어짐(전도)</p>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <!-- 건축물 착공 현황 -->
-                <div class="start_status">
-                  <div class="title_wrap d-flex align-items-center">
-                    <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘1" />
-                    <h2 class="content_title">건축물 착공 현황</h2>
-                  </div>
-                  <div class="start_status_chart">
-                    <div class="chart_wrap d-flex align-items-center justify-content-center text-center">
-                      <table>
-                        <colgroup>
-                          <col style="width: 20%">
-                          <col style="width: 80%">
-                        </colgroup>
-                        <tr>
-                          <th>소형</th>
-                          <td>
-                            <div class="progress">
-                              <div class="progress_bar pb_l"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>중형</th>
-                          <td>
-                            <div class="progress">
-                              <div class="progress_bar pb_m"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>대형</th>
-                          <td>
-                            <div class="progress">
-                              <div class="progress_bar pb_s"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <span style="padding-left: 90%;">0</span>
-                          </td>
-                          <td>
-                            <span style="float: right;">100%</span>
-                          </td>
-                        </tr>
-                      </table>
+                <div class="status_bg">
+                  <div class="start_status">
+                    <div class="title_wrap d-flex align-items-center">
+                      <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘1" />
+                      <h2 class="content_title">건축물 착공 현황</h2>
+                    </div>
+                    <div class="start_status_chart">
+                      <div class="chart_wrap d-flex align-items-center justify-content-center">
+                        <table>
+                          <colgroup>
+                            <col style="width: 20%">
+                            <col style="width: 80%">
+                          </colgroup>
+                          <tr>
+                            <th>소형</th>
+                            <td>
+                              <div class="progress">
+                                <div class="progress_bar pb_l"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>중형</th>
+                            <td>
+                              <div class="progress">
+                                <div class="progress_bar pb_m"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>대형</th>
+                            <td>
+                              <div class="progress">
+                                <div class="progress_bar pb_s"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <span>0</span>
+                            </td>
+                            <td>
+                              <span>100%</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <!-- 안전사고 피해현황 -->
-                <div class="damage_status">
-                  <div class="title_wrap d-flex align-items-center">
-                    <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘1" />
-                    <h2 class="content_title">안전사고 피해현황</h2>
-                  </div>
-                  <div class="damage_status_chart">
-                    <div class="chart_wrap d-flex align-items-center justify-content-center text-center">
-                      <table>
-                        <colgroup>
-                          <col style="width: 20%">
-                          <col style="width: 26.6666%">
-                          <col style="width: 26.6666%">
-                          <col style="width: 26.6666%">
-                        </colgroup>
-                        <tr>
-                          <th></th>
-                          <td></td>
-                          <td>
-                            <div class="casualty_icon chart_icon"></div>
-                            <span>사상자</span>
-                          </td>
-                          <td>
-                            <div class="injured_icon chart_icon"></div>
-                            <span>부상자</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>
-                            <p>40</p>
-                          </th>
-                          <td colspan="3"></td>
-                        </tr>
-                        <tr>
-                          <th>
-                            <p>30</p>
-                          </th>
-                          <td colspan="3"></td>
-                        </tr>
-                        <tr>
-                          <th>
-                            <p>20</p>
-                          </th>
-                          <td colspan="3"></td>
-                        </tr>
-                        <tr>
-                          <th>
-                            <p>10</p>
-                          </th>
-                          <td>
-                            <div class="progress">
-                              <div class="progress_bar y_2018"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress_bar y_2019"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress_bar y_2020"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>
-                            <p>0</p>
-                          </th>
-                          <td>2018</td>
-                          <td>2019</td>
-                          <td>2020</td>
-                        </tr>
-                      </table>
+                <div class="status_bg">
+                  <div class="damage_status">
+                    <div class="title_wrap d-flex align-items-center">
+                      <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘1" />
+                      <h2 class="content_title">안전사고 피해현황</h2>
+                    </div>
+                    <div class="damage_status_chart">
+                      <div class="chart_wrap d-flex align-items-center justify-content-center text-center">
+                        <table>
+                          <colgroup>
+                            <col style="width: 20%">
+                            <col style="width: 26.6666%">
+                            <col style="width: 26.6666%">
+                            <col style="width: 26.6666%">
+                          </colgroup>
+                          <tr>
+                            <th></th>
+                            <td></td>
+                            <td>
+                              <div class="casualty_icon chart_icon"></div>
+                              <span>사상자</span>
+                            </td>
+                            <td>
+                              <div class="injured_icon chart_icon"></div>
+                              <span>부상자</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <p>40</p>
+                            </th>
+                            <td colspan="3"></td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <p>30</p>
+                            </th>
+                            <td colspan="3"></td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <p>20</p>
+                            </th>
+                            <td colspan="3"></td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <p>10</p>
+                            </th>
+                            <td>
+                              <div class="progress">
+                                <div class="progress_bar y_2018"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="progress">
+                                <div class="progress_bar y_2019"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="progress">
+                                <div class="progress_bar y_2020"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <p>0</p>
+                            </th>
+                            <td>2018</td>
+                            <td>2019</td>
+                            <td>2020</td>
+                          </tr>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
