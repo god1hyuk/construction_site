@@ -241,3 +241,63 @@ $(function () {
     count++;
   });
 });
+
+// 메인 탭 (Easy Pie Chart)
+$(function() {
+  $('.insp_circle1').easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 10,
+    lineCap: 'butt',
+    barColor: '#5180e3',
+    trackColor:	"#dcdcdc",
+    // size: 130,
+    animate: 500
+  });
+  $('.insp_circle2').easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 10,
+    lineCap: 'butt',
+    barColor: '#62c6ff',
+    trackColor:	"#dcdcdc",
+    // size: 130,
+    animate: 500
+  });
+  $('.insp_circle3').easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 10,
+    lineCap: 'butt',
+    barColor: '#a76ed5',
+    trackColor:	"#dcdcdc",
+    // size: 130,
+    animate: 500
+  });
+});
+
+// 안전사고 발생 현황 (Chart JS)
+var data = {
+  labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
+  datasets: [
+    {
+      data: [19, 10, 13, 14],
+      backgroundColor: ['#5180e3', '#34d2de', '#ffd12a', '#52e32e'],
+      borderWidth: 0,
+    },
+  ],
+}
+
+var config3 = {
+  type: 'doughnut',
+  data: data,
+  options: {
+    responsive: true,
+    aspectRatio: 1,
+    legend: {
+      display: false,
+    },
+    cutoutPercentage: 70,
+  },
+};
+var myChart3 = new Chart(
+  document.getElementById('myChart3'),
+  config3
+);

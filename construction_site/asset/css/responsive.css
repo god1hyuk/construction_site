@@ -218,11 +218,14 @@
     .construction_site .area_info .inspection ul {
         align-items: center;
         height: 100%;
-        padding: 40px 4.1250vw;
+        padding: 40px 0;
     }
     .construction_site .area_info .inspection .circle {
-        width: 10.3125vw;
-        height: 10.3125vw;
+        min-width: 165px !important;
+        height: 165px !important;
+    }
+    .construction_site .area_info .inspection .insp_circle2 {
+        margin: 0 1.8750vw;
     }
     .construction_site .area_info .inspection .circle .text_wrap strong {
         font-size: 36px;
@@ -407,6 +410,15 @@
 
     /* 지역별 현황 */
 
+    /* 메인 탭 전환 */
+    .construction_site .area_info .inspection .circle {
+        min-width: 13.3065vw !important;
+        height: 13.3065vw !important;
+    }
+    .construction_site .area_info .inspection .insp_circle2 {
+        margin: 0 2.4194vw;
+    }
+
     /* 서브 탭 전환 */
     .construction_site .area_info .safechk_circle {
         width: 11.7742vw;
@@ -427,8 +439,8 @@
         padding: 40px 1.9531vw;
     }
     .construction_site .area_info .inspection .circle {
-        width: 11.7188vw;
-        height: 11.7188vw;
+        min-width: 11.7188vw !important;
+        height: 11.7188vw !important;
     }
     .construction_site .area_info .inspection .circle .text_wrap strong {
         font-size: 3.2vw;
@@ -511,6 +523,12 @@
         width: 100%;
     }
 
+    /* 메인 탭 전환 */
+    .construction_site .area_info .inspection .circle {
+        min-width: 184px !important;
+        height: 184px !important;
+    }
+
     /* 서브 탭 전환 */
     .construction_site .area_info .safechk_circle {
         width: 168px;
@@ -551,6 +569,10 @@
         padding-top: 30px;
     }
 
+    .construction_site .map_option li {
+        font-size: 16px;
+    }
+
     .construction_site .weather_wrap .area_name {
         width: 30% !important;
     }
@@ -563,6 +585,14 @@
         margin: 0 25px;
         margin-bottom: 30px;
     }
+}
+
+@media (max-width: 670px) {
+    
+}
+
+@media (max-width: 540px) {
+
 }
 
 @media (max-width: 414px) {

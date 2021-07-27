@@ -2,22 +2,37 @@
 <html lang="ko">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,user-scalable=no"
-    />
-    <title>서울시 민간건축공사장 안전관리 정보화시스템</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <!-- Favicon -->
     <link rel="icon" href="asset/images/icon/favicon.ico" />
     <link rel="shortcut icon" href="asset/images/icon/favicon.ico" />
+
+    <!-- Light Slider -->
     <link rel="stylesheet" href="asset/css/lightslider.min.css" />
+
+    <!-- Font -->
     <link rel="stylesheet" href="asset/css/font.css" />
+
+    <!-- Reset -->
     <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+
+    <!-- Form -->
     <link rel="stylesheet" href="asset/css/layout_v8.0.5.css" />
+
+    <!-- Common -->
     <link rel="stylesheet" href="asset/css/common.css" />
+
+    <!-- Header -->
     <link rel="stylesheet" href="asset/css/header.css" />
+
+    <!-- Style -->
     <link rel="stylesheet" href="asset/css/style.css" />
+
+    <!-- Responsive -->
     <link rel="stylesheet" href="asset/css/responsive.css" />
+    
+    <title>서울시 민간건축공사장 안전관리 정보화시스템</title>
   </head>
   <body>
     <div class="construction_site d-flex justify-content-between">
@@ -472,21 +487,20 @@
                   </ul>
                   <div class="tab_content">
                     <div class="inspection">
-                      <ul class="d-flex justify-content-center justify-content-between nt_rg">
-                        <li class="insp_circle1 circle d-flex align-items-center justify-content-center">
+                      <ul class="d-flex align-items-center justify-content-center nt_rg">
+                        <li class="insp_circle1 circle d-flex justify-content-center" data-percent="59">
                           <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
                             <div><strong>12</strong><span>건</span></div>
                             <p>점검계획</p>
                           </div>
                         </li>
-                        <li class="insp_circle2 circle d-flex align-items-center justify-content-center">
+                        <li class="insp_circle2 circle d-flex justify-content-center" data-percent="23">
                           <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
                             <div><strong>5</strong><span>건</span></div>
                             <p>점검완료</p>
                           </div>
                         </li>
-                        <li
-                          class="insp_circle3 circle d-flex align-items-center justify-content-center">
+                        <li class="insp_circle3 circle d-flex justify-content-center" data-percent="88">
                           <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
                             <div><strong>7</strong><span>%</span></div>
                             <p>점검비율</p>
@@ -507,10 +521,11 @@
                             <li>공종별</li>
                           </ul>
                           <div class="tab_content d-flex align-items-center justify-content-between active">
-                            <div class="safechk_circle d-flex align-items-center justify-content-center">
-                              <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
-                                <strong class="nt_b">56</strong>
-                                <p class="nt_m">건</p>
+                            <div class="safechk_circle">
+                              <canvas id="myChart3"></canvas>
+                              <div class="text_wrap">
+                                  <strong class="nt_b">32</strong>
+                                  <p class="nt_m">건</p>
                               </div>
                             </div>
                             <div class="safechk_result nt_rg">
@@ -534,46 +549,17 @@
                               </ul>
                             </div>
                           </div>
-                          <div class="tab_content d-flex align-items-center justify-content-between">
-                            <div class="safechk_circle d-flex align-items-center justify-content-center">
-                              <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
-                                <strong class="nt_b">32</strong>
-                                <p class="nt_m">건</p>
-                              </div>
-                            </div>
-                            <div class="safechk_result nt_rg">
-                              <ul>
-                                <li class="d-flex align-items-center justify-content-between">
-                                  <span class="d-flex align-items-center"><sub></sub>추락</span>
-                                  <p><strong>12</strong>건</p>
-                                </li>
-                                <li class="d-flex align-items-center justify-content-between">
-                                  <span class="d-flex align-items-center"><sub></sub>화재</span>
-                                  <p><strong>13</strong>건</p>
-                                </li>
-                                <li class="d-flex align-items-center justify-content-between">
-                                  <span class="d-flex align-items-center"><sub></sub>붕괴ㆍ도괴</span>
-                                  <p><strong>5</strong>건</p>
-                                </li>
-                                <li class="d-flex align-items-center justify-content-between">
-                                  <span class="d-flex align-items-center"><sub></sub>넘어짐</span>
-                                  <p><strong>7</strong>건</p>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          
                         </div>
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </div>
             
           </div>
-          <!-- 공공기관 링크 (슬라이더) -->
+
+          <!-- 공공기관 링크 모바일버전 (슬라이더) -->
           <div class="institutions_m institutions d-flex align-items-center justify-content-between">
             <a class="prevBtn slideBtn">
               <img src="asset/images/icon/prev_arrow.png" alt="슬라이드_이전버튼" />
@@ -635,16 +621,24 @@
               <img src="asset/images/icon/next_arrow.png" alt="슬라이드_다음버튼">
             </a>
           </div>
+
         </div>
       </div>
-    
     </div>
 
     <!-- jQuery -->
     <script src="asset/js/jquery-3.2.1.min.js"></script>
     <!-- <script src="asset/js/jquery-1.12.4.min.js"></script> -->
+
     <!-- Light Slider -->
     <script src="asset/js/lightslider.min.js"></script>
+
+    <!-- Easy Pie Chart -->
+    <script src="asset/js/jquery.easy-pie-chart.js"></script>
+
+    <!-- Chart JS -->
+    <script src="asset/js/chartJS@2.9.4.min.js"></script>
+
     <!-- Main JS -->
     <script src="asset/js/main.js"></script>
   </body>
