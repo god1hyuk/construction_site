@@ -6,7 +6,7 @@
   height: 100%;
   background: #2f313e;
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 5);
-  z-index: 999;
+  z-index: 980;
 }
 .construction_site .side_menu li {
   width: 100%;
@@ -149,7 +149,7 @@
 /* 헤더 (PC) */
 .construction_site header {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   color: #fff;
   background: #192b80;
   z-index: 998;
@@ -219,6 +219,50 @@
   padding-left: 0.5rem;
 }
 
+/* 헤더 (태블릿 & 모바일) */
+.construction_site .header_m {
+  display: none;
+}
+
+/* 상황전파 버튼 (모바일) */
+.acdnt_sprd_m {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  font-size: 28px;
+  color: #fff;
+  background: rgb(84,121,247);
+  background: linear-gradient(360deg, rgba(84,121,247,1) 0%, rgba(133,158,245,1) 100%);
+  z-index: 985;
+}
+.acdnt_sprd_m img {
+  width: 40px;
+  margin-right: 16px;
+  vertical-align: top;
+}
+.acdnt_sprd_m::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.15);
+}
+.acdnt_sprd_m::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+
 @media (max-height: 692px) {
   .construction_site .sideMenu_item {
     height: auto;
@@ -226,55 +270,5 @@
   .construction_site .sideMenu_item p {
     padding-top: 45px;
     padding-bottom: 10px;
-  }
-}
-
-/* 헤더 (태블릿 & 모바일) */
-.construction_site .header_m {
-  display: none;
-}
-
-@media (max-width: 1240px) {
-  .construction_site aside {
-    display: none;
-  }
-  .construction_site .header_pc {
-    display: none;
-  }
-
-  /* 헤더 (테블릿 & 모바일) */
-  .construction_site .header_m {
-      display: block;
-  }
-  .construction_site .header_m .logo_wrap {
-      height: 100px;
-      font-size: 28px;
-      padding-left: 28px;
-  }
-  .construction_site .header_m nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .construction_site .header_m .burger_btn {
-    width: 100px;
-    height: 100px;
-    background-image: url(../images/icon/burger.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #20b5c8;
-  }
-}
-
-@media (max-width: 414px) {
-  .construction_site .header_m .logo_wrap {
-    height: 52px;
-    font-size: 15px;
-    padding-left: 15px;
-  }
-  .construction_site .header_m .burger_btn {
-    width: 52px;
-    height: 52px;
-    background-size: 50%;
   }
 }

@@ -246,29 +246,26 @@ $(function () {
 $(function() {
   $('.insp_circle1').easyPieChart({
     scaleColor: "transparent",
-    lineWidth: 10,
+    lineWidth: 7.6923,
     lineCap: 'butt',
     barColor: '#5180e3',
     trackColor:	"#dcdcdc",
-    // size: 130,
     animate: 500
   });
   $('.insp_circle2').easyPieChart({
     scaleColor: "transparent",
-    lineWidth: 10,
+    lineWidth: 7.6923,
     lineCap: 'butt',
     barColor: '#62c6ff',
     trackColor:	"#dcdcdc",
-    // size: 130,
     animate: 500
   });
   $('.insp_circle3').easyPieChart({
     scaleColor: "transparent",
-    lineWidth: 10,
+    lineWidth: 7.6923,
     lineCap: 'butt',
     barColor: '#a76ed5',
     trackColor:	"#dcdcdc",
-    // size: 130,
     animate: 500
   });
 });
@@ -301,3 +298,15 @@ var myChart3 = new Chart(
   document.getElementById('myChart3'),
   config3
 );
+
+// 상황전파 버튼 (모바일)
+
+$(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 10 && $(this).width() <= 1240) {
+      $(".acdnt_sprd_m").fadeIn();
+    } else {
+      $(".acdnt_sprd_m").fadeOut();
+    }
+  });
+});

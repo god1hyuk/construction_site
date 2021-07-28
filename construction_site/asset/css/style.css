@@ -1,6 +1,5 @@
 .construction_site {
   position: relative;
-  /* overflow-x: hidden; */
   width: 100%;
   height: 100%;
 }
@@ -278,19 +277,21 @@
 /* 지도 영역 */
 
 /* 지도 옵션 */
-.construction_site .map_option ul {
+.construction_site .map_option {
   width: 100%;
-  height: 5vh;
 }
 .construction_site .map_option li {
   position: relative;
   width: 18.588%;
-  height: 100%;
+  height: 5vh;
   font-size: 1.6667vh;
   background: #fff;
   border: 1px solid #000;
   border-radius: 2px;
   transition: background .3s;
+}
+.construction_site .map_option li:nth-child(2n) {
+  margin: 0 1.765%;
 }
 .construction_site .map_option li .option_text {
   position: absolute;
@@ -338,9 +339,6 @@
 }
 .construction_site .map_option li:last-child label {
   border-color: #fa6c3e;
-}
-.construction_site .map_option li:nth-child(2n) {
-  margin: 0 1.765%;
 }
 
 /* 지도 보기 */
@@ -450,6 +448,7 @@
 .construction_site .area_info {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background: #fff;
   border-top: 5px solid #28344c;
   border-radius: 5px;
@@ -601,11 +600,11 @@
 }
 .construction_site .area_info .inspection .circle {
   position: relative;
-  min-width: 130px !important;
-  height: 130px !important;
+  min-width: 13.8889vh !important;
+  height: 13.8889vh !important;
 }
 .construction_site .area_info .inspection .insp_circle2 {
-  margin: 0 30px;
+  margin: 0 20px;
 }
 .construction_site .area_info .inspection .circle canvas {
   position: absolute;
@@ -619,17 +618,18 @@
 }
 .construction_site .area_info .inspection .circle .text_wrap strong {
   font-family: 'NotoSansKR-Bold';
-  /* font-size: 3.3333vh; */
-  font-size: 36px;
+  font-size: 3.3333vh;
+  /* font-size: 36px; */
 }
 .construction_site .area_info .inspection .circle .text_wrap span {
-  /* font-size: 1.6667vh; */
-  font-size: 18px;
+  font-size: 1.6667vh;
+  /* font-size: 18px; */
 }
 .construction_site .area_info .inspection .circle .text_wrap p {
-  /* font-size: 1.4815vh; */
-  font-size: 16px;
+  font-size: 1.4815vh;
+  /* font-size: 16px; */
   color: #2296fb;
+  padding-top: 5px;
 }
 
 /* 서브 탭 전환 */
@@ -666,11 +666,7 @@
   border-bottom: none;
 }
 .construction_site .tab_sub > .tab_content {
-  display: none !important;
   padding: 1.8519vh 0;
-}
-.construction_site .tab_sub > .tab_content.active {
-  display: flex !important;
 }
 .construction_site .area_info .safechk_circle {
   position: relative;
@@ -704,7 +700,7 @@
   border-radius: 3px;
 }
 .construction_site .area_info .safechk_result li:not(:last-child) {
-  padding-bottom: 2.3148vh;
+  padding-bottom: 1.8519vh;
 }
 .construction_site .area_info .safechk_result span {
   font-size: 1.3889vh;
