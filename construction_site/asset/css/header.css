@@ -445,8 +445,8 @@
 }
 
 .mobile_menu {
-  /* display: none; */
+  display: none;
 }
 .construction_site .main_content {
-  display: none;
+  /* display: none; */
 }

@@ -3,10 +3,8 @@ var count = 0;
 $(function () {
   $(".construction_site .switch_wrap").click(function () {
     if (count % 2 === 0) {
-      // $(this).css("transform", "scaleX(-1)");
       $(this).children(".switch_btn").addClass("active");
     } else if (count % 2 !== 0) {
-      // $(this).css("transform", "scaleX(1)");
       $(this).children(".switch_btn").removeClass("active");
     }
     count++;
@@ -92,10 +90,10 @@ $(function () {
     ],
     border: [
       "4px solid #7d96f1",
-      "4px solid #22cbc2", 
-      "4px solid #8cd900", 
-      "4px solid #f1b514", 
-      "4px solid #fa6c3e"
+      "4px solid #22cbc2",
+      "4px solid #8cd900",
+      "4px solid #f1b514",
+      "4px solid #fa6c3e",
     ],
     shadow: "0px 1px 5px rgba(35, 31, 32, 0.45)",
   };
@@ -117,7 +115,7 @@ $(function () {
         .css(
           "background-image",
           "url(asset/images/icon/check" + optionValue + ".png)"
-          );
+        );
     } else {
       $(this)
         .css("background", "#fff")
@@ -138,35 +136,33 @@ $(function () {
 
 // 지도영역 뷰
 $(function () {
-  $('.construction_site .map_view .all_area').click(function () {
+  $(".construction_site .map_view .all_area").click(function () {
     switch (count % 2) {
       case 0:
-          $(this)
-          .css("color", "#fff")
-          .css("background", "#3978fc");
-          $(this).children("img").attr("src", "asset/images/icon/all_area_on.png");
+        $(this).css("color", "#fff").css("background", "#3978fc");
+        $(this)
+          .children("img")
+          .attr("src", "asset/images/icon/all_area_on.png");
         break;
       default:
-          $(this)
-          .css("color", "#000")
-          .css("background", "#fff");
-          $(this).children("img").attr("src", "asset/images/icon/all_area.png");
+        $(this).css("color", "#000").css("background", "#fff");
+        $(this).children("img").attr("src", "asset/images/icon/all_area.png");
         break;
-      }
-      count++;
+    }
+    count++;
   });
 });
 
 // 공공기관 링크 (슬라이더)
-$(document).ready(function() {
+$(document).ready(function () {
   // PC 버전
-  var slider = $('.slider1').lightSlider({
-      item: 5,
-      loop: true,
-      pager: false,
-      slideMove: 1,
-      easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-      speed: 600,
+  var slider = $(".slider1").lightSlider({
+    item: 5,
+    loop: true,
+    pager: false,
+    slideMove: 1,
+    easing: "cubic-bezier(0.25, 0, 0.25, 1)",
+    speed: 600,
   });
   $("#lightSlider a").addClass("d-flex justify-content-center");
   $(".institutions_pc .prevBtn").click(function () {
@@ -176,31 +172,31 @@ $(document).ready(function() {
     slider.goToNextSlide();
   });
   // 모바일 버전
-  $(document).ready(function() {
-    var slider = $('.slider2').lightSlider({
-        item: 5,
-        loop: true,
-        pager: false,
-        slideMove: 1,
-        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-        speed: 600,
-        responsive : [
-            {
-                breakpoint:800,
-                settings: {
-                    item:3,
-                    slideMove:1,
-                    slideMargin:6,
-                  }
-            },
-            {
-                breakpoint:480,
-                settings: {
-                    item:2,
-                    slideMove:1
-                  }
-            }
-        ]
+  $(document).ready(function () {
+    var slider = $(".slider2").lightSlider({
+      item: 5,
+      loop: true,
+      pager: false,
+      slideMove: 1,
+      easing: "cubic-bezier(0.25, 0, 0.25, 1)",
+      speed: 600,
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            item: 3,
+            slideMove: 1,
+            slideMargin: 6,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            item: 2,
+            slideMove: 1,
+          },
+        },
+      ],
     });
     $(".institutions_m .prevBtn").click(function () {
       slider.goToPrevSlide();
@@ -210,10 +206,6 @@ $(document).ready(function() {
     });
   });
 });
-
-
-
-
 
 // 탭 전환
 $(function () {
@@ -243,30 +235,30 @@ $(function () {
 });
 
 // 메인 탭 (Easy Pie Chart)
-$(function() {
-  $('.insp_circle1').easyPieChart({
+$(function () {
+  $(".insp_circle1").easyPieChart({
     scaleColor: "transparent",
     lineWidth: 7.6923,
-    lineCap: 'butt',
-    barColor: '#5180e3',
-    trackColor:	"#dcdcdc",
-    animate: 500
+    lineCap: "butt",
+    barColor: "#5180e3",
+    trackColor: "#dcdcdc",
+    animate: 500,
   });
-  $('.insp_circle2').easyPieChart({
+  $(".insp_circle2").easyPieChart({
     scaleColor: "transparent",
     lineWidth: 7.6923,
-    lineCap: 'butt',
-    barColor: '#62c6ff',
-    trackColor:	"#dcdcdc",
-    animate: 500
+    lineCap: "butt",
+    barColor: "#62c6ff",
+    trackColor: "#dcdcdc",
+    animate: 500,
   });
-  $('.insp_circle3').easyPieChart({
+  $(".insp_circle3").easyPieChart({
     scaleColor: "transparent",
     lineWidth: 7.6923,
-    lineCap: 'butt',
-    barColor: '#a76ed5',
-    trackColor:	"#dcdcdc",
-    animate: 500
+    lineCap: "butt",
+    barColor: "#a76ed5",
+    trackColor: "#dcdcdc",
+    animate: 500,
   });
 });
 
@@ -276,14 +268,14 @@ var data = {
   datasets: [
     {
       data: [19, 10, 13, 14],
-      backgroundColor: ['#5180e3', '#34d2de', '#ffd12a', '#52e32e'],
+      backgroundColor: ["#5180e3", "#34d2de", "#ffd12a", "#52e32e"],
       borderWidth: 0,
     },
   ],
-}
+};
 
 var config3 = {
-  type: 'doughnut',
+  type: "doughnut",
   data: data,
   options: {
     responsive: true,
@@ -294,10 +286,7 @@ var config3 = {
     cutoutPercentage: 70,
   },
 };
-var myChart3 = new Chart(
-  document.getElementById('myChart3'),
-  config3
-);
+var myChart3 = new Chart(document.getElementById("myChart3"), config3);
 
 // 상황전파 버튼 (모바일)
 
@@ -311,13 +300,28 @@ $(function () {
   });
 });
 
+// 버거 메뉴 (모바일)
+$(function () {
+  $(".burger_btn").click(function () {
+    $(".mobile_menu").show();
+    $(".main_content").hide();
+  });
+  $(".close_btn").click(function () {
+    $(".mobile_menu").hide();
+    $(".main_content").show();
+  });
+});
+
 // 모바일 메뉴 아코디언
 $(function () {
-  $(".mobile_menu .m_sub_menu").hide();
-  $(".mobile_menu .m_menu_lists > ul > li > a").click(function () {
+  $(".m_sub_menu").hide();
+  $(".m_menu_lists > ul > li > a").click(function () {
     $(this).next().slideToggle(300);
     $("ul li a").not(this).next().slideUp(300);
     $(this).children(".accordion_btn").toggleClass("active");
+    if ($("ul li a").not(this).children(".accordion_btn").hasClass("active")) {
+      $("ul li a").not(this).children(".accordion_btn").removeClass("active");
+    }
     return false;
   });
 });
