@@ -965,6 +965,10 @@
     }
 
     /* 메인 탭 전환 */
+    .construction_site .area_info .tab_main > .tab_content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .construction_site .area_info .tab_main > .tab_index {
         padding-left: 20px;
         padding-right: 20px;
@@ -973,21 +977,41 @@
     /* 안전사고 발생 현황 */
 
     /* 서브 탭 전환 */
+    .construction_site .area_info .tab_sub > .tab_index li {
+        font-size: 15px;
+    }
+
+    .construction_site .area_info .safechk_result {
+        padding: 15px 8px;
+    }
+    .construction_site .area_info .safechk_result li:not(:last-child) {
+        padding-bottom: 15px;
+    }
     .construction_site .area_info .safechk_result span {
         font-size: 13px;
     }
     .construction_site .area_info .safechk_result span > sub {
         width: 5px;
         height: 5px;
+        margin-right: 5px;
     }
     .construction_site .area_info .safechk_result p {
         font-size: 13px;
+    }
+    .construction_site .area_info .safechk_result strong {
+        margin-right: 3px;
     }
 
     /* 공공기관 링크 모바일 버전 (슬라이더) */
     .construction_site .institutions_m {
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .construction_site .institutions_m .slideBtn {
+        width: 10%;
+    }
+    .construction_site .institutions_m .lSSlideOuter {
+        width: 90%;
     }
 }
 
@@ -1006,6 +1030,16 @@
     .construction_site .status_bg {
         padding: 25px 16px;
     }
+    .construction_site .content_title {
+        font-size: 18px;
+    }
+    .construction_site table th, .construction_site table td {
+        font-size: 13px;
+    }
+    .construction_site .start_status_chart tr:last-child td:last-child {
+        margin-bottom: 10px;
+    }
+    
 
     /* 지도 영역 */
     .construction_site .map_wrap {
@@ -1022,9 +1056,22 @@
     .construction_site .weather_wrap .weather {
         padding: 0 16px;
     }
+    .construction_site .weather_wrap p.day {
+        font-size: 14px;
+    }
+    .construction_site .weather_wrap .weather_main img {
+        width: 21px;
+    }
+    .construction_site .weather_wrap .weather_main p.temperture {
+        font-size: 13px;
+    }
+    .construction_site .weather_wrap .weather_main p.temperture strong {
+        font-size: 23px;
+    }
 
     /* 메인 탭 전환 */
     .construction_site .area_info .tab_main > .tab_index {
+        font-size: 15px;
         padding-left: 20px;
         padding-right: 20px;
     }

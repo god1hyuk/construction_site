@@ -310,3 +310,14 @@ $(function () {
     }
   });
 });
+
+// 모바일 메뉴 아코디언
+$(function () {
+  $(".mobile_menu .m_sub_menu").hide();
+  $(".mobile_menu .m_menu_lists > ul > li > a").click(function () {
+    $(this).next().slideToggle(300);
+    $("ul li a").not(this).next().slideUp(300);
+    $(this).children(".accordion_btn").toggleClass("active");
+    return false;
+  });
+});
