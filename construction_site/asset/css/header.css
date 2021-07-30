@@ -26,6 +26,8 @@
   background-color: #20b5c8;
 }
 .construction_site .sideMenu_item {
+  position: relative;
+  
   background-repeat: no-repeat;
   background-position: center 1.4815vh;
   border-top: 1px solid #595a65;
@@ -82,6 +84,34 @@
 .construction_site .notice.active {
   background-image: url(../images/icon/side_menu5_on.png) !important;
 }
+/* 사이드 서브메뉴 */
+.construction_site .sideMenu_item ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 180px;
+  padding: 24px 20px;
+  background: #fff;
+  border: 1px solid #2f313e;
+}
+.construction_site .sideMenu_item ul li:not(:last-child) {
+  padding-bottom: 15px;
+}
+.construction_site .sideMenu_item li a {
+  display: flex;
+  align-items: center;
+}
+.construction_site .sideMenu_item li span {
+  line-height: 1;
+  font-size: 15px;
+  color: #000;
+  padding-left: 4px;
+}
+.construction_site .sideMenu_item ul li:hover span {
+  color: #cdced8;
+}
+
 /* 상황전파 */
 .construction_site li.acdnt_sprd {
   border-top: 1px solid #595a65;
@@ -168,46 +198,50 @@
 }
 .construction_site .header_pc .sub_title p {
   position: relative;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 .construction_site .header_pc .sub_title p::before {
   position: absolute;
   content: "";
   top: 50%;
   transform: translateY(-50%);
-  left: -0.75rem;
+  left: -12px;
   width: 5px;
   height: 14px;
   background: #9dd1ff;
   border-radius: 2.5px;
 }
 .construction_site .header_pc .sub_title span {
-  font-size: 1.125rem;
-  margin-left: 1.125rem;
+  font-size: 18px;
+  margin-left: 18px;
 }
 .construction_site .header_pc .logout {
-  margin: 0 2rem;
+  margin: 0 32px;
   transition: color .13s;
 }
 .construction_site .header_pc .logout_icon {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 36px;
+  height: 36px;
   background-image: url(../images/icon/logout.png);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #979fc6;
-  margin-right: 0.5rem;
+  margin-right: 8px;
   border-radius: 100px;
   transition: background .13s;
 }
-.construction_site .header_pc .logout.active .logout_icon {
+.construction_site .header_pc .logout:hover {
+  color: #64eef9;
+}
+.construction_site .header_pc .logout:hover .logout_icon {
   background-image: url(../images/icon/logout_on.png);
+  background-color: #fff;
 }
 .construction_site .header_pc .go_map button {
-  width: 7rem;
-  height: 2.25rem;
+  width: 112px;
+  height: 36px;
   font-weight: bold;
-  font-size: 0.875rem;
+  font-size: 14px;
   color: #fff;
   padding: 0;
   background: #3b4b93;
@@ -215,8 +249,23 @@
   border-radius: 3px;
   transition: all .13s;
 }
-.construction_site .header_pc .go_map button img {
-  padding-left: 0.5rem;
+.construction_site .header_pc .go_map button:hover {
+  color: #192b80;
+  background-color: #d3d9f6;
+}
+.construction_site .header_pc .go_map button:hover .go_map_icon {
+  background-color: #28344c;
+  background-image: url(../images/icon/go_map_on.png);
+}
+.construction_site .header_pc .go_map_icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  background-color: #fff;
+  background-image: url(../images/icon/go_map.png);
+  background-repeat: no-repeat;
+  background-position: 55%;
+  border-radius: 100px;
 }
 
 /* 헤더 (태블릿 & 모바일) */
@@ -273,7 +322,7 @@
   }
 }
 
-/* 모바일 메뉴 (로그인) */
+/* 모바일 메뉴 (로그인 버전) */
 .mobile_menu {
   display: none;
   position: relative;
@@ -284,7 +333,10 @@
   background: #fff;
   z-index: 999;
 }
-.mobile_menu .m_menu_logout {
+/* .mobile_menu .m_login {
+  display: none;
+} */
+.mobile_menu .m_logout {
   display: none;
 }
 /* 모바일 메뉴 상단 */
@@ -303,6 +355,7 @@
   padding: 32px 27px 16px;
 }
 .mobile_menu .login_text span {
+  line-height: 1;
   font-size: 32px;
   color: #fff;
   padding-left: 16px;
@@ -320,6 +373,7 @@
   border-radius: 100px;
 }
 .mobile_menu .login_link {
+  font-size: 20px;
   color: #fff;
   margin-left: 27px;
 }
@@ -377,19 +431,19 @@
 .mobile_menu .m_menu_lists .accordion_btn.active {
   transform: rotate(180deg);
 }
-.mobile_menu .m_sub_menu {
+.mobile_menu .m_submenu {
   padding: 30px 0;
   background: #ededed;
 }
-.mobile_menu .m_sub_menu li:not(:last-child) {
+.mobile_menu .m_submenu li:not(:last-child) {
   padding-bottom: 24px;
 }
-.mobile_menu .m_sub_menu li span {
+.mobile_menu .m_submenu li span {
   font-size: 26px;
   color: #28344c;
   padding-left: 5px;
 }
-.mobile_menu .m_sub_menu li:hover span {
+.mobile_menu .m_submenu li:hover span {
   color: #3978fc;
 }
 /* 모바일 메뉴 하단 */
@@ -456,4 +510,31 @@
 }
 .mobile_menu .account_wrap button:first-child {
   border-right: 1px solid #b9b9b9;
+}
+
+/* 모바일 메뉴 (로그아웃 버전) */
+.mobile_menu .m_logout .login_icon {
+  background-color: transparent;
+  background-image: url(../images/icon/profile.png);
+  background-size: cover;
+}
+.mobile_menu .m_logout .login_text span {
+  font-size: 26px;
+}
+.mobile_menu .m_logout .login_text strong {
+  position: relative;
+  font-size: 32px;
+  padding-right: 55px;
+}
+.mobile_menu .m_logout .login_text strong::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 25px;
+  width: 2px;
+  height: 30px;
+  background: #a4c1ff;
+}
+.mobile_menu .m_logout .account_wrap button {
+  width: 100%;
 }

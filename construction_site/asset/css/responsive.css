@@ -536,6 +536,8 @@
         padding: 0 25px;
     }
 
+    /* 메인 컨텐츠 */
+
     /* Today 안전사고 */
     .construction_site .day_stats_bg {
         margin-top: 10px;
@@ -590,6 +592,10 @@
     .construction_site .content_title {
         font-size: 28px;
         padding-left: 12px;
+    }
+    .construction_site .start_status .title_wrap img,
+    .construction_site .damage_status .title_wrap img {
+        width: auto;
     }
 
     .construction_site .start_status_chart {
@@ -647,6 +653,9 @@
     .construction_site .tab_sub > .tab_content {
         padding-top: 25px;
     }
+    .construction_site .area_info .safechk_occu .title_wrap img {
+        width: auto;
+      }
     .construction_site .area_info .safechk_circle {
         width: 172px;
         height: 172px;
@@ -748,7 +757,7 @@
         height: 30px;
         background-size: 50%;
     }
-    .mobile_menu .m_sub_menu li span {
+    .mobile_menu .m_submenu li span {
         font-size: 20px;
     }
     /* 모바일 메뉴 하단 */
@@ -788,6 +797,22 @@
     .mobile_menu .switch_body {
         height: 22px;
     }
+
+    /* 모바일 메뉴 (로그아웃 버전) */
+    .mobile_menu .m_logout .login_text span {
+        font-size: 20px;
+    }
+    .mobile_menu .m_logout .login_text strong {
+        font-size: 24px;
+        padding-right: 32px;
+    }
+    .mobile_menu .m_logout .login_text strong::after {
+        top: 22%;
+        right: 14px;
+        height: 24px;
+    }
+
+    /* 메인 컨텐츠 */
 
     /* 건축물 착공 현황 & 안전사고 피해현황 공통 */
     .construction_site .content_title {
@@ -951,6 +976,101 @@
         height: 52px;
     }
 
+    /* 모바일 메뉴 (로그인) */
+    .mobile_menu .m_menu_top {
+        height: 88px;
+    }
+    /* 모바일 메뉴 상단 */
+    .mobile_menu .login_text {
+        padding: 18px 15px 7px;
+    }
+    .mobile_menu .login_icon {
+        width: 32px;
+        height: 32px;
+        background-size: 40%;
+    }
+    .mobile_menu .login_text span {
+        font-size: 18px;
+    }
+    .mobile_menu .login_link {
+        font-size: 13px;
+        margin-left: 15px;
+    }
+    .mobile_menu .login_link img {
+        width: 6px;
+        margin-left: 9px;
+    }
+    .mobile_menu .close_btn {
+        top: 18px;
+        right: 15px;
+        width: 18px;
+        height: 18px;
+    }
+    /* 모바일 메뉴 리스트 */
+    .mobile_menu .m_menu_lists > ul {
+        padding: 88px 15px 200px;
+    }
+    .mobile_menu .m_menu_lists > ul > li:not(:last-child) {
+        border-width: 1px;
+    }
+    .mobile_menu .m_menu_lists li a {
+        padding: 20px 10px;
+    }
+    .mobile_menu .m_menu_lists li p {
+        font-size: 15px;
+    }
+    .mobile_menu .m_menu_lists li img {
+        width: 7px;
+    }
+    .mobile_menu .m_menu_lists .accordion_btn {
+        width: 20px;
+        height: 20px;
+        background-size: 55%;
+    }
+    .mobile_menu .m_submenu {
+        padding: 18px 0;
+    }
+    .mobile_menu .m_submenu li span {
+        font-size: 15px;
+    }
+    /* 모바일 메뉴 하단 */
+    .mobile_menu .m_menu_bottom {
+        margin-top: 50px;
+    }
+    .mobile_menu .bottom_menu {
+        height: 100px;
+        margin-top: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .mobile_menu .home_btn {
+        font-size: 18px;
+    }
+    .mobile_menu .home_btn img {
+        width: 20px;
+        margin-right: 7px;
+    }
+    .mobile_menu .night_mode_m p {
+        font-size: 16px;
+    }
+    .mobile_menu .account_wrap button {
+        height: 42px;
+        font-size: 14px;
+    }
+    
+    /* 모바일 메뉴 (로그아웃 버전) */
+    .mobile_menu .m_logout .login_text span {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+    .mobile_menu .m_logout .login_text strong {
+        font-size: 18px;
+    }
+    .mobile_menu .m_logout .login_text strong::after {
+        top: 22%;
+        height: 18px;
+    }
+
     /* 메인 컨텐츠 */
 
     /* Today 안전사고 */
@@ -985,6 +1105,14 @@
     .construction_site .status_bg {
         padding: 25px 20px;
     }
+    .construction_site .start_status .title_wrap img,
+    .construction_site .damage_status .title_wrap img {
+        width: 17px;
+    }
+    .construction_site .content_title {
+        font-size: 20px;
+        padding-left: 10px;
+    }
     .construction_site table th, .construction_site table td {
         font-size: 16px;
     }
@@ -992,9 +1120,6 @@
         margin-bottom: 4px;
     }
 
-    .construction_site .content_title {
-        font-size: 20px;
-    }
 
     /* 지도 영역 */
     .construction_site .map_wrap {
@@ -1049,6 +1174,9 @@
     }
 
     /* 안전사고 발생 현황 */
+    .construction_site .area_info .safechk_occu .title_wrap img {
+        width: 9px;
+    }
 
     /* 서브 탭 전환 */
     .construction_site .area_info .tab_sub > .tab_index li {
@@ -1094,89 +1222,6 @@
     .col-4 {
         padding: 0 16px;
     }
-
-    /* 모바일 메뉴 (로그인) */
-    .mobile_menu .m_menu_top {
-        height: 88px;
-    }
-    /* 모바일 메뉴 상단 */
-    .mobile_menu .login_text {
-        padding: 18px 15px 7px;
-    }
-    .mobile_menu .login_icon {
-        width: 32px;
-        height: 32px;
-        background-size: 40%;
-    }
-    .mobile_menu .login_text span {
-        font-size: 18px;
-    }
-    .mobile_menu .login_link {
-        font-size: 13px;
-        margin-left: 15px;
-    }
-    .mobile_menu .login_link img {
-        width: 6px;
-        margin-left: 9px;
-    }
-    .mobile_menu .close_btn {
-        top: 18px;
-        right: 15px;
-        width: 18px;
-        height: 18px;
-    }
-    /* 모바일 메뉴 리스트 */
-    .mobile_menu .m_menu_lists > ul {
-        padding: 88px 15px 200px;
-    }
-    .mobile_menu .m_menu_lists > ul > li:not(:last-child) {
-        border-width: 1px;
-    }
-    .mobile_menu .m_menu_lists li a {
-        padding: 20px 10px;
-    }
-    .mobile_menu .m_menu_lists li p {
-        font-size: 15px;
-    }
-    .mobile_menu .m_menu_lists li img {
-        width: 7px;
-    }
-    .mobile_menu .m_menu_lists .accordion_btn {
-        width: 20px;
-        height: 20px;
-        background-size: 55%;
-    }
-    .mobile_menu .m_sub_menu {
-        padding: 18px 0;
-    }
-    .mobile_menu .m_sub_menu li span {
-        font-size: 15px;
-    }
-    /* 모바일 메뉴 하단 */
-    .mobile_menu .m_menu_bottom {
-        margin-top: 50px;
-    }
-    .mobile_menu .bottom_menu {
-        height: 100px;
-        margin-top: 16px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .mobile_menu .home_btn {
-        font-size: 18px;
-    }
-    .mobile_menu .home_btn img {
-        width: 20px;
-        margin-right: 7px;
-    }
-    .mobile_menu .night_mode_m p {
-        font-size: 16px;
-    }
-    .mobile_menu .account_wrap button {
-        height: 42px;
-        font-size: 14px;
-    }
-
 
     /* Today 안전사고 */
     .construction_site .day_stats_bg {

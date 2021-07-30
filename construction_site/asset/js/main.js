@@ -3,39 +3,17 @@ var count = 0;
 $(function () {
   $(".construction_site .switch_wrap").click(function () {
     if (count % 2 === 0) {
+      $(this).prev("p").text("주간모드");
       $(this).children(".switch_btn").addClass("active");
+      $("#changeStyle1").attr("href", "asset/css/header_dark.css");
+      $("#changeStyle2").attr("href", "asset/css/style_dark.css");
     } else if (count % 2 !== 0) {
+      $(this).prev("p").text("야간모드");
       $(this).children(".switch_btn").removeClass("active");
+      $("#changeStyle1").attr("href", "asset/css/header.css");
+      $("#changeStyle2").attr("href", "asset/css/style.css");
     }
     count++;
-  });
-});
-
-// 헤더 메뉴 active
-$(function () {
-  $(".construction_site .logout").mouseover(function () {
-    $(this).addClass("active");
-    $(this).css("color", "#64eef9");
-    $(this)
-      .children("a")
-      .children(".logout_icon")
-      .css("background-color", "#fff");
-  });
-  $(".construction_site .logout").mouseout(function () {
-    $(this).removeClass("active");
-    $(this).css("color", "#fff");
-    $(this)
-      .children("a")
-      .children(".logout_icon")
-      .css("background-color", "#979fc6");
-  });
-  $(".construction_site .go_map button").mouseover(function () {
-    $(this).children("img").attr("src", "asset/images/icon/go_map_on.png");
-    $(this).css("background-color", "#d3d9f6").css("color", "#192b80");
-  });
-  $(".construction_site .go_map button").mouseout(function () {
-    $(this).children("img").attr("src", "asset/images/icon/go_map.png");
-    $(this).css("background-color", "#3b4b93").css("color", "#fff");
   });
 });
 
@@ -64,12 +42,15 @@ $(function () {
   });
 });
 
-// 건축물 착공 현황
-// $(function () {
-//   $(".start_status_chart .progress_bar").css("width", "0").animate({
-//     width: "80%"
-//   }, 1200);
-// });
+// 사이드 서브메뉴
+$(function () {
+  $(".sideMenu_item").mouseover(function () {
+    $(this).children(".pc_submenu").stop().fadeIn(150);
+  });
+  $(".sideMenu_item").mouseout(function () {
+    $(this).children(".pc_submenu").stop().fadeOut(150);
+  });
+});
 
 // 지도영역 옵션
 $(function () {
@@ -316,7 +297,7 @@ $(function () {
 
 // 모바일 메뉴 아코디언
 $(function () {
-  $(".m_sub_menu").hide();
+  $(".m_submenu").hide();
   $(".m_menu_lists > ul > li > a").click(function () {
     $(this).next().slideToggle(300);
     $("ul li a").not(this).next().slideUp(300);

@@ -90,6 +90,10 @@
   font-size: 1.8519vh;
   padding-left: 7px;
 }
+.construction_site .start_status .title_wrap img,
+.construction_site .damage_status .title_wrap img {
+  width: 17px;
+}
 .construction_site .start_status_chart,
 .construction_site .damage_status_chart {
   width: 100%;
@@ -594,7 +598,6 @@
   background: #fff;
 }
 
-/* 안전사고 발생 현황 */
 .construction_site .area_info .inspection ul {
   padding: 3.7037vh 0;
 }
@@ -619,15 +622,12 @@
 .construction_site .area_info .inspection .circle .text_wrap strong {
   font-family: 'NotoSansKR-Bold';
   font-size: 3.3333vh;
-  /* font-size: 36px; */
 }
 .construction_site .area_info .inspection .circle .text_wrap span {
   font-size: 1.6667vh;
-  /* font-size: 18px; */
 }
 .construction_site .area_info .inspection .circle .text_wrap p {
   font-size: 1.4815vh;
-  /* font-size: 16px; */
   color: #2296fb;
   padding-top: 5px;
 }
@@ -636,6 +636,9 @@
 .construction_site .area_info .safechk_occu {
   height: 60%;
   margin: 0 auto;
+}
+.construction_site .area_info .safechk_occu .title_wrap img {
+  width: 9px;
 }
 .construction_site .area_info .safechk_wrap {
   margin-top: 1.3889vh;
