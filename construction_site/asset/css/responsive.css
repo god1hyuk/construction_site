@@ -1120,6 +1120,8 @@
         margin-left: 9px;
     }
     .mobile_menu .close_btn {
+        top: 18px;
+        right: 15px;
         width: 18px;
         height: 18px;
     }
