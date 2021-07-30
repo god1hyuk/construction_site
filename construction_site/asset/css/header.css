@@ -285,7 +285,7 @@
   z-index: 999;
 }
 .mobile_menu .m_menu_logout {
-  display: none
+  display: none;
 }
 /* 모바일 메뉴 상단 */
 .mobile_menu .m_menu_top {
@@ -331,13 +331,14 @@
   position: absolute;
   top: 32px;
   right: 28px;
-  width: 34px;
-  height: 34px;
+  width: 35px;
+  height: 35px;
   padding: 0;
+  background-image: url(../images/icon/close_btn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
   background-color: transparent;
-}
-.mobile_menu .close_btn img {
-  width: 98%;
 }
 /* 모바일 메뉴 리스트 */
 .mobile_menu .m_menu_lists {
