@@ -273,32 +273,31 @@
   }
 }
 
-
-
-
+/* 모바일 메뉴 (로그인) */
 .mobile_menu {
-  position: absolute;
+  display: none;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
   background: #fff;
   z-index: 999;
 }
+/* 모바일 메뉴 상단 */
 .mobile_menu .m_menu_top {
-  position: relative;
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 170px;
   background-image: url(../images/m_menu_bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
+  z-index: 999;
 }
 .mobile_menu .login_text {
-  padding-top: 32px;
-  padding-left: 27px;
-  padding-bottom: 16px;
+  padding: 32px 27px 16px;
 }
 .mobile_menu .login_text span {
   font-size: 32px;
@@ -311,7 +310,10 @@
 .mobile_menu .login_icon {
   width: 64px;
   height: 64px;
-  background: #28344c;
+  background-color: #28344c;
+  background-image: url(../images/icon/login.png);
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 100px;
 }
 .mobile_menu .login_link {
@@ -334,9 +336,13 @@
   background-size: cover;
   background-color: transparent;
 }
-
+/* 모바일 메뉴 리스트 */
 .mobile_menu .m_menu_lists {
-  padding: 0 25px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.mobile_menu .m_menu_lists > ul {
+  padding: 170px 25px 312px;
 }
 .mobile_menu .m_menu_lists li a {
   padding: 35px 16px;
@@ -382,10 +388,15 @@
 .mobile_menu .m_sub_menu li:hover span {
   color: #3978fc;
 }
-
+/* 모바일 메뉴 하단 */
 .mobile_menu .m_menu_bottom {
-  margin-top: 80px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 100px;
+  background: #fafafa;
   border-top: 1px solid #707070;
+  z-index: 1;
 }
 .mobile_menu .bottom_menu {
   height: 150px;
@@ -424,11 +435,10 @@
 .mobile_menu .switch_body {
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 90px;
+  width: 100%;
   height: 40px;
   background: #28344c;
 }
-
 .mobile_menu .account_wrap {
   width: 100%;
 }
@@ -442,11 +452,4 @@
 }
 .mobile_menu .account_wrap button:first-child {
   border-right: 1px solid #b9b9b9;
-}
-
-.mobile_menu {
-  display: none;
-}
-.construction_site .main_content {
-  /* display: none; */
 }
