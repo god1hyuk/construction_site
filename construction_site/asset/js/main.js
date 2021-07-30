@@ -305,10 +305,12 @@ $(function () {
   $(".burger_btn").click(function () {
     $(".mobile_menu").show();
     $(".main_content").hide();
+    $(".acdnt_sprd_m").hide();
   });
   $(".close_btn").click(function () {
     $(".mobile_menu").hide();
     $(".main_content").show();
+    $(".acdnt_sprd_m").show();
   });
 });
 
