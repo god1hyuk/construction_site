@@ -32,7 +32,7 @@
     <!-- <link rel="stylesheet" href="asset/css/style_dark.css" /> -->
 
     <!-- Responsive -->
-    <link rel="stylesheet" href="asset/css/responsive.css" />
+    <link rel="stylesheet" id="changeStyle3" href="asset/css/responsive.css" />
     
     <title>서울시 민간건축공사장 안전관리 정보화시스템</title>
   </head>
@@ -45,31 +45,37 @@
         <nav class="side_menu text-center nt_rg">
           <ul>
             <li class="home">
-              <a href="index.html">
+              <a href="index.html" class="d-flex align-items-center justify-content-center">
+                <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
               </a>
             </li>
-            <li class="cnstrst_manage sideMenu_item" value="0">
+            <li class="sideMenu_item" value="0">
               <a href="javascript: void(0);">
+                <div class="sideMenu_icon"></div>
                 <p>공사장관리</p>
               </a>
             </li>
-            <li class="bldg_manage sideMenu_item" value="1">
+            <li class="sideMenu_item" value="1">
               <a href="javascript: void(0);">
+                <div class="sideMenu_icon"></div>
                 <p>건축물관리</p>
               </a>
             </li>
-            <li class="acdnt_info sideMenu_item" value="2">
+            <li class="sideMenu_item" value="2">
               <a href="javascript: void(0);">
+                <div class="sideMenu_icon"></div>
                 <p>사고정보</p>
               </a>
             </li>
-            <li class="cctv sideMenu_item" value="3">
+            <li class="sideMenu_item" value="3">
               <a href="javascript: void(0);">
+                <div class="sideMenu_icon"></div>
                 <p>CCTV</p>
               </a>
             </li>
-            <li class="advisory sideMenu_item" value="4">
+            <li class="sideMenu_item" value="4">
               <a href="javascript: void(0);">
+                <div class="sideMenu_icon"></div>
                 <p>자문단관리</p>
               </a>
               <ul class="pc_submenu">
@@ -87,8 +93,9 @@
                 </li>
               </ul>
             </li>
-            <li class="notice sideMenu_item" value="5">
+            <li class="sideMenu_item" value="5">
               <a href="javascript: void(0);">
+                <div class="sideMenu_icon"></div>
                 <p>알림마당</p>
               </a>
               <ul class="pc_submenu">
@@ -407,9 +414,11 @@
                 <div class="day_stats_bg">
                   <div class="day_stats nt_b">
                     <div class="d_stats_header d-flex align-items-center justify-content-center">
-                      <div class="d_stats_title d-flex align-items-center justify-content-center">
-                        <h3>Today</h3>
-                        <span class="nt_rg">안전사고</span>
+                      <div class="d_stats_title">
+                        <div class="title_wrap d-flex align-items-center justify-content-center">
+                          <h3>Today</h3>
+                          <span class="nt_rg">안전사고</span>
+                        </div>
                       </div>
                     </div>
                     <div class="d_stats_lists d-flex align-items-center justify-content-center">
@@ -634,9 +643,7 @@
                 </div>
                 <!-- 공공기관 링크 PC버전 (슬라이더) -->
                 <div class="institutions_pc institutions d-flex align-items-center justify-content-between">
-                  <a class="prevBtn slideBtn">
-                    <img src="asset/images/icon/prev_arrow.png" alt="슬라이드_이전버튼" />
-                  </a>
+                  <a class="prevBtn slideBtn"></a>
                   <ul id="lightSlider" class="slider1">
                     <li>
                       <a href="javascript: void(0);">
@@ -690,16 +697,14 @@
                       </a>
                     </li>
                   </ul>
-                  <a class="nextBtn slideBtn">
-                    <img src="asset/images/icon/next_arrow.png" alt="슬라이드_다음버튼">
-                  </a>
+                  <a class="nextBtn slideBtn"></a>
                 </div>
               </div>
             </div>                                                      
 
             <div class="col-4">
               <!-- 지역별 현황 영역 -->
-              <div class="area_info h_full">
+              <div class="area_info d-flex flex-column justify-content-between h_full">
                 <!-- 날씨 정보 -->
                 <div class="weather_wrap d-flex align-items-center justify-content-between">
                   <div class="area_name">
@@ -748,7 +753,29 @@
                     <li>소형</li>
                   </ul>
                   <div class="tab_content">
-                    <div class="inspection">
+                    <div class="inspection insp_light">
+                      <ul class="d-flex align-items-center justify-content-center nt_rg">
+                        <li class="insp_circle1 circle d-flex justify-content-center" data-percent="59">
+                          <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
+                            <div><strong>12</strong><span>건</span></div>
+                            <p>점검계획</p>
+                          </div>
+                        </li>
+                        <li class="insp_circle2 circle d-flex justify-content-center" data-percent="23">
+                          <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
+                            <div><strong>5</strong><span>건</span></div>
+                            <p>점검완료</p>
+                          </div>
+                        </li>
+                        <li class="insp_circle3 circle d-flex justify-content-center" data-percent="88">
+                          <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
+                            <div><strong>7</strong><span>%</span></div>
+                            <p>점검비율</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="inspection insp_dark">
                       <ul class="d-flex align-items-center justify-content-center nt_rg">
                         <li class="insp_circle1 circle d-flex justify-content-center" data-percent="59">
                           <div class="text_wrap d-flex flex-column align-items-center justify-content-center">
@@ -784,7 +811,8 @@
                           </ul>
                           <div class="tab_content d-flex align-items-center justify-content-between">
                             <div class="safechk_circle">
-                              <canvas id="myChart3"></canvas>
+                              <canvas id="myChart"></canvas>
+                              <!-- <canvas id="myChart_dark"></canvas> -->
                               <div class="text_wrap">
                                   <strong class="nt_b">56</strong>
                                   <p class="nt_m">건</p>

@@ -7,47 +7,29 @@ $(function () {
       $(this).children(".switch_btn").addClass("active");
       $("#changeStyle1").attr("href", "asset/css/header_dark.css");
       $("#changeStyle2").attr("href", "asset/css/style_dark.css");
+      $("#changeStyle3").attr("href", "asset/css/responsive_dark.css");
+      $("#myChart").addClass("dark");
+      
+
+
     } else if (count % 2 !== 0) {
       $(this).prev("p").text("야간모드");
       $(this).children(".switch_btn").removeClass("active");
       $("#changeStyle1").attr("href", "asset/css/header.css");
       $("#changeStyle2").attr("href", "asset/css/style.css");
+      $("#changeStyle3").attr("href", "asset/css/responsive.css");
+      $("#myChart").removeClass("dark");
     }
     count++;
   });
 });
 
-// 사이드 메뉴 active
-$(function () {
-  var sideMenu_num;
-  $(".construction_site .sideMenu_item").mouseover(function () {
-    sideMenu_num = this.value;
-    $(this).css(
-      "background-image",
-      "url(asset/images/icon/side_menu" + sideMenu_num + "_on.png)"
-    );
-    $(this).addClass("hover");
-  });
-  $(".construction_site .sideMenu_item").mouseout(function () {
-    sideMenu_num = this.value;
-    $(this).css(
-      "background-image",
-      "url(asset/images/icon/side_menu" + sideMenu_num + ".png)"
-    );
-    $(this).removeClass("hover");
-  });
-  $(".construction_site .sideMenu_item").click(function () {
-    $(".construction_site .sideMenu_item").removeClass("active");
-    $(this).addClass("active");
-  });
-});
-
 // 사이드 서브메뉴
 $(function () {
-  $(".sideMenu_item").mouseover(function () {
+  $(".construction_site .sideMenu_item").mouseover(function () {
     $(this).children(".pc_submenu").stop().fadeIn(150);
   });
-  $(".sideMenu_item").mouseout(function () {
+  $(".construction_site .sideMenu_item").mouseout(function () {
     $(this).children(".pc_submenu").stop().fadeOut(150);
   });
 });
@@ -120,13 +102,13 @@ $(function () {
   $(".construction_site .map_view .all_area").click(function () {
     switch (count % 2) {
       case 0:
-        $(this).css("color", "#fff").css("background", "#3978fc");
+        $(this).addClass("active");
         $(this)
           .children("img")
           .attr("src", "asset/images/icon/all_area_on.png");
         break;
       default:
-        $(this).css("color", "#000").css("background", "#fff");
+        $(this).removeClass("active");
         $(this).children("img").attr("src", "asset/images/icon/all_area.png");
         break;
     }
@@ -217,7 +199,7 @@ $(function () {
 
 // 메인 탭 (Easy Pie Chart)
 $(function () {
-  $(".insp_circle1").easyPieChart({
+  $(".insp_light .insp_circle1").easyPieChart({
     scaleColor: "transparent",
     lineWidth: 7.6923,
     lineCap: "butt",
@@ -225,7 +207,7 @@ $(function () {
     trackColor: "#dcdcdc",
     animate: 500,
   });
-  $(".insp_circle2").easyPieChart({
+  $(".insp_light .insp_circle2").easyPieChart({
     scaleColor: "transparent",
     lineWidth: 7.6923,
     lineCap: "butt",
@@ -233,7 +215,7 @@ $(function () {
     trackColor: "#dcdcdc",
     animate: 500,
   });
-  $(".insp_circle3").easyPieChart({
+  $(".insp_light .insp_circle3").easyPieChart({
     scaleColor: "transparent",
     lineWidth: 7.6923,
     lineCap: "butt",
@@ -241,10 +223,82 @@ $(function () {
     trackColor: "#dcdcdc",
     animate: 500,
   });
+  $(".insp_light .insp_circle1").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#5180e3",
+    trackColor: "#dcdcdc",
+    animate: 500,
+  });
+  $(".insp_light .insp_circle2").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#62c6ff",
+    trackColor: "#dcdcdc",
+    animate: 500,
+  });
+  $(".insp_light .insp_circle3").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#a76ed5",
+    trackColor: "#dcdcdc",
+    animate: 500,
+  });
+  $(".insp_light .insp_circle1").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#5180e3",
+    trackColor: "#dcdcdc",
+    animate: 500,
+  });
+  $(".insp_light .insp_circle2").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#62c6ff",
+    trackColor: "#dcdcdc",
+    animate: 500,
+  });
+  $(".insp_light .insp_circle3").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#a76ed5",
+    trackColor: "#dcdcdc",
+    animate: 500,
+  });
+  $(".insp_dark .insp_circle1").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#64eef9",
+    trackColor: "#5f6c94",
+    animate: 500,
+  });
+  $(".insp_dark .insp_circle2").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#56cbfd",
+    trackColor: "#5f6c94",
+    animate: 500,
+  });
+  $(".insp_dark .insp_circle3").easyPieChart({
+    scaleColor: "transparent",
+    lineWidth: 7.6923,
+    lineCap: "butt",
+    barColor: "#50a4ff",
+    trackColor: "#5f6c94",
+    animate: 500,
+  });
 });
 
 // 안전사고 발생 현황 (Chart JS)
-var data = {
+var data_light = {
   labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
   datasets: [
     {
@@ -254,10 +308,20 @@ var data = {
     },
   ],
 };
+var data_dark = {
+  labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
+  datasets: [
+    {
+      data: [19, 10, 13, 14],
+      backgroundColor: ["red", "#34d2de", "#ffd12a", "#52e32e"],
+      borderWidth: 0,
+    },
+  ],
+};
 
-var config3 = {
+var config_light = {
   type: "doughnut",
-  data: data,
+  data: data_light,
   options: {
     responsive: true,
     aspectRatio: 1,
@@ -267,7 +331,10 @@ var config3 = {
     cutoutPercentage: 70,
   },
 };
-var myChart3 = new Chart(document.getElementById("myChart3"), config3);
+var myChart_light = new Chart(document.getElementById("myChart"), config_light);
+
+
+
 
 // 상황전파 버튼 (모바일)
 

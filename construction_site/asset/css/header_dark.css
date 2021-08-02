@@ -1,89 +1,111 @@
 /* 사이드 메뉴 (PC) */
 .construction_site aside {
-    /* display: none; */
     position: fixed;
     width: 70px;
     height: 100%;
     background: rgb(83,220,218);
     background: linear-gradient(180deg, rgba(83,220,218,1) 0%, rgba(92,137,220,1) 100%);
-    box-shadow: 1px 0px 7px rgba(0, 0, 0, 5);
+    box-shadow: 1px 0 7px rgba(0, 0, 0, 5);
     z-index: 980;
 }
 .construction_site .side_menu li {
     width: 100%;
-    color: #cdced8;
+    color: #fff;
 }
 .construction_site .side_menu a {
     display: block;
-    position: relative;
     width: 100%;
     height: 100%;
 }
 .construction_site .home {
     height: 70px;
-    background-image: url(../images/icon/home_btn.png);
+    background-image: url("../images/icon/home_btn.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #3752cd;
 }
 .construction_site .sideMenu_item {
     position: relative;
-    
-    background-repeat: no-repeat;
-    background-position: center 1.4815vh;
-    /* border-top: 1px solid #595a65;
-    border-bottom: 1px solid #1e2024; */
-    transition: background .13s;
+    padding-top: 15px;
 }
 .construction_site .sideMenu_item p {
     width: 100%;
     font-size: 13px;
-    padding-top: 4.8148vh;
-    padding-bottom: 1.4815vh;
+    padding-top: 7px;
+    padding-bottom: 1.3889vh;
 }
 .construction_site .sideMenu_item:not(:last-child):hover {
-    color: #000;
+    position: relative;
+    color: #394467;
     background-color: #fff;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
 }
-.construction_site .sideMenu_item:not(:last-child).active {
-    color: #000 !important;
-    background-color: #fff !important;
+.construction_site .sideMenu_item:not(:last-child):hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #3e496d;
 }
-.construction_site .cnstrst_manage {
-    background-image: url(../images/icon/side_menu0.png);
+.construction_site .sideMenu_item:not(:last-child):hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #3e496d;
 }
-.construction_site .cnstrst_manage.active {
-    background-image: url(../images/icon/side_menu0_on.png) !important;
+.construction_site .sideMenu_icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100px;
+    transition: background 0.13s;
 }
-.construction_site .bldg_manage {
-    background-image: url(../images/icon/side_menu1.png);
+.construction_site .sideMenu_item:hover .sideMenu_icon {
+    background-color: #53bada;
 }
-.construction_site .bldg_manage.active {
-    background-image: url(../images/icon/side_menu1_on.png) !important;
+.construction_site .sideMenu_item[value="0"] .sideMenu_icon {
+    background-image: url("../images/icon/side_menu0_dark.png");
 }
-.construction_site .acdnt_info {
-    background-image: url(../images/icon/side_menu2.png);
+.construction_site .sideMenu_item[value="0"]:hover .sideMenu_icon {
+    background-image: url("../images/icon/side_menu0_dark_on.png") !important;
 }
-.construction_site .acdnt_info.active {
-    background-image: url(../images/icon/side_menu2_on.png) !important;
+.construction_site .sideMenu_item[value="1"] .sideMenu_icon {
+    background-image: url("../images/icon/side_menu1_dark.png");
 }
-.construction_site .cctv {
-    background-image: url(../images/icon/side_menu3.png);
+.construction_site .sideMenu_item[value="1"]:hover .sideMenu_icon {
+    background-image: url("../images/icon/side_menu1_dark_on.png") !important;
 }
-.construction_site .cctv.active {
-    background-image: url(../images/icon/side_menu3_on.png) !important;
+.construction_site .sideMenu_item[value="2"] .sideMenu_icon {
+    background-image: url("../images/icon/side_menu2_dark.png");
 }
-.construction_site .advisory {
-    background-image: url(../images/icon/side_menu4.png);
+.construction_site .sideMenu_item[value="2"]:hover .sideMenu_icon {
+    background-image: url("../images/icon/side_menu2_dark_on.png") !important;
 }
-.construction_site .advisory.active {
-    background-image: url(../images/icon/side_menu4_on.png) !important;
+.construction_site .sideMenu_item[value="3"] .sideMenu_icon {
+    background-image: url("../images/icon/side_menu3_dark.png");
 }
-.construction_site .notice {
-    background-image: url(../images/icon/side_menu5.png);
+.construction_site .sideMenu_item[value="3"]:hover .sideMenu_icon {
+    background-image: url("../images/icon/side_menu3_dark_on.png") !important;
 }
-.construction_site .notice.active {
-    background-image: url(../images/icon/side_menu5_on.png) !important;
+.construction_site .sideMenu_item[value="4"] .sideMenu_icon {
+    background-image: url("../images/icon/side_menu4_dark.png");
+}
+.construction_site .sideMenu_item[value="4"]:hover .sideMenu_icon {
+    background-image: url("../images/icon/side_menu4_dark_on.png") !important;
+}
+.construction_site .sideMenu_item[value="5"] .sideMenu_icon {
+    background-image: url("../images/icon/side_menu5_dark.png");
+}
+.construction_site .sideMenu_item[value="5"]:hover .sideMenu_icon {
+    background-image: url("../images/icon/side_menu5_dark_on.png") !important;
 }
 /* 사이드 서브메뉴 */
 .construction_site .sideMenu_item ul {
@@ -125,8 +147,7 @@
     width: 85%;
     font-size: 13px;
     color: #fff;
-    margin: 0 auto;
-    margin-top: 8px;
+    margin: 8px auto 0;
     padding: 5px 0;
     background: #222d4a;
     border-radius: 3px;
@@ -147,8 +168,7 @@
     position: relative;
     width: 36px;
     height: 19px;
-    margin: 0 auto;
-    margin-top: 10px;
+    margin: 10px auto 0;
 }
 .construction_site .switch_wrap:hover {
     cursor: pointer;
@@ -159,7 +179,7 @@
     left: 0;
     width: 17px;
     height: 17px;
-    transition: all .13s;
+    transition: all 0.13s;
     z-index: 2;
 }
 .construction_site .switch_btn.active {
@@ -174,8 +194,9 @@
     height: 15px;
     background: #191b20;
     border-radius: 100px;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.25) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
 }
-  
+
 /* 헤더 (PC) */
 .construction_site header {
     position: fixed;
@@ -221,24 +242,24 @@
 }
 .construction_site .header_pc .logout {
     margin: 0 32px;
-    transition: color .13s;
+    transition: color 0.13s;
 }
 .construction_site .header_pc .logout_icon {
     width: 36px;
     height: 36px;
-    background-image: url(../images/icon/logout_white.png);
+    background-image: url("../images/icon/logout_white.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #53bada;
     margin-right: 8px;
     border-radius: 100px;
-    transition: background .13s;
+    transition: background 0.13s;
 }
 .construction_site .header_pc .logout:hover {
     color: #64eef9;
 }
 .construction_site .header_pc .logout:hover .logout_icon {
-    background-image: url(../images/icon/logout_on.png);
+    background-image: url("../images/icon/logout_on.png");
     background-color: #fff;
 }
 .construction_site .header_pc .go_map button {
@@ -251,7 +272,7 @@
     background: #3d455c;
     border: 1px solid #fff;
     border-radius: 3px;
-    transition: all .13s;
+    transition: all 0.13s;
 }
 .construction_site .header_pc .go_map button:hover {
     color: #111a34;
@@ -259,26 +280,26 @@
 }
 .construction_site .header_pc .go_map button:hover .go_map_icon {
     background-color: #5c8bdc;
-    background-image: url(../images/icon/go_map_on.png);
+    background-image: url("../images/icon/go_map_on.png");
 }
 .construction_site .header_pc .go_map_icon {
     width: 20px;
     height: 20px;
     margin-left: 8px;
     background-color: #fff;
-    background-image: url(../images/icon/go_map.png);
+    background-image: url("../images/icon/go_map.png");
     background-repeat: no-repeat;
     background-position: 55%;
     border-radius: 100px;
 }
-  
-  /* 헤더 (태블릿 & 모바일) */
-  .construction_site .header_m {
+
+/* 헤더 (태블릿 & 모바일) */
+.construction_site .header_m {
     display: none;
-  }
-  
-  /* 상황전파 버튼 (모바일) */
-  .acdnt_sprd_m {
+}
+
+/* 상황전파 버튼 (모바일) */
+.acdnt_sprd_m {
     display: none;
     position: fixed;
     bottom: 10px;
@@ -290,13 +311,13 @@
     background: rgb(84,121,247);
     background: linear-gradient(360deg, rgba(84,121,247,1) 0%, rgba(133,158,245,1) 100%);
     z-index: 985;
-  }
-  .acdnt_sprd_m img {
+}
+.acdnt_sprd_m img {
     width: 40px;
     margin-right: 16px;
     vertical-align: top;
-  }
-  .acdnt_sprd_m::before {
+}
+.acdnt_sprd_m::before {
     content: "";
     position: absolute;
     top: -10px;
@@ -304,8 +325,8 @@
     width: 100%;
     height: 10px;
     background: rgba(0, 0, 0, 0.15);
-  }
-  .acdnt_sprd_m::after {
+}
+.acdnt_sprd_m::after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -313,21 +334,31 @@
     width: 100%;
     height: 10px;
     background: rgba(0, 0, 0, 0.15);
-  }
-  
-  
-  @media (max-height: 692px) {
+}
+
+@media (max-height: 692px) {
     .construction_site .sideMenu_item {
       height: auto;
+      padding-top: 15px;
+    }
+    .construction_site .sideMenu_icon {
+      width: 35px;
+      height: 35px;
     }
     .construction_site .sideMenu_item p {
-      padding-top: 45px;
-      padding-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
-  }
-  
-  /* 모바일 메뉴 (로그인 버전) */
-  .mobile_menu {
+    .construction_site .acdnt_sprd {
+      padding-top: 10px;
+    }
+    .construction_site .acdnt_sprd a {
+      margin-top: 5px;
+    }
+}
+
+/* 모바일 메뉴 (로그인 버전) */
+.mobile_menu {
     display: none;
     position: relative;
     top: 0;
@@ -336,122 +367,122 @@
     height: 100vh;
     background: #fff;
     z-index: 999;
-  }
-  /* .mobile_menu .m_login {
+}
+/* .mobile_menu .m_login {
     display: none;
   } */
-  .mobile_menu .m_logout {
+.mobile_menu .m_logout {
     display: none;
-  }
-  /* 모바일 메뉴 상단 */
-  .mobile_menu .m_menu_top {
+}
+/* 모바일 메뉴 상단 */
+.mobile_menu .m_menu_top {
     position: absolute;
     top: 0;
     width: 100%;
     height: 170px;
-    background-image: url(../images/m_menu_bg.jpg);
+    background-image: url("../images/m_menu_bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 999;
-  }
-  .mobile_menu .login_text {
+}
+.mobile_menu .login_text {
     padding: 32px 27px 16px;
-  }
-  .mobile_menu .login_text span {
+}
+.mobile_menu .login_text span {
     line-height: 1;
     font-size: 32px;
     color: #fff;
     padding-left: 16px;
-  }
-  .mobile_menu .login_text strong {
+}
+.mobile_menu .login_text strong {
     color: #50ffe1;
-  }
-  .mobile_menu .login_icon {
+}
+.mobile_menu .login_icon {
     width: 64px;
     height: 64px;
     background-color: #28344c;
-    background-image: url(../images/icon/login.png);
+    background-image: url("../images/icon/login.png");
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 100px;
-  }
-  .mobile_menu .login_link {
+}
+.mobile_menu .login_link {
     font-size: 20px;
     color: #fff;
     margin-left: 27px;
-  }
-  .mobile_menu .login_link img {
+}
+.mobile_menu .login_link img {
     margin-left: 16px;
     vertical-align: middle;
-  }
-  .mobile_menu .close_btn {
+}
+.mobile_menu .close_btn {
     position: absolute;
     top: 32px;
     right: 28px;
     width: 35px;
     height: 35px;
     padding: 0;
-    background-image: url(../images/icon/close_btn.png);
+    background-image: url("../images/icon/close_btn.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
     background-color: transparent;
-  }
-  /* 모바일 메뉴 리스트 */
-  .mobile_menu .m_menu_lists {
+}
+/* 모바일 메뉴 리스트 */
+.mobile_menu .m_menu_lists {
     height: 100vh;
     overflow-y: scroll;
-  }
-  .mobile_menu .m_menu_lists > ul {
+}
+.mobile_menu .m_menu_lists > ul {
     padding: 170px 25px 312px;
-  }
-  .mobile_menu .m_menu_lists li a {
+}
+.mobile_menu .m_menu_lists li a {
     padding: 35px 16px;
-  }
-  .mobile_menu .m_menu_lists > ul > li:not(:last-child) {
+}
+.mobile_menu .m_menu_lists > ul > li:not(:last-child) {
     border-bottom: 2px solid #d4d4d4;
-  }
-  .mobile_menu .m_menu_lists > ul > li > a {
+}
+.mobile_menu .m_menu_lists > ul > li > a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .mobile_menu .m_menu_lists li p {
+}
+.mobile_menu .m_menu_lists li p {
     font-size: 28px;
     color: #3e3e3e;
-  }
-  .mobile_menu .m_menu_lists .accordion_btn {
+}
+.mobile_menu .m_menu_lists .accordion_btn {
     width: 45px;
     height: 45px;
-    background-image: url(../images/icon/arrow_blue.png);
+    background-image: url("../images/icon/arrow_blue.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #fafafa;
     border: 1px solid #bcc5d6;
     border-radius: 100px;
-    transition: all .3s;
-  }
-  .mobile_menu .m_menu_lists .accordion_btn.active {
+    transition: all 0.3s;
+}
+.mobile_menu .m_menu_lists .accordion_btn.active {
     transform: rotate(180deg);
-  }
-  .mobile_menu .m_submenu {
+}
+.mobile_menu .m_submenu {
     padding: 30px 0;
     background: #ededed;
-  }
-  .mobile_menu .m_submenu li:not(:last-child) {
+}
+.mobile_menu .m_submenu li:not(:last-child) {
     padding-bottom: 24px;
-  }
-  .mobile_menu .m_submenu li span {
+}
+.mobile_menu .m_submenu li span {
     font-size: 26px;
     color: #28344c;
     padding-left: 5px;
-  }
-  .mobile_menu .m_submenu li:hover span {
+}
+.mobile_menu .m_submenu li:hover span {
     color: #3978fc;
-  }
-  /* 모바일 메뉴 하단 */
-  .mobile_menu .m_menu_bottom {
+}
+/* 모바일 메뉴 하단 */
+.mobile_menu .m_menu_bottom {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -459,78 +490,79 @@
     background: #fafafa;
     border-top: 1px solid #707070;
     z-index: 1;
-  }
-  .mobile_menu .bottom_menu {
+}
+.mobile_menu .bottom_menu {
     height: 150px;
     margin-top: 30px;
     margin-left: 45px;
     margin-right: 28px;
-  }
-  .mobile_menu .home_btn {
+}
+.mobile_menu .home_btn {
     height: 40px;
     font-size: 32px;
     color: #3978fc;
-  }
-  .mobile_menu .home_btn img {
+}
+.mobile_menu .home_btn img {
     margin-right: 15px;
-  }
-  .mobile_menu .night_mode_m {
+}
+.mobile_menu .night_mode_m {
     height: 47px;
-  }
-  .mobile_menu .night_mode_m p {
+}
+.mobile_menu .night_mode_m p {
     line-height: 1;
     font-size: 30px;
     margin-right: 25px;
-  }
-  .mobile_menu .switch_wrap {
+}
+.mobile_menu .switch_wrap {
     width: 90px;
     height: 100%;
     margin-top: 0;
-  }
-  .mobile_menu .switch_btn {
+}
+.mobile_menu .switch_btn {
     top: 0;
     left: -2px;
     transform: none;
     width: 47px;
     height: 47px;
-  }
-  .mobile_menu .switch_body {
+}
+.mobile_menu .switch_body {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 40px;
     background: #28344c;
-  }
-  .mobile_menu .account_wrap {
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.25) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+.mobile_menu .account_wrap {
     width: 100%;
-  }
-  .mobile_menu .account_wrap button {
+}
+.mobile_menu .account_wrap button {
     width: 50%;
     height: 80px;
     font-size: 26px;
     color: #fff;
     background: #28344c;
     border-top: 1px solid #b9b9b9;
-  }
-  .mobile_menu .account_wrap button:first-child {
+}
+.mobile_menu .account_wrap button:first-child {
     border-right: 1px solid #b9b9b9;
-  }
-  
-  /* 모바일 메뉴 (로그아웃 버전) */
-  .mobile_menu .m_logout .login_icon {
+}
+
+/* 모바일 메뉴 (로그아웃 버전) */
+.mobile_menu .m_logout .login_icon {
     background-color: transparent;
-    background-image: url(../images/icon/profile.png);
+    background-image: url("../images/icon/profile.png");
     background-size: cover;
-  }
-  .mobile_menu .m_logout .login_text span {
+}
+.mobile_menu .m_logout .login_text span {
     font-size: 26px;
-  }
-  .mobile_menu .m_logout .login_text strong {
+}
+.mobile_menu .m_logout .login_text strong {
     position: relative;
     font-size: 32px;
     padding-right: 55px;
-  }
-  .mobile_menu .m_logout .login_text strong::after {
+}
+.mobile_menu .m_logout .login_text strong::after {
     content: "";
     position: absolute;
     top: 25%;
@@ -538,7 +570,7 @@
     width: 2px;
     height: 30px;
     background: #a4c1ff;
-  }
-  .mobile_menu .m_logout .account_wrap button {
+}
+.mobile_menu .m_logout .account_wrap button {
     width: 100%;
-  }
+}

@@ -1,44 +1,36 @@
 /* 사이드 메뉴 (PC) */
-.construction_site aside {
-  /* display: none; */
+aside {
   position: fixed;
-  width: 70px;
   height: 100%;
-  background: #2f313e;
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 5);
+}
+.construction_site aside {
+  width: 70px;
+  background: #2f313e;
   z-index: 980;
 }
-.construction_site .side_menu li {
+.side_menu li {
   width: 100%;
   color: #cdced8;
 }
-.construction_site .side_menu a {
-  display: block;
+.construction_site .home {
+  height: 70px;
+  background-color: #20b5c8;
+}
+aside .home a {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.construction_site .home {
-  height: 70px;
-  background-image: url(../images/icon/home_btn.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #20b5c8;
-}
 .construction_site .sideMenu_item {
   position: relative;
-  
-  background-repeat: no-repeat;
-  background-position: center 1.4815vh;
   border-top: 1px solid #595a65;
   border-bottom: 1px solid #1e2024;
-  transition: background .13s;
 }
 .construction_site .sideMenu_item p {
   width: 100%;
   font-size: 13px;
-  padding-top: 4.8148vh;
-  padding-bottom: 1.4815vh;
+  padding-bottom: 15px;
 }
 .construction_site .sideMenu_item:not(:last-child):hover {
   color: #000;
@@ -48,44 +40,51 @@
   color: #000 !important;
   background-color: #fff !important;
 }
-.construction_site .cnstrst_manage {
+.construction_site .sideMenu_icon {
+  width: 100%;
+  height: 52px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background .13s;
+}
+.construction_site .sideMenu_item[value="0"] .sideMenu_icon {
   background-image: url(../images/icon/side_menu0.png);
 }
-.construction_site .cnstrst_manage.active {
+.construction_site .sideMenu_item[value="0"]:hover .sideMenu_icon {
   background-image: url(../images/icon/side_menu0_on.png) !important;
 }
-.construction_site .bldg_manage {
+.construction_site .sideMenu_item[value="1"] .sideMenu_icon {
   background-image: url(../images/icon/side_menu1.png);
 }
-.construction_site .bldg_manage.active {
+.construction_site .sideMenu_item[value="1"]:hover .sideMenu_icon {
   background-image: url(../images/icon/side_menu1_on.png) !important;
 }
-.construction_site .acdnt_info {
+.construction_site .sideMenu_item[value="2"] .sideMenu_icon {
   background-image: url(../images/icon/side_menu2.png);
 }
-.construction_site .acdnt_info.active {
+.construction_site .sideMenu_item[value="2"]:hover .sideMenu_icon {
   background-image: url(../images/icon/side_menu2_on.png) !important;
 }
-.construction_site .cctv {
+.construction_site .sideMenu_item[value="3"] .sideMenu_icon {
   background-image: url(../images/icon/side_menu3.png);
 }
-.construction_site .cctv.active {
+.construction_site .sideMenu_item[value="3"]:hover .sideMenu_icon {
   background-image: url(../images/icon/side_menu3_on.png) !important;
 }
-.construction_site .advisory {
+.construction_site .sideMenu_item[value="4"] .sideMenu_icon {
   background-image: url(../images/icon/side_menu4.png);
 }
-.construction_site .advisory.active {
+.construction_site .sideMenu_item[value="4"]:hover .sideMenu_icon {
   background-image: url(../images/icon/side_menu4_on.png) !important;
 }
-.construction_site .notice {
+.construction_site .sideMenu_item[value="5"] .sideMenu_icon {
   background-image: url(../images/icon/side_menu5.png);
 }
-.construction_site .notice.active {
+.construction_site .sideMenu_item[value="5"]:hover .sideMenu_icon {
   background-image: url(../images/icon/side_menu5_on.png) !important;
 }
 /* 사이드 서브메뉴 */
-.construction_site .sideMenu_item ul {
+.construction_site .pc_submenu {
   display: none;
   position: absolute;
   top: 0;
@@ -95,20 +94,20 @@
   background: #fff;
   border: 1px solid #2f313e;
 }
-.construction_site .sideMenu_item ul li:not(:last-child) {
+.construction_site .pc_submenu li:not(:last-child) {
   padding-bottom: 15px;
 }
-.construction_site .sideMenu_item li a {
+.construction_site .pc_submenu li a {
   display: flex;
   align-items: center;
 }
-.construction_site .sideMenu_item li span {
+.construction_site .pc_submenu li span {
   line-height: 1;
   font-size: 15px;
   color: #000;
   padding-left: 4px;
 }
-.construction_site .sideMenu_item ul li:hover span {
+.construction_site .pc_submenu li:hover span {
   color: #cdced8;
 }
 
@@ -176,31 +175,33 @@
   border-radius: 100px;
 }
 
-/* 헤더 (PC) */
-.construction_site header {
+/* 헤더 공통(PC) */
+header {
   position: fixed;
   width: 100%;
   color: #fff;
   background: #192b80;
   z-index: 970;
 }
-.construction_site .header_pc {
+.header_pc {
   height: 70px;
 }
-.construction_site .header_pc nav {
+.header_pc nav {
   width: 100%;
+}
+.construction_site .header_pc nav {
   padding-left: 104px;
   padding-right: 34px;
 }
-.construction_site .header_pc .title {
+.header_pc .title {
   font-size: 20px;
   margin-left: 19px;
 }
-.construction_site .header_pc .sub_title p {
+.header_pc .sub_title p {
   position: relative;
   font-size: 14px;
 }
-.construction_site .header_pc .sub_title p::before {
+.header_pc .sub_title p::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -211,15 +212,15 @@
   background: #9dd1ff;
   border-radius: 2.5px;
 }
-.construction_site .header_pc .sub_title span {
+.header_pc .sub_title span {
   font-size: 18px;
   margin-left: 18px;
 }
-.construction_site .header_pc .logout {
+.header_pc .logout {
   margin: 0 32px;
   transition: color .13s;
 }
-.construction_site .header_pc .logout_icon {
+.header_pc .logout_icon {
   width: 36px;
   height: 36px;
   background-image: url(../images/icon/logout.png);
@@ -230,14 +231,14 @@
   border-radius: 100px;
   transition: background .13s;
 }
-.construction_site .header_pc .logout:hover {
+.header_pc .logout:hover {
   color: #64eef9;
 }
-.construction_site .header_pc .logout:hover .logout_icon {
+.header_pc .logout:hover .logout_icon {
   background-image: url(../images/icon/logout_on.png);
   background-color: #fff;
 }
-.construction_site .header_pc .go_map button {
+.header_pc .go_map button {
   width: 112px;
   height: 36px;
   font-weight: bold;
@@ -249,15 +250,15 @@
   border-radius: 3px;
   transition: all .13s;
 }
-.construction_site .header_pc .go_map button:hover {
+.header_pc .go_map button:hover {
   color: #192b80;
   background-color: #d3d9f6;
 }
-.construction_site .header_pc .go_map button:hover .go_map_icon {
+.header_pc .go_map button:hover .go_map_icon {
   background-color: #28344c;
   background-image: url(../images/icon/go_map_on.png);
 }
-.construction_site .header_pc .go_map_icon {
+.header_pc .go_map_icon {
   width: 20px;
   height: 20px;
   margin-left: 8px;
@@ -269,7 +270,7 @@
 }
 
 /* 헤더 (태블릿 & 모바일) */
-.construction_site .header_m {
+.header_m {
   display: none;
 }
 
@@ -314,11 +315,17 @@
 
 @media (max-height: 692px) {
   .construction_site .sideMenu_item {
-    height: auto;
+      height: auto;
+      padding-top: 10px;
+  }
+  .construction_site .sideMenu_icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
   }
   .construction_site .sideMenu_item p {
-    padding-top: 45px;
-    padding-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
   }
 }
 
@@ -496,6 +503,7 @@
   width: 100%;
   height: 40px;
   background: #28344c;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.25) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
 }
 .mobile_menu .account_wrap {
   width: 100%;
@@ -537,4 +545,121 @@
 }
 .mobile_menu .m_logout .account_wrap button {
   width: 100%;
+}
+
+/* 서브페이지 공사장관리 */
+
+/* 서브페이지 헤더 (PC) */
+.sub_page .header_pc nav {
+  padding-left: 26px;
+  padding-right: 34px;
+}
+
+/* 서브페이지 사이드 메뉴 (PC) */
+.sub_page aside {
+  width: 316px;
+  height: 100vh;
+  background: #2c3646;
+}
+.sub_page .side_menu {
+  padding-top: 70px;
+}
+
+.sub_page .home {
+  height: 75px;
+  font-size: 24px;
+  color: #fff;
+  padding: 0 26px;
+  background: rgb(0,204,178);
+  background: linear-gradient(-45deg, rgba(0,204,178,1) 31%, rgba(57,120,252,1) 100%);  
+}
+.sub_page .home a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 207px;
+  width: 1px;
+  height: 38px;
+  background: #00a28d;
+}
+.sub_page .home a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 208px;
+  width: 1px;
+  height: 38px;
+  background: #80e6d9;
+}
+.sub_page .side_menu li:nth-child(2) {
+  margin-top: 30px;
+}
+.sub_page .sideMenu_item {
+  height: 64px;
+  /* padding: 0 35px; */
+}
+.sub_page .sideMenu_item a {
+  display: flex;
+  align-items: center;
+  width: 246px;
+  height: 100%;
+  margin: 0 auto;
+}
+.sub_page .sideMenu_item > a {
+  border-bottom: 1px solid #414f64;
+}
+.sub_page .sideMenu_icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sub_page .sideMenu_item[value="0"] .sideMenu_icon {
+  background-image: url(../images/icon/side_menu0.png);
+}
+.sub_page .sideMenu_item[value="0"]:hover .sideMenu_icon {
+  background-image: url(../images/icon/side_menu0_on.png) !important;
+}
+.sub_page .sideMenu_item[value="1"] .sideMenu_icon {
+  background-image: url(../images/icon/side_menu1.png);
+}
+.sub_page .sideMenu_item[value="1"]:hover .sideMenu_icon {
+  background-image: url(../images/icon/side_menu1_on.png) !important;
+}
+.sub_page .sideMenu_item[value="2"] .sideMenu_icon {
+  background-image: url(../images/icon/side_menu2.png);
+}
+.sub_page .sideMenu_item[value="2"]:hover .sideMenu_icon {
+  background-image: url(../images/icon/side_menu2_on.png) !important;
+}
+.sub_page .sideMenu_item[value="3"] .sideMenu_icon {
+  background-image: url(../images/icon/side_menu3.png);
+}
+.sub_page .sideMenu_item[value="3"]:hover .sideMenu_icon {
+  background-image: url(../images/icon/side_menu3_on.png) !important;
+}
+.sub_page .sideMenu_item[value="4"] .sideMenu_icon {
+  background-image: url(../images/icon/side_menu4.png);
+}
+.sub_page .sideMenu_item[value="4"]:hover .sideMenu_icon {
+  background-image: url(../images/icon/side_menu4_on.png) !important;
+}
+.sub_page .sideMenu_item[value="5"] .sideMenu_icon {
+  background-image: url(../images/icon/side_menu5.png);
+}
+.sub_page .sideMenu_item[value="5"]:hover .sideMenu_icon {
+  background-image: url(../images/icon/side_menu5_on.png) !important;
+}
+.sub_page .pc_submenu {
+  /* background: green; */
+  /* padding: 25px 0; */
+}
+.sub_page .pc_submenu li span {
+  line-height: 1;
+  font-size: 15px;
+  color: #fefefe;
+  padding-left: 4px;
 }
