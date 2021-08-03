@@ -8,17 +8,12 @@ $(function () {
       $("#changeStyle1").attr("href", "asset/css/header_dark.css");
       $("#changeStyle2").attr("href", "asset/css/style_dark.css");
       $("#changeStyle3").attr("href", "asset/css/responsive_dark.css");
-      $("#myChart").addClass("dark");
-      
-
-
     } else if (count % 2 !== 0) {
       $(this).prev("p").text("야간모드");
       $(this).children(".switch_btn").removeClass("active");
       $("#changeStyle1").attr("href", "asset/css/header.css");
       $("#changeStyle2").attr("href", "asset/css/style.css");
       $("#changeStyle3").attr("href", "asset/css/responsive.css");
-      $("#myChart").removeClass("dark");
     }
     count++;
   });
@@ -172,13 +167,16 @@ $(document).ready(function () {
 
 // 탭 전환
 $(function () {
-  var tab_id;
   $(".tab_main > .tab_index li").click(function () {
     $(".tab_main > .tab_index li").removeClass("active");
     $(this).addClass("active");
   });
   $(".tab_sub > .tab_index li").click(function () {
     $(".tab_sub > .tab_index li").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".division_tab > .tab_index li").click(function () {
+    $(".division_tab > .tab_index li").removeClass("active");
     $(this).addClass("active");
   });
 });
@@ -197,7 +195,7 @@ $(function () {
   });
 });
 
-// 메인 탭 (Easy Pie Chart)
+// 메인 탭 차트 (Easy Pie Chart)
 $(function () {
   $(".insp_light .insp_circle1").easyPieChart({
     scaleColor: "transparent",
@@ -298,40 +296,40 @@ $(function () {
 });
 
 // 안전사고 발생 현황 (Chart JS)
-var data_light = {
-  labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
-  datasets: [
-    {
-      data: [19, 10, 13, 14],
-      backgroundColor: ["#5180e3", "#34d2de", "#ffd12a", "#52e32e"],
-      borderWidth: 0,
-    },
-  ],
-};
-var data_dark = {
-  labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
-  datasets: [
-    {
-      data: [19, 10, 13, 14],
-      backgroundColor: ["red", "#34d2de", "#ffd12a", "#52e32e"],
-      borderWidth: 0,
-    },
-  ],
-};
+// var data_light = {
+//   labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
+//   datasets: [
+//     {
+//       data: [19, 10, 13, 14],
+//       backgroundColor: ["#5180e3", "#34d2de", "#ffd12a", "#52e32e"],
+//       borderWidth: 0,
+//     },
+//   ],
+// };
+// var data_dark = {
+//   labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
+//   datasets: [
+//     {
+//       data: [19, 10, 13, 14],
+//       backgroundColor: ["red", "#34d2de", "#ffd12a", "#52e32e"],
+//       borderWidth: 0,
+//     },
+//   ],
+// };
 
-var config_light = {
-  type: "doughnut",
-  data: data_light,
-  options: {
-    responsive: true,
-    aspectRatio: 1,
-    legend: {
-      display: false,
-    },
-    cutoutPercentage: 70,
-  },
-};
-var myChart_light = new Chart(document.getElementById("myChart"), config_light);
+// var config_light = {
+//   type: "doughnut",
+//   data: data_light,
+//   options: {
+//     responsive: true,
+//     aspectRatio: 1,
+//     legend: {
+//       display: false,
+//     },
+//     cutoutPercentage: 70,
+//   },
+// };
+// var myChart_light = new Chart(document.getElementById("myChart"), config_light);
 
 
 
@@ -362,7 +360,35 @@ $(function () {
   });
 });
 
-// 모바일 메뉴 아코디언
+// 서브메뉴 (아코디언)
+
+// 서브페이지
+$(function () {
+  let sideMenu_num;
+  $(".sub_page .sideMenu_item").mouseover(function () {
+    sideMenu_num = this.value;
+    $(this).children("a").children(".sideMenu_icon")
+      .css("background-image", "url(asset/images/icon/side_menu" + sideMenu_num + "_dark_on.png)");
+  });
+  $(".sub_page .sideMenu_item").mouseout(function () {
+    sideMenu_num = this.value;
+    $(this).children("a").children(".sideMenu_icon")
+      .css("background-image", "url(asset/images/icon/sub_side_menu" + sideMenu_num + ".png)");
+  });
+  $(".pc_submenu").hide();
+  $(".sub_page .sideMenu_item > a").click(function () {
+    $(".sub_page .sideMenu_item > a").not(this).parent("li.toggle").removeClass("active");
+    $(this).parent("li.toggle").toggleClass("active");
+    $(this).next(".pc_submenu").slideToggle(300);
+    $("ul li a").not(this).next().slideUp(300);
+    $(this).children(".accordion_btn").toggleClass("active");
+    if ($("ul li a").not(this).children(".accordion_btn").hasClass("active")) {
+      $("ul li a").not(this).children(".accordion_btn").removeClass("active");
+    }
+    return false;
+  });
+});
+// 모바일
 $(function () {
   $(".m_submenu").hide();
   $(".m_menu_lists > ul > li > a").click(function () {
@@ -373,5 +399,14 @@ $(function () {
       $("ul li a").not(this).children(".accordion_btn").removeClass("active");
     }
     return false;
+  });
+});
+
+// 추가 검색조건 펼치기
+$(function () {
+  $(".search_add form").hide();
+  $(".add_btn").click(function () {
+    $(this).prev("form").slideToggle(300);
+    $(this).children(".add_btn img").toggleClass("active");
   });
 });

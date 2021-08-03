@@ -76,14 +76,7 @@ html,body {
 }
 
 /* Grid */
-.container {
-  padding-top: 70px;
-  padding-left: 70px;
-}
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   padding: 0 30px;
   padding-top: 2.7778vh;
