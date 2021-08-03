@@ -1,3 +1,5 @@
+/* 메인 페이지 */
+
 /* 사이드 메뉴 (PC) */
 aside {
   position: fixed;
@@ -313,23 +315,6 @@ header {
   background: rgba(0, 0, 0, 0.15);
 }
 
-
-@media (max-height: 692px) {
-  .construction_site .sideMenu_item {
-      height: auto;
-      padding-top: 10px;
-  }
-  .construction_site .sideMenu_icon {
-    width: 35px;
-    height: 35px;
-    margin: 0 auto;
-  }
-  .construction_site .sideMenu_item p {
-      padding-top: 5px;
-      padding-bottom: 5px;
-  }
-}
-
 /* 모바일 메뉴 (로그인 버전) */
 .mobile_menu {
   display: none;
@@ -548,7 +533,7 @@ header {
   width: 100%;
 }
 
-/* 서브페이지 공사장관리 */
+/* 서브 페이지 */
 
 /* 서브페이지 헤더 (PC) */
 .sub_page .header_pc nav {
@@ -593,7 +578,7 @@ header {
   height: 3.5185vh;
   background: #80e6d9;
 }
-.sub_page .side_menu ul {
+.sub_page .side_menu > ul {
   padding-top: 2.7778vh;
   background: #354052;
 }
@@ -701,7 +686,7 @@ header {
 }
 .sub_page .acdnt_sprd {
   position: absolute;
-  bottom: 32px;
+  bottom: 2.9630vh;
   left: 50%;
   transform: translateX(-50%);
   width: 245px;
@@ -719,4 +704,26 @@ header {
 }
 .sub_page .acdnt_sprd a img {
   margin-right: 12px;
+}
+
+@media (max-height: 692px) {
+  /* 메인 페이지 */
+  .construction_site .sideMenu_item {
+      height: auto;
+      padding-top: 10px;
+  }
+  .construction_site .sideMenu_icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+  }
+  .construction_site .sideMenu_item p {
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+  /* 서브 페이지 */
+  .sub_page .side_menu > ul {
+    padding-top: 0;
+  }
 }
