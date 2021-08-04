@@ -72,7 +72,7 @@ $(function () {
         .css("background-color", "#fff")
         .css(
           "background-image",
-          "url(asset/images/icon/check" + optionValue + ".png)"
+          "url(asset/images/icon/map_check" + optionValue + ".png)"
         );
     } else {
       $(this)
@@ -175,9 +175,16 @@ $(function () {
     $(".tab_sub > .tab_index li").removeClass("active");
     $(this).addClass("active");
   });
-  $(".division_tab > .tab_index li").click(function () {
-    $(".division_tab > .tab_index li").removeClass("active");
+  $(".search_rqt_tab > .tab_index li").click(function () {
+    $(".search_rqt_tab > .tab_index li").removeClass("active");
     $(this).addClass("active");
+  });
+  $(".search_rqt_tab > .tab_content li").click(function () {
+    if ($(this).children("input[type='checkbox']").is(":checked")) {
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
   });
 });
 
@@ -296,7 +303,7 @@ $(function () {
 });
 
 // 안전사고 발생 현황 (Chart JS)
-// var data_light = {
+// var data = {
 //   labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
 //   datasets: [
 //     {
@@ -306,20 +313,10 @@ $(function () {
 //     },
 //   ],
 // };
-// var data_dark = {
-//   labels: ["추락", "화재", "붕괴ㆍ도괴", "넘어짐"],
-//   datasets: [
-//     {
-//       data: [19, 10, 13, 14],
-//       backgroundColor: ["red", "#34d2de", "#ffd12a", "#52e32e"],
-//       borderWidth: 0,
-//     },
-//   ],
-// };
 
-// var config_light = {
+// var config = {
 //   type: "doughnut",
-//   data: data_light,
+//   data: data,
 //   options: {
 //     responsive: true,
 //     aspectRatio: 1,
@@ -329,10 +326,7 @@ $(function () {
 //     cutoutPercentage: 70,
 //   },
 // };
-// var myChart_light = new Chart(document.getElementById("myChart"), config_light);
-
-
-
+// var myChart = new Chart(document.getElementById("myChart"), config);
 
 // 상황전파 버튼 (모바일)
 
@@ -408,5 +402,20 @@ $(function () {
   $(".add_btn").click(function () {
     $(this).prev("form").slideToggle(300);
     $(this).children(".add_btn img").toggleClass("active");
+  });
+});
+
+// 추가 검색조건 Inputs
+$(function () {
+  $(".check_wrap > li:not(:nth-child(3)) li").click(function () {
+    if ($(this).children("input[type='checkbox']").is(":checked")) {
+      $(this).children(".checking").addClass("active");
+    } else {
+      $(this).children(".checking").removeClass("active");
+    }
+  });
+  $(".check_wrap > li:nth-child(3) li").click(function () {
+    $(".check_wrap > li:nth-child(3) li .checking").removeClass("active");
+    $(this).children(".checking").addClass("active");
   });
 });
