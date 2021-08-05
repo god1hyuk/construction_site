@@ -840,15 +840,15 @@
   font-size: 16px;
 }
 /* 구분 탭 */
-.const_mgt .search_rqt_tab {
+.const_mgt .searchRqt_tab {
   width: 100%;
   padding: 40px 0;
   border-bottom: 1px solid #eaeaea;
 }
-.const_mgt .search_rqt_tab .tab_index {
+.const_mgt .searchRqt_tab .tab_index {
   width: 10%;
 }
-.const_mgt .search_rqt_tab .tab_index li {
+.const_mgt .searchRqt_tab .tab_index li {
   width: 100%;
   font-size: 18px;
   line-height: 1;
@@ -858,50 +858,58 @@
   border: 1px solid #515463;
   border-right: none;
 }
-.const_mgt .search_rqt_tab .tab_index li:not(:last-child) {
+.const_mgt .searchRqt_tab .tab_index li:not(:last-child) {
   margin-bottom: 20px;
 }
-.const_mgt .search_rqt_tab .tab_index li:hover {
+.const_mgt .searchRqt_tab .tab_index li:hover {
   cursor: pointer;
 }
-.const_mgt .search_rqt_tab .tab_index li.active {
+.const_mgt .searchRqt_tab .tab_index li.active {
   color: #fff;
   background: #192b80;
 }
-/* 임시 */
-.const_mgt .search_rqt_tab .tab_content:not(:nth-child(2)) {
+.const_mgt .searchRqt_tab .tab_content {
   display: none;
-}
-.const_mgt .search_rqt_tab .tab_content {
   width: 90%;
   height: 246px;
   border: 2px solid #192b80;
 }
-.const_mgt .search_rqt_tab .tab_content p {
+.const_mgt .searchRqt_tab .tab_content.active {
+  display: block;
+}
+.const_mgt .searchRqt_tab #searchRqt_tab1.active {
+  display: flex;
+}
+.const_mgt .searchRqt_tab #searchRqt_tab1 > div {
+  width: 50%;
+}
+.const_mgt .searchRqt_tab .process_main {
+  border-right: 1px solid #e8eaef;
+}
+.const_mgt .searchRqt_tab .tab_content p {
   line-height: 1;
   padding: 19px 0;
   background: #e8eaef;
 }
-.const_mgt .search_rqt_tab .tab_content ul {
+.const_mgt .searchRqt_tab .tab_content ul {
   display: flex;
   padding: 30px;
 }
-.const_mgt .search_rqt_tab .tab_content li {
-  width: 64px;
-  height: 32px;
+.const_mgt .searchRqt_tab .tab_content li {
   line-height: 1;
   font-size: 15px;
+  padding: 8px 20px;
   background: #dde0e2;
   border-radius: 100px;
 }
-.const_mgt .search_rqt_tab .tab_content li:hover {
+.const_mgt .searchRqt_tab .tab_content li:hover {
   cursor: pointer;
 }
-.const_mgt .search_rqt_tab .tab_content li.active {
+.const_mgt .searchRqt_tab .tab_content li.active {
   color: #fff;
   background: #5479f7;
 }
-.const_mgt .search_rqt_tab .tab_content li:not(:last-child) {
+.const_mgt .searchRqt_tab .tab_content li:not(:last-child) {
   margin-right: 20px;
 }
 /* 추가 검색조건 */
@@ -999,6 +1007,7 @@
   width: 260px;
   height: 40px;
   padding-left: 50px;
+  background-color: #f3f5f6;
   background-image: url(../images/icon/date_icon.png);
   background-repeat: no-repeat;
   background-position: 10px center;
@@ -1044,6 +1053,7 @@ a.ui-button:active,
   position: relative;
   padding: 0 50px;
   padding-top: 25px;
+  padding-bottom: 30px;
   background: #e8eaef;
 }
 .const_mgt .picked_rqt li {
@@ -1068,12 +1078,179 @@ a.ui-button:active,
 .const_mgt .picked_rqt li:not(:last-child) {
   margin-right: 20px;
 }
-.const_mgt .search_decision button {
+/* 조건검색 키워드 */
+.const_mgt .search_decision .keyword_wrap {
+  width: 100%;
+  height: 72px;
+  line-height: 1;
+  font-size: 15px;
+  margin-top: 26px;
+  padding: 0 27px;
+  background: #fff;
+  border: 1px solid #bbc5d8;
+  border-radius: 3px;
+}
+.const_mgt .search_decision .keyword_list > li {
+  position: relative;
+}
+.const_mgt .search_decision .keyword_list > li:hover > .sBubble {
+  display: block;
+}
+.const_mgt .search_decision .keyword_list > li:first-child {
+  padding-right: 20px;
+}
+.const_mgt .search_decision .keyword_list > li:not(:first-child) {
+  padding: 0 20px;
+  border-left: 1px solid #bbc5d8;
+}
+.const_mgt .search_decision .keyword button.kEdit_btn {
+  width: 92px;
+  height: 30px;
+  font-size: 14px;
+  color: #fff;
+  background: #7f97be;
+  border-radius: 3px;
+}
+/* 키워드 말풍선 */
+.const_mgt .search_decision .sBubble {
+  display: none;
+	position: absolute;
+  bottom: 40px;
+  left: -92px;
+  width: 278px;
+  font-size: 13px;
+  padding: 16px 20px;
+	background: #fffef5;
+	border: 1px solid #2c3646;
+  border-radius: 3px;
+}
+.const_mgt .keyword_list li:first-child .sBubble {
+  left: -110px;
+}
+.sBubble::after, .sBubble::before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.sBubble::after {
+	border-color: rgba(255, 254, 245, 0);
+	border-top-color: #fffef5;
+	border-width: 12px;
+	margin-left: -12px;
+}
+.sBubble::before {
+	border-color: rgba(44, 54, 70, 0);
+	border-top-color: #2c3646;
+	border-width: 13px;
+	margin-left: -13px;
+}
+.const_mgt .search_decision .sBubble ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.const_mgt .search_decision .sBubble li {
+  display: block;
+  padding-right: 10px;
+}
+.const_mgt .search_decision .sBubble li:not(:last-child) {
+  margin-right: 10px;
+  border-right: 1px solid #585e67;
+}
+.const_mgt .search_decision .sBubble li:last-child {
+  padding-top: 5px;
+}
+.const_mgt .search_decision .sBubble li:hover .sBubble {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* 키워드 저장 */
+.const_mgt .keyword_save {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 200px;
+  width: 357px;
+  height: 200px;
+  padding: 40px 30px;
+  background: rgb(232,238,248);
+  background: linear-gradient(0deg, rgba(232,238,248,1) 0%, rgba(255,255,255,1) 100%);
+  border: 1px solid #6372a1;
+  border-top: 4px solid #5479f7;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px 0px rgba(35, 31, 32, 0.35);
+}
+.const_mgt .keyword_save::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 15px;
+  background: #6372a1;
+  transform: rotate(45deg) translate(5px, -2px);
+}
+.const_mgt .keyword_save::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 15px;
+  background: #6372a1;
+  transform: rotate(-45deg) translate(-5px, -2px);
+}
+.const_mgt .keyword_save li {
+  display: flex;
+  align-items: center;
+}
+.const_mgt .keyword_save li:first-child {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #cccfd8;
+}
+.const_mgt .keyword_save label {
+  justify-content: start;
+  font-size: 18px;
+}
+.const_mgt .keyword_save input[type="text"] {
+  width: 195px;
+  height: 38px;
+  font-size: 16px;
+}
+.const_mgt .keyword_save label img {
+  width: 17px;
+  margin-right: 8px;
+}
+.const_mgt .keyword_save button {
+  width: 86px;
+  height: 32px;
+  border-radius: 5px;
+}
+.const_mgt .keyword_save button.kSave_cancel {
+  margin-right: 8px;
+  background: #fff;
+  border: 1px solid #99a0a2;
+}
+.const_mgt .keyword_save button.kSave_save {
+  color: #fff;
+  background: #6372a1;
+}
+
+/* 초기화 / 검색 / 저장 버튼 */
+.const_mgt .search_decision .decisionBtn {
+  position: relative;
+  margin-top: 30px;
+}
+.const_mgt .search_decision .decisionBtn button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 35px;
 }
 .const_mgt .search_decision button img {
   margin-right: 10px;
@@ -1101,8 +1278,9 @@ a.ui-button:active,
 }
 .const_mgt .search_decision .save_btn {
   position: absolute;
-  bottom: 20px;
-  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
   width: 120px;
   height: 27px;
   background: transparent;

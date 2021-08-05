@@ -175,11 +175,14 @@ $(function () {
     $(".tab_sub > .tab_index li").removeClass("active");
     $(this).addClass("active");
   });
-  $(".search_rqt_tab > .tab_index li").click(function () {
-    $(".search_rqt_tab > .tab_index li").removeClass("active");
+  $(".searchRqt_tab > .tab_index li").click(function () {
+    var tab_id = $(this).attr('data-tab');
+    $(".searchRqt_tab > .tab_index li").removeClass("active");
+    $(".searchRqt_tab > .tab_content").removeClass("active");
     $(this).addClass("active");
+    $("#" + tab_id).addClass('active');
   });
-  $(".search_rqt_tab > .tab_content li").click(function () {
+  $(".searchRqt_tab > .tab_content li").click(function () {
     if ($(this).children("input[type='checkbox']").is(":checked")) {
       $(this).addClass("active");
     } else {
@@ -417,5 +420,26 @@ $(function () {
   $(".check_wrap > li:nth-child(3) li").click(function () {
     $(".check_wrap > li:nth-child(3) li .checking").removeClass("active");
     $(this).children(".checking").addClass("active");
+  });
+});
+
+// 조건검색 키워드
+$(function () {
+  $(".search_decision .keyword").hide();
+  $(".search_decision .decisionBtn .save_btn").click(function () {
+    $(".search_decision .keyword").slideToggle();
+    $(".keyword_save").fadeOut(200);
+  });
+  $(".keyword_list li").mouseover(function () {
+    $(this).children(".sBubble").stop().fadeIn(100);
+  });
+  $(".keyword_list li").mouseout(function () {
+    $(this).children(".sBubble").stop().fadeOut(100);
+  });
+  $(".kEdit_btn").click(function () {
+    $(".keyword_save").fadeIn(200);
+  });
+  $(".keyword_save button.kSave_cancel").click(function () {
+    $(".keyword_save").fadeOut(200);
   });
 });
