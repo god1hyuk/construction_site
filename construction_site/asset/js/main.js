@@ -403,8 +403,14 @@ $(function () {
 $(function () {
   $(".search_add form").hide();
   $(".add_btn").click(function () {
-    $(this).prev("form").slideToggle(300);
+    $(this).prev("form").slideToggle(500);
     $(this).children(".add_btn img").toggleClass("active");
+    if (count % 2 === 0) {
+      $(this).children("p").text("추가 검색조건 닫기");
+    } else {
+      $(this).children("p").text("추가 검색조건 더보기");
+    }
+    count++;
   });
 });
 
@@ -441,5 +447,20 @@ $(function () {
   });
   $(".keyword_save button.kSave_cancel").click(function () {
     $(".keyword_save").fadeOut(200);
+  });
+});
+
+// 검색결과 리스트
+$(function () {
+  $(".result_list table.result tr").click(function () {
+    if ($(this).children("td").children("input[type='checkbox']").is(":checked")) {
+      $(this).children("td").children(".checking").addClass("active");
+    } else {
+      $(this).children("td").children(".checking").removeClass("active");
+    }
+  });
+  $(".pagination li.page_item").click(function () {
+    $(".pagination li.page_item").removeClass("active");
+    $(this).addClass("active");
   });
 });

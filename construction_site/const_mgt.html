@@ -745,7 +745,7 @@
                       </ul>
                     </form>
                     <div class="add_btn d-flex align-items-center justify-content-center">
-                      추가 검색조건 닫기
+                      <p>추가 검색조건 더보기</p>
                       <img src="asset/images/icon/search_add.png" alt="추가검색버튼_아이콘" />
                     </div>
                   </div>
@@ -848,6 +848,7 @@
                           </form>
                         </div>
                       </div>
+
                     </div>
                   </div>
                   <!-- 초기화 / 검색 / 저장 버튼 -->
@@ -873,23 +874,231 @@
                   <div class="total">
                     <p>총 <strong class="ns_b">289</strong> 건</p>
                   </div>
-                  <div class="result_option">
+                  <div class="result_option d-flex">
                     <button>담당업무</button>
                     <button>재난관리 그룹추가</button>
                   </div>
                 </div>
-
+                <!-- 검색결과 리스트 -->
                 <div class="result_list">
-
+                  <div class="subject_wrap">
+                    <table class="subject">
+                      <colgroup>
+                        <col width="7%">
+                        <col width="20%">
+                        <col width="8%">
+                        <col width="8%">
+                        <col width="13%">
+                        <col width="13%">
+                        <col width="13%">
+                        <col width="8%">
+                        <col width="10%">
+                      </colgroup>
+                      <tr>
+                        <th>
+                          <div class="checking"></div>
+                        </th>
+                        <th>위치</th>
+                        <th>유형</th>
+                        <th>공종</th>
+                        <th>착공일</th>
+                        <th>준공예정일</th>
+                        <th>공정기/경과일</th>
+                        <th>공정율</th>
+                        <th>점검횟수</th>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="result_wrap">
+                    <table class="result">
+                      <colgroup>
+                        <col width="7%">
+                        <col width="20%">
+                        <col width="8%">
+                        <col width="8%">
+                        <col width="13%">
+                        <col width="13%">
+                        <col width="13%">
+                        <col width="8%">
+                        <col width="10%">
+                      </colgroup>                 
+                      <tr>
+                        <td>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>대형</td>
+                        <td>철거</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>1회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking1"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking1" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>중형</td>
+                        <td>기초</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>3회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking2"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking2" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>소형</td>
+                        <td>골조</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>2회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking3"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking3" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>대형</td>
+                        <td>철거</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>1회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking4"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking4" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>중형</td>
+                        <td>기초</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>3회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking5"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking5" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>소형</td>
+                        <td>골조</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>2회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking6"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking6" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>대형</td>
+                        <td>철거</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>1회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking7"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking7" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>중형</td>
+                        <td>기초</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>3회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking8"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking8" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>소형</td>
+                        <td>골조</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>2회</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="result_checking9"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking9" />
+                          <div class="checking"></div>
+                        </td>
+                        <td>서울시 구로구 경인로 382 (개봉동)</td>
+                        <td>대형</td>
+                        <td>철거</td>
+                        <td>2021-11-10</td>
+                        <td>2021-11-10</td>
+                        <td>1000/50</td>
+                        <td>10%</td>
+                        <td>1회</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="result_bottom d-flex align-items-center justify-content-center">
+                    <!-- 페이지네이션 -->
+                    <ul class="pagination">
+                      <li class="prev move"></li>
+                      <li class="page_item active">1</li>
+                      <li class="page_item">2</li>
+                      <li class="page_item">3</li>
+                      <li class="page_item">4</li>
+                      <li class="page_item">5</li>
+                      <li class="next move"></li>
+                      <li class="superNext move"></li>
+                    </ul>
+                    <button class="exel" type="button">
+                      <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                      엑셀
+                    </button>
+                  </div>
                 </div>
               </div>
-
             </div>
+            <!-- 카피라이트 -->
+            <p class="copyright">Copyrightⓒ  Seoul Metropolitan Government All Rights Reserved.</p>
           </div>
         </div>
-
       </div>
-
     </div>
 
     <!-- jQuery -->

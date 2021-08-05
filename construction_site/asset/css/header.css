@@ -17,6 +17,9 @@ aside {
 }
 .construction_site .home {
   height: 70px;
+  background-image: url("../images/icon/home_btn.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #20b5c8;
 }
 aside .home a {
@@ -582,6 +585,9 @@ header {
   padding-top: 2.7778vh;
   background: #354052;
 }
+.sub_page .sideMenu_item {
+  transition: all .1s;
+}
 .sub_page .sideMenu_item:hover {
   background: #2c3646;
   color: #fff;
@@ -677,6 +683,7 @@ header {
   font-size: 15px;
   color: #fefefe;
   padding-left: 4px;
+  transition: color .1s;
 }
 .sub_page .pc_submenu li:hover span {
   color: #00ccb2;

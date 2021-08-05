@@ -5,8 +5,12 @@
     background: #677390;
 }
 /* 메인 컨텐츠 */
-.construction_site .main_content {
+.main_content {
     width: 100%;
+}
+.construction_site .container {
+    padding-top: 70px;
+    padding-left: 70px;
 }
 /* Today 안전사고 */
 .construction_site .day_stats {
