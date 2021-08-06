@@ -546,7 +546,7 @@ header {
 
 /* 서브페이지 사이드 메뉴 (PC) */
 .sub_page aside {
-  width: 316px;
+  width: 16.4583vw;
   height: 100vh;
   background: #2c3646;
 }
@@ -557,7 +557,7 @@ header {
   height: 75px;
   font-size: 24px;
   color: #fff;
-  padding: 0 26px;
+  padding: 0 1.3542vw;
   background: rgb(0,204,178);
   background: linear-gradient(-45deg, rgba(0,204,178,1) 31%, rgba(57,120,252,1) 100%);  
 }
@@ -566,7 +566,7 @@ header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 207px;
+  left: 10.7813vw;
   width: 1px;
   height: 3.5185vh;
   background: #00a28d;
@@ -576,13 +576,13 @@ header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 208px;
+  left: 10.8333vw;
   width: 1px;
   height: 3.5185vh;
   background: #80e6d9;
 }
 .sub_page .side_menu > ul {
-  padding-top: 2.7778vh;
+  padding-top: 1.5625vw;
   background: #354052;
 }
 .sub_page .sideMenu_item {
@@ -613,7 +613,7 @@ header {
 .sub_page .sideMenu_item a {
   display: flex;
   align-items: center;
-  width: 246px;
+  width: 12.8125vw;
   margin: 0 auto;
 }
 .sub_page .sideMenu_item > a {
@@ -696,7 +696,7 @@ header {
   bottom: 2.9630vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 245px;
+  width: 12.7604vw;
   height: 50px;
   font-size: 18px;
   color: #fff;

@@ -411,8 +411,8 @@
                 <div class="search_form">
                   <!-- 주소선택 -->
                   <div class="adress">
-                    <form action="" class="d-flex align-items-center justify-content-between">
-                      <h3 class="ns_b">주소</h3>
+                    <h3 class="ns_b">주소</h3>
+                    <form action="">
                       <ul class="d-flex">
                         <li>
                           <select name="adress_gu" id="gu">
@@ -520,7 +520,7 @@
                       <ul class="check_wrap">
                         <li>
                           <h3>주용도</h3>
-                          <ul class="check_list d-flex">
+                          <ul class="check_list">
                             <li>
                               <label for="mainUse_check0"></label>
                               <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
@@ -880,199 +880,195 @@
                   </div>
                 </div>
                 <!-- 검색결과 리스트 -->
-                <div class="result_list">
+                <div class="result_list text-center">
                   <div class="subject_wrap">
-                    <table class="subject">
-                      <colgroup>
-                        <col width="7%">
-                        <col width="20%">
-                        <col width="8%">
-                        <col width="8%">
-                        <col width="13%">
-                        <col width="13%">
-                        <col width="13%">
-                        <col width="8%">
-                        <col width="10%">
-                      </colgroup>
-                      <tr>
-                        <th>
-                          <div class="checking"></div>
-                        </th>
-                        <th>위치</th>
-                        <th>유형</th>
-                        <th>공종</th>
-                        <th>착공일</th>
-                        <th>준공예정일</th>
-                        <th>공정기/경과일</th>
-                        <th>공정율</th>
-                        <th>점검횟수</th>
-                      </tr>
-                    </table>
+                    <ul class="subject d-flex align-items-center">
+                      <li>
+                        <div class="checking"></div>
+                      </li>
+                      <li>위치</li>
+                      <li>유형</li>
+                      <li>공종</li>
+                      <li>착공일</li>
+                      <li>준공예정일</li>
+                      <li>공정기/경과일</li>
+                      <li>공정율</li>
+                      <li>점검횟수</li>
+                    </ul>
                   </div>
                   <div class="result_wrap">
-                    <table class="result">
-                      <colgroup>
-                        <col width="7%">
-                        <col width="20%">
-                        <col width="8%">
-                        <col width="8%">
-                        <col width="13%">
-                        <col width="13%">
-                        <col width="13%">
-                        <col width="8%">
-                        <col width="10%">
-                      </colgroup>                 
-                      <tr>
-                        <td>
-                          <label for="result_checking0"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking0" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>대형</td>
-                        <td>철거</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>1회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking1"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking1" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>중형</td>
-                        <td>기초</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>3회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking2"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking2" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>소형</td>
-                        <td>골조</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>2회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking3"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking3" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>대형</td>
-                        <td>철거</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>1회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking4"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking4" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>중형</td>
-                        <td>기초</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>3회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking5"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking5" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>소형</td>
-                        <td>골조</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>2회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking6"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking6" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>대형</td>
-                        <td>철거</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>1회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking7"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking7" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>중형</td>
-                        <td>기초</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>3회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking8"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking8" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>소형</td>
-                        <td>골조</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>2회</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label for="result_checking9"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking9" />
-                          <div class="checking"></div>
-                        </td>
-                        <td>서울시 구로구 경인로 382 (개봉동)</td>
-                        <td>대형</td>
-                        <td>철거</td>
-                        <td>2021-11-10</td>
-                        <td>2021-11-10</td>
-                        <td>1000/50</td>
-                        <td>10%</td>
-                        <td>1회</td>
-                      </tr>
-                    </table>
+                    <ul class="result">
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking0"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking0" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>대형</li>
+                          <li>철거</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>1회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking1"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking1" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>중형</li>
+                          <li>기초</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>3회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking2"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking2" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>소형</li>
+                          <li>골조</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>2회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking3"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking3" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>대형</li>
+                          <li>철거</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>1회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking4"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking4" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>중형</li>
+                          <li>기초</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>3회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking5"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking5" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>소형</li>
+                          <li>골조</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>2회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking6"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking6" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>대형</li>
+                          <li>철거</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>1회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking7"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking7" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>중형</li>
+                          <li>기초</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>3회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking8"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking8" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>소형</li>
+                          <li>골조</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>2회</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="result_item">
+                          <li>
+                            <label for="result_checking9"></label>
+                            <input type="checkbox" name="result_checking" id="result_checking9" />
+                            <div class="checking"></div>
+                          </li>
+                          <li>서울시 구로구 경인로 382 (개봉동)</li>
+                          <li>대형</li>
+                          <li>철거</li>
+                          <li>2021-11-10</li>
+                          <li>2021-11-10</li>
+                          <li>1000/50</li>
+                          <li>10%</li>
+                          <li>1회</li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                   <div class="result_bottom d-flex align-items-center justify-content-center">
                     <!-- 페이지네이션 -->

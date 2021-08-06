@@ -335,7 +335,7 @@ $(function () {
 
 $(function () {
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 10 && $(this).width() <= 1240) {
+    if ($(this).scrollTop() > 10 && $(this).width() <= 1024) {
       $(".acdnt_sprd_m").fadeIn();
     } else {
       $(".acdnt_sprd_m").fadeOut();
@@ -452,11 +452,11 @@ $(function () {
 
 // 검색결과 리스트
 $(function () {
-  $(".result_list table.result tr").click(function () {
-    if ($(this).children("td").children("input[type='checkbox']").is(":checked")) {
-      $(this).children("td").children(".checking").addClass("active");
+  $(".result_list .result > li").click(function () {
+    if ($(this).children(".result_item").children("li").children("input[type='checkbox']").is(":checked")) {
+      $(this).children(".result_item").children("li").children(".checking").addClass("active");
     } else {
-      $(this).children("td").children(".checking").removeClass("active");
+      $(this).children(".result_item").children("li").children(".checking").removeClass("active");
     }
   });
   $(".pagination li.page_item").click(function () {
