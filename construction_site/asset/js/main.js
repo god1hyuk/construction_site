@@ -347,11 +347,13 @@ $(function () {
 $(function () {
   $(".burger_btn").click(function () {
     $(".mobile_menu").show();
+    $(".header_m").hide();
     $(".main_content").hide();
     $(".acdnt_sprd_m").hide();
   });
   $(".close_btn").click(function () {
     $(".mobile_menu").hide();
+    $(".header_m").show();
     $(".main_content").show();
     $(".acdnt_sprd_m").show();
   });
@@ -385,7 +387,7 @@ $(function () {
     return false;
   });
 });
-// 모바일
+// 모바일 메뉴
 $(function () {
   $(".m_submenu").hide();
   $(".m_menu_lists > ul > li > a").click(function () {
@@ -414,6 +416,22 @@ $(function () {
   });
 });
 
+// 검색조건 선택
+$(function () {
+  $(".sub_page .searchFilter_btn").click(function () {
+    $(".searchFilter_m").show();
+    $(".header_m").hide();
+    $(".main_content").hide();
+    $(".acdnt_sprd_m").hide();
+  });
+  $(".sub_page .searchFilter_m .close_btn").click(function () {
+    $(".searchFilter_m").hide();
+    $(".header_m").show();
+    $(".main_content").show();
+    $(".acdnt_sprd_m").show();
+  });
+});
+
 // 추가 검색조건 Inputs
 $(function () {
   $(".check_wrap > li:not(:nth-child(3)) li").click(function () {
@@ -431,18 +449,13 @@ $(function () {
 
 // 조건검색 키워드
 $(function () {
-  $(".search_decision .keyword").hide();
-  $(".search_decision .decisionBtn .save_btn").click(function () {
-    $(".search_decision .keyword").slideToggle();
-    $(".keyword_save").fadeOut(200);
-  });
   $(".keyword_list li").mouseover(function () {
     $(this).children(".sBubble").stop().fadeIn(100);
   });
   $(".keyword_list li").mouseout(function () {
     $(this).children(".sBubble").stop().fadeOut(100);
   });
-  $(".kEdit_btn").click(function () {
+  $(".search_decision .save_btn").click(function () {
     $(".keyword_save").fadeIn(200);
   });
   $(".keyword_save button.kSave_cancel").click(function () {
@@ -463,4 +476,16 @@ $(function () {
     $(".pagination li.page_item").removeClass("active");
     $(this).addClass("active");
   });
+});
+
+$(function () {
+ if ($(window).width() <= 1024) {
+  $(".const_mgt .search_result .result_item li:nth-child(3)").prepend("<span>유형</span>");
+  $(".const_mgt .search_result .result_item li:nth-child(4)").prepend("<span>공종</span>");
+  $(".const_mgt .search_result .result_item li:nth-child(5)").prepend("<span>착공일</span>");
+  $(".const_mgt .search_result .result_item li:nth-child(6)").prepend("<span>준공예정일</span>");
+  $(".const_mgt .search_result .result_item li:nth-child(7)").prepend("<span>공정기/경과일</span>");
+  $(".const_mgt .search_result .result_item li:nth-child(8)").prepend("<span>공정율</span>");
+  $(".const_mgt .search_result .result_item li:nth-child(9)").prepend("<span>점검횟수</span>");
+ }
 });

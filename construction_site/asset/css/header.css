@@ -329,9 +329,9 @@ header {
   background: #fff;
   z-index: 999;
 }
-/* .mobile_menu .m_login {
-  display: none;
-} */
+.mobile_menu .m_login {
+  /* display: none; */
+}
 .mobile_menu .m_logout {
   display: none;
 }

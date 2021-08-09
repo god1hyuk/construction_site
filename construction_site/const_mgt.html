@@ -392,6 +392,49 @@
 
       </div>
 
+      <!-- 검색조건 선택 (모바일) -->
+      <div class="searchFilter_m">
+        <div class="searchFilter_top d-flex align-items-center justify-content-between">
+          <button class="init_btn_m">
+            <img src="asset/images/icon/searchFilter_init.png" alt="초기화_아이콘" />
+            초기화
+          </button>
+          <h2 class="ns_b">필터</h2>
+          <button class="close_btn"></button>
+        </div>
+        <!-- 검색조건 체크리스트 (모바일) -->
+        <div class="searchFilter_list">
+          <form action="">
+            <ul>
+              <li>
+                <h3>규모</h3>
+                <h4>대형</h4>
+                <ul class="check_list">
+                  <li class="active">
+                    <label for="division_check0">대형</label>
+                    <input type="checkbox" name="division_check" id="division_check0" />
+                  </li>
+                  <li>
+                    <label for="division_check1">중형</label>
+                    <input type="checkbox" name="division_check" id="division_check1" />
+                  </li>
+                  <li>
+                    <label for="division_check2">소형</label>
+                    <input type="checkbox" name="division_check" id="division_check2" />
+                  </li>
+                </ul>
+              </li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+
       <!-- 상황전파 버튼 (모바일) -->
       <button class="acdnt_sprd_m d-flex align-items-center justify-content-center nt_b">
         <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
@@ -424,7 +467,9 @@
                             <option value="">가양1동</option>
                           </select>
                         </li>
-                        <input type="text" placeholder="상세주소를 입력하세요." />
+                        <li>
+                          <input type="text" placeholder="상세주소를 입력하세요." />
+                        </li>
                       </ul>
                     </form>
                   </div>
@@ -749,6 +794,12 @@
                       <img src="asset/images/icon/search_add.png" alt="추가검색버튼_아이콘" />
                     </div>
                   </div>
+                  <!-- 검색조건 선택버튼 (모바일) -->
+                  <button class="searchFilter_btn ns_b">
+                    <img src="asset/images/icon/search_add_m.png" alt="검색조건 선택_아이콘" />
+                    검색조건 선택
+                  </button>
+
                 </div>
                 <!-- 검색 결정 -->
                 <div class="search_decision">
@@ -848,7 +899,6 @@
                           </form>
                         </div>
                       </div>
-
                     </div>
                   </div>
                   <!-- 초기화 / 검색 / 저장 버튼 -->
@@ -870,7 +920,7 @@
               </div>
               <!-- 검색 결과 -->
               <div class="search_result">
-                <div class="result_top d-flex justify-content-between">
+                <div class="result_top">
                   <div class="total">
                     <p>총 <strong class="ns_b">289</strong> 건</p>
                   </div>
