@@ -153,27 +153,27 @@
     border-radius: 3px;
 }
 /* 야간 모드 */
-.construction_site .night_mode {
+.night_mode {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 1.1111vh;
     width: 100%;
 }
-.construction_site .night_mode p {
+.night_mode p {
     color: #fff;
     font-size: 14px;
 }
-.construction_site .switch_wrap {
+.switch_wrap {
     position: relative;
     width: 36px;
     height: 19px;
     margin: 10px auto 0;
 }
-.construction_site .switch_wrap:hover {
+.switch_wrap:hover {
     cursor: pointer;
 }
-.construction_site .switch_btn {
+.switch_btn {
     position: absolute;
     top: 0;
     left: 0;
@@ -182,10 +182,10 @@
     transition: all 0.13s;
     z-index: 2;
 }
-.construction_site .switch_btn.active {
-    left: 50%;
+.switch_btn.active {
+    left: 50% !important;
 }
-.construction_site .switch_body {
+.switch_body {
     position: absolute;
     top: 1px;
     left: 50%;

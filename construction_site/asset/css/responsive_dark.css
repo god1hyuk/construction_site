@@ -23,7 +23,10 @@
     }
 
     /* 메인 컨텐츠 */
-
+    .construction_site .container {
+        padding-top: 100px;
+        padding-left: 0;
+    }
     /* Today 안전사고 */
     .construction_site .day_stats {
         height: auto;
@@ -305,8 +308,7 @@
 @media (max-width: 1240px) {
     /* 공통 영역 */
     .container {
-        padding-top: 100px;
-        padding-left: 0;
+        margin-bottom: 150px;
     }
     .row {
         padding: 0;
@@ -720,6 +722,9 @@
 
 @media (max-width: 540px) {
 	/* 공통 영역 */
+    .container {
+        margin-bottom: 128px;
+    }
 	.col-6 {
 		height: 600px;
 	}
@@ -958,6 +963,9 @@
 @media (max-width: 414px) {
     /* 공통 영역 */
     .container {
+        margin-bottom: 115px;
+    }
+    .container {
         padding-top: 52px;
     }
     .col-4 {
@@ -1072,7 +1080,9 @@
     }
 
     /* 메인 컨텐츠 */
-
+    .construction_site .container {
+        padding-top: 52px;
+    }
     /* Today 안전사고 */
     .construction_site .day_stats_bg {
         padding: 25px 20px;

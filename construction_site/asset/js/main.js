@@ -1,16 +1,22 @@
 var count = 0;
 // 야간모드 스위치
 $(function () {
-  $(".construction_site .switch_wrap").click(function () {
+  $(".switch_wrap").click(function () {
     if (count % 2 === 0) {
       $(this).prev("p").text("주간모드");
       $(this).children(".switch_btn").addClass("active");
+    } else if (count % 2 !== 0) {
+      $(this).prev("p").text("야간모드");
+      $(this).children(".switch_btn").removeClass("active");
+    }
+    count++;
+  });
+  $(".construction_site .switch_wrap").click(function () {
+    if (count % 2 === 0) {
       $("#changeStyle1").attr("href", "asset/css/header_dark.css");
       $("#changeStyle2").attr("href", "asset/css/style_dark.css");
       $("#changeStyle3").attr("href", "asset/css/responsive_dark.css");
     } else if (count % 2 !== 0) {
-      $(this).prev("p").text("야간모드");
-      $(this).children(".switch_btn").removeClass("active");
       $("#changeStyle1").attr("href", "asset/css/header.css");
       $("#changeStyle2").attr("href", "asset/css/style.css");
       $("#changeStyle3").attr("href", "asset/css/responsive.css");
@@ -18,6 +24,7 @@ $(function () {
     count++;
   });
 });
+
 
 // 사이드 서브메뉴
 $(function () {
@@ -375,8 +382,8 @@ $(function () {
       .css("background-image", "url(asset/images/icon/sub_side_menu" + sideMenu_num + ".png)");
   });
   $(".pc_submenu").hide();
-  $(".sub_page .sideMenu_item > a").click(function () {
-    $(".sub_page .sideMenu_item > a").not(this).parent("li.toggle").removeClass("active");
+  $(".sub_page .sideMenu_item.toggle > a").click(function () {
+    $(".sub_page .sideMenu_item.toggle > a").not(this).parent("li.toggle").removeClass("active");
     $(this).parent("li.toggle").toggleClass("active");
     $(this).next(".pc_submenu").slideToggle(300);
     $("ul li a").not(this).next().slideUp(300);
@@ -390,7 +397,7 @@ $(function () {
 // 모바일 메뉴
 $(function () {
   $(".m_submenu").hide();
-  $(".m_menu_lists > ul > li > a").click(function () {
+  $(".m_menu_lists > ul > .accordion_menu > a").click(function () {
     $(this).next().slideToggle(300);
     $("ul li a").not(this).next().slideUp(300);
     $(this).children(".accordion_btn").toggleClass("active");
