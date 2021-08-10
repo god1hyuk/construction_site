@@ -1036,23 +1036,30 @@
         font-size: 16px;
         margin-top: 30px;
     }
-    /* 검색결과 리스트 */
+    /* 검색결과 */
     .const_mgt .search_result .result_option button {
         width: 48.5%;
+        font-size: 18px;
     }
     .const_mgt .search_result .result_option button:last-child {
         margin-left: 3%;
     }
+    .const_mgt .search_result .total p {
+        font-size: 24px;
+    }
+    /* 검색결과 리스트 */
     .const_mgt .search_result .result_item {
         flex-direction: column;
         align-items: start;
         padding: 40px 0;
     }
     .const_mgt .search_result .result_item li:nth-child(2) {
+        font-size: 24px;
         padding-bottom: 0;
     }
     .const_mgt .search_result .result_item li:not(:nth-child(2)) {
         width: 100%;
+        font-size: 18px;
         padding-left: 30px;
     }
     .const_mgt .search_result .result_item li:not(:nth-child(2)) span {
@@ -1609,6 +1616,8 @@
     /* 서브페이지 */
     .sub_page .container {
         margin-top: 62px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .sub_page .title_wrap {
         flex-direction: column;
@@ -1670,6 +1679,16 @@
     /* 검색 결과 */
     .const_mgt .search_result .result_option button {
         font-size: 18px;
+    }
+    /* 검색 결과 리스트*/
+    .const_mgt .search_result .result_list {
+        margin-left: -20px;
+    }
+    /* 카피라이트 */
+    .copyright {
+        font-size: 12px;
+        margin-left: -20px;
+        padding-left: 20px;
     }
 }
 
@@ -1742,5 +1761,70 @@
     .construction_site .institutions_m {
         margin-left: 16px;
         margin-right: 16px;
+    }
+    /* 서브페이지 */
+    .sub_page .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    /* 검색 폼 영역 */
+    .const_mgt .search_container .search_form {
+        padding: 0 16px;
+    }
+    /* 검색 결정 */
+    .const_mgt .search_decision {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .const_mgt .search_decision .decisionBtn button {
+        right: 16px;
+    }
+    .const_mgt .picked_rqt li:not(:last-child) {
+        margin-right: 6px;
+    }
+    /* 임시 */
+    .const_mgt .search_decision .decisionBtn {
+        flex-direction: column;
+    }
+    .const_mgt .search_decision .decisionBtn button:not(:last-child) {
+        width: 100%;
+    }
+    .const_mgt .search_decision .init_btn {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    /* 검색결과 */
+
+    /* 임시 (폰트는 확정) */
+    .const_mgt .search_result .result_option {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+    .const_mgt .search_result .result_option button:last-child {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    .const_mgt .search_result .result_option button {
+        width: 100%;
+        font-size: 16px;
+    }
+    /* 검색결과 리스트*/
+    .const_mgt .search_result .result_list {
+        margin-left: -16px;
+    }
+    .const_mgt .search_result .result_item li:nth-child(2) {
+        font-size: 18px;
+    }
+    .const_mgt .search_result .result_item li:not(:nth-child(2)) {
+        font-size: 16px;
+    }
+    .const_mgt .search_result .result_item li:not(:nth-child(2)) span {
+        width: 35%;
+    }
+    /* 카피라이트 */
+    .copyright {
+        font-size: 11px;
+        margin-left: -16px;
+        padding-left: 16px;
     }
 }

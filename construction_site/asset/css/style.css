@@ -1350,7 +1350,7 @@ a.ui-button:active,
 }
 .const_mgt .search_result .result_option button {
   font-size: 14px;
-  padding: 10px 0;
+  padding: 10px 15px;
   background: #fff;
   border: 1px solid #c0c9cb;
   border-radius: 5px;
