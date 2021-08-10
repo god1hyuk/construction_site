@@ -1827,8 +1827,14 @@
     }
 
     /* 검색결과 */
+    .const_mgt .search_result .result_option {
+        margin-bottom: 20px;
+    }
     .const_mgt .search_result .result_option button {
         font-size: 16px;
+    }
+    .const_mgt .search_result .total p {
+        font-size: 20px;
     }
     /* 검색결과 리스트*/
     .const_mgt .search_result .result_list {
