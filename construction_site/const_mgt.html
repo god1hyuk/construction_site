@@ -1,1182 +1,1191 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <!-- Favicon -->
-    <link rel="icon" href="asset/images/icon/favicon.ico" />
-    <link rel="shortcut icon" href="asset/images/icon/favicon.ico" />
 
-    <!-- jQuery UI for datepicker -->
-    <link rel="stylesheet" href="asset/css/jquery-ui.min.css" />
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
-    <!-- Font -->
-    <link rel="stylesheet" href="asset/css/font.css" />
+  <!-- includeHTML -->
+  <script src="asset/js/includeHTML.js"></script>
 
-    <!-- Reset -->
-    <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="asset/images/icon/favicon.ico" />
+  <link rel="shortcut icon" href="asset/images/icon/favicon.ico" />
 
-    <!-- Form -->
-    <link rel="stylesheet" href="asset/css/layout_v8.0.5.css" />
+  <!-- jQuery UI for datepicker -->
+  <link rel="stylesheet" href="asset/css/jquery-ui.min.css" />
 
-    <!-- Common -->
-    <link rel="stylesheet" href="asset/css/common.css" />
+  <!-- Font -->
+  <link rel="stylesheet" href="asset/css/font.css" />
 
-    <!-- Header -->
-    <link rel="stylesheet" id="changeStyle1" href="asset/css/header.css" />
+  <!-- Reset -->
+  <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
 
-    <!-- Style -->
-    <link rel="stylesheet" id="changeStyle2" href="asset/css/style.css" />
+  <!-- Form -->
+  <link rel="stylesheet" href="asset/css/layout_v8.0.5.css" />
 
-    <!-- datepicker -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- Common -->
+  <link rel="stylesheet" href="asset/css/common.css" />
 
-    <!-- Responsive -->
-    <link rel="stylesheet" id="changeStyle3" href="asset/css/responsive.css" />
+  <!-- Header -->
+  <link rel="stylesheet" id="changeStyle1" href="asset/css/header.css" />
 
-    <title>서울시 민간건축공사장 안전관리 정보화시스템</title>
+  <!-- Style -->
+  <link rel="stylesheet" id="changeStyle2" href="asset/css/style.css" />
 
-  </head>
-  <body>
-    <!-- 공사장관리 서브페이지 -->
-    <div class="const_mgt sub_page d-flex justify-content-between">
+  <!-- datepicker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-      <!-- 서브페이지 사이드 메뉴 (PC) -->
-      <aside>
-        <nav class="side_menu ns_b">
-          <div class="home d-flex align-items-center">
-            <a href="index.html" class="d-flex align-items-center justify-content-between">
-              <span>Menu</span>
-              <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
+  <!-- Responsive -->
+  <link rel="stylesheet" id="changeStyle3" href="asset/css/responsive.css" />
+
+  <title>서울시 민간건축공사장 안전관리 정보화시스템</title>
+
+</head>
+
+<body>
+  <!-- 공사장관리 서브페이지 -->
+  <div class="const_mgt sub_page d-flex justify-content-between">
+
+    <!-- 서브페이지 사이드 메뉴 (PC) -->
+    <aside>
+      <nav class="side_menu ns_b">
+        <div class="home d-flex align-items-center">
+          <a href="index.html" class="d-flex align-items-center justify-content-between">
+            <span>Menu</span>
+            <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
+          </a>
+        </div>
+        <ul>
+          <li class="sideMenu_item" value="0">
+            <a href="const_mgt.html">
+              <div class="sideMenu_icon"></div>
+              <p>공사장관리</p>
             </a>
+          </li>
+          <li class="sideMenu_item" value="1">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>건축물관리</p>
+            </a>
+          </li>
+          <li class="sideMenu_item" value="2">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>사고정보</p>
+            </a>
+          </li>
+          <li class="sideMenu_item" value="3">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>실시간 모니터링</p>
+            </a>
+          </li>
+          <li class="sideMenu_item toggle" value="4">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>자문단관리</p>
+              <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+            </a>
+            <ul class="pc_submenu">
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>자문단 점검이력</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>공고관리</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sideMenu_item toggle" value="5">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>알림마당</p>
+              <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+            </a>
+            <ul class="pc_submenu">
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>공지사항</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>홍보/보도자료</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>관련법규/지침</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <button class="acdnt_sprd">
+          <a href="javascript: void(0);">
+            <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+            <p class="text-center ns_b">상황전파</p>
+          </a>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- 헤더 (PC) -->
+    <header class="header_pc d-flex">
+      <nav class="d-flex align-items-center justify-content-between">
+        <div class="logo_wrap d-flex align-items-center">
+          <a href="index.html">
+            <img src="asset/images/logo.png" alt="서울시_로고_이미지" />
+          </a>
+          <h1 class="title ns_eb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
+        </div>
+        <div class="nav_right d-flex">
+          <div class="sub_title d-flex align-items-center">
+            <p>서울시 지역건축안전센터</p>
+            <span>홍길동</span>
           </div>
+          <ul class="d-flex align-items-center">
+            <li class="logout">
+              <a class="d-flex align-items-center" href="javascript: void(0);">
+                <div class="logout_icon"></div>
+                <p>로그아웃</p>
+              </a>
+            </li>
+            <li class="go_map nt_b">
+              <button class="d-flex align-items-center justify-content-center">
+                지도이동
+                <div class="go_map_icon"></div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 헤더 (테블릿 & 모바일) -->
+    <header class="header_m">
+      <div class="logo_wrap d-flex align-items-center">
+        <h1 class="title ns_eb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
+      </div>
+      <nav>
+        <button class="burger_btn"></button>
+      </nav>
+    </header>
+
+    <!-- 모바일 메뉴 -->
+    <div class="mobile_menu nt_m">
+      <!-- 로그인 버전 -->
+      <div class="m_login">
+        <div class="m_menu_top">
+          <div class="login_text d-flex align-items-center">
+            <div class="login_icon"></div>
+            <span><strong>로그인</strong>이 필요합니다.</span>
+          </div>
+          <a href="javascript: void(0);" class="login_link">
+            로그인하기
+            <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
+          </a>
+          <button class="close_btn"></button>
+        </div>
+        <div class="m_menu_lists nt_m">
           <ul>
-            <li class="sideMenu_item" value="0">
+            <li>
               <a href="const_mgt.html">
-                <div class="sideMenu_icon"></div>
-                <p>공사장관리</p>
+                <p>공사장 관리</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
               </a>
             </li>
-            <li class="sideMenu_item" value="1">
+            <li>
               <a href="javascript: void(0);">
-                <div class="sideMenu_icon"></div>
-                <p>건축물관리</p>
+                <p>건축물 관리</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
               </a>
             </li>
-            <li class="sideMenu_item" value="2">
+            <li>
               <a href="javascript: void(0);">
-                <div class="sideMenu_icon"></div>
                 <p>사고정보</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
               </a>
             </li>
-            <li class="sideMenu_item" value="3">
+            <li>
               <a href="javascript: void(0);">
-                <div class="sideMenu_icon"></div>
-                <p>실시간 모니터링</p>
+                <p>CCTV</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
               </a>
             </li>
-            <li class="sideMenu_item toggle" value="4">
+            <li class="accordion_menu">
               <a href="javascript: void(0);">
-                <div class="sideMenu_icon"></div>
                 <p>자문단관리</p>
-                <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+                <div class="accordion_btn"></div>
               </a>
-              <ul class="pc_submenu">
+              <ul class="m_submenu nt_rg">
                 <li>
                   <a href="javascript: void(0);">
-                    <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
                     <span>자문단 점검이력</span>
                   </a>
                 </li>
                 <li>
                   <a href="javascript: void(0);">
-                    <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
                     <span>공고관리</span>
                   </a>
                 </li>
               </ul>
             </li>
-            <li class="sideMenu_item toggle" value="5">
+            <li class="accordion_menu">
               <a href="javascript: void(0);">
-                <div class="sideMenu_icon"></div>
                 <p>알림마당</p>
-                <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+                <div class="accordion_btn"></div>
               </a>
-              <ul class="pc_submenu">
+              <ul class="m_submenu nt_rg">
                 <li>
                   <a href="javascript: void(0);">
-                    <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
                     <span>공지사항</span>
                   </a>
                 </li>
                 <li>
                   <a href="javascript: void(0);">
-                    <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
                     <span>홍보/보도자료</span>
                   </a>
                 </li>
                 <li>
                   <a href="javascript: void(0);">
-                    <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
                     <span>관련법규/지침</span>
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
-          <button class="acdnt_sprd">
-            <a href="javascript: void(0);">
-              <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
-              <p class="text-center ns_b">상황전파</p>
-            </a>
-          </button>
-        </nav>
-      </aside>
-
-      <!-- 헤더 (PC) -->
-      <header class="header_pc d-flex">
-        <nav class="d-flex align-items-center justify-content-between">
-          <div class="logo_wrap d-flex align-items-center">
-            <a href="index.html">
-              <img src="asset/images/logo.png" alt="서울시_로고_이미지" />
-            </a>
-            <h1 class="title ns_eb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
-          </div>
-          <div class="nav_right d-flex">
-            <div class="sub_title d-flex align-items-center">
-              <p>서울시 지역건축안전센터</p>
-              <span>홍길동</span>
-            </div>
-            <ul class="d-flex align-items-center">
-              <li class="logout">
-                <a class="d-flex align-items-center" href="javascript: void(0);">
-                  <div class="logout_icon"></div>
-                  <p>로그아웃</p>
-                </a>
-              </li>
-              <li class="go_map nt_b">
-                <button class="d-flex align-items-center justify-content-center">
-                  지도이동
-                  <div class="go_map_icon"></div>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
-      <!-- 헤더 (테블릿 & 모바일) -->
-      <header class="header_m">
-        <div class="logo_wrap d-flex align-items-center">
-          <h1 class="title ns_eb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
         </div>
-        <nav>
-          <button class="burger_btn"></button>
-        </nav>
-      </header>
-
-      <!-- 모바일 메뉴 -->
-      <div class="mobile_menu nt_m">
-        <!-- 로그인 버전 -->
-        <div class="m_login">
-          <div class="m_menu_top">
-            <div class="login_text d-flex align-items-center">
-              <div class="login_icon"></div>
-              <span><strong>로그인</strong>이 필요합니다.</span>
-            </div>
-            <a href="javascript: void(0);" class="login_link">
-              로그인하기
-              <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
+        <div class="m_menu_bottom">
+          <div class="bottom_menu d-flex justify-content-between">
+            <a href="index.html" class="home_btn d-flex align-items-center">
+              <img src="asset/images/icon/home_btn_dark.png" alt="홈버튼_아이콘" />
+              홈화면
             </a>
-            <button class="close_btn"></button>
-          </div>
-          <div class="m_menu_lists nt_m">
-            <ul>
-              <li>
-                <a href="const_mgt.html">
-                  <p>공사장 관리</p>
-                  <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);">
-                  <p>건축물 관리</p>
-                  <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);">
-                  <p>사고정보</p>
-                  <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);">
-                  <p>CCTV</p>
-                  <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
-                </a>
-              </li>
-              <li class="accordion_menu">
-                <a href="javascript: void(0);">
-                  <p>자문단관리</p>
-                  <div class="accordion_btn"></div>
-                </a>
-                <ul class="m_submenu nt_rg">
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>자문단 점검이력</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>공고관리</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="accordion_menu">
-                <a href="javascript: void(0);">
-                  <p>알림마당</p>
-                  <div class="accordion_btn"></div>
-                </a>
-                <ul class="m_submenu nt_rg">
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>공지사항</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>홍보/보도자료</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>관련법규/지침</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="m_menu_bottom">
-            <div class="bottom_menu d-flex justify-content-between">
-              <a href="index.html" class="home_btn d-flex align-items-center">
-                <img src="asset/images/icon/home_btn_dark.png" alt="홈버튼_아이콘" />
-                홈화면
-              </a>
-              <div class="night_mode_m d-flex align-items-center nt_rg">
-                <p>야간모드</p>
-                <div class="switch_wrap">
-                  <img class="switch_btn" src="asset/images/switch_btn_m.png" alt="스위치버튼_이미지" />
-                  <div class="switch_body"></div>
-                </div>
+            <div class="night_mode_m d-flex align-items-center nt_rg">
+              <p>야간모드</p>
+              <div class="switch_wrap">
+                <img class="switch_btn" src="asset/images/switch_btn_m.png" alt="스위치버튼_이미지" />
+                <div class="switch_body"></div>
               </div>
             </div>
-            <div class="account_wrap d-flex">
-              <button>로그인</button>
-              <button>사용자등록</button>
-            </div>
+          </div>
+          <div class="account_wrap d-flex">
+            <button>로그인</button>
+            <button>사용자등록</button>
           </div>
         </div>
-
-        <!-- 로그아웃 버전 -->
-        <div class="m_logout">
-          <div class="m_menu_top">
-            <div class="login_text d-flex align-items-center">
-              <div class="login_icon"></div>
-              <span><strong>홍길동</strong>서울시 지역건축안전센터</span>
-            </div>
-            <a href="javascript: void(0);" class="login_link">
-              로그아웃하기
-              <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
-            </a>
-            <button class="close_btn"></button>
-          </div>
-          <div class="m_menu_lists">
-            <ul>
-              <li>
-                <a href="const_mgt.html">
-                  <p>공사장 관리</p>
-                  <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);">
-                  <p>건축물 관리</p>
-                  <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);">
-                  <p>사고정보</p>
-                  <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);">
-                  <p>CCTV</p>
-                  <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
-                </a>
-              </li>
-              <li class="accordion_menu">
-                <a href="javascript: void(0);">
-                  <p>자문단관리</p>
-                  <div class="accordion_btn"></div>
-                </a>
-                <ul class="m_submenu nt_rg">
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>자문단 점검이력</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>공고관리</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="accordion_menu">
-                <a href="javascript: void(0);">
-                  <p>알림마당</p>
-                  <div class="accordion_btn"></div>
-                </a>
-                <ul class="m_submenu nt_rg">
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>공지사항</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>홍보/보도자료</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);">
-                      <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
-                      <span>관련법규/지침</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="m_menu_bottom">
-            <div class="bottom_menu d-flex justify-content-between">
-              <a href="index.html" class="home_btn d-flex align-items-center">
-                <img src="asset/images/icon/home_btn_dark.png" alt="홈버튼_아이콘" />
-                홈화면
-              </a>
-              <div class="night_mode_m d-flex align-items-center nt_rg">
-                <p>야간모드</p>
-                <div class="switch_wrap">
-                  <img class="switch_btn" src="asset/images/switch_btn_m.png" alt="스위치버튼_이미지" />
-                  <div class="switch_body"></div>
-                </div>
-              </div>
-            </div>
-            <div class="account_wrap d-flex">
-              <button>로그아웃</button>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <!-- 검색조건 선택 (모바일) -->
-      <div class="searchFilter_m">
-        <div class="searchFilter_top d-flex align-items-center justify-content-between">
-          <button class="init_btn_m">
-            <img src="asset/images/icon/searchFilter_init.png" alt="초기화_아이콘" />
-            초기화
-          </button>
-          <h2 class="ns_b">필터</h2>
+      <!-- 로그아웃 버전 -->
+      <div class="m_logout">
+        <div class="m_menu_top">
+          <div class="login_text d-flex align-items-center">
+            <div class="login_icon"></div>
+            <span><strong>홍길동</strong>서울시 지역건축안전센터</span>
+          </div>
+          <a href="javascript: void(0);" class="login_link">
+            로그아웃하기
+            <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
+          </a>
           <button class="close_btn"></button>
         </div>
-        <!-- 검색조건 체크리스트 (모바일) -->
-        <div class="searchFilter_list">
-          <form action="">
-            <ul>
-              <li>
-                <h3>규모</h3>
-                <h4>대형</h4>
-                <ul class="check_list">
-                  <li class="active">
-                    <label for="division_check0">대형</label>
-                    <input type="checkbox" name="division_check" id="division_check0" />
-                  </li>
-                  <li>
-                    <label for="division_check1">중형</label>
-                    <input type="checkbox" name="division_check" id="division_check1" />
-                  </li>
-                  <li>
-                    <label for="division_check2">소형</label>
-                    <input type="checkbox" name="division_check" id="division_check2" />
-                  </li>
-                </ul>
-              </li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </form>
+        <div class="m_menu_lists">
+          <ul>
+            <li>
+              <a href="const_mgt.html">
+                <p>공사장 관리</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>건축물 관리</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>사고정보</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>CCTV</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li class="accordion_menu">
+              <a href="javascript: void(0);">
+                <p>자문단관리</p>
+                <div class="accordion_btn"></div>
+              </a>
+              <ul class="m_submenu nt_rg">
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>자문단 점검이력</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>공고관리</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion_menu">
+              <a href="javascript: void(0);">
+                <p>알림마당</p>
+                <div class="accordion_btn"></div>
+              </a>
+              <ul class="m_submenu nt_rg">
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>공지사항</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>홍보/보도자료</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>관련법규/지침</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <!-- 상황전파 버튼 (모바일) -->
-      <button class="acdnt_sprd_m d-flex align-items-center justify-content-center nt_b">
-        <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
-        상황전파
-      </button>
-
-      <div class="main_content">
-        <div class="container">
-          <div class="row">
-            <div class="title_wrap">
-              <div class="title_icon"></div>
-              <h3 class="ns_eb">공사장 관리</h3>
-            </div>
-            <div class="search_container">
-              <div class="search_wrap">
-                <!-- 검색 폼 영역 -->
-                <div class="search_form">
-                  <!-- 주소선택 -->
-                  <div class="adress">
-                    <h3 class="ns_b">주소</h3>
-                    <form action="">
-                      <ul class="d-flex">
-                        <li>
-                          <select name="adress_gu" id="gu">
-                            <option value="">마포구</option>
-                          </select>
-                        </li>
-                        <li>
-                          <select name="adress_dong" id="dong">
-                            <option value="">가양1동</option>
-                          </select>
-                        </li>
-                        <li>
-                          <input type="text" placeholder="상세주소를 입력하세요." />
-                        </li>
-                      </ul>
-                    </form>
-                  </div>
-                  <!-- 검색조건 탭 -->
-                  <div class="searchRqt_tab d-flex">
-                    <ul class="tab_index ns_b">
-                      <li class="active" data-tab="searchRqt_tab0">규모</li>
-                      <li data-tab="searchRqt_tab1">공정</li>
-                      <li data-tab="searchRqt_tab2">점검종류</li>
-                    </ul>
-                    <div id="searchRqt_tab0" class="tab_content active">
-                      <div class="division">
-                        <p class="text-center">구분</p>
-                        <form action="">
-                          <ul>
-                            <li>
-                              <label for="division_check0">대형</label>
-                              <input type="checkbox" name="division_check" id="division_check0" />
-                            </li>
-                            <li>
-                              <label for="division_check1">중형</label>
-                              <input type="checkbox" name="division_check" id="division_check1" />
-                            </li>
-                            <li>
-                              <label for="division_check2">소형</label>
-                              <input type="checkbox" name="division_check" id="division_check2" />
-                            </li>
-                          </ul>
-                        </form>
-                      </div>
-                    </div>
-                    <div id="searchRqt_tab1" class="tab_content">
-                      <div class="process_main">
-                        <p class="text-center">대분류</p>
-                        <form action="">
-                          <ul>
-                            <li>
-                              <label for="processM_check0">철거</label>
-                              <input type="checkbox" name="processM_check" id="processM_check0" />
-                            </li>
-                            <li>
-                              <label for="processM_check1">해체</label>
-                              <input type="checkbox" name="processM_check" id="processM_check1" />
-                            </li>
-                            <li>
-                              <label for="processM_check2">굴토</label>
-                              <input type="checkbox" name="processM_check" id="processM_check2" />
-                            </li>
-                          </ul>
-                        </form>
-                      </div>
-                      <div class="process_sub">
-                        <p class="text-center">소분류</p>
-                        <form action="">
-                          <ul>
-                            <li>
-                              <label for="processS_check0">허가</label>
-                              <input type="checkbox" name="processS_check" id="processS_check0" />
-                            </li>
-                            <li>
-                              <label for="processS_check1">신고</label>
-                              <input type="checkbox" name="processS_check" id="processS_check1" />
-                            </li>
-                          </ul>
-                        </form>
-                      </div>
-                    </div>
-                    <div id="searchRqt_tab2" class="tab_content">
-                      <div class="checkType">
-                        <p class="text-center">구분</p>
-                        <form action="">
-                          <ul>
-                            <li>
-                              <label for="cType_check0">정기안전점검</label>
-                              <input type="checkbox" name="cType_check" id="cType_check0" />
-                            </li>
-                            <li>
-                              <label for="cType_check1">중소형 안전점검</label>
-                              <input type="checkbox" name="cType_check" id="cType_check1" />
-                            </li>
-                            <li>
-                              <label for="cType_check2">특별점검</label>
-                              <input type="checkbox" name="cType_check" id="cType_check2" />
-                            </li>
-                          </ul>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 추가 검색조건 -->
-                  <div class="search_add">
-                    <form action="">
-                      <ul class="check_wrap">
-                        <li>
-                          <h3>주용도</h3>
-                          <ul class="check_list">
-                            <li>
-                              <label for="mainUse_check0"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
-                              <div class="checking"></div>
-                              <p>단독주택</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check1"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check1" />
-                              <div class="checking"></div>
-                              <p>공동주택</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check2"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check2" />
-                              <div class="checking"></div>
-                              <p>근린생활시설</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check3"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check3" />
-                              <div class="checking"></div>
-                              <p>업무시설</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check4"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check4" />
-                              <div class="checking"></div>
-                              <p>숙박시설</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check5"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check5" />
-                              <div class="checking"></div>
-                              <p>위락시설</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check6"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check6" />
-                              <div class="checking"></div>
-                              <p>공장</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check7"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check7" />
-                              <div class="checking"></div>
-                              <p>창고</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check8"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check8" />
-                              <div class="checking"></div>
-                              <p>문화 및 집회시설</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check9"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check9" />
-                              <div class="checking"></div>
-                              <p>노유자시설</p>
-                            </li>
-                            <li>
-                              <label for="mainUse_check10"></label>
-                              <input type="checkbox" name="mainUse_check" id="mainUse_check10" />
-                              <div class="checking"></div>
-                              <p>기타</p>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <h3>구조</h3>
-                          <ul class="check_list d-flex">
-                            <li>
-                              <label for="structure_check0"></label>
-                              <input type="checkbox" name="structure_check" id="structure_check0" />
-                              <div class="checking"></div>
-                              <p>철근콘크리트조</p>
-                            </li>
-                            <li>
-                              <label for="structure_check1"></label>
-                              <input type="checkbox" name="structure_check" id="structure_check1" />
-                              <div class="checking"></div>
-                              <p>철골철근콜크리트조</p>
-                            </li>
-                            <li>
-                              <label for="structure_check2"></label>
-                              <input type="checkbox" name="structure_check" id="structure_check2" />
-                              <div class="checking"></div>
-                              <p>철골조</p>
-                            </li>
-                            <li>
-                              <label for="structure_check3"></label>
-                              <input type="checkbox" name="structure_check" id="structure_check3" />
-                              <div class="checking"></div>
-                              <p>목구조</p>
-                            </li>
-                            <li>
-                              <label for="structure_check4"></label>
-                              <input type="checkbox" name="structure_check" id="structure_check4" />
-                              <div class="checking"></div>
-                              <p>블록 및 조적조</p>
-                            </li>
-                            <li>
-                              <label for="structure_check5"></label>
-                              <input type="checkbox" name="structure_check" id="structure_check5" />
-                              <div class="checking"></div>
-                              <p>기타</p>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <h3>CCTV 설치여부</h3>
-                          <ul class="check_list d-flex">
-                            <li>
-                              <label for="cctv_check0"></label>
-                              <input type="radio" name="cctv_check" id="cctv_check0" checked />
-                              <div class="checking active"></div>
-                              <p>설치</p>
-                            </li>
-                            <li>
-                              <label for="cctv_check1"></label>
-                              <input type="radio" name="cctv_check" id="cctv_check1" />
-                              <div class="checking"></div>
-                              <p>미설치</p>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <h3>공종</h3>
-                          <ul class="check_list d-flex">
-                            <li>
-                              <label for="constType_check0"></label>
-                              <input type="checkbox" name="constType_check" id="constType_check0" />
-                              <div class="checking"></div>
-                              <p>철거</p>
-                            </li>
-                            <li>
-                              <label for="constType_check2"></label>
-                              <input type="checkbox" name="constType_check" id="constType_check2" />
-                              <div class="checking"></div>
-                              <p>굴토</p>
-                            </li>
-                            <li>
-                              <label for="constType_check3"></label>
-                              <input type="checkbox" name="constType_check" id="constType_check3" />
-                              <div class="checking"></div>
-                              <p>가시설</p>
-                            </li>
-                            <li>
-                              <label for="constType_check4"></label>
-                              <input type="checkbox" name="constType_check" id="constType_check4" />
-                              <div class="checking"></div>
-                              <p>골조</p>
-                            </li>
-                            <li>
-                              <label for="constType_check5"></label>
-                              <input type="checkbox" name="constType_check" id="constType_check5" />
-                              <div class="checking"></div>
-                              <p>크레인</p>
-                            </li>
-                            <li>
-                              <label for="constType_check6"></label>
-                              <input type="checkbox" name="constType_check" id="constType_check6" />
-                              <div class="checking"></div>
-                              <p>마감</p>
-                            </li>
-                            <li>
-                              <label for="constType_check7"></label>
-                              <input type="checkbox" name="constType_check" id="constType_check7" />
-                              <div class="checking"></div>
-                              <p>기타</p>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <h3>공정률</h3>
-                          <ul class="check_list d-flex">
-                            <li>
-                              <select name="" id="">
-                                <option value="">60%</option>
-                              </select>
-                              <p>~</p>
-                              <select name="" id="">
-                                <option value="">70%</option>
-                              </select>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <h3>허가일자</h3>
-                          <ul class="check_list d-flex">
-                            <li>
-                              <input type="text" id="permitDate" class="datepicker" />
-                            </li>                          
-                          </ul>
-                        </li>
-                        <li>
-                          <h3>착공일자</h3>
-                          <ul class="check_list d-flex">
-                            <li>
-                              <input type="text" id="startDate" class="datepicker" />
-                            </li>                          
-                          </ul>
-                        </li>
-                        <li>
-                          <h3>사용승인예정일</h3>
-                          <ul class="check_list d-flex">
-                            <li>
-                              <input type="text" id="useOkDate" class="datepicker" />
-                            </li>                          
-                          </ul>
-                        </li>
-                        <li>
-                          <h3>장비보유현황</h3>
-                          <ul class="check_list d-flex">
-                            <li>
-                              <select name="" id="">
-                                <option value="">포크레인</option>
-                              </select>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </form>
-                    <div class="add_btn d-flex align-items-center justify-content-center">
-                      <p>추가 검색조건 더보기</p>
-                      <img src="asset/images/icon/search_add.png" alt="추가검색버튼_아이콘" />
-                    </div>
-                  </div>
-                  <!-- 검색조건 선택버튼 (모바일) -->
-                  <button class="searchFilter_btn ns_b">
-                    <img src="asset/images/icon/search_add_m.png" alt="검색조건 선택_아이콘" />
-                    검색조건 선택
-                  </button>
-
-                </div>
-                <!-- 검색 결정 -->
-                <div class="search_decision">
-                  <ul class="picked_rqt d-flex">
-                    <li>
-                      소형
-                      <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-                    </li>
-                    <li>
-                      철거 - 허가
-                      <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-                    </li>
-                  </ul>
-                  <!-- 조건검색 키워드 -->
-                  <div class="keyword">
-                    <div class="keyword_wrap d-flex align-items-center justify-content-between">
-                      <ul class="keyword_list d-flex">
-                        <li>
-                          <div class="sBubble">
-                            <ul>
-                              <li>면적 : 1,000m² 미만</li>
-                              <li>용도 : 업무시설</li>
-                              <li>층수 : 지하1층/지상5층</li>
-                            </ul>
-                          </div>
-                          <a href="javascript: void(0)">
-                            키워드1
-                          </a>
-                        </li>
-                        <li>
-                          <div class="sBubble">
-                            <ul>
-                              <li>면적 : 1,000m² 미만</li>
-                              <li>용도 : 업무시설</li>
-                              <li>층수 : 지하1층/지상5층</li>
-                            </ul>
-                          </div>
-                          <a href="javascript: void(0)">
-                            키워드2
-                          </a>
-                        </li>
-                        <li>
-                          <div class="sBubble">
-                            <ul>
-                              <li>면적 : 1,000m² 미만</li>
-                              <li>용도 : 업무시설</li>
-                              <li>층수 : 지하1층/지상5층</li>
-                            </ul>
-                          </div>
-                          <a href="javascript: void(0)">
-                            키워드3
-                          </a>
-                        </li>
-                        <li>
-                          <div class="sBubble">
-                            <ul>
-                              <li>면적 : 1,000m² 미만</li>
-                              <li>용도 : 업무시설</li>
-                              <li>층수 : 지하1층/지상5층</li>
-                            </ul>
-                          </div>
-                          <a href="javascript: void(0)">
-                            키워드4
-                          </a>
-                        </li>
-                        <li>
-                          <div class="sBubble">
-                            <ul>
-                              <li>면적 : 1,000m² 미만</li>
-                              <li>용도 : 업무시설</li>
-                              <li>층수 : 지하1층/지상5층</li>
-                            </ul>
-                          </div>
-                          <a href="javascript: void(0)">
-                            키워드5
-                          </a>
-                        </li>
-                      </ul>
-                      <button class="kEdit_btn">키워드 편집</button>
-                      <!-- 키워드 저장 -->
-                      <div class="keyword_save">
-                        <div class="kSave_wrap">
-                          <form action="">
-                            <ul>
-                              <li class="justify-content-between">
-                                <label for="">
-                                  <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘" />
-                                  키워드
-                                </label>
-                                <input type="text" placeholder="키워드를 입력해주세요." />
-                              </li>
-                              <li class="mt_20 justify-content-center">
-                                <button type="reset" class="kSave_cancel">취소</button>
-                                <button type="button" class="kSave_save">저장</button>
-                              </li>
-                            </ul>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 초기화 / 검색 / 저장 버튼 -->
-                  <div class="decisionBtn d-flex align-items-center justify-content-center">
-                    <button type="reset" class="init_btn">
-                      <img src="asset/images/icon/initialization.png" alt="초기화_아이콘" />
-                      초기화
-                    </button>
-                    <button type="submit" class="search_btn">
-                      <img src="asset/images/icon/searching.png" alt="검색_아이콘" />
-                      검색
-                    </button>
-                    <button type="button" class="save_btn">
-                      <img src="asset/images/icon/search_save.png" alt="저장_아이콘" />
-                      검색조건 저장
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- 검색 결과 -->
-              <div class="search_result">
-                <div class="result_top">
-                  <div class="total">
-                    <p>총 <strong class="ns_b">289</strong> 건</p>
-                  </div>
-                  <div class="result_option d-flex">
-                    <button>담당업무</button>
-                    <button>재난관리 그룹추가</button>
-                  </div>
-                </div>
-                <!-- 검색결과 리스트 -->
-                <div class="result_list text-center">
-                  <div class="subject_wrap">
-                    <ul class="subject d-flex align-items-center">
-                      <li>
-                        <div class="checking"></div>
-                      </li>
-                      <li>위치</li>
-                      <li>유형</li>
-                      <li>공종</li>
-                      <li>착공일</li>
-                      <li>준공예정일</li>
-                      <li>공정기/경과일</li>
-                      <li>공정율</li>
-                      <li>점검횟수</li>
-                    </ul>
-                  </div>
-                  <div class="result_wrap">
-                    <ul class="result">
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking0"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking0" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>대형</li>
-                          <li>철거</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>1회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking1"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking1" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>중형</li>
-                          <li>기초</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>3회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking2"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking2" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>소형</li>
-                          <li>골조</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>2회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking3"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking3" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>대형</li>
-                          <li>철거</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>1회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking4"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking4" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>중형</li>
-                          <li>기초</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>3회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking5"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking5" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>소형</li>
-                          <li>골조</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>2회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking6"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking6" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>대형</li>
-                          <li>철거</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>1회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking7"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking7" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>중형</li>
-                          <li>기초</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>3회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking8"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking8" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>소형</li>
-                          <li>골조</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>2회</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>
-                            <label for="result_checking9"></label>
-                            <input type="checkbox" name="result_checking" id="result_checking9" />
-                            <div class="checking"></div>
-                          </li>
-                          <li>서울시 구로구 경인로 382 (개봉동)</li>
-                          <li>대형</li>
-                          <li>철거</li>
-                          <li>2021-11-10</li>
-                          <li>2021-11-10</li>
-                          <li>1000/50</li>
-                          <li>10%</li>
-                          <li>1회</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="result_bottom d-flex align-items-center justify-content-center">
-                    <!-- 페이지네이션 -->
-                    <ul class="pagination">
-                      <li class="prev move"></li>
-                      <li class="page_item active">1</li>
-                      <li class="page_item">2</li>
-                      <li class="page_item">3</li>
-                      <li class="page_item">4</li>
-                      <li class="page_item">5</li>
-                      <li class="next move"></li>
-                      <li class="superNext move"></li>
-                    </ul>
-                    <button class="exel" type="button">
-                      <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
-                      엑셀
-                    </button>
-                  </div>
-                </div>
+        <div class="m_menu_bottom">
+          <div class="bottom_menu d-flex justify-content-between">
+            <a href="index.html" class="home_btn d-flex align-items-center">
+              <img src="asset/images/icon/home_btn_dark.png" alt="홈버튼_아이콘" />
+              홈화면
+            </a>
+            <div class="night_mode_m d-flex align-items-center nt_rg">
+              <p>야간모드</p>
+              <div class="switch_wrap">
+                <img class="switch_btn" src="asset/images/switch_btn_m.png" alt="스위치버튼_이미지" />
+                <div class="switch_body"></div>
               </div>
             </div>
-            <!-- 카피라이트 -->
-            <p class="copyright">Copyrightⓒ  Seoul Metropolitan Government All Rights Reserved.</p>
+          </div>
+          <div class="account_wrap d-flex">
+            <button>로그아웃</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="asset/js/jquery-3.2.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 상황전파 버튼 (모바일) -->
+    <button class="acdnt_sprd_m d-flex align-items-center justify-content-center nt_b">
+      <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+      상황전파
+    </button>
 
-    <!-- datepicker -->
-    <script>
-      $.datepicker.setDefaults({
-          dateFormat: 'yy-mm-dd',
-          prevText: '이전 달',
-          nextText: '다음 달',
-          monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-          monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-          dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-          dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-          dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-          showMonthAfterYear: true,
-          yearSuffix: '년'
-      });
+    <!-- 검색조건 선택 (모바일) -->
+    <div class="searchFilter_m">
+      <div class="searchFilter_top d-flex align-items-center justify-content-between">
+        <button class="init_btn_m">
+          <img src="asset/images/icon/searchFilter_init.png" alt="초기화_아이콘" />
+          초기화
+        </button>
+        <h2 class="ns_b">필터</h2>
+        <button class="close_btn"></button>
+      </div>
+      <!-- 검색조건 체크리스트 (모바일) -->
+      <div class="searchFilter_list">
+        <form action="">
+          <ul>
+            <li>
+              <h3>규모</h3>
+              <h4>대형</h4>
+              <ul class="check_list">
+                <li class="active">
+                  <label for="division_check0">대형</label>
+                  <input type="checkbox" name="division_check" id="division_check0" />
+                </li>
+                <li>
+                  <label for="division_check1">중형</label>
+                  <input type="checkbox" name="division_check" id="division_check1" />
+                </li>
+                <li>
+                  <label for="division_check2">소형</label>
+                  <input type="checkbox" name="division_check" id="division_check2" />
+                </li>
+              </ul>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </form>
+      </div>
+    </div>
 
-      $(function() {
-        $("#permitDate").datepicker().datepicker('setDate', new Date());
-        $("#startDate").datepicker().datepicker('setDate', new Date());
-        $("#useOkDate").datepicker().datepicker('setDate', new Date());
-      });
-    </script>
+    <div class="main_content">
+      <div class="container">
+        <div class="row">
+          <div class="title_wrap">
+            <div class="title_icon"></div>
+            <h3 class="ns_eb">공사장 관리</h3>
+          </div>
+          <div class="search_container">
+            <div class="search_wrap">
+              <!-- 검색 폼 영역 -->
+              <div class="search_form">
+                <!-- 주소선택 -->
+                <div class="adress">
+                  <h3 class="ns_b">주소</h3>
+                  <form action="">
+                    <ul class="d-flex">
+                      <li>
+                        <select name="adress_gu" id="gu">
+                          <option value="">마포구</option>
+                        </select>
+                      </li>
+                      <li>
+                        <select name="adress_dong" id="dong">
+                          <option value="">가양1동</option>
+                        </select>
+                      </li>
+                      <li>
+                        <input type="text" placeholder="상세주소를 입력하세요." />
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <!-- 검색조건 탭 -->
+                <div class="searchRqt_tab d-flex">
+                  <ul class="tab_index ns_b">
+                    <li class="active" data-tab="searchRqt_tab0">규모</li>
+                    <li data-tab="searchRqt_tab1">공정</li>
+                    <li data-tab="searchRqt_tab2">점검종류</li>
+                  </ul>
+                  <div id="searchRqt_tab0" class="tab_content active">
+                    <div class="division">
+                      <p class="text-center">구분</p>
+                      <form action="">
+                        <ul>
+                          <li>
+                            <label for="division_check0">대형</label>
+                            <input type="checkbox" name="division_check" id="division_check0" />
+                          </li>
+                          <li>
+                            <label for="division_check1">중형</label>
+                            <input type="checkbox" name="division_check" id="division_check1" />
+                          </li>
+                          <li>
+                            <label for="division_check2">소형</label>
+                            <input type="checkbox" name="division_check" id="division_check2" />
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="searchRqt_tab1" class="tab_content">
+                    <div class="process_main">
+                      <p class="text-center">대분류</p>
+                      <form action="">
+                        <ul>
+                          <li>
+                            <label for="processM_check0">철거</label>
+                            <input type="checkbox" name="processM_check" id="processM_check0" />
+                          </li>
+                          <li>
+                            <label for="processM_check1">해체</label>
+                            <input type="checkbox" name="processM_check" id="processM_check1" />
+                          </li>
+                          <li>
+                            <label for="processM_check2">굴토</label>
+                            <input type="checkbox" name="processM_check" id="processM_check2" />
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                    <div class="process_sub">
+                      <p class="text-center">소분류</p>
+                      <form action="">
+                        <ul>
+                          <li>
+                            <label for="processS_check0">허가</label>
+                            <input type="checkbox" name="processS_check" id="processS_check0" />
+                          </li>
+                          <li>
+                            <label for="processS_check1">신고</label>
+                            <input type="checkbox" name="processS_check" id="processS_check1" />
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="searchRqt_tab2" class="tab_content">
+                    <div class="checkType">
+                      <p class="text-center">구분</p>
+                      <form action="">
+                        <ul>
+                          <li>
+                            <label for="cType_check0">정기안전점검</label>
+                            <input type="checkbox" name="cType_check" id="cType_check0" />
+                          </li>
+                          <li>
+                            <label for="cType_check1">중소형 안전점검</label>
+                            <input type="checkbox" name="cType_check" id="cType_check1" />
+                          </li>
+                          <li>
+                            <label for="cType_check2">특별점검</label>
+                            <input type="checkbox" name="cType_check" id="cType_check2" />
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- 추가 검색조건 -->
+                <div class="search_add">
+                  <form action="">
+                    <ul class="check_wrap">
+                      <li>
+                        <h3>주용도</h3>
+                        <ul class="check_list">
+                          <li>
+                            <label for="mainUse_check0"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                            <div class="checking"></div>
+                            <p>단독주택</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check1"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check1" />
+                            <div class="checking"></div>
+                            <p>공동주택</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check2"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check2" />
+                            <div class="checking"></div>
+                            <p>근린생활시설</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check3"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check3" />
+                            <div class="checking"></div>
+                            <p>업무시설</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check4"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check4" />
+                            <div class="checking"></div>
+                            <p>숙박시설</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check5"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check5" />
+                            <div class="checking"></div>
+                            <p>위락시설</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check6"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check6" />
+                            <div class="checking"></div>
+                            <p>공장</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check7"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check7" />
+                            <div class="checking"></div>
+                            <p>창고</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check8"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check8" />
+                            <div class="checking"></div>
+                            <p>문화 및 집회시설</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check9"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check9" />
+                            <div class="checking"></div>
+                            <p>노유자시설</p>
+                          </li>
+                          <li>
+                            <label for="mainUse_check10"></label>
+                            <input type="checkbox" name="mainUse_check" id="mainUse_check10" />
+                            <div class="checking"></div>
+                            <p>기타</p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>구조</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <label for="structure_check0"></label>
+                            <input type="checkbox" name="structure_check" id="structure_check0" />
+                            <div class="checking"></div>
+                            <p>철근콘크리트조</p>
+                          </li>
+                          <li>
+                            <label for="structure_check1"></label>
+                            <input type="checkbox" name="structure_check" id="structure_check1" />
+                            <div class="checking"></div>
+                            <p>철골철근콜크리트조</p>
+                          </li>
+                          <li>
+                            <label for="structure_check2"></label>
+                            <input type="checkbox" name="structure_check" id="structure_check2" />
+                            <div class="checking"></div>
+                            <p>철골조</p>
+                          </li>
+                          <li>
+                            <label for="structure_check3"></label>
+                            <input type="checkbox" name="structure_check" id="structure_check3" />
+                            <div class="checking"></div>
+                            <p>목구조</p>
+                          </li>
+                          <li>
+                            <label for="structure_check4"></label>
+                            <input type="checkbox" name="structure_check" id="structure_check4" />
+                            <div class="checking"></div>
+                            <p>블록 및 조적조</p>
+                          </li>
+                          <li>
+                            <label for="structure_check5"></label>
+                            <input type="checkbox" name="structure_check" id="structure_check5" />
+                            <div class="checking"></div>
+                            <p>기타</p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>CCTV 설치여부</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <label for="cctv_check0"></label>
+                            <input type="radio" name="cctv_check" id="cctv_check0" checked />
+                            <div class="checking active"></div>
+                            <p>설치</p>
+                          </li>
+                          <li>
+                            <label for="cctv_check1"></label>
+                            <input type="radio" name="cctv_check" id="cctv_check1" />
+                            <div class="checking"></div>
+                            <p>미설치</p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>공종</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <label for="constType_check0"></label>
+                            <input type="checkbox" name="constType_check" id="constType_check0" />
+                            <div class="checking"></div>
+                            <p>철거</p>
+                          </li>
+                          <li>
+                            <label for="constType_check2"></label>
+                            <input type="checkbox" name="constType_check" id="constType_check2" />
+                            <div class="checking"></div>
+                            <p>굴토</p>
+                          </li>
+                          <li>
+                            <label for="constType_check3"></label>
+                            <input type="checkbox" name="constType_check" id="constType_check3" />
+                            <div class="checking"></div>
+                            <p>가시설</p>
+                          </li>
+                          <li>
+                            <label for="constType_check4"></label>
+                            <input type="checkbox" name="constType_check" id="constType_check4" />
+                            <div class="checking"></div>
+                            <p>골조</p>
+                          </li>
+                          <li>
+                            <label for="constType_check5"></label>
+                            <input type="checkbox" name="constType_check" id="constType_check5" />
+                            <div class="checking"></div>
+                            <p>크레인</p>
+                          </li>
+                          <li>
+                            <label for="constType_check6"></label>
+                            <input type="checkbox" name="constType_check" id="constType_check6" />
+                            <div class="checking"></div>
+                            <p>마감</p>
+                          </li>
+                          <li>
+                            <label for="constType_check7"></label>
+                            <input type="checkbox" name="constType_check" id="constType_check7" />
+                            <div class="checking"></div>
+                            <p>기타</p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>공정률</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <select name="" id="">
+                              <option value="">60%</option>
+                            </select>
+                            <p>~</p>
+                            <select name="" id="">
+                              <option value="">70%</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>허가일자</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <input type="text" id="permitDate" class="datepicker" />
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>착공일자</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <input type="text" id="startDate" class="datepicker" />
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>사용승인예정일</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <input type="text" id="useOkDate" class="datepicker" />
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>장비보유현황</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <select name="" id="">
+                              <option value="">포크레인</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </form>
+                  <div class="add_btn d-flex align-items-center justify-content-center">
+                    <p>추가 검색조건 더보기</p>
+                    <img src="asset/images/icon/search_add.png" alt="추가검색버튼_아이콘" />
+                  </div>
+                </div>
+                <!-- 검색조건 선택버튼 (모바일) -->
+                <button class="searchFilter_btn ns_b">
+                  <img src="asset/images/icon/search_add_m.png" alt="검색조건 선택_아이콘" />
+                  검색조건 선택
+                </button>
 
-    <!-- Main JS -->
-    <script src="asset/js/main.js"></script>
-  </body>
+              </div>
+              <!-- 검색 결정 -->
+              <div class="search_decision">
+                <ul class="picked_rqt d-flex">
+                  <li>
+                    소형
+                    <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
+                  </li>
+                  <li>
+                    철거 - 허가
+                    <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
+                  </li>
+                </ul>
+                <!-- 조건검색 키워드 -->
+                <div class="keyword">
+                  <div class="keyword_wrap d-flex align-items-center justify-content-between">
+                    <ul class="keyword_list d-flex">
+                      <li>
+                        <div class="sBubble">
+                          <ul>
+                            <li>면적 : 1,000m² 미만</li>
+                            <li>용도 : 업무시설</li>
+                            <li>층수 : 지하1층/지상5층</li>
+                          </ul>
+                        </div>
+                        <a href="javascript: void(0)">
+                          키워드1
+                        </a>
+                      </li>
+                      <li>
+                        <div class="sBubble">
+                          <ul>
+                            <li>면적 : 1,000m² 미만</li>
+                            <li>용도 : 업무시설</li>
+                            <li>층수 : 지하1층/지상5층</li>
+                          </ul>
+                        </div>
+                        <a href="javascript: void(0)">
+                          키워드2
+                        </a>
+                      </li>
+                      <li>
+                        <div class="sBubble">
+                          <ul>
+                            <li>면적 : 1,000m² 미만</li>
+                            <li>용도 : 업무시설</li>
+                            <li>층수 : 지하1층/지상5층</li>
+                          </ul>
+                        </div>
+                        <a href="javascript: void(0)">
+                          키워드3
+                        </a>
+                      </li>
+                      <li>
+                        <div class="sBubble">
+                          <ul>
+                            <li>면적 : 1,000m² 미만</li>
+                            <li>용도 : 업무시설</li>
+                            <li>층수 : 지하1층/지상5층</li>
+                          </ul>
+                        </div>
+                        <a href="javascript: void(0)">
+                          키워드4
+                        </a>
+                      </li>
+                      <li>
+                        <div class="sBubble">
+                          <ul>
+                            <li>면적 : 1,000m² 미만</li>
+                            <li>용도 : 업무시설</li>
+                            <li>층수 : 지하1층/지상5층</li>
+                          </ul>
+                        </div>
+                        <a href="javascript: void(0)">
+                          키워드5
+                        </a>
+                      </li>
+                    </ul>
+                    <button class="kEdit_btn">키워드 편집</button>
+                    <!-- 키워드 저장 -->
+                    <div class="keyword_save">
+                      <div class="kSave_wrap">
+                        <form action="">
+                          <ul>
+                            <li class="justify-content-between">
+                              <label for="">
+                                <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘" />
+                                키워드
+                              </label>
+                              <input type="text" placeholder="키워드를 입력해주세요." />
+                            </li>
+                            <li class="mt_20 justify-content-center">
+                              <button type="reset" class="kSave_cancel">취소</button>
+                              <button type="button" class="kSave_save">저장</button>
+                            </li>
+                          </ul>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 초기화 / 검색 / 저장 버튼 -->
+                <div class="decisionBtn d-flex align-items-center justify-content-center">
+                  <button type="reset" class="init_btn">
+                    <img src="asset/images/icon/initialization.png" alt="초기화_아이콘" />
+                    초기화
+                  </button>
+                  <button type="submit" class="search_btn">
+                    <img src="asset/images/icon/searching.png" alt="검색_아이콘" />
+                    검색
+                  </button>
+                  <button type="button" class="save_btn">
+                    <img src="asset/images/icon/search_save.png" alt="저장_아이콘" />
+                    검색조건 저장
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 검색 결과 -->
+            <div class="search_result">
+              <div class="result_top">
+                <div class="total">
+                  <p>총 <strong class="ns_b">289</strong> 건</p>
+                </div>
+                <div class="result_option d-flex">
+                  <button>담당업무</button>
+                  <button>재난관리 그룹추가</button>
+                </div>
+              </div>
+              <!-- 검색결과 리스트 -->
+              <div class="result_list text-center">
+                <div class="subject_wrap">
+                  <ul class="subject d-flex align-items-center">
+                    <li>
+                      <div class="checking"></div>
+                    </li>
+                    <li>위치</li>
+                    <li>유형</li>
+                    <li>공종</li>
+                    <li>착공일</li>
+                    <li>준공예정일</li>
+                    <li>공정기/경과일</li>
+                    <li>공정율</li>
+                    <li>점검횟수</li>
+                  </ul>
+                </div>
+                <div class="result_wrap">
+                  <ul class="result">
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>대형</li>
+                        <li>철거</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>1회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking1"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking1" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>중형</li>
+                        <li>기초</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>3회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking2"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking2" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>소형</li>
+                        <li>골조</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>2회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking3"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking3" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>대형</li>
+                        <li>철거</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>1회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking4"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking4" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>중형</li>
+                        <li>기초</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>3회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking5"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking5" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>소형</li>
+                        <li>골조</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>2회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking6"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking6" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>대형</li>
+                        <li>철거</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>1회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking7"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking7" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>중형</li>
+                        <li>기초</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>3회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking8"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking8" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>소형</li>
+                        <li>골조</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>2회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking9"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking9" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>서울시 구로구 경인로 382 (개봉동)</li>
+                        <li>대형</li>
+                        <li>철거</li>
+                        <li>2021-11-10</li>
+                        <li>2021-11-10</li>
+                        <li>1000/50</li>
+                        <li>10%</li>
+                        <li>1회</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="result_bottom d-flex align-items-center justify-content-center">
+                  <!-- 페이지네이션 -->
+                  <ul class="pagination">
+                    <li class="prev move"></li>
+                    <li class="page_item active">1</li>
+                    <li class="page_item">2</li>
+                    <li class="page_item">3</li>
+                    <li class="page_item">4</li>
+                    <li class="page_item">5</li>
+                    <li class="next move"></li>
+                    <li class="superNext move"></li>
+                  </ul>
+                  <button class="exel" type="button">
+                    <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                    엑셀
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 카피라이트 -->
+          <p class="copyright">Copyrightⓒ Seoul Metropolitan Government All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="asset/js/plugin/jquery-3.2.1.min.js"></script>
+  <script src="asset/js/plugin/jquery-ui.min.js"></script>
+
+  <!-- datepicker -->
+  <script>
+    $.datepicker.setDefaults({
+      dateFormat: 'yy-mm-dd',
+      prevText: '이전 달',
+      nextText: '다음 달',
+      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+      showMonthAfterYear: true,
+      yearSuffix: '년'
+    });
+
+    $(function () {
+      $("#permitDate").datepicker().datepicker('setDate', new Date());
+      $("#startDate").datepicker().datepicker('setDate', new Date());
+      $("#useOkDate").datepicker().datepicker('setDate', new Date());
+    });
+  </script>
+
+  <!-- includeHTML -->
+  <script>includeHTML();</script>
+
+  <!-- Main JS -->
+  <script src="asset/js/main.js"></script>
+</body>
+
 </html>

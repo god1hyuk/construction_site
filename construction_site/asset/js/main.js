@@ -1,22 +1,16 @@
 var count = 0;
 // 야간모드 스위치
 $(function () {
-  $(".switch_wrap").click(function () {
+  $(".construction_site .switch_wrap").click(function () {
     if (count % 2 === 0) {
       $(this).prev("p").text("주간모드");
       $(this).children(".switch_btn").addClass("active");
-    } else if (count % 2 !== 0) {
-      $(this).prev("p").text("야간모드");
-      $(this).children(".switch_btn").removeClass("active");
-    }
-    count++;
-  });
-  $(".construction_site .switch_wrap").click(function () {
-    if (count % 2 === 0) {
       $("#changeStyle1").attr("href", "asset/css/header_dark.css");
       $("#changeStyle2").attr("href", "asset/css/style_dark.css");
       $("#changeStyle3").attr("href", "asset/css/responsive_dark.css");
     } else if (count % 2 !== 0) {
+      $(this).prev("p").text("야간모드");
+      $(this).children(".switch_btn").removeClass("active");
       $("#changeStyle1").attr("href", "asset/css/header.css");
       $("#changeStyle2").attr("href", "asset/css/style.css");
       $("#changeStyle3").attr("href", "asset/css/responsive.css");
@@ -24,7 +18,6 @@ $(function () {
     count++;
   });
 });
-
 
 // 사이드 서브메뉴
 $(function () {
@@ -357,6 +350,7 @@ $(function () {
     $(".header_m").hide();
     $(".main_content").hide();
     $(".acdnt_sprd_m").hide();
+    alert("aaaaa");
   });
   $(".close_btn").click(function () {
     $(".mobile_menu").hide();
@@ -382,8 +376,8 @@ $(function () {
       .css("background-image", "url(asset/images/icon/sub_side_menu" + sideMenu_num + ".png)");
   });
   $(".pc_submenu").hide();
-  $(".sub_page .sideMenu_item.toggle > a").click(function () {
-    $(".sub_page .sideMenu_item.toggle > a").not(this).parent("li.toggle").removeClass("active");
+  $(".sideMenu_item.toggle > a").click(function () {
+    $(".sideMenu_item.toggle > a").not(this).parent("li.toggle").removeClass("active");
     $(this).parent("li.toggle").toggleClass("active");
     $(this).next(".pc_submenu").slideToggle(300);
     $("ul li a").not(this).next().slideUp(300);
@@ -486,13 +480,13 @@ $(function () {
 });
 
 $(function () {
- if ($(window).width() <= 1024) {
-  $(".const_mgt .search_result .result_item li:nth-child(3)").prepend("<span>유형</span>");
-  $(".const_mgt .search_result .result_item li:nth-child(4)").prepend("<span>공종</span>");
-  $(".const_mgt .search_result .result_item li:nth-child(5)").prepend("<span>착공일</span>");
-  $(".const_mgt .search_result .result_item li:nth-child(6)").prepend("<span>준공예정일</span>");
-  $(".const_mgt .search_result .result_item li:nth-child(7)").prepend("<span>공정기/경과일</span>");
-  $(".const_mgt .search_result .result_item li:nth-child(8)").prepend("<span>공정율</span>");
-  $(".const_mgt .search_result .result_item li:nth-child(9)").prepend("<span>점검횟수</span>");
- }
+  if ($(window).width() <= 1024) {
+    $(".const_mgt .search_result .result_item li:nth-child(3)").prepend("<span>유형</span>");
+    $(".const_mgt .search_result .result_item li:nth-child(4)").prepend("<span>공종</span>");
+    $(".const_mgt .search_result .result_item li:nth-child(5)").prepend("<span>착공일</span>");
+    $(".const_mgt .search_result .result_item li:nth-child(6)").prepend("<span>준공예정일</span>");
+    $(".const_mgt .search_result .result_item li:nth-child(7)").prepend("<span>공정기/경과일</span>");
+    $(".const_mgt .search_result .result_item li:nth-child(8)").prepend("<span>공정율</span>");
+    $(".const_mgt .search_result .result_item li:nth-child(9)").prepend("<span>점검횟수</span>");
+  }
 });
