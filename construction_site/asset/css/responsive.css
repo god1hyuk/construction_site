@@ -1072,9 +1072,31 @@
 
 @media (max-width: 540px) {
 	/* 공통 영역 */
+    .container {
+        margin-bottom: 128px;
+    }
 	.col-6 {
 		height: 600px;
 	}
+
+    /* header.css */
+    /* 상황전파 버튼 (모바일) */
+    .acdnt_sprd_m {
+        bottom: 8px;
+        height: 70px;
+        font-size: 24px;
+    }
+    .acdnt_sprd_m img {
+        width: 30px;
+    }
+    .acdnt_sprd_m::before {
+        top: -8px;
+        height: 8px;
+    }
+    .acdnt_sprd_m::after {
+        bottom: -8px;
+        height: 8px;
+    }
 
     /* 모바일 메뉴 (로그인) */
     .mobile_menu .m_menu_top {
@@ -1352,6 +1374,9 @@
 
 @media (max-width: 414px) {
     /* 공통 영역 */
+    .container {
+        margin-bottom: 115px;
+    }
     .col-4 {
         margin-top: 60px;
         padding: 0 20px;
@@ -1366,6 +1391,24 @@
     .header_m .burger_btn {
         width: 52px;
         height: 52px;
+    }
+
+    /* 상황전파 버튼 (모바일) */
+    .acdnt_sprd_m {
+        bottom: 5px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .acdnt_sprd_m img {
+        width: 25px;
+    }
+    .acdnt_sprd_m::before {
+        top: -5px;
+        height: 5px;
+    }
+    .acdnt_sprd_m::after {
+        bottom: -5px;
+        height: 5px;
     }
 
     /* 모바일 메뉴 (로그인) */
@@ -1782,30 +1825,9 @@
     .const_mgt .picked_rqt li:not(:last-child) {
         margin-right: 6px;
     }
-    /* 임시 */
-    .const_mgt .search_decision .decisionBtn {
-        flex-direction: column;
-    }
-    .const_mgt .search_decision .decisionBtn button:not(:last-child) {
-        width: 100%;
-    }
-    .const_mgt .search_decision .init_btn {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-    /* 검색결과 */
 
-    /* 임시 (폰트는 확정) */
-    .const_mgt .search_result .result_option {
-        flex-direction: column;
-        margin-bottom: 25px;
-    }
-    .const_mgt .search_result .result_option button:last-child {
-        margin-top: 15px;
-        margin-left: 0;
-    }
+    /* 검색결과 */
     .const_mgt .search_result .result_option button {
-        width: 100%;
         font-size: 16px;
     }
     /* 검색결과 리스트*/
