@@ -1941,7 +1941,10 @@
     }
 
     /* 로그인 페이지 */
-    .login_page .login_box .loginBox_title,
+    .login_page .login_box {
+        margin-top: 62px;
+    }
+    .login_page .loginBox_title,
     .login_page .loginBox_main {
         padding-left: 20px !important;
         padding-right: 20px !important;
