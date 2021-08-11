@@ -1,9 +1,29 @@
+/* 메인페이지 */
+
 .construction_site {
   position: relative;
   width: 100%;
   height: 100%;
   background: #ced4e0;
 }
+
+/* 내 정보 보기 */
+.myInfo {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.349);
+  z-index: 999;
+}
+.myInfo .info_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 999;
+}
+
 /* 메인 컨텐츠 */
 .main_content {
   width: 100%;
