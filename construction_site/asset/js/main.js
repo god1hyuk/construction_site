@@ -350,7 +350,6 @@ $(function () {
     $(".header_m").hide();
     $(".main_content").hide();
     $(".acdnt_sprd_m").hide();
-    alert("aaaaa");
   });
   $(".close_btn").click(function () {
     $(".mobile_menu").hide();
@@ -447,6 +446,14 @@ $(function () {
     $(this).children(".checking").addClass("active");
   });
 });
+
+// $(function () {
+//   $("label").click(function () {
+//     if ($(this).next("input[type='checkbox']").is(":checked")) {
+//       $(this).css("background","#000");
+//     }
+//   })
+// });
 
 // 조건검색 키워드
 $(function () {

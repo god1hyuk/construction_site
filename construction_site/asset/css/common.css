@@ -64,6 +64,11 @@ html,body {
   -ms-flex-pack: center;
   justify-content: center;
 }
+.justify-content-end {
+  -webkit-box-pack: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+}
 .justify-content-between {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -170,4 +175,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.datepicker {
+  color: #1f1e1e;
+  padding-left: 50px;
+  background-color: #f3f5f6;
+  background-image: url(../images/icon/date_icon.png);
+  background-repeat: no-repeat;
+  background-position: 10px center;
 }

@@ -1027,15 +1027,9 @@
   width: 260px;
   height: 40px;
 }
-
 .search_add .check_wrap .datepicker {
   width: 260px;
   height: 40px;
-  padding-left: 50px;
-  background-color: #f3f5f6;
-  background-image: url(../images/icon/date_icon.png);
-  background-repeat: no-repeat;
-  background-position: 10px center;
 }
 
 
@@ -1539,4 +1533,135 @@ a.ui-button:active,
   font-size: 14px;
   color: #5a5a5a;
   margin-top: 33px;
+}
+
+
+/* 로그인 페이지 */
+.login_page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/login_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.login_page .header_pc {
+  padding: 0 27px;
+}
+.login_page .header_m .logo_wrap {
+  padding-left: 0;
+}
+.login_page .login_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 89.8148vh;
+  /* width: 50.5208vw; */
+  height: 45.1852vh;
+  box-shadow: 0px 0px 15px 0px rgba(35, 31, 32, 0.35);
+}
+.login_page .login_box .loginBox_title {
+  width: 45%;
+  padding: 4.4444vh 3.5185vh 0;
+  background: #fff;
+}
+.login_page .login_box .loginBox_title h2 {
+  font-size: 3.8889vh;
+  color: #192b80;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.07);
+}
+.login_page .login_box .loginBox_title p {
+  font-size: 1.2963vh;
+  color: #414141;
+  margin-top: 1.4815vh;
+}
+.login_page .login_box .loginBox_title img {
+  display: block;
+  width: 21.4815vh;
+  margin: 0 auto;
+  margin-top: 5.5556vh;
+}
+.login_page .login_box .loginBox_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  padding: 3.7037vh;
+  background: rgb(57,120,252);
+  background: linear-gradient(135deg, rgba(57,120,252,1) 0%, rgba(0,204,178,1) 75%);
+}
+.login_page .login_box .loginBox_main form,
+.login_page .login_box .loginBox_main ul, 
+.login_page .login_box .loginBox_main input {  
+  width: 100%;
+}
+.login_page .login_box .loginBox_main ul {
+  display: flex;
+  flex-direction: column;
+}
+.login_page .login_box .loginBox_main > img {
+  width: 7.0370vh;
+}
+.login_page .login_box .loginBox_main input {
+  width: 100%;
+  height: 5.5556vh;
+  font-size: 1.6667vh;
+  border-radius: 3px;
+}
+.login_page .login_box .loginBox_main input::placeholder {
+  color: #9c9c9c;
+}
+.login_page .login_box .loginBox_main li:first-child {
+  margin-top: 1.6667vh;
+  margin-bottom: 1.3889vh;
+}
+.login_page .login_box .loginBox_main li:last-child {
+  margin-top: 1.6667vh;
+}
+.login_page .login_box .loginBox_main .login_subBtn {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+}
+.login_page .login_box .loginBox_main .login_subBtn button {
+  font-size: 1.4815vh;
+  color: #fff;
+  padding: 0;
+  background: transparent;
+}
+.login_page .login_box .loginBox_main .login_subBtn img {
+  width: 1.7593vh;
+  margin-top: 3px;
+  margin-right: 0.7407vh;
+}
+.login_page .login_box .loginBox_main .login_subBtn button:first-child {
+  margin-right: 1.4815vh;
+}
+.login_page .login_box .loginBox_main .login_btn {
+  width: 100%;
+  height: 6.4815vh;
+  font-size: 2.5926vh;
+  color: #fff;
+  margin-top: 5vh;
+  background: rgb(40,52,76);
+  background: linear-gradient(0deg, rgba(40,52,76,1) 0%, rgba(71,81,102,1) 100%);
+  border: 3px solid #28344c;
+}
+
+.login_page .copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 13px;
+  color: #383838;
+  text-align: center;
+  margin: 0;
+  padding-top: 3.7037vh;
+  padding-bottom: 8.3333vh;
+  background: #c0cadb;
 }
