@@ -821,7 +821,6 @@
     /* 로그인 페이지 */
     .login_page {
         flex-direction: column;
-        /* height: auto; */
         overflow-y: hidden;
         background-color: #d5d6d9;
         background-image: none;
@@ -848,42 +847,81 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 60px;
-        padding-bottom: 50px;
+        /* padding-top: 60px; */
+        /* padding-top: 4.3924vh; */
+        padding-top: 5.8594vw;
+        /* padding-bottom: 50px; */
+        /* padding-bottom: 3.6603vh; */
+        padding-bottom: 4.8828vw;
     }
     .login_page .login_box .loginBox_title h2 {
         font-size: 54px;
     }
     .login_page .login_box .loginBox_title p {
         font-size: 20px;
+        /* margin-top: 20px; */
+        /* margin-top: 1.4641vh; */
+        margin-top: 1.9531vw;
     }
     .login_page .login_box .loginBox_title img {
         width: 109px;
         margin: 0;
     }
-    .login_page .loginBox_main {
-        padding-top: 87px !important;
-        padding-bottom: 90px !important;
+    .login_page .login_box .loginBox_main {
+        /* padding-top: 87px; */
+        /* padding-top: 6.3690vh; */
+        padding-top: 8.4961vw;
+        /* padding-bottom: 90px; */
+        /* padding-bottom: 6.5886vh; */
+        padding-bottom: 8.7891vw;
+    }
+    .login_page .login_box .loginBox_main > img {
+        width: 94px;
+        /* width: 6.8814vh; */
     }
     .login_page .login_box .loginBox_main li:first-child {
-        margin-top: 26px;
-        margin-bottom: 20px;
+        /* margin-top: 26px; */
+        /* margin-top: 1.9034vh; */
+        margin-top: 2.5391vw;
+        /* margin-bottom: 20px; */
+        /* margin-bottom: 1.4641vh; */
+        margin-bottom: 1.9531vw;
     }
     .login_page .login_box .loginBox_main input {
         height: 78px;
         font-size: 24px;
     }
+    .login_page .login_box .loginBox_main li:last-child {
+        /* margin-top: 24px; */
+        /* margin-top: 1.7570vh; */
+        margin-top: 2.3438vw;
+    }
     .login_page .login_box .loginBox_main .login_subBtn button {
         font-size: 21px;
     }
+    .login_page .login_box .loginBox_main .login_subBtn button:first-child {
+        margin-right: 20px;
+    }
+    .login_page .login_box .loginBox_main .login_subBtn img {
+        width: 25px;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .login_page .login_box .loginBox_main .login_btn {
+        height: 90px;
+        font-size: 36px;
+        /* margin-top: 76px; */
+        /* margin-top: 5.5637vh; */
+        margin-top: 7.4219vw;
+    }
     .login_page .copyright {
         position: static;
-        align-self: flex-start;
-        height: 100% !important;
         font-size: 14px;
         margin: 0;
+        /* padding-top: 38px; */
+        /* padding-top: 2.7818vh; */
+        padding-top: 3.7109vw;
         padding-left: 0;
-        padding-bottom: 100%;
     }
 }
 
@@ -1174,6 +1212,11 @@
     }
     .const_mgt .search_result .result_item li:not(:nth-child(2)) p {
         width: 70%;
+    }
+
+    /* 로그인 페이지 */
+    .login_page .login_box {
+        margin-top: 16.5625vw;
     }
 }
 
@@ -1476,6 +1519,62 @@
     /* 조건검색 키워드 */
     .const_mgt .search_decision .keyword_wrap {
         font-size: 13px;
+    }
+
+    /* 로그인 페이지 */
+    .login_page .login_box .loginBox_title {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .login_page .login_box .loginBox_title h2 {
+        font-size: 32px;
+    }
+    .login_page .login_box .loginBox_title p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .login_page .login_box .loginBox_title img {
+        width: 65px;
+    }
+    .login_page .login_box .loginBox_main {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .login_page .login_box .loginBox_main > img {
+        width: 68px;
+    }
+    .login_page .login_box .loginBox_main li:first-child {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .login_page .login_box .loginBox_main input {
+        height: 64px;
+        font-size: 18px;
+    }
+    .login_page .login_box .loginBox_main li:last-child {
+        margin-top: 20px;
+    }
+    .login_page .login_box .loginBox_main .login_subBtn {
+        align-self: center;
+    }
+    .login_page .login_box .loginBox_main .login_subBtn button {
+        font-size: 15px;
+    }
+    .login_page .login_box .loginBox_main .login_subBtn button:first-child {
+        margin-right: 30px;
+    }
+    .login_page .login_box .loginBox_main .login_subBtn button img {
+        width: 17px;
+        margin-top: 2px;
+        margin-right: 5px;
+    }
+    .login_page .login_box .loginBox_main .login_btn {
+        height: 64px;
+        font-size: 22px;
+        margin-top: 40px;
+    }
+    .login_page .copyright {
+        padding-top: 25px;
     }
 }
 
@@ -1840,6 +1939,35 @@
         margin-left: -20px;
         padding-left: 20px;
     }
+
+    /* 로그인 페이지 */
+    .login_page .login_box .loginBox_title,
+    .login_page .loginBox_main {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .login_page .login_box .loginBox_title h2 {
+        font-size: 26px;
+    }
+    .login_page .login_box .loginBox_title p {
+        font-size: 13px;
+    }
+    .login_page .login_box .loginBox_title img {
+        width: 54px;
+    }
+    .login_page .login_box .loginBox_main > img {
+        width: 58px;
+    }
+    .login_page .login_box .loginBox_main input {
+        height: 58px;
+    }
+    .login_page .login_box .loginBox_main .login_btn {
+        height: 58px;
+    }
+    .login_page .copyright {
+        font-size: 12px;
+        padding-top: 30px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1961,5 +2089,30 @@
         font-size: 11px;
         margin-left: -16px;
         padding-left: 16px;
+    }
+
+    /* 로그인 페이지 */
+    .login_page .login_box .loginBox_title,
+    .login_page .loginBox_main {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .login_page .login_box .loginBox_title h2 {
+        font-size: 24px;
+    }
+    .login_page .login_box .loginBox_title p {
+        font-size: 12px;
+    }
+    .login_page .login_box .loginBox_main input {
+        height: 52px;
+        font-size: 16px;
+    }
+    .login_page .login_box .loginBox_main .login_btn {
+        height: 52px;
+        font-size: 16px;
+    }
+    .login_page .copyright {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
