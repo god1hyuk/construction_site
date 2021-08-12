@@ -62,8 +62,8 @@
     .construction_site .content_title {
         font-size: 20px;
     }
-    .construction_site table th,
-    .construction_site table td {
+    .construction_site .chart th,
+    .construction_site .chart td {
         font-size: 13px;
     }
 
@@ -409,6 +409,61 @@
     background-color: #20b5c8;
     }
 
+    /* 내 정보 보기 */
+    .myInfo {
+        background: #d5d6d9;
+    }
+    .myInfo .info_wrap {
+        position: static;
+        transform: none;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        background: transparent;
+        border-top: none;
+        border-radius: 0;
+    }
+    .myInfo .info_top {
+        padding: 36px 0;
+        background: #5479f7;
+        border-bottom: none;
+    }
+    .myInfo .info_top h1 {
+        font-family: 'NanumSquareEB';
+        font-size: 32px;
+        color: #fff;
+    }
+    .myInfo .info_top .close_btn {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+        width: 31px;
+        height: 31px;
+        background-image: url(../images/icon/close_btn.png);
+    }
+    .myInfo .table_wrap {
+        margin-top: 10px;
+        padding: 52px 30px 0;
+        background: #fff;
+    }
+    .myInfo table {
+        font-size: 16px;
+    }
+    .myInfo table th h3,
+    .myInfo table td p {
+        padding: 16px 0;
+        padding-left: 26px;
+    }
+    .myInfo .info_btn {
+        margin-top: 0;
+        padding: 60px 30px 100%;
+        background: #fff;
+    }
+    .myInfo .info_btn button {
+        font-size: 22px;
+        padding: 20px 0;
+    }
+
     /* 메인 컨텐츠 */
     .construction_site .container {
         padding-top: 100px;
@@ -463,7 +518,7 @@
         border-radius: 0;
         box-shadow: none;
     }
-    .construction_site table th, .construction_site table td {
+    .construction_site .chart th, .construction_site .chart td {
         font-size: 20px;
     }
 
@@ -1231,22 +1286,18 @@
 
     /* header.css */
     /* 상황전파 버튼 (모바일) */
-    .acdnt_sprd_m {
+    .send_btn_m {
         bottom: 8px;
-        height: 70px;
         font-size: 24px;
     }
-    .acdnt_sprd_m img {
+    .send_btn_m button {
+        height: 70px;
+    }
+    .send_btn_m img {
         width: 30px;
     }
-    .acdnt_sprd_m::before {
-        top: -8px;
-        height: 8px;
-    }
-    .acdnt_sprd_m::after {
-        bottom: -8px;
-        height: 8px;
-    }
+
+    /* 메인페이지 */
 
     /* 모바일 메뉴 (로그인) */
     .mobile_menu .m_menu_top {
@@ -1336,13 +1387,36 @@
         height: 24px;
     }
 
+    /* 내 정보 보기 */
+    .myInfo .info_top {
+        padding: 24px 0;
+    }
+    .myInfo .info_top h1 {
+        font-size: 24px;
+    }
+    .myInfo .info_top .close_btn {
+        width: 24px;
+        height: 24px;
+    }
+    .myInfo .table_wrap {
+        padding-top: 30px;
+    }
+    .myInfo table th h3, 
+    .myInfo table td p {
+        padding-left: 12px;
+    }
+    .myInfo .info_btn button {
+        font-size: 20px;
+        padding: 18px 0;
+    }
+
     /* 메인 컨텐츠 */
 
     /* 건축물 착공 현황 & 안전사고 피해현황 공통 */
     .construction_site .content_title {
         font-size: 22px;
     }
-    .construction_site table th, .construction_site table td {
+    .construction_site .chart th, .construction_site .chart td {
         font-size: 18px;
     }
     .construction_site .start_status_chart tr:last-child td:last-child {
@@ -1600,21 +1674,15 @@
     }
 
     /* 상황전파 버튼 (모바일) */
-    .acdnt_sprd_m {
+    .send_btn_m {
         bottom: 5px;
-        height: 60px;
         font-size: 20px;
     }
-    .acdnt_sprd_m img {
+    .send_btn_m button {
+        height: 60px;
+    }
+    .send_btn_m img {
         width: 25px;
-    }
-    .acdnt_sprd_m::before {
-        top: -5px;
-        height: 5px;
-    }
-    .acdnt_sprd_m::after {
-        bottom: -5px;
-        height: 5px;
     }
 
     /* 모바일 메뉴 (로그인) */
@@ -1712,6 +1780,23 @@
         height: 18px;
     }
 
+    /* 내 정보 보기 */
+    .myInfo .info_top .close_btn {
+        right: 20px;
+    }
+    .myInfo .table_wrap,
+    .myInfo .info_btn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .myInfo table th h3, 
+    .myInfo table td p {
+        font-size: 14px;
+    }
+    .myInfo .info_btn button {
+        font-size: 18px;
+    }
+
     /* 메인 컨텐츠 */
     .construction_site .container {
         padding-top: 52px;
@@ -1756,7 +1841,7 @@
         font-size: 20px;
         padding-left: 10px;
     }
-    .construction_site table th, .construction_site table td {
+    .construction_site .chart th, .construction_site .chart td {
         font-size: 16px;
     }
     .construction_site .start_status_chart tr:last-child td:last-child {
@@ -1979,6 +2064,26 @@
         padding: 0 16px;
     }
 
+    /* 메인페이지 */
+
+    /* 내 정보 보기 */
+    .myInfo .info_top h1 {
+        font-size: 22px;
+    }
+    .myInfo .info_top .close_btn {
+        width: 22px;
+        height: 22px;
+    }
+    .myInfo table th h3, 
+    .myInfo table td p {
+        padding-left: 8px;
+        font-size: 13px;
+    }
+    .myInfo .info_btn button {
+        padding: 15px 0;
+        font-size: 16px;
+    }
+
     /* Today 안전사고 */
     .construction_site .day_stats_bg {
         padding: 25px 16px;
@@ -1991,7 +2096,7 @@
     .construction_site .content_title {
         font-size: 18px;
     }
-    .construction_site table th, .construction_site table td {
+    .construction_site .chart th, .construction_site .chart td {
         font-size: 13px;
     }
     .construction_site .start_status_chart tr:last-child td:last-child {

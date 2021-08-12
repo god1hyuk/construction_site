@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+
+  <!-- includeHTML -->
+  <script src="asset/js/includeHTML.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="asset/images/icon/favicon.ico" />
+  <link rel="shortcut icon" href="asset/images/icon/favicon.ico" />
+
+  <!-- jQuery UI for datepicker -->
+  <link rel="stylesheet" href="asset/css/jquery-ui.min.css" />
+
+  <!-- Font -->
+  <link rel="stylesheet" href="asset/css/font.css" />
+
+  <!-- Reset -->
+  <link rel="stylesheet" href="asset/css/_reset_v7.0.4.css" />
+
+  <!-- Form -->
+  <link rel="stylesheet" href="asset/css/layout_v8.0.5.css" />
+
+  <!-- Common -->
+  <link rel="stylesheet" href="asset/css/common.css" />
+
+  <!-- Header -->
+  <link rel="stylesheet" id="changeStyle1" href="asset/css/header.css" />
+
+  <!-- Style -->
+  <link rel="stylesheet" id="changeStyle2" href="asset/css/style.css" />
+
+  <!-- datepicker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- Responsive -->
+  <link rel="stylesheet" id="changeStyle3" href="asset/css/responsive.css" />
+
+  <title>서울시 민간건축공사장 안전관리 정보화시스템</title>
+
+</head>
+
+<body>
+  <!-- 공사장관리 서브페이지 -->
+  <div class="info_modify sub_page d-flex justify-content-between">
+
+    <!-- 서브페이지 사이드 메뉴 (PC) -->
+    <aside>
+      <nav class="side_menu ns_b">
+        <div class="home d-flex align-items-center">
+          <a href="index.html" class="d-flex align-items-center justify-content-between">
+            <span>Menu</span>
+            <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
+          </a>
+        </div>
+        <ul>
+          <li class="sideMenu_item" value="0">
+            <a href="const_mgt.html">
+              <div class="sideMenu_icon"></div>
+              <p>공사장관리</p>
+            </a>
+          </li>
+          <li class="sideMenu_item" value="1">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>건축물관리</p>
+            </a>
+          </li>
+          <li class="sideMenu_item" value="2">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>사고정보</p>
+            </a>
+          </li>
+          <li class="sideMenu_item" value="3">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>실시간 모니터링</p>
+            </a>
+          </li>
+          <li class="sideMenu_item toggle" value="4">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>자문단관리</p>
+              <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+            </a>
+            <ul class="pc_submenu">
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>자문단 점검이력</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>공고관리</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sideMenu_item toggle" value="5">
+            <a href="javascript: void(0);">
+              <div class="sideMenu_icon"></div>
+              <p>알림마당</p>
+              <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+            </a>
+            <ul class="pc_submenu">
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>공지사항</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>홍보/보도자료</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>관련법규/지침</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="send_btn d-flex align-items-center justify-content-center">
+            <button class="acdnt_sprd">
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+                  <p class="text-center ns_b">상황전파</p>
+                </a>
+            </button>
+            <button class="msg_send">
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+                  <p class="text-center ns_b">문자전송</p>
+                </a>
+            </button>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- 헤더 (PC) -->
+    <header class="header_pc d-flex">
+      <nav class="d-flex align-items-center justify-content-between">
+        <div class="logo_wrap d-flex align-items-center">
+          <a href="index.html">
+            <img src="asset/images/logo.png" alt="서울시_로고_이미지" />
+          </a>
+          <h1 class="title ns_eb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
+        </div>
+        <div class="nav_right d-flex">
+          <div class="sub_title d-flex align-items-center">
+            <p>서울시 지역건축안전센터</p>
+            <span>홍길동</span>
+          </div>
+          <ul class="d-flex align-items-center">
+            <li class="logout">
+              <a class="d-flex align-items-center" href="javascript: void(0);">
+                <div class="logout_icon"></div>
+                <p>로그아웃</p>
+              </a>
+            </li>
+            <li class="go_map nt_b">
+              <button class="d-flex align-items-center justify-content-center">
+                지도이동
+                <div class="go_map_icon"></div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 헤더 (테블릿 & 모바일) -->
+    <header class="header_m">
+      <div class="logo_wrap d-flex align-items-center">
+        <h1 class="title ns_eb">서울시 민간건축공사장 안전관리 정보화시스템</h1>
+      </div>
+      <nav>
+        <button class="burger_btn"></button>
+      </nav>
+    </header>
+
+    <!-- 모바일 메뉴 -->
+    <div class="mobile_menu nt_m">
+      <!-- 로그인 버전 -->
+      <div class="m_login">
+        <div class="m_menu_top">
+          <div class="login_text d-flex align-items-center">
+            <div class="login_icon"></div>
+            <span><strong>로그인</strong>이 필요합니다.</span>
+          </div>
+          <a href="javascript: void(0);" class="login_link">
+            로그인하기
+            <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
+          </a>
+          <button class="close_btn"></button>
+        </div>
+        <div class="m_menu_lists nt_m">
+          <ul>
+            <li>
+              <a href="const_mgt.html">
+                <p>공사장 관리</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>건축물 관리</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>사고정보</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>CCTV</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li class="accordion_menu">
+              <a href="javascript: void(0);">
+                <p>자문단관리</p>
+                <div class="accordion_btn"></div>
+              </a>
+              <ul class="m_submenu nt_rg">
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>자문단 점검이력</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>공고관리</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion_menu">
+              <a href="javascript: void(0);">
+                <p>알림마당</p>
+                <div class="accordion_btn"></div>
+              </a>
+              <ul class="m_submenu nt_rg">
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>공지사항</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>홍보/보도자료</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>관련법규/지침</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="m_menu_bottom">
+          <div class="bottom_menu d-flex justify-content-between">
+            <a href="index.html" class="home_btn d-flex align-items-center">
+              <img src="asset/images/icon/home_btn_dark.png" alt="홈버튼_아이콘" />
+              홈화면
+            </a>
+            <div class="night_mode_m d-flex align-items-center nt_rg">
+              <p>야간모드</p>
+              <div class="switch_wrap">
+                <img class="switch_btn" src="asset/images/switch_btn_m.png" alt="스위치버튼_이미지" />
+                <div class="switch_body"></div>
+              </div>
+            </div>
+          </div>
+          <div class="account_wrap d-flex">
+            <button>로그인</button>
+            <button>사용자등록</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 로그아웃 버전 -->
+      <div class="m_logout">
+        <div class="m_menu_top">
+          <div class="login_text d-flex align-items-center">
+            <div class="login_icon"></div>
+            <span><strong>홍길동</strong>서울시 지역건축안전센터</span>
+          </div>
+          <a href="javascript: void(0);" class="login_link">
+            로그아웃하기
+            <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
+          </a>
+          <button class="close_btn"></button>
+        </div>
+        <div class="m_menu_lists">
+          <ul>
+            <li>
+              <a href="const_mgt.html">
+                <p>공사장 관리</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>건축물 관리</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>사고정보</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">
+                <p>CCTV</p>
+                <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+              </a>
+            </li>
+            <li class="accordion_menu">
+              <a href="javascript: void(0);">
+                <p>자문단관리</p>
+                <div class="accordion_btn"></div>
+              </a>
+              <ul class="m_submenu nt_rg">
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>자문단 점검이력</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>공고관리</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion_menu">
+              <a href="javascript: void(0);">
+                <p>알림마당</p>
+                <div class="accordion_btn"></div>
+              </a>
+              <ul class="m_submenu nt_rg">
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>공지사항</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>홍보/보도자료</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">
+                    <img src="asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                    <span>관련법규/지침</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="m_menu_bottom">
+          <div class="bottom_menu d-flex justify-content-between">
+            <a href="index.html" class="home_btn d-flex align-items-center">
+              <img src="asset/images/icon/home_btn_dark.png" alt="홈버튼_아이콘" />
+              홈화면
+            </a>
+            <div class="night_mode_m d-flex align-items-center nt_rg">
+              <p>야간모드</p>
+              <div class="switch_wrap">
+                <img class="switch_btn" src="asset/images/switch_btn_m.png" alt="스위치버튼_이미지" />
+                <div class="switch_body"></div>
+              </div>
+            </div>
+          </div>
+          <div class="account_wrap d-flex">
+            <button>로그아웃</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 상황전파 버튼 (모바일) -->
+    <div class="send_btn_m nt_b d-flex align-items-center justify-content-center">
+        <button class="acdnt_sprd_m d-flex align-items-center justify-content-center">
+            <a href="javascript: void(0);">
+                <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+                <p>상황전파</p>
+            </a>
+        </button>
+        <button class="msg_send_m">
+            <a href="javascript: void(0);">
+              <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+              <p class="text-center ns_b">문자전송</p>
+            </a>
+        </button>
+    </div>
+
+    <div class="main_content">
+      <div class="container">
+        <div class="row">
+          <div class="title_wrap">
+            <div class="title_icon"></div>
+            <h3 class="ns_eb">내 정보 수정</h3>
+          </div>
+          <div class="form_container">
+            <div class="form_wrap">
+              <!-- 정보 수정 폼 영역 -->
+              <div class="infoModify_form content_form">
+                <form action="">
+                    <table class="modify_list">
+                        <colgroup>
+                            <col width="12%" />
+                            <col widht="88%" />
+                        </colgroup>
+                        <tr>
+                            <th>
+                                <span>아이디</span>
+                            </th>
+                            <td>
+                                <p>Test001</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>이름</span>
+                            </th>
+                            <td>
+                                <p>홍길동</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="vertical-align: top;">
+                                <span>현재 비밀번호 <sub>*</sub></span>
+                            </th>
+                            <td>
+                                <input type="password" placeholder="현재 비밀번호 입력" />
+                                <p><sub>*</sub> 비밀번호는 영문, 숫자, 특수문자(~!@#$%^&*())를 각 1자 이상 혼합하여 8자리 이상 12자리 이하로 입력해야 합니다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>신규 비밀번호 <sub>*</sub></span>
+                            </th>
+                            <td>
+                                <input type="password" placeholder="신규 비밀번호 입력" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>휴대폰 번호 <sub>*</sub></span>
+                            </th>
+                            <td>
+                                <input type="tel" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>소속기관</span>
+                            </th>
+                            <td>
+                                <div class="select_wrap d-flex">
+                                    <select name="si">
+                                        <option value="">서울특별시</option>
+                                    </select>
+                                    <select name="place">
+                                        <option value="">지역건축안전센터</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>부서명</span>
+                            </th>
+                            <td>
+                                <input type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>권한</span>
+                            </th>
+                            <td>
+                                <input type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>SSO Key</span>
+                            </th>
+                            <td>
+                                <input type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>
+                                <p><sub></sub>서울특별시 SSO를 사용하시려면 행정포털에서 로그인 하세요.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+              </div>
+              <div class="infoModify_btn nt_m d-flex align-items-center justify-content-center">
+                  <button>취소</button>
+                  <button>저장</button>
+              </div>
+            </div>
+
+          </div>
+          <!-- 카피라이트 -->
+          <p class="copyright">Copyrightⓒ Seoul Metropolitan Government All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="asset/js/plugin/jquery-3.2.1.min.js"></script>
+  <script src="asset/js/plugin/jquery-ui.min.js"></script>
+
+  <!-- datepicker -->
+  <script>
+    $.datepicker.setDefaults({
+      dateFormat: 'yy-mm-dd',
+      prevText: '이전 달',
+      nextText: '다음 달',
+      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+      showMonthAfterYear: true,
+      yearSuffix: '년'
+    });
+
+    $(function () {
+      $("#permitDate").datepicker().datepicker('setDate', new Date());
+      $("#startDate").datepicker().datepicker('setDate', new Date());
+      $("#useOkDate").datepicker().datepicker('setDate', new Date());
+    });
+  </script>
+
+  <!-- includeHTML -->
+  <script>includeHTML();</script>
+
+  <!-- Main JS -->
+  <script src="asset/js/main.js"></script>
+</body>
+
+</html>

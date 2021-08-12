@@ -141,6 +141,7 @@ html,body {
 /* Input */
 input, select {
   padding: 0 16px;
+  background: #f3f5f6;
   border: 1px solid #cccfd8;
 }
 input:focus, select:focus {
@@ -179,7 +180,6 @@ button {
 .datepicker {
   color: #1f1e1e;
   padding-left: 50px;
-  background-color: #f3f5f6;
   background-image: url(../images/icon/date_icon.png);
   background-repeat: no-repeat;
   background-position: 10px center;

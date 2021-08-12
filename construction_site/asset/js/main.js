@@ -334,11 +334,12 @@ $(function () {
 // 상황전파 버튼 (모바일)
 
 $(function () {
+  $(".send_btn_m").hide();
   $(window).scroll(function () {
     if ($(this).scrollTop() > 10 && $(this).width() <= 1024) {
-      $(".acdnt_sprd_m").fadeIn();
+      $(".send_btn_m").fadeIn();
     } else {
-      $(".acdnt_sprd_m").fadeOut();
+      $(".send_btn_m").fadeOut();
     }
   });
 });

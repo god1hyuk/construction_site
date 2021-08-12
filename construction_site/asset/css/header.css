@@ -284,41 +284,33 @@ header {
 }
 
 /* 상황전파 버튼 (모바일) */
-.acdnt_sprd_m {
-  display: none;
+.send_btn_m {
+  display: none !important;
   position: fixed;
   bottom: 10px;
   left: 0;
   width: 100%;
-  height: 90px;
   font-size: 28px;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.send_btn_m a {
+  display: flex;
+}
+.send_btn_m button {
+  width: 50%;
+  height: 90px;
+}
+.acdnt_sprd_m {
   color: #fff;
+  margin-right: 10px;
   background: rgb(84,121,247);
   background: linear-gradient(360deg, rgba(84,121,247,1) 0%, rgba(133,158,245,1) 100%);
   z-index: 985;
 }
-.acdnt_sprd_m img {
-  width: 40px;
+.send_btn_m img {
+  width: 38px;
   margin-right: 16px;
-  vertical-align: top;
-}
-.acdnt_sprd_m::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.15);
-}
-.acdnt_sprd_m::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.15);
 }
 
 /* 모바일 메뉴 (로그인 버전) */
@@ -695,26 +687,35 @@ header {
 .sub_page .pc_submenu li.active span {
   color: #00ccb2;
 }
-.sub_page .acdnt_sprd {
+.sub_page .send_btn {
   position: absolute;
   bottom: 2.9630vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 12.7604vw;
-  height: 50px;
-  font-size: 18px;
-  color: #fff;
-  background: rgb(66,87,190);
-  background: linear-gradient(360deg, rgba(66,87,190,1) 0%, rgba(110,128,213,1) 100%);
-  border-radius: 3px;
+  width: 100%;
+  padding: 0 3.3333vh;
 }
-.sub_page .acdnt_sprd a {
+.sub_page .send_btn a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.sub_page .acdnt_sprd a img {
-  margin-right: 12px;
+.sub_page .acdnt_sprd,
+.sub_page .msg_send {
+  width: 50%;
+  height: 4.6296vh;
+  font-size: 1.4815vh;
+  border-radius: 3px;
+}
+.sub_page .acdnt_sprd {
+  color: #fff;
+  margin-right: 0.5208vw;
+  background: rgb(66,87,190);
+  background: linear-gradient(360deg, rgba(66,87,190,1) 0%, rgba(110,128,213,1) 100%);
+}
+.sub_page .send_btn img {
+  width: 2.2222vh;
+  margin-right: 0.6250vw;
 }
 
 @media (max-height: 692px) {

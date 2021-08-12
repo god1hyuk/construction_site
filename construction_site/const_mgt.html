@@ -131,12 +131,20 @@
             </ul>
           </li>
         </ul>
-        <button class="acdnt_sprd">
-          <a href="javascript: void(0);">
-            <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
-            <p class="text-center ns_b">상황전파</p>
-          </a>
-        </button>
+        <div class="send_btn d-flex align-items-center justify-content-center">
+          <button class="acdnt_sprd">
+              <a href="javascript: void(0);">
+                <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+                <p class="text-center ns_b">상황전파</p>
+              </a>
+          </button>
+          <button class="msg_send">
+              <a href="javascript: void(0);">
+                <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+                <p class="text-center ns_b">문자전송</p>
+              </a>
+          </button>
+        </div>
       </nav>
     </aside>
 
@@ -401,10 +409,20 @@
     </div>
 
     <!-- 상황전파 버튼 (모바일) -->
-    <button class="acdnt_sprd_m d-flex align-items-center justify-content-center nt_b">
-      <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
-      상황전파
-    </button>
+    <div class="send_btn_m nt_b d-flex align-items-center justify-content-center">
+      <button class="acdnt_sprd_m d-flex align-items-center justify-content-center">
+          <a href="javascript: void(0);">
+              <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+              <p>상황전파</p>
+          </a>
+      </button>
+      <button class="msg_send_m">
+          <a href="javascript: void(0);">
+            <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+            <p class="text-center ns_b">문자전송</p>
+          </a>
+      </button>
+    </div>
 
     <!-- 검색조건 선택 (모바일) -->
     <div class="searchFilter_m">
@@ -513,7 +531,7 @@
             <li>
               <h3>허가일자</h3>
               <h4>2021-01-08</h4>
-              <input type="text" id="permitDate" class="datepicker" />
+              <input type="text" id="permitDate_m" class="datepicker" />
             </li>
           </ul>
         </form>
@@ -531,10 +549,10 @@
             <div class="title_icon"></div>
             <h3 class="ns_eb">공사장 관리</h3>
           </div>
-          <div class="search_container">
-            <div class="search_wrap">
+          <div class="form_container">
+            <div class="form_wrap">
               <!-- 검색 폼 영역 -->
-              <div class="search_form">
+              <div class="search_form content_form">
                 <!-- 주소선택 -->
                 <div class="adress">
                   <h3 class="ns_b">주소</h3>
@@ -1251,6 +1269,7 @@
 
     $(function () {
       $("#permitDate").datepicker().datepicker('setDate', new Date());
+      $("#permitDate_m").datepicker().datepicker('setDate', new Date());
       $("#startDate").datepicker().datepicker('setDate', new Date());
       $("#useOkDate").datepicker().datepicker('setDate', new Date());
     });
