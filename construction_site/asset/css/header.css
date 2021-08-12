@@ -222,6 +222,9 @@ header {
   font-size: 18px;
   margin-left: 18px;
 }
+.header_pc .sub_title span:hover {
+  cursor: pointer;
+}
 .header_pc .logout {
   margin: 0 32px;
   transition: color .13s;

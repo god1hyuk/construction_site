@@ -240,6 +240,9 @@
     background: #19233e;
     border-radius: 3px;
 }
+.construction_site .header_pc .sub_title span:hover {
+    cursor: pointer;
+}
 .construction_site .header_pc .logout {
     margin: 0 32px;
     transition: color 0.13s;

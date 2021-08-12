@@ -351,7 +351,7 @@ $(function () {
     $(".main_content").hide();
     $(".acdnt_sprd_m").hide();
   });
-  $(".close_btn").click(function () {
+  $(".mobile_menu .close_btn").click(function () {
     $(".mobile_menu").hide();
     $(".header_m").show();
     $(".main_content").show();
@@ -496,4 +496,17 @@ $(function () {
     $(".const_mgt .search_result .result_item li:nth-child(8)").prepend("<span>공정율</span>");
     $(".const_mgt .search_result .result_item li:nth-child(9)").prepend("<span>점검횟수</span>");
   }
+});
+
+// 내 정보 보기
+$(function () {
+  $(".myInfo").hide();
+  $(".header_pc .sub_title span").click(function () {
+    $(".myInfo").fadeIn(100);
+    $("body").css("overflow", "hidden");
+  });
+  $(".myInfo .close_btn").click(function () {
+    $(".myInfo").fadeOut(100);
+    $("body").css("overflow", "visible");
+  });
 });
