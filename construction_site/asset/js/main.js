@@ -1,4 +1,5 @@
 var count = 0;
+
 // 야간모드 스위치
 $(function () {
   $(".construction_site .switch_wrap").click(function () {
@@ -502,7 +503,7 @@ $(function () {
 // 내 정보 보기
 $(function () {
   $(".myInfo").hide();
-  $(".header_pc .sub_title span").click(function () {
+  $(".user_name").click(function () {
     $(".myInfo").fadeIn(100);
     $("body").css("overflow", "hidden");
   });

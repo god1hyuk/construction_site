@@ -133,16 +133,12 @@
         </ul>
         <div class="send_btn d-flex align-items-center justify-content-center">
           <button class="acdnt_sprd">
-              <a href="javascript: void(0);">
-                <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
-                <p class="text-center ns_b">상황전파</p>
-              </a>
+            <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+            <p class="text-center ns_b">상황전파</p>
           </button>
           <button class="msg_send">
-              <a href="javascript: void(0);">
-                <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
-                <p class="text-center ns_b">문자전송</p>
-              </a>
+            <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+            <p class="text-center ns_b">문자전송</p>
           </button>
         </div>
       </nav>
@@ -160,14 +156,22 @@
         <div class="nav_right d-flex">
           <div class="sub_title d-flex align-items-center">
             <p>서울시 지역건축안전센터</p>
-            <span>홍길동</span>
+            <span class="user_name">홍길동</span>
           </div>
           <ul class="d-flex align-items-center">
+            <!-- 로그인 버튼 -->
+            <li class="login">
+              <button class="d-flex align-items-center" onclick="location.href='login_page.html'">
+                <div class="log_icon"></div>
+                <p>로그인</p>
+              </button>
+            </li>
+            <!-- 로그아웃 버튼 -->
             <li class="logout">
-              <a class="d-flex align-items-center" href="javascript: void(0);">
-                <div class="logout_icon"></div>
+              <button class="d-flex align-items-center" href="javascript: void(0);">
+                <div class="log_icon"></div>
                 <p>로그아웃</p>
-              </a>
+              </button>
             </li>
             <li class="go_map nt_b">
               <button class="d-flex align-items-center justify-content-center">
@@ -199,7 +203,7 @@
             <div class="login_icon"></div>
             <span><strong>로그인</strong>이 필요합니다.</span>
           </div>
-          <a href="javascript: void(0);" class="login_link">
+          <a href="login_page.html" class="login">
             로그인하기
             <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
           </a>
@@ -294,7 +298,7 @@
             </div>
           </div>
           <div class="account_wrap d-flex">
-            <button>로그인</button>
+            <button onclick="location.href='info_modify.html'">로그인</button>
             <button>사용자등록</button>
           </div>
         </div>
@@ -305,9 +309,9 @@
         <div class="m_menu_top">
           <div class="login_text d-flex align-items-center">
             <div class="login_icon"></div>
-            <span><strong>홍길동</strong>서울시 지역건축안전센터</span>
+            <span><strong class="user_name">홍길동</strong>서울시 지역건축안전센터</span>
           </div>
-          <a href="javascript: void(0);" class="login_link">
+          <a href="javascript: void(0);" class="logout">
             로그아웃하기
             <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
           </a>
@@ -411,17 +415,91 @@
     <!-- 상황전파 버튼 (모바일) -->
     <div class="send_btn_m nt_b d-flex align-items-center justify-content-center">
       <button class="acdnt_sprd_m d-flex align-items-center justify-content-center">
-          <a href="javascript: void(0);">
-              <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
-              <p>상황전파</p>
-          </a>
+        <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+        <p>상황전파</p>
       </button>
       <button class="msg_send_m">
-          <a href="javascript: void(0);">
-            <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
-            <p class="text-center ns_b">문자전송</p>
-          </a>
+        <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+        <p class="text-center">문자전송</p>
       </button>
+    </div>
+
+    <!-- 내 정보 보기 -->
+    <div class="myInfo">
+      <div class="info_wrap">
+        <div class="info_top d-flex justify-content-center">
+          <h1 class="ns_b">내 정보 보기</h1>
+          <button class="close_btn"></button>
+        </div>
+        <div class="table_wrap">
+          <table>
+            <colgroup>
+              <col width="30%">
+              <col widht="70%">
+            </colgroup>
+            <tr>
+              <th style="border-top: 1px solid #192b80;">
+                <h3>아이디</h3>
+              </th>
+              <td style="border-top: 2px solid #5479f7;">
+                <p>Test</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>이름</h3>
+              </th>
+              <td>
+                <p>홍길동</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>휴대폰 번호</h3>
+              </th>
+              <td>
+                <p>010-1234-5678</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>소속기관</h3>
+              </th>
+              <td>
+                <p>서울시 지역건축안전센터</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>부서명</h3>
+              </th>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>권한</h3>
+              </th>
+              <td>
+                <p>총괄관리자</p>
+              </td>
+            </tr>
+            <tr>
+              <th style="border-bottom: 1px solid #192b80;">
+                <h3>SSO key</h3>
+              </th>
+              <td style="border-bottom: 2px solid #5479f7;">
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="info_btn nt_b d-flex justify-content-center">
+          <button>취소</button>
+          <button onclick="location.href='info_modify.html'">수정</button>
+        </div>
+      </div>
     </div>
 
     <!-- 검색조건 선택 (모바일) -->

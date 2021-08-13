@@ -143,7 +143,7 @@
 .construction_site .acdnt_sprd {
     padding-top: 2.2222vh;
 }
-.construction_site .acdnt_sprd a {
+.construction_site .acdnt_sprd button {
     width: 85%;
     font-size: 13px;
     color: #fff;
@@ -243,14 +243,25 @@
 .construction_site .header_pc .sub_title span:hover {
     cursor: pointer;
 }
+.construction_site .header_pc .login {
+    display: none;
+  }
+.construction_site .header_pc .sub_title,
+.construction_site .header_pc .logout {
+    /* display: none; */
+}
+.construction_site .header_pc .login,
 .construction_site .header_pc .logout {
     margin: 0 32px;
-    transition: color 0.13s;
 }
-.construction_site .header_pc .logout_icon {
+.construction_site .header_pc .login button,
+.construction_site .header_pc .logout button {
+  color: #fff;
+  background: transparent;
+} 
+.construction_site .header_pc .log_icon {
     width: 36px;
     height: 36px;
-    background-image: url("../images/icon/logout_white.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #53bada;
@@ -258,10 +269,22 @@
     border-radius: 100px;
     transition: background 0.13s;
 }
-.construction_site .header_pc .logout:hover {
-    color: #64eef9;
+.construction_site .header_pc .login .log_icon {
+    background-image: url("../images/icon/login_white.png");
 }
-.construction_site .header_pc .logout:hover .logout_icon {
+.construction_site .header_pc .logout .log_icon {
+    background-image: url("../images/icon/logout_white.png");
+}
+.construction_site .header_pc .login:hover button,
+.construction_site .header_pc .logout:hover button {
+    color: #64eef9;
+    transition: color 0.13s;
+}
+.construction_site .header_pc .login:hover .log_icon {
+    background-image: url("../images/icon/login_on.png");
+    background-color: #fff;
+}
+.construction_site .header_pc .logout:hover .log_icon {
     background-image: url("../images/icon/logout_on.png");
     background-color: #fff;
 }
@@ -302,41 +325,34 @@
 }
 
 /* 상황전파 버튼 (모바일) */
-.acdnt_sprd_m {
-    display: none;
+.send_btn_m {
     position: fixed;
     bottom: 10px;
     left: 0;
     width: 100%;
-    height: 90px;
     font-size: 28px;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+.send_btn_m button {
+    width: 50%;
+    height: 90px;
+    line-height: 1;
+}
+.acdnt_sprd_m {
     color: #fff;
+    margin-right: 10px;
     background: rgb(84,121,247);
     background: linear-gradient(360deg, rgba(84,121,247,1) 0%, rgba(133,158,245,1) 100%);
     z-index: 985;
 }
-.acdnt_sprd_m img {
-    width: 40px;
+.msg_send_m {
+    background: rgb(195,202,213);
+    background: linear-gradient(0deg, rgba(195,202,213,1) 0%, rgba(255,255,255,1) 100%);
+}
+.send_btn_m img {
+    width: 38px;
     margin-right: 16px;
-    vertical-align: top;
-}
-.acdnt_sprd_m::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: rgba(0, 0, 0, 0.15);
-}
-.acdnt_sprd_m::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: rgba(0, 0, 0, 0.15);
 }
 
 @media (max-height: 692px) {
@@ -355,7 +371,7 @@
     .construction_site .acdnt_sprd {
       padding-top: 10px;
     }
-    .construction_site .acdnt_sprd a {
+    .construction_site .acdnt_sprd button {
       margin-top: 5px;
     }
 }
@@ -371,9 +387,9 @@
     background: #fff;
     z-index: 999;
 }
-/* .mobile_menu .m_login {
-    display: none;
-  } */
+.mobile_menu .m_login {
+    /* display: none; */
+  }
 .mobile_menu .m_logout {
     display: none;
 }
@@ -405,12 +421,12 @@
     width: 64px;
     height: 64px;
     background-color: #28344c;
-    background-image: url("../images/icon/login.png");
+    background-image: url("../images/icon/login_white_m.png");
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 100px;
 }
-.mobile_menu .login_link {
+.mobile_menu .login {
     font-size: 20px;
     color: #fff;
     margin-left: 27px;

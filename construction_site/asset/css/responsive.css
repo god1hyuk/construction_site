@@ -22,7 +22,19 @@
       margin-right: 0 !important;
     }
 
-    /* 메인 컨텐츠 */
+    /* 내 정보 수정 */
+    .info_modify .modify_list th, 
+    .info_modify .modify_list td {
+        padding-left: 30px;
+    }
+    .info_modify .modify_list th {
+        width: 15%;
+    }
+    .info_modify .modify_list td {
+        width: 85%;
+    }
+
+    /* 메인페이지 */
 
     /* Today 안전사고 */
     .construction_site .day_stats {
@@ -314,6 +326,15 @@
 }
 
 @media (max-width: 1440px) {
+
+    /* 내 정보 수정 */
+    .info_modify .modify_list th {
+        width: 18%;
+    }
+    .info_modify .modify_list td {
+        width: 82%;
+    }
+
     /* 메인페이지 */
     .construction_site .area_info .inspection .insp_circle2 {
         margin: 0 0.6944vw;
@@ -461,7 +482,21 @@
     }
     .myInfo .info_btn button {
         font-size: 22px;
-        padding: 20px 0;
+        padding: 22px 0;
+    }
+
+    /* 내 정보 수정 */
+    .info_modify .modify_list th {
+        width: 28%;
+    }
+    .info_modify .modify_list td {
+        width: 72%;
+    }
+    .info_modify .modify_list input {
+        width: 100%;
+    }
+    .info_modify .modify_list .select_wrap {
+        width: 100%;
     }
 
     /* 메인 컨텐츠 */
@@ -579,7 +614,7 @@
         padding-top: 50px;
     }
     /* 공사장 관리 */
-    .const_mgt .search_container {
+    .const_mgt .form_container {
         padding: 0;
         background: transparent;
         border: none;
@@ -596,7 +631,7 @@
         width: 100%;
     }
     /* 검색 폼 영역 */
-    .const_mgt .search_container .search_form {
+    .const_mgt .form_container .search_form {
         padding: 0 30px;
         border: 2px solid #515463;
         border-top: 5px solid #28344c;
@@ -962,7 +997,7 @@
         margin-right: 10px;
         margin-top: 5px;
     }
-    .login_page .login_box .loginBox_main .login_btn {
+    .login_page .login_box .loginBox_main .do_login {
         height: 90px;
         font-size: 36px;
         /* margin-top: 76px; */
@@ -984,6 +1019,22 @@
     /* 공통 영역 */
     .col-4 {
         padding: 0 25px;
+    }
+    .info_btn button {
+        width: 50% !important;
+        font-size: 20px !important;
+        padding: 18px 0 !important;
+    }
+    .info_btn button:first-child {
+        margin-right: 0;
+    }
+
+    /* 내 정보 수정 */
+    .info_modify .form_container {
+        padding: 0 !important;
+        background: transparent;
+        border: none;
+        box-shadow: none;
     }
 
     /* 메인 컨텐츠 */
@@ -1289,12 +1340,50 @@
     .send_btn_m {
         bottom: 8px;
         font-size: 24px;
+        z-index: 999;
     }
     .send_btn_m button {
         height: 70px;
     }
     .send_btn_m img {
         width: 30px;
+    }
+
+    /* 내 정보 수정 */
+    .info_modify .infoModify_form {
+        padding: 0 25px;
+    }
+    .info_modify .modify_list {
+        display: block;
+    }
+    .info_modify .modify_list tr {
+        display: flex;
+        flex-direction: column;
+    }
+    .info_modify .modify_list tr:last-child th {
+        display: none;
+    }
+    .info_modify .modify_list tr:last-child td {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .info_modify .modify_list th, 
+    .info_modify .modify_list td {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .info_modify .modify_list td {
+        padding-top: 0;
+    }
+    .info_modify .modify_list .select_wrap {
+        flex-direction: column;
+    }
+    .info_modify .modify_list .select_wrap select {
+        width: 100%;
+    }
+    .info_modify .modify_list .select_wrap select:last-child {
+        margin-top: 15px;
     }
 
     /* 메인페이지 */
@@ -1404,10 +1493,6 @@
     .myInfo table th h3, 
     .myInfo table td p {
         padding-left: 12px;
-    }
-    .myInfo .info_btn button {
-        font-size: 20px;
-        padding: 18px 0;
     }
 
     /* 메인 컨텐츠 */
@@ -1642,7 +1727,7 @@
         margin-top: 2px;
         margin-right: 5px;
     }
-    .login_page .login_box .loginBox_main .login_btn {
+    .login_page .login_box .loginBox_main .do_login {
         height: 64px;
         font-size: 22px;
         margin-top: 40px;
@@ -1701,11 +1786,13 @@
     .mobile_menu .login_text span {
         font-size: 18px;
     }
-    .mobile_menu .login_link {
+    .mobile_menu .login,
+    .mobile_menu .logout {
         font-size: 13px;
         margin-left: 15px;
     }
-    .mobile_menu .login_link img {
+    .mobile_menu .login img,
+    .mobile_menu .logout img {
         width: 6px;
         margin-left: 9px;
     }
@@ -1793,8 +1880,41 @@
     .myInfo table td p {
         font-size: 14px;
     }
-    .myInfo .info_btn button {
-        font-size: 18px;
+
+    /* 내 정보 수정 */
+    .info_modify .infoModify_form {
+        padding: 0 20px;
+    }
+    .info_modify .modify_list th,
+    .info_modify .modify_list td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .info_modify .modify_list th {
+        font-size: 16px;
+    }
+    .info_modify .modify_list td,
+    .info_modify .modify_list input,
+    .info_modify .modify_list select {
+        font-size: 15px;
+    }
+    .info_modify .modify_list tr:nth-child(3) p {
+        font-size: 12px;
+    }
+    .info_btn button {
+        font-size: 18px !important;
+    }
+    .info_modify .modify_list tr:last-child p {
+        font-size: 13px;
+        line-height: 2;
+    }
+    .info_modify .modify_list tr:last-child p sup {
+        width: 5px;
+        height: 5px;
+        margin-top: -2px;
+        margin-right: 3px;
+        vertical-align: middle;
+        border-width: 3px;
     }
 
     /* 메인 컨텐츠 */
@@ -1967,7 +2087,7 @@
         display: none;
     }
     /* 검색 폼 영역 */
-    .const_mgt .search_container .search_form {
+    .const_mgt .form_container .search_form {
         padding: 0 20px;
     }
     /* 검색 결정 */
@@ -2049,7 +2169,7 @@
     .login_page .login_box .loginBox_main input {
         height: 58px;
     }
-    .login_page .login_box .loginBox_main .login_btn {
+    .login_page .login_box .loginBox_main .do_login {
         height: 58px;
     }
     .login_page .copyright {
@@ -2062,6 +2182,10 @@
     /* 공통 영역 */
     .col-4 {
         padding: 0 16px;
+    }
+    .info_btn button {
+        padding: 15px 0 !important;
+        font-size: 16px !important;
     }
 
     /* 메인페이지 */
@@ -2079,9 +2203,10 @@
         padding-left: 8px;
         font-size: 13px;
     }
-    .myInfo .info_btn button {
-        padding: 15px 0;
-        font-size: 16px;
+
+    /* 내 정보 수정 */
+    .info_modify .infoModify_form {
+        padding: 0 15px;
     }
 
     /* Today 안전사고 */
@@ -2154,7 +2279,7 @@
         padding-right: 16px;
     }
     /* 검색 폼 영역 */
-    .const_mgt .search_container .search_form {
+    .const_mgt .form_container .search_form {
         padding: 0 16px;
     }
     /* 검색 결정 */
@@ -2215,7 +2340,7 @@
         height: 52px;
         font-size: 16px;
     }
-    .login_page .login_box .loginBox_main .login_btn {
+    .login_page .login_box .loginBox_main .do_login {
         height: 52px;
         font-size: 16px;
     }

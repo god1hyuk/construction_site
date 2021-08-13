@@ -124,9 +124,9 @@
           </li>
           <li class="acdnt_sprd">
             <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
-            <a href="javascript: void(0);">
+            <button>
               <p class="text-center">상황전파</p>
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
@@ -151,14 +151,22 @@
         <div class="nav_right d-flex">
           <div class="sub_title d-flex align-items-center">
             <p>서울시 지역건축안전센터</p>
-            <span>홍길동</span>
+            <span class="user_name">홍길동</span>
           </div>
           <ul class="d-flex align-items-center">
+            <!-- 로그인 버튼 -->
+            <li class="login">
+              <button class="d-flex align-items-center" onclick="location.href='login_page.html'">
+                <div class="log_icon"></div>
+                <p>로그인</p>
+              </button>
+            </li>
+            <!-- 로그아웃 버튼 -->
             <li class="logout">
-              <a class="d-flex align-items-center" href="javascript: void(0);">
-                <div class="logout_icon"></div>
+              <button class="d-flex align-items-center" href="javascript: void(0);">
+                <div class="log_icon"></div>
                 <p>로그아웃</p>
-              </a>
+              </button>
             </li>
             <li class="go_map nt_b">
               <button class="d-flex align-items-center justify-content-center">
@@ -190,10 +198,10 @@
             <div class="login_icon"></div>
             <span><strong>로그인</strong>이 필요합니다.</span>
           </div>
-          <a href="javascript: void(0);" class="login_link">
+          <button onclick="location.href='login_page.html'" class="login">
             로그인하기
             <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
-          </a>
+          </button>
           <button class="close_btn"></button>
         </div>
         <div class="m_menu_lists nt_m">
@@ -285,7 +293,7 @@
             </div>
           </div>
           <div class="account_wrap d-flex">
-            <button>로그인</button>
+            <button onclick="location.href='login_page.html'">로그인</button>
             <button>사용자등록</button>
           </div>
         </div>
@@ -296,12 +304,12 @@
         <div class="m_menu_top">
           <div class="login_text d-flex align-items-center">
             <div class="login_icon"></div>
-            <span><strong>홍길동</strong>서울시 지역건축안전센터</span>
+            <span><strong class="user_name">홍길동</strong>서울시 지역건축안전센터</span>
           </div>
-          <a href="javascript: void(0);" class="login_link">
+          <button class="logout">
             로그아웃하기
             <img src="asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
-          </a>
+          </button>
           <button class="close_btn"></button>
         </div>
         <div class="m_menu_lists">
@@ -402,16 +410,12 @@
     <!-- 상황전파 버튼 (모바일) -->
     <div class="send_btn_m nt_b d-flex align-items-center justify-content-center">
       <button class="acdnt_sprd_m d-flex align-items-center justify-content-center">
-          <a href="javascript: void(0);">
-              <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
-              <p>상황전파</p>
-          </a>
+        <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
+        <p>상황전파</p>
       </button>
       <button class="msg_send_m">
-          <a href="javascript: void(0);">
-            <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
-            <p class="text-center ns_b">문자전송</p>
-          </a>
+        <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+        <p class="text-center">문자전송</p>
       </button>
     </div>
 

@@ -125,7 +125,7 @@ aside .home a {
 .construction_site .acdnt_sprd {
   padding-top: 2.2222vh;
 }
-.construction_site .acdnt_sprd a {
+.construction_site .acdnt_sprd button {
   display: block;
   width: 85%;
   font-size: 13px;
@@ -225,14 +225,24 @@ header {
 .header_pc .sub_title span:hover {
   cursor: pointer;
 }
+.header_pc .login {
+  display: none;
+}
+.header_pc .sub_title,
+.header_pc .logout {
+    /* display: none; */
+}
+.header_pc .login,
 .header_pc .logout {
   margin: 0 32px;
-  transition: color .13s;
 }
-.header_pc .logout_icon {
+.header_pc .login button,
+.header_pc .logout button {
+  color: #fff;
+} 
+.header_pc .log_icon {
   width: 36px;
   height: 36px;
-  background-image: url(../images/icon/logout.png);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #979fc6;
@@ -240,10 +250,22 @@ header {
   border-radius: 100px;
   transition: background .13s;
 }
-.header_pc .logout:hover {
-  color: #64eef9;
+.header_pc .login .log_icon {
+  background-image: url(../images/icon/login.png);
 }
-.header_pc .logout:hover .logout_icon {
+.header_pc .logout .log_icon {
+  background-image: url(../images/icon/logout.png);
+}
+.header_pc .login:hover button,
+.header_pc .logout:hover button {
+  color: #64eef9;
+  transition: color 0.13s;
+}
+.header_pc .login:hover .log_icon {
+  background-image: url(../images/icon/login_on.png);
+  background-color: #fff;
+}
+.header_pc .logout:hover .log_icon {
   background-image: url(../images/icon/logout_on.png);
   background-color: #fff;
 }
@@ -285,7 +307,6 @@ header {
 
 /* 상황전파 버튼 (모바일) */
 .send_btn_m {
-  display: none !important;
   position: fixed;
   bottom: 10px;
   left: 0;
@@ -293,13 +314,12 @@ header {
   font-size: 28px;
   padding: 10px 0;
   background: rgba(0, 0, 0, 0.15);
-}
-.send_btn_m a {
-  display: flex;
+  z-index: 999;
 }
 .send_btn_m button {
   width: 50%;
   height: 90px;
+  line-height: 1;
 }
 .acdnt_sprd_m {
   color: #fff;
@@ -311,6 +331,10 @@ header {
 .send_btn_m img {
   width: 38px;
   margin-right: 16px;
+}
+.msg_send_m {
+  background: rgb(195,202,213);
+  background: linear-gradient(0deg, rgba(195,202,213,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 /* 모바일 메뉴 (로그인 버전) */
@@ -358,17 +382,20 @@ header {
   width: 64px;
   height: 64px;
   background-color: #28344c;
-  background-image: url(../images/icon/login.png);
+  background-image: url(../images/icon/login_white_m.png);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 100px;
 }
-.mobile_menu .login_link {
+.mobile_menu .login,
+.mobile_menu .lgout {
   font-size: 20px;
   color: #fff;
   margin-left: 27px;
 }
-.mobile_menu .login_link img {
+
+.mobile_menu .login img,
+.mobile_menu .logout img {
   margin-left: 16px;
   vertical-align: middle;
 }
@@ -695,11 +722,6 @@ header {
   width: 100%;
   padding: 0 3.3333vh;
 }
-.sub_page .send_btn a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .sub_page .acdnt_sprd,
 .sub_page .msg_send {
   width: 50%;
@@ -712,6 +734,10 @@ header {
   margin-right: 0.5208vw;
   background: rgb(66,87,190);
   background: linear-gradient(360deg, rgba(66,87,190,1) 0%, rgba(110,128,213,1) 100%);
+}
+.sub_page .msg_send {
+  background: rgb(195,202,213);
+  background: linear-gradient(0deg, rgba(195,202,213,1) 0%, rgba(255,255,255,1) 100%);
 }
 .sub_page .send_btn img {
   width: 2.2222vh;

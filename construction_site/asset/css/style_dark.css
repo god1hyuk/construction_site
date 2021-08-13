@@ -710,6 +710,9 @@
     background: #0c142b;
 }
 .construction_site .area_info .tab_main > .tab_index li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24%;
     color: #fff;
     padding: 1.3889vh 0;
@@ -730,16 +733,13 @@
 }
 .construction_site .area_info .tab_main > .tab_content {
     height: 90%;
-    padding: 0 20px;
+    padding: 50px 20px 30px;
     background: rgb(43,46,65);
     background: linear-gradient(0deg, rgba(43,46,65,1) 0%, rgba(73,86,114,1) 100%);
     border-radius: 0 0 10px 10px;
 }
 .construction_site .insp_light {
   display: none;
-}
-.construction_site .area_info .inspection ul {
-    padding: 3.7037vh 0;
 }
 .construction_site .area_info .inspection .circle {
     position: relative;
@@ -784,7 +784,7 @@
 
 /* 안전사고 발생 현황 */
 .construction_site .area_info .safechk_occu {
-    height: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 .construction_site .safechk_occu .content_title {

@@ -9,7 +9,9 @@
 
 /* 내 정보 보기 */
 .myInfo {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
@@ -110,16 +112,7 @@
 }
 .myInfo .info_btn button {
   width: 50%;
-  line-height: 1;
   padding: 1.1458vw 0;
-}
-.myInfo .info_btn button:first-child {
-  background: #fff;
-  border: 1px solid #6e6e6e;
-}
-.myInfo .info_btn button:last-child {
-  color: #fff;
-  background: #192b80;
 }
 
 /* 내 정보 수정 */
@@ -147,15 +140,18 @@
   font-family: 'NotoSansKR-Bold';
   font-size: 18px;
 }
-.info_modify .modify_list sub {
+.info_modify .modify_list sup {
   color: #da2128;
   vertical-align: top;
 }
-.info_modify .modify_list tr:nth-child(3) p,
-.info_modify .modify_list tr:nth-child(3) sub {
+.info_modify .modify_list tr:nth-child(3) p {
   font-size: 14px;
   color: #ee5c50;
   padding-top: 17px;
+}
+.info_modify .modify_list tr:nth-child(3) sub {
+  color: #ee5c50;
+  vertical-align: middle;
 }
 .info_modify .modify_list .select_wrap {
   width: 50%;
@@ -176,7 +172,7 @@
   font-size: 14px;
   color: #192b80;
 }
-.info_modify .modify_list tr:last-child sub {
+.info_modify .modify_list tr:last-child sup {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -189,29 +185,13 @@
   width: 50%;
   height: 50px;
 }
-
-.info_modify .infoModify_btn {
-  margin-top: 80px;
+.info_modify .info_btn {
+  padding-top: 80px;
 }
-.info_modify .infoModify_btn button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.info_modify .info_btn button {
   width: 255px;
-  line-height: 1;
-  padding: 22px 0;
   font-size: 22px;
 }
-.info_modify .infoModify_btn button:first-child {
-  margin-right: 15px;
-  background: #fff;
-  border: 1px solid #6e6e6e;
-}
-.info_modify .infoModify_btn button:last-child {
-  color: #fff;
-  background: #192b80;
-}
-
 
 /* 메인 컨텐츠 */
 .main_content {
@@ -1850,7 +1830,7 @@ a.ui-button:active,
 .login_page .login_box .loginBox_main .login_subBtn button:first-child {
   margin-right: 0.8333vw;
 }
-.login_page .login_box .loginBox_main .login_btn {
+.login_page .login_box .loginBox_main .do_login {
   width: 100%;
   height: 3.6458vw;
   font-size: 1.4583vw;
