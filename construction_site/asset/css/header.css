@@ -349,10 +349,10 @@ header {
   z-index: 999;
 }
 .mobile_menu .m_login {
-  /* display: none; */
+  display: none;
 }
 .mobile_menu .m_logout {
-  display: none;
+  /* display: none; */
 }
 /* 모바일 메뉴 상단 */
 .mobile_menu .m_menu_top {
@@ -388,7 +388,7 @@ header {
   border-radius: 100px;
 }
 .mobile_menu .login,
-.mobile_menu .lgout {
+.mobile_menu .logout {
   font-size: 20px;
   color: #fff;
   margin-left: 27px;
