@@ -351,13 +351,13 @@ $(function () {
     $(".mobile_menu").show();
     $(".header_m").hide();
     $(".main_content").hide();
-    $(".acdnt_sprd_m").hide();
+    $(".send_btn_m").hide();
   });
   $(".mobile_menu .close_btn").click(function () {
     $(".mobile_menu").hide();
     $(".header_m").show();
     $(".main_content").show();
-    $(".acdnt_sprd_m").show();
+    $(".send_btn_m").show();
   });
 });
 

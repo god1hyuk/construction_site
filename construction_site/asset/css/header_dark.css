@@ -346,13 +346,13 @@
     background: linear-gradient(360deg, rgba(84,121,247,1) 0%, rgba(133,158,245,1) 100%);
     z-index: 985;
 }
-.msg_send_m {
-    background: rgb(195,202,213);
-    background: linear-gradient(0deg, rgba(195,202,213,1) 0%, rgba(255,255,255,1) 100%);
-}
 .send_btn_m img {
     width: 38px;
     margin-right: 16px;
+}
+.msg_send_m {
+    background: rgb(195,202,213);
+    background: linear-gradient(0deg, rgba(195,202,213,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 @media (max-height: 692px) {
