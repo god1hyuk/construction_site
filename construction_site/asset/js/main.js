@@ -190,6 +190,13 @@ $(function () {
       $(this).removeClass("active");
     }
   });
+  $(".responsibility .tab_index li").click(function () {
+    var tab_id = $(this).attr('data-tab');
+    $(".responsibility .tab_index li").removeClass("active");
+    $(".responsibility .tab_content").removeClass("active");
+    $(this).addClass("active");
+    $("#" + tab_id).addClass('active');
+  });
 });
 
 // 날씨정보 영역
@@ -471,6 +478,9 @@ $(function () {
   $(".keyword_save button.kSave_cancel").click(function () {
     $(".keyword_save").fadeOut(200);
   });
+  $(".keyword_save button.close_btn").click(function () {
+    $(".keyword_save").fadeOut(200);
+  });
 });
 
 // 검색결과 리스트
@@ -500,8 +510,9 @@ $(function () {
   }
 });
 
-// 내 정보 보기
+// 모달창
 $(function () {
+  // 내 정보 보기
   $(".myInfo").hide();
   $(".user_name").click(function () {
     $(".myInfo").fadeIn(100);
@@ -510,5 +521,21 @@ $(function () {
   $(".myInfo .close_btn").click(function () {
     $(".myInfo").fadeOut(100);
     $("body").css("overflow", "visible");
+  });
+  // 담당업무 설정
+  $(".responsibility").hide();
+  $(".resp_btn").click(function () {
+    $(".responsibility").fadeIn(100);
+    $("body").css("overflow", "hidden");
+    if ($(window).width() > 1024) {
+    }
+  });
+  $(".responsibility .close_btn").click(function () {
+    $(".responsibility").fadeOut(100);
+    $("body").css("overflow", "visible");
+  });
+  $(".responsibility .save_btn button").click(function () {
+    $(".responsibility").fadeOut(100);
+    $("body").css("overflow", "visible");    
   });
 });
