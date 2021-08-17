@@ -350,6 +350,11 @@
     .const_mgt .search_add .check_wrap li:first-child li:nth-child(8) {
         margin-top: 15px;
     }
+
+    /* 담당업무 설정 */
+    .responsibility .tab_content form li .guide_ment {
+        line-height: 2;
+    }
 }
 
 @media (max-width: 1150px) {
@@ -842,7 +847,6 @@
         margin-right: 20px;
     }
     
-
     /* 담당업무 설정 */
     .responsibility {
         top: 0;
@@ -881,6 +885,7 @@
         padding: 0 20px;
     }
     .responsibility .tab_content form li .guide_ment {
+        line-height: 1;
         font-size: 14px;
     }
     .responsibility .tab_content form li .guide_ment sub {
