@@ -502,218 +502,6 @@
       </div>
     </div>
 
-    <!-- 검색조건 선택 (모바일) -->
-    <div class="searchFilter_m">
-      <div class="searchFilter_top d-flex align-items-center justify-content-between">
-        <button class="init_btn_m">
-          <img src="asset/images/icon/searchFilter_init.png" alt="초기화_아이콘" />
-          초기화
-        </button>
-        <h2 class="ns_b">필터</h2>
-        <button class="close_btn"></button>
-      </div>
-      <!-- 검색조건 체크리스트 (모바일) -->
-      <div class="searchFilter_list">
-        <form action="">
-          <ul>
-            <li>
-              <h3>규모</h3>
-              <h4>대형</h4>
-              <ul class="check_list">
-                <li class="active">
-                  <label for="division_check0_m">대형</label>
-                  <input type="checkbox" name="division_check" id="division_check0_m" />
-                </li>
-                <li>
-                  <label for="division_check1_m">중형</label>
-                  <input type="checkbox" name="division_check" id="division_check1_m" />
-                </li>
-                <li>
-                  <label for="division_check2_m">소형</label>
-                  <input type="checkbox" name="division_check" id="division_check2_m" />
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>공정</h3>
-              <h4>철거 - <span>허가</span></h4>
-              <ul class="check_list">
-                <li class="active">
-                  <label for="processM_check0_m">철거</label>
-                  <input type="checkbox" name="processM_check" id="processM_check0_m" />
-                </li>
-                <li>
-                  <label for="processM_check1_m">해체</label>
-                  <input type="checkbox" name="processM_check" id="processM_check1_m" />
-                </li>
-                <li>
-                  <label for="processM_check2_m">굴토</label>
-                  <input type="checkbox" name="processM_check" id="processM_check2_m" />
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul class="check_list">
-                <li class="active">
-                  <label for="processS_check0_m">허가</label>
-                  <input type="checkbox" name="processS_check" id="processS_check0_m" />
-                </li>
-                <li>
-                  <label for="processS_check1_m">신고</label>
-                  <input type="checkbox" name="processS_check" id="processS_check1_m" />
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>주용도</h3>
-              <h4>단독주택</h4>
-              <ul class="check_list">
-                <li class="active">
-                  <label for="division_check0">단독주택</label>
-                  <input type="checkbox" name="division_check" id="division_check0" />
-                </li>
-                <li>
-                  <label for="division_check1">공동주택</label>
-                  <input type="checkbox" name="division_check" id="division_check1" />
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>구조</h3>
-              <h4>단독주택</h4>
-              <ul class="check_list">
-                <li class="active">
-                  <label for="division_check0">철근콘크리트조</label>
-                  <input type="checkbox" name="division_check" id="division_check0" />
-                </li>
-                <li>
-                  <label for="division_check1">철골철근콘크리트조</label>
-                  <input type="checkbox" name="division_check" id="division_check1" />
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>CCTV 설치여부</h3>
-              <h4>설치</h4>
-              <ul class="check_list">
-                <li class="active">
-                  <label for="division_check0">설치</label>
-                  <input type="checkbox" name="division_check" id="division_check0" />
-                </li>
-                <li>
-                  <label for="division_check1">미설치</label>
-                  <input type="checkbox" name="division_check" id="division_check1" />
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>허가일자</h3>
-              <h4>2021-01-08</h4>
-              <input type="text" id="permitDate_m" class="datepicker" />
-            </li>
-          </ul>
-        </form>
-      </div>
-      <div class="searchFilter_bottom d-flex align-items-center">
-        <button>취소</button>
-        <button>적용</button>
-      </div>
-    </div>
-
-    <!-- 담당업무 설정 -->
-    <div class="responsibility modal_bg">
-      <div class="modal_wrap">
-        <div class="modal_top d-flex justify-content-center">
-          <h1 class="ns_b">담당업무 설정</h1>
-          <button class="close_btn"></button>
-        </div>
-        <div class="tab_wrap">
-          <ul class="tab_index ns_b d-flex justify-content-center">
-            <li class="active" data-tab="resp_tab0">공사장 설정</li>
-            <li data-tab="resp_tab1">건축물 설정</li>
-          </ul>
-          <div id="resp_tab0" class="tab_content active">
-            <form action="">
-              <ul>
-                <li>
-                  <span class="nt_b">공사장 분류</span>
-                  <div class="select_wrap">
-                    <select name="" id="">
-                      <option value=""></option>
-                    </select>
-                    <button>추가</button>
-                  </div>
-                </li>
-                <li>
-                  <span class="nt_b">지역</span>
-                  <div class="select_wrap">
-                    <select name="" id="">
-                      <option value="">서울특별시</option>
-                    </select>
-                    <select name="" id="">
-                      <option value=""></option>
-                    </select>
-                    <button>추가</button>
-                  </div>
-                </li>
-                <li>
-                  <p class="guide_ment"><sub></sub>시설물의 경우 법정동 기준으로 설정합니다.</p>
-                </li>
-              </ul>
-            </form>
-            <ul class="picked_rqt d-flex align-items-center">
-              <li>
-                단독주택
-                <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-              </li>
-            </ul>
-          </div>
-          <div id="resp_tab1" class="tab_content">
-            <form action="">
-              <ul>
-                <li>
-                  <span class="nt_b">건축물 분류</span>
-                  <div class="select_wrap">
-                    <select name="" id="">
-                      <option value=""></option>
-                    </select>
-                    <button>추가</button>
-                  </div>
-                </li>
-                <li>
-                  <span class="nt_b">지역</span>
-                  <div class="select_wrap">
-                    <select name="" id="">
-                      <option value="">서울특별시</option>
-                    </select>
-                    <select name="" id="">
-                      <option value=""></option>
-                    </select>
-                    <button>추가</button>
-                  </div>
-                </li>
-                <li>
-                  <p class="guide_ment"><sub></sub>건축물의 경우 행정동 기준으로 설정하며, 건축물 주소 표현은 설정하신 행정동의 속해 있는 법정동으로 표현됩니다.</p>
-                </li>
-              </ul>
-            </form>
-            <ul class="picked_rqt d-flex align-items-center">
-              <li>
-                단독주택
-                <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="modal_bottom d-flex justify-content-center">
-          <div class="save_btn d-flex justify-content-center align-items-center">
-            <button type="reset">취소</button>
-            <button type="submit">저장</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="main_content">
       <div class="container">
         <div class="row">
@@ -723,275 +511,280 @@
           </div>
           <div class="form_container">
             <!-- 지도 & 로드뷰 -->
-            <div class="map_wrap">
+            <div class="map_wrap ns_eb">
                 <div class="map">지도</div>
                 <div class="road_view">로드뷰</div>
             </div>
-            <!-- 공사장 정보 -->
+            <!-- 공사장 정보 리스트 -->
             <div class="cInfo_wrap">
-                <table border="1">
-                    <colgroup>
-                        <col width="15%" />
-                        <col width="35%" />
-                        <col width="15%" />
-                        <col width="35%" />
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th>자치구</th>
-                            <td>○○구 ○○과 ○○팀</td>
-                            <th>시행방법</th>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">대지위치</th>
-                            <td rowspan="3">서울시 ○○구 ○○동 ○○○번지 (도로명 주소: )</td>
-                            <th rowspan="3">건축규모</th>
-                            <td>○동, 지하○층/지상○층, 연면적 ○○○m²</td>
-                        </tr>
-                        <tr>
-                            <td>○동, 지하○층/지상○층, 연면적 ○○○m²</td>
-                        </tr>
-                        <tr>
-                            <td>○동, 지하○층/지상○층, 연면적 ○○○m²</td>
-                        </tr>
-                        <tr>
-                            <th>주용도</th>
-                            <td>단독주택</td>
-                            <th>구조</th>
-                            <td>철근콘크리트조</td>
-                        </tr>
-                        <tr>
-                            <th>착공일자</th>
-                            <td>2021-09-21</td>
-                            <th>안전계획서</th>
-                            <td>안전관리 계획서</td>
-                        </tr>
-                        <tr>
-                            <th>CCTV 설치여부</th>
-                            <td>설치</td>
-                            <th>CCTV 정보</th>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <th>위험등급</th>
-                            <td>상</td>
-                            <th>심의일<p>(위험등급결정일)</p></th>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <th>시공자</th>
-                            <td>○○종합개발 / 홍길동 / 010-0000-0000</td>
-                            <th>감리자</th>
-                            <td>○○종합개발 / 홍길동 / 010-0000-0000</td>
-                        </tr>
-                        <tr>
-                            <th>공정률</th>
-                            <td>60%</td>
-                            <th>진행공정</th>
-                            <td>철거</td>
-                        </tr>
-                    </tbody>
-                </table>
+              <ul class="cInfo_list d-flex justify-content-between">
+                <li>
+                  <span>자치구</span>
+                  <p>○○구 ○○과 ○○팀</p>
+                </li>
+                <li>
+                  <span>시행방법</span>
+                  <p>&nbsp;</p>
+                </li>
+                <li>
+                  <span>대지위치</span>
+                  <p>서울시 ○○구 ○○동 ○○○번지 (도로명 주소: )</p>
+                </li>
+                <li>
+                  <span>건축규모</span>
+                  <ul>
+                    <li><p>○동, 지하○층/지상○층, 연면적 ○○○m²</p></li>
+                    <li><p>○동, 지하○층/지상○층, 연면적 ○○○m²</p></li>
+                    <li><p>○동, 지하○층/지상○층, 연면적 ○○○m²</p></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>주용도</span>
+                  <p>단독주택</p>
+                </li>
+                <li>
+                  <span>구조</span>
+                  <p>철근콘크리트조</p>
+                </li>
+                <li>
+                  <span>착공일자</span>
+                  <p>2021-09-21</p>
+                </li>
+                <li>
+                  <span>안전계획서</span>
+                  <p>안전관리 계획서</p>
+                </li>
+                <li>
+                  <span>CCTV 설치여부</span>
+                  <p>설치</p>
+                </li>
+                <li>
+                  <span>CCTV 정보</span>
+                  <p>&nbsp;</p>
+                </li>
+                <li>
+                  <span>위험등급</span>
+                  <p>상</p>
+                </li>
+                <li>
+                  <span>심의일<strong>(위험등급결정일)</strong></span>
+                  <p>&nbsp;</p>
+                </li>
+                <li>
+                  <span>시공자</span>
+                  <p>○○종합개발 / 홍길동 / 010-0000-0000</p>
+                </li>
+                <li>
+                  <span>감리자</span>
+                  <p>○○종합개발 / 홍길동 / 010-0000-0000</p>
+                </li>
+                <li>
+                  <span>공정률</span>
+                  <p>60%</p>
+                </li>
+                <li>
+                  <span>진행공정</span>
+                  <p>철거</p>
+                </li>
+              </ul>
+              <div class="cInfoList_btn d-flex justify-content-end">
+                <button>진행사항 수정</button>
+                <button>목록</button>
+              </div>
             </div>
-            <!-- 검색 결과 -->
-            <div class="search_result">
+            <!-- 공사장 점검 탭 -->
+            <div class="tab_wrap">
+              <ul class="tab_index nt_b d-flex align-items-center">
+                <li class="active">공사장 점검 결과</li>
+                <li>공사장 점검 계획</li>
+              </ul>
+            </div>
+            <!-- 공사장 점검 결과 -->
+            <div class="insp_result result_container">
               <div class="result_top">
                 <div class="total">
-                  <p>총 <strong class="ns_b">289</strong> 건</p>
-                </div>
-                <div class="result_option d-flex">
-                  <button class="resp_btn">담당업무</button>
-                  <button>재난관리 그룹추가</button>
+                  <p>총 <strong class="ns_b">29</strong> 건</p>
                 </div>
               </div>
-              <!-- 검색결과 리스트 -->
+              <!-- 점검 결과 리스트 -->
               <div class="result_list text-center">
                 <div class="subject_wrap">
                   <ul class="subject d-flex align-items-center">
-                    <li>
-                      <div class="checking"></div>
+                    <li>연번</li>
+                    <li>점검일자</li>
+                    <li>점검종류</li>
+                    <li class="d-flex flex-column">
+                      점검내역
+                      <ul class="d-flex">
+                        <li>적합</li>
+                        <li>부적합</li>
+                        <li>미조치</li>
+                      </ul>
                     </li>
-                    <li>위치</li>
-                    <li>유형</li>
-                    <li>공종</li>
-                    <li>착공일</li>
-                    <li>준공예정일</li>
-                    <li>공정기/경과일</li>
-                    <li>공정율</li>
-                    <li>점검횟수</li>
+                    <li>점검자</li>
+                    <li>관리출처</li>
                   </ul>
                 </div>
                 <div class="result_wrap">
                   <ul class="result">
                     <li>
                       <ul class="result_item">
+                        <li>10</li>
+                        <li>2021-05-21</li>
+                        <li>정기안전점검</li>
                         <li>
-                          <label for="result_checking0"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking0" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>2건</li>
+                            <li>1건</li>
+                            <li>1건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>대형</li>
-                        <li>철거</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>1회</li>
+                        <li>배상현</li>
+                        <li>안전총괄실 시설안전과</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>9</li>
+                        <li>2021-03-11</li>
+                        <li>특별점검</li>
                         <li>
-                          <label for="result_checking1"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking1" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>0건</li>
+                            <li>1건</li>
+                            <li>0건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>중형</li>
-                        <li>기초</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>3회</li>
+                        <li>배상현</li>
+                        <li>안전총괄실 시설안전과</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>8</li>
+                        <li>2021-12-15</li>
+                        <li>수시점검</li>
                         <li>
-                          <label for="result_checking2"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking2" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>1건</li>
+                            <li>2건</li>
+                            <li>0건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>소형</li>
-                        <li>골조</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>2회</li>
+                        <li>배상현</li>
+                        <li>세움터</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>7</li>
+                        <li>2021-12-15</li>
+                        <li>집중안전점검</li>
                         <li>
-                          <label for="result_checking3"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking3" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>0건</li>
+                            <li>3건</li>
+                            <li>1건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>대형</li>
-                        <li>철거</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>1회</li>
+                        <li>김재율</li>
+                        <li>세움터</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>6</li>
+                        <li>2021-03-30</li>
+                        <li>수시점검</li>
                         <li>
-                          <label for="result_checking4"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking4" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>1건</li>
+                            <li>0건</li>
+                            <li>0건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>중형</li>
-                        <li>기초</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>3회</li>
+                        <li>배상현</li>
+                        <li>안전총괄실 시설안전과</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>5</li>
+                        <li>2021-05-21</li>
+                        <li>정기안전점검</li>
                         <li>
-                          <label for="result_checking5"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking5" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>2건</li>
+                            <li>1건</li>
+                            <li>1건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>소형</li>
-                        <li>골조</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>2회</li>
+                        <li>배상현</li>
+                        <li>세움터</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>4</li>
+                        <li>2021-03-11</li>
+                        <li>특별점검</li>
                         <li>
-                          <label for="result_checking6"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking6" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>0건</li>
+                            <li>1건</li>
+                            <li>0건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>대형</li>
-                        <li>철거</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>1회</li>
+                        <li>배상현</li>
+                        <li>세움터</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>3</li>
+                        <li>2021-12-15</li>
+                        <li>수시점검</li>
                         <li>
-                          <label for="result_checking7"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking7" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>1건</li>
+                            <li>2건</li>
+                            <li>0건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>중형</li>
-                        <li>기초</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>3회</li>
+                        <li>배상현</li>
+                        <li>안전총괄실 시설안전과</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>2</li>
+                        <li>2021-12-15</li>
+                        <li>집중안전점검</li>
                         <li>
-                          <label for="result_checking8"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking8" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>0건</li>
+                            <li>3건</li>
+                            <li>1건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>소형</li>
-                        <li>골조</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>2회</li>
+                        <li>김재율</li>
+                        <li>세움터</li>
                       </ul>
                     </li>
                     <li>
                       <ul class="result_item">
+                        <li>1</li>
+                        <li>2021-03-30</li>
+                        <li>수시점검</li>
                         <li>
-                          <label for="result_checking9"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking9" />
-                          <div class="checking"></div>
+                          <ul>
+                            <li>1건</li>
+                            <li>0건</li>
+                            <li>0건</li>
+                          </ul>
                         </li>
-                        <li>서울시 구로구 경인로 382 (개봉동)</li>
-                        <li>대형</li>
-                        <li>철거</li>
-                        <li>2021-11-10</li>
-                        <li>2021-11-10</li>
-                        <li>1000/50</li>
-                        <li>10%</li>
-                        <li>1회</li>
+                        <li>배상현</li>
+                        <li>안전총괄실 시설안전과</li>
                       </ul>
                     </li>
                   </ul>
@@ -1008,10 +801,13 @@
                     <li class="next move"></li>
                     <li class="superNext move"></li>
                   </ul>
-                  <button class="exel" type="button">
-                    <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
-                    엑셀
-                  </button>
+                  <div class="result_btn">
+                    <button class="exel" type="button">
+                      <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                      엑셀
+                    </button>
+                    <button type="button">등록</button>
+                  </div>
                 </div>
               </div>
             </div>

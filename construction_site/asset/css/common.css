@@ -184,6 +184,12 @@ button {
   align-items: center;
   justify-content: center;
   background: transparent;
+  transition: opacity 0.1s;
+}
+.sub_page .main_content button:hover,
+.modal_wrap button:hover {
+  cursor: pointer;
+  opacity: 80%;
 }
 /* info_btn */
 .info_btn button {
@@ -201,4 +207,13 @@ button {
 .info_btn button:last-child {
   color: #fff;
   background: #192b80;
+}
+
+/* 탭 */
+.tab_index li:hover {
+  cursor: pointer;
+}
+.sub_page .tab_index li.active {
+  color: #fff;
+  background: #192b80 !important;
 }

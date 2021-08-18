@@ -197,6 +197,13 @@ $(function () {
     $(this).addClass("active");
     $("#" + tab_id).addClass('active');
   });
+  $(".const_info .tab_index li").click(function () {
+    var tab_id = $(this).attr('data-tab');
+    $(".const_info .tab_index li").removeClass("active");
+    $(".const_info .tab_content").removeClass("active");
+    $(this).addClass("active");
+    $("#" + tab_id).addClass('active');
+  });
 });
 
 // 날씨정보 영역
@@ -492,6 +499,9 @@ $(function () {
       $(this).children(".result_item").children("li").children(".checking").removeClass("active");
     }
   });
+  $(".const_mgt .result_item li:not(:first-child)").click(function () {
+    location.href = "const_info.html";
+  });
   $(".pagination li.page_item").click(function () {
     $(".pagination li.page_item").removeClass("active");
     $(this).addClass("active");
@@ -500,13 +510,25 @@ $(function () {
 
 $(function () {
   if ($(window).width() <= 1024) {
-    $(".const_mgt .search_result .result_item li:nth-child(3)").prepend("<span>유형</span>");
-    $(".const_mgt .search_result .result_item li:nth-child(4)").prepend("<span>공종</span>");
-    $(".const_mgt .search_result .result_item li:nth-child(5)").prepend("<span>착공일</span>");
-    $(".const_mgt .search_result .result_item li:nth-child(6)").prepend("<span>준공예정일</span>");
-    $(".const_mgt .search_result .result_item li:nth-child(7)").prepend("<span>공정기/경과일</span>");
-    $(".const_mgt .search_result .result_item li:nth-child(8)").prepend("<span>공정율</span>");
-    $(".const_mgt .search_result .result_item li:nth-child(9)").prepend("<span>점검횟수</span>");
+    // 공사장 관리 페이지
+    $(".const_mgt .search_result .result_item > li:nth-child(3)").prepend("<span>유형</span>");
+    $(".const_mgt .search_result .result_item > li:nth-child(4)").prepend("<span>공종</span>");
+    $(".const_mgt .search_result .result_item > li:nth-child(5)").prepend("<span>착공일</span>");
+    $(".const_mgt .search_result .result_item > li:nth-child(6)").prepend("<span>준공예정일</span>");
+    $(".const_mgt .search_result .result_item > li:nth-child(7)").prepend("<span>공정기/경과일</span>");
+    $(".const_mgt .search_result .result_item > li:nth-child(8)").prepend("<span>공정율</span>");
+    $(".const_mgt .search_result .result_item > li:nth-child(9)").prepend("<span>점검횟수</span>");
+    // 공사장 정보보기 페이지
+    $(".const_info .insp_result .result_item > li:nth-child(1)").after("<li>서울특별시 구로구 경인로 382 (개봉동)</li>");
+    $(".const_info .insp_result .result_item > li:nth-child(3)").prepend("<span>점검일자</span>");
+    $(".const_info .insp_result .result_item > li:nth-child(4)").prepend("<span>점검종류</span>");
+    $(".const_info .insp_result .result_item > li:nth-child(5)").prepend("<span>점검내역</span>");
+    $(".const_info .insp_result .result_item > li:nth-child(5) ul").addClass("bScale_list");
+    $(".const_info .insp_result .bScale_list > li:nth-child(1)").prepend("<strong>적합</strong>");
+    $(".const_info .insp_result .bScale_list > li:nth-child(2)").prepend("<strong>부적합</strong>");
+    $(".const_info .insp_result .bScale_list > li:nth-child(3)").prepend("<strong>미조치</strong>");
+    $(".const_info .insp_result .result_item > li:nth-child(6)").prepend("<span>점검자</span>");
+    $(".const_info .insp_result .result_item > li:nth-child(7)").prepend("<span>관리출처</span>");
   }
 });
 
