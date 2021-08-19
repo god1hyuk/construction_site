@@ -2407,10 +2407,14 @@ a.ui-button:active,
   font-size: 18px;
 }
 .map_page .mResult_list li span {
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 13px;
   color: #757575;
   padding-top: 13px;
+}
+.map_page .mResult_list li span img {
+  margin-right: 5px;
 }
 .map_page .loc_shift {
   width: 35px;
