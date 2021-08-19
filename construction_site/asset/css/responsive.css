@@ -380,7 +380,7 @@
 
     /* 지도 검색결과 */
     .map_page .mResult {
-        height: 400px;
+        max-height: 400px;
         overflow-y: scroll;
     }
 }
