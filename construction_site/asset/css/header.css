@@ -722,12 +722,15 @@ header {
   width: 100%;
   padding: 0 3.3333vh;
 }
-.sub_page .acdnt_sprd,
-.sub_page .msg_send {
+.sub_page .send_btn button {
   width: 50%;
   height: 4.6296vh;
   font-size: 1.4815vh;
   border-radius: 3px;
+  transition: opacity 0.1s;
+}
+.sub_page .send_btn button:hover {
+  opacity: 90%;
 }
 .sub_page .acdnt_sprd {
   color: #fff;

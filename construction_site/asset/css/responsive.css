@@ -375,6 +375,14 @@
     .const_info .cInfo_list > li p {
         font-size: 14px;
     }
+
+    /* 지도 페이지 */
+
+    /* 지도 검색결과 */
+    .map_page .mResult {
+        height: 400px;
+        overflow-y: scroll;
+    }
 }
 
 @media (max-width: 1150px) {
@@ -914,15 +922,15 @@
         height: 13px;
         margin-right: 6px;
     }
-    .responsibility .picked_rqt {
+    .responsibility .hash_tags {
         margin-top: 36px;
         padding: 20px 24px;
     }
-    .responsibility .picked_rqt li {
+    .responsibility .hash_tags li {
         font-size: 16px;
         padding: 12px 16px;
     }
-    .responsibility .picked_rqt li img {
+    .responsibility .hash_tags li img {
         width: 16px;
         margin-left: 40px;
     }
@@ -1922,14 +1930,14 @@
         width: 100% !important;
     }
     /* 검색 결정 */
-    .const_mgt .picked_rqt li {
+    .const_mgt .hash_tags li {
         font-size: 14px;
         padding: 8px 10px;
     }
-    .const_mgt .picked_rqt li:not(:last-child) {
+    .const_mgt .hash_tags li:not(:last-child) {
         margin-right: 10px;
     }
-    .const_mgt .picked_rqt li img {
+    .const_mgt .hash_tags li img {
         width: 14px;
         margin-left: 10px;
     }
@@ -2030,11 +2038,7 @@
     .const_info .map_wrap .map {
         margin-bottom: 15px;
     }
-    /* 공사장 점검 탭 */
-    .const_info .tab_index li {
-        font-size: 20px;
-    }
-
+    
     /* 공사장 정보 리스트 */
     .const_info .cInfo_list > li {
         flex-direction: column;
@@ -2043,6 +2047,7 @@
     .const_info .cInfo_list > li > span {
         width: 100%;
         padding: 15px 0;
+        border-bottom: 1px solid #9aa0ab !important;
         border-right: none;
     }
     .const_info .cInfo_list > li > p,
@@ -2055,6 +2060,11 @@
     }
     .const_info .cInfoList_btn button {
         font-size: 18px;
+    }
+    
+    /* 공사장 점검 탭 */
+    .const_info .tab_index li {
+        font-size: 20px;
     }
 
     /* 공사장 점검 결과 */
@@ -2491,14 +2501,14 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-    .const_mgt .picked_rqt li {
+    .const_mgt .hash_tags li {
         font-size: 12px;
         padding: 5px 8px;
     }
-    .const_mgt .picked_rqt li:not(:last-child) {
+    .const_mgt .hash_tags li:not(:last-child) {
         margin-right: 8px;
     }
-    .const_mgt .picked_rqt li img {
+    .const_mgt .hash_tags li img {
         width: 10px;
         margin-left: 8px;
     }
@@ -2735,7 +2745,7 @@
     .const_mgt .search_decision .decisionBtn button {
         right: 16px;
     }
-    .const_mgt .picked_rqt li:not(:last-child) {
+    .const_mgt .hash_tags li:not(:last-child) {
         margin-right: 6px;
     }
 

@@ -463,14 +463,6 @@ $(function () {
   });
 });
 
-// $(function () {
-//   $("label").click(function () {
-//     if ($(this).next("input[type='checkbox']").is(":checked")) {
-//       $(this).css("background","#000");
-//     }
-//   })
-// });
-
 // 조건검색 키워드
 $(function () {
   $(".keyword_list li").mouseover(function () {
@@ -559,5 +551,26 @@ $(function () {
   $(".responsibility .save_btn button").click(function () {
     $(".responsibility").fadeOut(100);
     $("body").css("overflow", "visible");    
+  });
+});
+
+// 지도 검색창
+$(function () {
+  $(".map_page .mSearch_on").click(function () {
+    $('.map_page .mSearch_on').toggleClass("active");
+    $('.map_page aside').toggleClass("active");
+    $('.map_page .map_view').toggleClass("active");
+  });
+  $(".map_page .mAdress_sub").hide();
+  $(".mAdress_btn").click(function () {
+    $(this).toggleClass("active");
+    $(".map_page .mAdress_sub").slideToggle(200);
+  });
+  $(".map_page .mountain_check").click(function () {
+    if ($(this).children("input[type='checkbox']").is(":checked")) {
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
   });
 });

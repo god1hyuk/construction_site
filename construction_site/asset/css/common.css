@@ -1,5 +1,6 @@
 html,body {
   height: 100vh;
+  line-height: 1;
   font-family: "NotoSansKR-Regular", sans-serif;
   -webkit-text-size-adjust: none;
   -ms-user-select: none; 
@@ -33,6 +34,10 @@ html,body {
 }
 .ns_rg {
   font-family: 'NanumSquareR';
+}
+
+header .title {
+  font-family: 'NanumSquareEB';
 }
 
 /* flex */
@@ -140,6 +145,7 @@ html,body {
 
 /* Input */
 input, select {
+  color: #2c2c2c;
   padding: 0 16px;
   background: #f3f5f6;
   border: 1px solid #cccfd8;
@@ -188,15 +194,13 @@ button {
 }
 .sub_page .main_content button:hover,
 .modal_wrap button:hover {
-  cursor: pointer;
-  opacity: 80%;
+  opacity: 90%;
 }
 /* info_btn */
 .info_btn button {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
   padding: 22px 0;
 }
 .info_btn button:first-child {
@@ -216,4 +220,22 @@ button {
 .sub_page .tab_index li.active {
   color: #fff;
   background: #192b80 !important;
+}
+
+/* 해시태그 */
+.hash_tags li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #192b80;
+  background: #fff;
+  border: 1px solid #3978fc;
+  border-radius: 5px;
+  transition: all .1s;
+}
+.hash_tags li:hover {
+  color: #fff;
+  background: #354052;
+  border-color: #354052;
+  cursor: pointer;
 }
