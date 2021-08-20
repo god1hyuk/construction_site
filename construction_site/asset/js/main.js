@@ -573,4 +573,20 @@ $(function () {
       $(this).removeClass("active");
     }
   });
+  $(".mMode_btn button").click(function () {
+    $(".mMode_btn button").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".map_page .loc_shift").click(function () {
+    $(".map_page .loc_shift").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".map_page .mcBtn").click(function () {
+    $(this).toggleClass("active");
+  });
+  $(".map_page .mSearch_fold").hide();
+  $(".map_page .mSearch_add").click(function () {
+    $(".map_page .mSearch_wrap").slideToggle();
+    $(".map_page .mSearch_fold").fadeToggle(100);
+  });
 });
