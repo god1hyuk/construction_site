@@ -3035,7 +3035,7 @@
 
     /* 지도 검색결과 */
     .map_page aside .mResult {
-        max-height: 50vh;
+        max-height: 45vh;
     }
 
     /* 지도 영역 (지도페이지) */
