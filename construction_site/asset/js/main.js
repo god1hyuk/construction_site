@@ -573,6 +573,12 @@ $(function () {
       $(this).removeClass("active");
     }
   });
+  $(".map_page .mFilter_btn").click(function () {
+    $(".mFilter").fadeToggle(300);
+  });
+  $(".mFilter .close_btn").click(function () {
+    $(".mFilter").fadeToggle(300);
+  });
   $(".mMode_btn button").click(function () {
     $(".mMode_btn button").removeClass("active");
     $(this).addClass("active");

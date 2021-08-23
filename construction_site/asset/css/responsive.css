@@ -1279,7 +1279,7 @@
     .map_page .mHeader_m .home {
         width: 94px;
         height: 94px;
-        background-size: 40px;
+        background-size: 50%;
     }
     .map_page .mHeader_m h1 {
         width: 100%;
@@ -1321,13 +1321,12 @@
     /* 지도 검색창 */
     .map_page aside {
         display: block;
-        /* position: absolute !important; */
         transform: none;
         bottom: 0;
         width: 100%;
         height: auto;
         background: #f4f6f9;
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         box-shadow: 0px -5px 5px 0px rgba(34, 31, 31, 0.3);
         z-index: 900;
     }
@@ -1355,24 +1354,24 @@
         position: absolute;
         right: 43px;
     }
-    /* 지도 필터 */
-    .map_page .mFilter {
+    /* 지도 옵션 */
+    .map_page .mOption {
         padding-bottom: 0;
         background: transparent;
         border: none;
     }
-    .map_page .mFilter form ul {
+    .map_page .mOption form ul {
         padding-bottom: 0;
         border: none;
     }
-    .map_page .mFilter form li {
+    .map_page .mOption form li {
         height: 60px;
     }
-    .map_page .mFilter form select {
+    .map_page .mOption form select {
         font-size: 20px;
     }
-    .map_page .mFilter form li:nth-child(2) button,
-    .map_page .mFilter form li:nth-child(3) button {
+    .map_page .mOption .mFilter_btn,
+    .map_page .mOption .mSearch_btn {
         font-size: 24px;
     }
     .map_page .hash_tags {
@@ -1798,10 +1797,20 @@
     }
 
     /* 지도 페이지 */
-
-    /* 지도 검색창 */
-    /* 지도페이지 조건검색 (모바일) */
-
+    .map_page .mHeader_m header {
+        height: 14.9254vw;
+    }
+    .map_page .mHeader_m .home {
+        width: 14.9254vw;
+        height: 14.9254vw;
+    }
+    .map_page .mHeader_m h1 {
+        font-size: 3.7313vw;
+    }
+    .map_page .mSearch_m input {
+        font-size: 20px;
+        padding: 0 8px;
+    }
 }
 
 @media (max-width: 540px) {
@@ -2353,6 +2362,108 @@
     .login_page .copyright {
         padding-top: 25px;
     }
+
+    /* 지도 페이지 */
+    /* 지도페이지 헤더 & 지도 검색 (모바일) */
+    .map_page .mHeader_m h1 {
+        font-size: 22px;
+    }
+    .map_page .mSearch_m {
+        padding: 15px;
+    }
+    .map_page .mSearch_m input {
+        height: 50px;
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .map_page .mSearch_m button {
+        height: 50px;
+        font-size: 18px;
+        padding: 6px;
+    }
+    /* 지도 검색창 */
+    .map_page .mSearch_add {
+        font-size: 22px;
+        padding: 15px 0;
+    }
+    .map_page .mSearch_add img {
+        width: 20px;
+    }
+    .map_page .mSearch_add img:first-child {
+        margin-right: 8px;
+    }
+    .map_page .mSearch_fold {
+        right: 20px;
+    }
+
+    /* 지도 검색 필터 */
+    .map_page .mFilter_list h4 {
+        font-size: 20px;
+    }
+    .map_page .mFilter_list .check_list li {
+        font-size: 16px;
+    }
+    .map_page .mFilter_list .check_list label {
+        padding: 12px !important;
+    }
+
+    /* 지도 옵션 */
+    .map_page .mOption form li {
+        height: 50px;
+    }
+    .map_page .mOption form select {
+        font-size: 18px;
+    }
+    .map_page .mOption .mFilter_btn, 
+    .map_page .mOption .mSearch_btn {
+        font-size: 20px;
+    }
+    .map_page .hash_tags {
+        padding: 15px;
+    }
+    .map_page .hash_tags li {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .map_page .hash_tags img {
+        width: 10px;
+        margin-left: 10px;
+    }
+
+    /* 지도 검색결과 */
+    .map_page aside .mResult {
+        padding-top: 32px;
+    }
+    .map_page .mResult .total p, 
+    .map_page .mResult_list li p {
+        font-size: 20px;
+    }
+    .map_page .mResult_list li {
+        padding: 20px;
+    }
+    .map_page .mResult_list li span {
+        font-size: 16px;
+    }
+    .map_page .mResult_list li span img {
+        width: 6px;
+    }
+    .map_page .loc_shift {
+        width: 45px;
+        height: 45px;
+        background-size: 40%;
+    }
+
+    /* 지도 영역 (지도페이지) */
+    /* 지도 컨트롤러 */
+    .map_page .mControls {
+        top: 20px;
+    }
+    .map_page .mControls button {
+        width: 40px;
+        height: 40px;
+        background-size: 50%;
+        border-width: 3px;
+    }
 }
 
 @media (max-width: 414px) {
@@ -2844,6 +2955,96 @@
         font-size: 12px;
         padding-top: 30px;
     }
+
+    /* 지도 페이지 */
+
+    /* 지도페이지 헤더 & 지도 검색 (모바일) */
+    .map_page .mHeader_m header {
+        height: 52px;
+    }
+    .map_page .mHeader_m .home {
+        width: 52px;
+        height: 52px;
+    }
+    .map_page .mHeader_m h1 {
+        font-size: 15px;
+    }
+    .map_page .mSearch_m {
+        padding: 0;
+    }
+    .map_page .mSearch_m input {
+        font-size: 15px;
+        margin-right: 0;
+    }
+    .map_page .mSearch_m button {
+        font-size: 16px;
+        padding: 5px;
+        border-radius: 0;
+    }
+    .map_page .mSearch_m button .btn_inner {
+        border-radius: 0;
+    }
+    /* 지도 검색창 */
+    .map_page .mSearch_add {
+        font-size: 16px;
+    }
+    .map_page .mSearch_add {
+        align-items: center;
+    }
+    .map_page .mSearch_add img {
+        width: 16px;
+    }
+    /* 지도 옵션 */
+    .map_page .mOption {
+        padding-top: 0;
+    }
+    .map_page .mOption form ul {
+        flex-direction: column;
+    }
+    .map_page .mOption form li {
+        width: 100% !important; 
+    }
+    .map_page .mOption form li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .map_page .mOption form select {
+        font-size: 16px;
+    }
+    .map_page .mOption .mFilter_btn, 
+    .map_page .mOption .mSearch_btn {
+        font-size: 18px;
+    }
+    .map_page .hash_tags {
+        padding: 10px;
+    }
+    .map_page .hash_tags li {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .map_page .hash_tags img {
+        margin-left: 5px;
+    }
+    .map_page .mResult .total p, 
+    .map_page .mResult_list li p {
+        font-size: 18px;
+    }
+    .map_page .mResult_list li span {
+        font-size: 15px;
+        padding-top: 15px;
+    }
+
+    /* 지도 영역 (지도페이지) */
+    /* 지도 컨트롤러 */
+    .map_page .mControls {
+        right: 10px;
+    }
+    .map_page .mControls button {
+        width: 36px;
+        height: 36px;
+    }
+    .map_page .mcBtn:not(:first-child) {
+        margin-top: 12px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -3050,5 +3251,32 @@
     .login_page .copyright {
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    /* 지도 페이지 */
+
+    /* 지도페이지 헤더 & 지도 검색 (모바일) */
+    .map_page .mSearch_m {
+        border-bottom-width: 3px;
+    }
+    .map_page .mSearch_m input {
+        font-size: 14px;
+    }
+
+    /* 지도 검색창 */
+
+    /* 지도 옵션 */
+    .map_page .mResult_list li {
+        padding: 20px 5px;
+    }
+    .map_page .mResult_list li span {
+        font-size: 13px;
+    }
+    .map_page .mResult_list li span img {
+        width: 5px;
+    }
+    .map_page .loc_shift {
+        width: 40px;
+        height: 40px;
     }
 }
