@@ -40,7 +40,7 @@
 
 <body>
   <!-- 공사장 정보보기 서브페이지 -->
-  <div class="const_info sub_page d-flex">
+  <div class="const_info sub_page d-flex align-items-center">
 
     <!-- 서브페이지 사이드 메뉴 (PC) -->
     <aside>
@@ -423,6 +423,84 @@
       <div class="modal_wrap">
         <div class="modal_top d-flex justify-content-center">
           <h1 class="ns_b">내 정보 보기</h1>
+          <button class="close_btn"></button>
+        </div>
+        <div class="table_wrap">
+          <table>
+            <colgroup>
+              <col width="30%">
+              <col widht="70%">
+            </colgroup>
+            <tr>
+              <th style="border-top: 1px solid #192b80;">
+                <h3>아이디</h3>
+              </th>
+              <td style="border-top: 2px solid #5479f7;">
+                <p>Test</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>이름</h3>
+              </th>
+              <td>
+                <p>홍길동</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>휴대폰 번호</h3>
+              </th>
+              <td>
+                <p>010-1234-5678</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>소속기관</h3>
+              </th>
+              <td>
+                <p>서울시 지역건축안전센터</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>부서명</h3>
+              </th>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <h3>권한</h3>
+              </th>
+              <td>
+                <p>총괄관리자</p>
+              </td>
+            </tr>
+            <tr>
+              <th style="border-bottom: 1px solid #192b80;">
+                <h3>SSO key</h3>
+              </th>
+              <td style="border-bottom: 2px solid #5479f7;">
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="info_btn nt_b d-flex justify-content-center">
+          <button>취소</button>
+          <button onclick="location.href='info_modify.html'">수정</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 공사장 진행사항 수정 -->
+    <div class="constProgress modal_bg">
+      <div class="modal_wrap">
+        <div class="modal_top d-flex justify-content-center">
+          <h1 class="ns_b">공사장 진행사항</h1>
           <button class="close_btn"></button>
         </div>
         <div class="table_wrap">

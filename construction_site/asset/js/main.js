@@ -20,6 +20,16 @@ $(function () {
   });
 });
 
+// 링크 이동
+$(function () {
+  $(".home").click(function () {
+    location.href = "index.html";
+  });
+  $(".go_map button").click(function () {
+    location.href = "map_page.html";
+  });
+});
+
 // 사이드 서브메뉴
 $(function () {
   $(".construction_site .sideMenu_item").mouseover(function () {

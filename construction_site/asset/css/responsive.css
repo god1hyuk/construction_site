@@ -519,6 +519,9 @@
     }
 
     /* 내 정보 수정 */
+    .info_modify .container {
+    
+    }
     .info_modify .modify_list th {
         width: 28%;
     }
@@ -714,7 +717,6 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        overflow-y: scroll;
         background: #eeeff2;
         z-index: 999;
     }
@@ -753,7 +755,10 @@
     }
     /* 검색조건 체크리스트 (모바일) */
     .const_mgt .searchFilter_list {
+        height: 100%;
+        overflow-y: scroll;
         padding-top: 64px;
+        /* padding-bottom: 250px; */
     }
     .const_mgt .searchFilter_list form > ul > li {
         padding: 25px 30px;
@@ -765,7 +770,7 @@
         font-size: 15px;
         color: #3e3e3e;
     }
-    .const_mgt .searchFilter_list form > ul > li h4 {
+    .const_mgt .searchFilter_list h4 {
         line-height: 1;
         font-family: 'NotoSansKR-Bold';
         font-size: 24px;
@@ -808,7 +813,7 @@
         border: none;
     }
     .const_mgt .searchFilter_list form > ul > li:last-child {
-        padding-bottom: 75px;
+        padding-bottom: 280px;
     }
     .const_mgt .searchFilter_list .datepicker {
         width: 50%;
@@ -816,10 +821,16 @@
         font-size: 18px;
         margin-top: 16px;
     }
+    .const_mgt .searchFilter_bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
     .const_mgt .searchFilter_bottom button {
         width: 50%;
+        height: 65px;
         font-size: 24px;
-        padding: 22px 0;
     }
     .const_mgt .searchFilter_bottom button:first-child {
         color: #192b80;
@@ -2137,6 +2148,18 @@
     .info_modify .title_wrap::after {
         width: 60%;
     }
+
+    /* 검색조건 선택 (모바일) */
+    .const_mgt .searchFilter_list h4 {
+        font-size: 20px;
+    }
+    .const_mgt .searchFilter_list .check_list li {
+        font-size: 16px;
+    }
+    .const_mgt .searchFilter_list .check_list label {
+        padding: 12px;
+    }
+
     /* 주소 선택 */
     .const_mgt .search_form .adress ul {
         flex-direction: column;
@@ -2816,6 +2839,13 @@
     .info_modify .title_wrap::after {
         display: none;
     }
+
+    /* 검색조건 선택 (모바일) */
+    /* 검색조건 체크리스트 (모바일) */
+    .const_mgt .searchFilter_list .datepicker {
+        width: 100%;
+    }
+
     /* 검색 폼 영역 */
     .const_mgt .form_container .search_form {
         padding: 0 20px;

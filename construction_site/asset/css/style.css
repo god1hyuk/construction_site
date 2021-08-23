@@ -117,6 +117,12 @@
   padding: 2.037vh 0;
 }
 
+/* 공사장 진행사항 */
+.constProgress .table_wrap {
+  border-top: 1px solid #192b80;
+  border-bottom: 1px solid #192b80;
+}
+
 /* 내 정보 수정 */
 .info_modify .title_wrap .title_icon {
   background-image: url(../images/icon/info_modify_title.png);
