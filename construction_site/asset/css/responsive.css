@@ -3033,6 +3033,11 @@
         padding-top: 15px;
     }
 
+    /* 지도 검색결과 */
+    .map_page aside .mResult {
+        max-height: 50vh;
+    }
+
     /* 지도 영역 (지도페이지) */
     /* 지도 컨트롤러 */
     .map_page .mControls {
