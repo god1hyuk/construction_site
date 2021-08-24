@@ -13,6 +13,9 @@
   <link rel="icon" href="asset/images/icon/favicon.ico" />
   <link rel="shortcut icon" href="asset/images/icon/favicon.ico" />
 
+  <!-- jQuery UI for datepicker -->
+  <link rel="stylesheet" href="asset/css/jquery-ui.min.css" />
+
   <!-- Font -->
   <link rel="stylesheet" href="asset/css/font.css" />
 
@@ -40,7 +43,7 @@
 
 <body>
   <!-- 공사장 정보보기 서브페이지 -->
-  <div class="const_info sub_page d-flex align-items-center">
+  <div class="const_info sub_page d-flex">
 
     <!-- 서브페이지 사이드 메뉴 (PC) -->
     <aside>
@@ -503,73 +506,319 @@
           <h1 class="ns_b">공사장 진행사항</h1>
           <button class="close_btn"></button>
         </div>
-        <div class="table_wrap">
-          <table>
-            <colgroup>
-              <col width="30%">
-              <col widht="70%">
-            </colgroup>
-            <tr>
-              <th style="border-top: 1px solid #192b80;">
-                <h3>아이디</h3>
-              </th>
-              <td style="border-top: 2px solid #5479f7;">
-                <p>Test</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <h3>이름</h3>
-              </th>
-              <td>
-                <p>홍길동</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <h3>휴대폰 번호</h3>
-              </th>
-              <td>
-                <p>010-1234-5678</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <h3>소속기관</h3>
-              </th>
-              <td>
-                <p>서울시 지역건축안전센터</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <h3>부서명</h3>
-              </th>
-              <td>
-                <p>&nbsp;</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <h3>권한</h3>
-              </th>
-              <td>
-                <p>총괄관리자</p>
-              </td>
-            </tr>
-            <tr>
-              <th style="border-bottom: 1px solid #192b80;">
-                <h3>SSO key</h3>
-              </th>
-              <td style="border-bottom: 2px solid #5479f7;">
-                <p>&nbsp;</p>
-              </td>
-            </tr>
-          </table>
+        <div class="cProgress_list">
+          <form action="">
+            <ul class="check_wrap">
+              <li>
+                <span>자치구</span>
+                <p>○○구 ○○과 ○○팀 ( Tel : 02-123-4567)</p>
+              </li>
+              <li>
+                <span>시행방법</span>
+                <p>○○구 ○○과 ○○팀 ( Tel : 02-123-4567)</p>
+              </li>
+              <li>
+                <span>대지위치</span>
+                <p>서울시 ○○구 ○○동 ○○○번지 (도로명 주소 : )</p>
+              </li>
+              <li>
+                <span>건축규모</span>
+                <p>○동, 지하○층/지상○층, 연면적 ○○○m²</p>
+              </li>
+              <li>
+                <span>주용도</span>
+                <ul class="check_list">
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>단독주택</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>공동주택</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>근린생활시설</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>업무시설</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>숙박시설</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>위락시설</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>공장</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>창고</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>문화 및 집회시설</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>노유자시설</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p class="d-flex">기타<strong><sup>※</sup>세부용도 : ○○시설(단독 또는 공동주택 선택 시 작성)</strong></p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>구조</span>
+                <ul class="check_list">
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>철근콘크리트조</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>철골철근콘크리트조</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>철골조</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>목구조</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>블록 및 조적조</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>기타</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>CCTV 설치여부</span>
+                <ul class="check_list">
+                  <li>
+                    <label for="cctv_check0"></label>
+                    <input type="radio" name="cctv_check" id="cctv_check0" checked />
+                    <div class="checking active"></div>
+                    <p>설치</p>
+                  </li>
+                  <li>
+                    <label for="cctv_check1"></label>
+                    <input type="radio" name="cctv_check" id="cctv_check1" />
+                    <div class="checking"></div>
+                    <p>미설치</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>IP카메라 정보</span>               
+                <div class="form_box">
+                  1.
+                  <input type="text" />
+                  <button class="add_btn">추가</button>
+                </div>
+              </li>
+              <li>
+                <span>공정률</span>
+                <div class="form_box">
+                  <input type="text" value="50%" />
+                </div>
+              </li>
+              <li>
+                <span>진행공정</span>
+                <ul class="check_list">
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>철거</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>굴토</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>가시설</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>골조</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>크레인</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>마감</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>기타</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>건축주</span>
+                <div class="form_box">
+                  <input type="text" placeholder="성명 / 연락처" />
+                </div>
+              </li>
+              <li>
+                <span>설계자</span>
+                <div class="form_box">
+                  <input type="text" placeholder="업체명 / 설계자 / 연락처" />
+                </div>
+              </li>
+              <li>
+                <span>시공자</span>
+                <div class="form_box">
+                  <input type="text" placeholder="업체명 / 현장대리인 / 연락처" />
+                </div>
+              </li>
+              <li>
+                <span>감리자</span>
+                <div class="form_box">
+                  <input type="text" placeholder="업체명 / 감리자 / 연락처" />
+                </div>
+              </li>
+              <li>
+                <span>허가일자</span>
+                <div class="form_box">
+                  <input type="text" id="permitDate" class="datepicker" />
+                </div>
+              </li>
+              <li>
+                <span>안전관리계획서</span>
+                <ul class="check_list">
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>안전관리계획서</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>유해위험방지계획서</p>
+                  </li>
+                  <li>
+                    <label for="mainUse_check0"></label>
+                    <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                    <div class="checking"></div>
+                    <p>굴토 심의서</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>착공일</span>
+                <div class="form_box">
+                  <input type="text" id="startDate" class="datepicker" />
+                </div>
+              </li>
+              <li>
+                <span>심의일<br /><strong>(위험등급결정일)</strong></span>
+                <div class="form_box d-flex flex-column">
+                  <input type="text" id="reviewDate" class="datepicker" />
+                  <strong><sup>* </sup>구청장 직권선정은 직권선정일</strong>
+                </div>
+              </li>
+              <li>
+                <span>사용승인예정일</span>
+                <div class="from_box">
+                  <input type="text" id="useOkDate" class="datepicker" />
+                </div>
+              </li>
+              <li>
+                <span>장비보유현황</span>
+                <div class="form_box">
+                  <select name="" id="">
+                    <option value="">포크레인</option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <span>조감도</span>
+                <div class="form_box">
+                  <input type="file" id="birdsEye_view" />
+                  <input type="text" class="upload_name" />
+                  <label class="file_btn" for="birdsEye_view">파일선택</label>
+                </div>
+              </li>
+              <li>
+                <span>현황판</span>
+                <div class="form_box">
+                  <input type="file" id="status_board" />
+                  <input type="text" class="upload_name" />
+                  <label class="file_btn" for="status_board">파일선택</label>
+                </div>
+              </li>
+            </ul>
+          </form>
         </div>
-        <div class="info_btn nt_b d-flex justify-content-center">
-          <button>취소</button>
-          <button onclick="location.href='info_modify.html'">수정</button>
+        <div class="modal_bottom">
+          <div class="save_btn nt_b d-flex justify-content-center">
+            <button>취소</button>
+            <button>저장</button>
+          </div>
         </div>
       </div>
     </div>
@@ -660,7 +909,7 @@
                 </li>
               </ul>
               <div class="cInfoList_btn d-flex justify-content-end">
-                <button>진행사항 수정</button>
+                <button class="cProgress_btn">진행사항 수정</button>
                 <button>목록</button>
               </div>
             </div>
@@ -893,6 +1142,31 @@
 
   <!-- jQuery -->
   <script src="asset/js/plugin/jquery-3.2.1.min.js"></script>
+  <script src="asset/js/plugin/jquery-ui.min.js"></script>
+
+  <!-- datepicker -->
+  <script>
+    $.datepicker.setDefaults({
+      dateFormat: 'yy-mm-dd',
+      prevText: '이전 달',
+      nextText: '다음 달',
+      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+      showMonthAfterYear: true,
+      yearSuffix: '년'
+    });
+
+    $(function () {
+      $("#permitDate").datepicker().datepicker('setDate', new Date());
+      $("#permitDate_m").datepicker().datepicker('setDate', new Date());
+      $("#startDate").datepicker().datepicker('setDate', new Date());
+      $("#useOkDate").datepicker().datepicker('setDate', new Date());
+      $("#reviewDate").datepicker().datepicker('setDate', new Date());
+    });
+  </script>
 
   <!-- includeHTML -->
   <script>includeHTML();</script>

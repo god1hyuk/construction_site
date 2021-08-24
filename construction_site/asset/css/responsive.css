@@ -519,9 +519,6 @@
     }
 
     /* 내 정보 수정 */
-    .info_modify .container {
-    
-    }
     .info_modify .modify_list th {
         width: 28%;
     }
@@ -929,7 +926,7 @@
         height: 50px;
         font-size: 16px;
     }
-    .responsibility .tab_content form li button {
+    .responsibility .add_btn {
         height: 50px;
         font-size: 16px;
         padding: 0 20px;
@@ -1063,6 +1060,26 @@
     .const_info .title_wrap::after {
         width: 73%;
     }
+
+    /* 공사장 진행사항 수정 */
+    .cProgress_list {
+        height: 70vh;
+        padding: 0 30px;
+        padding-top: 50px;
+        background: #fff;
+    }
+    .conctProgress .modal_bottom {
+        /* padding-bottom: 100%; */
+    }
+    .modal_bottom .save_btn {
+        padding: 0 30px;
+        padding-bottom: 100%;
+        border-top: none;
+    }
+    .modal_bottom .save_btn button {
+        width: 100%;
+    }
+
     /* 지도 & 로드뷰 */
     .const_info .map_wrap {
         background: #fff;
@@ -2902,7 +2919,7 @@
     .responsibility .tab_content form .select_wrap select:nth-child(2) {
         margin-top: 10px;
     }
-    .responsibility .tab_content form .select_wrap button {
+    .responsibility .add_btn {
         width: 100%;
         margin-top: 10px;
     }

@@ -430,9 +430,9 @@ $(function () {
 // 추가 검색조건 펼치기
 $(function () {
   $(".search_add form").hide();
-  $(".add_btn").click(function () {
+  $(".addSearch_btn").click(function () {
     $(this).prev("form").slideToggle(500);
-    $(this).children(".add_btn img").toggleClass("active");
+    $(this).children(".addSearch_btn img").toggleClass("active");
     if (count % 2 === 0) {
       $(this).children("p").text("추가 검색조건 닫기");
     } else {
@@ -539,28 +539,46 @@ $(function () {
   // 내 정보 보기
   $(".myInfo").hide();
   $(".user_name").click(function () {
-    $(".myInfo").fadeIn(100);
+    $(".myInfo").fadeIn(300);
     $("body").css("overflow", "hidden");
   });
   $(".myInfo .close_btn").click(function () {
-    $(".myInfo").fadeOut(100);
+    $(".myInfo").fadeOut(300);
     $("body").css("overflow", "visible");
   });
   // 담당업무 설정
   $(".responsibility").hide();
   $(".resp_btn").click(function () {
-    $(".responsibility").fadeIn(100);
+    $(".responsibility").fadeIn(300);
     $("body").css("overflow", "hidden");
     if ($(window).width() > 1024) {
     }
   });
   $(".responsibility .close_btn").click(function () {
-    $(".responsibility").fadeOut(100);
+    $(".responsibility").fadeOut(300);
     $("body").css("overflow", "visible");
   });
   $(".responsibility .save_btn button").click(function () {
-    $(".responsibility").fadeOut(100);
+    $(".responsibility").fadeOut(300);
     $("body").css("overflow", "visible");    
+  });
+  // 공사장 진행사항 수정
+  $(".cProgress_btn").click(function () {
+    $(".constProgress").fadeIn(300);
+    $("body").css("overflow", "hidden");
+  });
+  $(".constProgress button").click(function () {
+    $(".constProgress").fadeOut(300);
+    $("body").css("overflow", "visible");
+  });
+  // 파일 업로드
+  $(function(){ 
+    let fileTarget = $('input[type="file"]');
+    console.log(fileTarget);
+    fileTarget.on('change', function () {
+      let fileName = $(this).val().split('\\');
+      $(this).next('.upload_name').val(fileName[fileName.length-1]);
+    });
   });
 });
 

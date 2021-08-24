@@ -1154,46 +1154,6 @@
   font-size: 15px;
   padding-left: 10px;
 }
-.search_add .check_list label {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.search_add .check_wrap > li:not(:nth-child(3)) .checking {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 2px solid #eaeaea;
-}
-.search_add .check_wrap > li:not(:nth-child(3)) .checking.active {
-  background-color: #5479f7;
-  background-image: url(../images/icon/search_check.png);
-  border: none;
-}
-.search_add .check_wrap > li:nth-child(3) .checking {
-  position: relative;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #eaeaea;
-  border-radius: 100px;
-}
-.search_add .check_wrap > li:nth-child(3) .checking.active {
-  background-color: #5479f7;
-  border: none;
-}
-.search_add .check_wrap > li:nth-child(3) .checking.active::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 45%;
-  height: 45%;
-  background-color: #fff;
-  border-radius: 100px;
-}
 .search_add .check_wrap > li:nth-child(5) p {
   padding: 0 26px;
   padding-top: 12px;
@@ -1234,15 +1194,15 @@ a.ui-button:active,
 }
 
 /* 추가 검색조건 버튼 */
-.const_mgt .search_add .add_btn {
+.const_mgt .search_add .addSearch_btn {
   width: 100%;
   height: 108px;
 }
-.const_mgt .search_add .add_btn img {
+.const_mgt .search_add .addSearch_btn img {
   margin-left: 30px;
   transition: transform .3s;
 }
-.const_mgt .search_add .add_btn img.active {
+.const_mgt .search_add .addSearch_btn img.active {
   transform: rotate(180deg);
 }
 /* 검색조건 선택버튼 (모바일) */
@@ -1752,11 +1712,9 @@ a.ui-button:active,
   height: 4.6296vh;
   margin-right: 0.7407vh;
 }
-.responsibility .tab_content form li button {
+.responsibility .add_btn {
   height: 4.6296vh;
-  color: #fff;
   padding: 0 1.8519vh;
-  background: #2c3646;
 }
 .responsibility .tab_content form li .guide_ment {
   font-size: 1.2037vh;
@@ -1779,26 +1737,27 @@ a.ui-button:active,
   width: 1.4815vh;
   margin-left: 2.3148vh;
 }
-.responsibility .modal_bottom {
+.modal_bottom {
   padding-top: 5.5556vh;
+  background: #fff;
 }
-.responsibility .modal_bottom .save_btn {
+.modal_bottom .save_btn {
   width: 100%;
   font-size: 2.037vh;
   padding-top: 4.6296vh;
   border-top: 2px solid #ccc;
 }
-.responsibility .modal_bottom .save_btn button {
+.modal_bottom .save_btn button {
   padding: 1.8519vh 5.5556vh;
   border-radius: 5px;
   transition: background 0.1s;
 }
-.responsibility .modal_bottom .save_btn button:first-child {
+.modal_bottom .save_btn button:first-child {
   color: #2c3646;
   margin-right: 16px;
   border: 3px solid #72777e;
 }
-.responsibility .modal_bottom .save_btn button:last-child {
+.modal_bottom .save_btn button:last-child {
   color: #192b80;
   border: 3px solid #5479f7;
 }
@@ -1807,6 +1766,154 @@ a.ui-button:active,
 .const_info .title_wrap::after {
   width: 84%;
 }
+
+/* 공사장 진행사항 수정 */
+.constProgress {
+  display: none;
+}
+.constProgress .modal_wrap {
+  width: 60vw;
+  height: 90vh;
+}
+.cProgress_list {
+  height: 65%;
+  /* margin-top: 3.7037vh; */
+}
+.cProgress_list form {
+  height: 100%;
+  overflow-y: scroll;
+  border-top: 1px solid #192b80;
+}
+.cProgress_list .check_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cProgress_list .check_wrap > li {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 9.2593vh;
+  border-bottom: 1px solid #d7d7d7;
+}
+.cProgress_list .check_wrap > li > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 32%;
+  height: 100%;
+  font-family: 'NotoSansKR-Bold';
+  font-size: 1.4815vh;
+  padding-left: 1.3889vh;
+  background: #f5f6fa;
+}
+.cProgress_list .check_wrap > li > span > strong {
+  line-height: 2;
+  font-family: 'NotoSansKR-Regular';
+}
+.cProgress_list .check_wrap > li > p,
+.cProgress_list .check_wrap > li > div,
+.cProgress_list .check_wrap > li > ul {
+  width: 68%;
+  font-size: 1.3889vh;
+  padding: 0 1.3889vh;
+}
+.cProgress_list .check_wrap > li:nth-child(5),
+.cProgress_list .check_wrap > li:nth-child(6) {
+  width: 100%;
+}
+.cProgress_list .check_wrap > li:nth-child(5) > span,
+.cProgress_list .check_wrap > li:nth-child(6) > span {
+  width: 16%;
+}
+.cProgress_list .check_wrap > li:nth-child(5) > ul,
+.cProgress_list .check_wrap > li:nth-child(6) > ul {
+  width: 84%;
+}
+.cProgress_list .check_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cProgress_list .check_list li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 1.8519vh;
+}
+.cProgress_list li:nth-child(5) .check_list strong {
+  display: flex;
+  align-items: center;
+  font-size: 1.2037vh;
+  color: #757575;
+  margin-left: 5px;
+}
+.cProgress_list strong sup {
+  padding-right: 3px;
+}
+.cProgress_list .check_list .checking {
+  width: 1.8519vh;
+  height: 1.8519vh;
+  margin-right: 0.9259vh;
+}
+.cProgress_list .form_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cProgress_list .check_wrap li:nth-child(8) input {
+  margin: 0 10px;
+}
+.cProgress_list .form_box strong {
+  width: 100%;
+  font-size: 1.2037vh;
+  color: #757575;
+  margin-top: 10px;
+}
+.cProgress_list .form_box strong sup {
+  vertical-align: top;
+}
+.cProgress_list .add_btn {
+  width: 20%;
+  height: 32px;
+  border-radius: 3px;
+}
+.cProgress_list input,
+.cProgress_list select {
+  width: 100%;
+  height: 32px;
+}
+.cProgress_list .datepicker {
+  background-size: 20px;
+}
+input[type="file"] {
+  display: none;
+}
+.cProgress_list .check_wrap li:nth-child(21) .check_list li,
+.cProgress_list .check_wrap li:last-child .check_list li {
+  justify-content: space-between;
+  width: 100%;
+}
+.upload_name {
+  width: 70% !important;
+  font-size: 1.3889vh;
+  margin-right: 10px;
+  padding: 0 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.file_btn {
+  width: 30%;
+  height: 32px;
+  font-size: 1.2037vh;
+  background: rgb(244,246,249);
+  background: linear-gradient(0deg, rgba(244,246,249,1) 0%, rgba(255,255,255,1) 100%);
+  border-radius: 5px;
+  border: 1px solid #c0c9cb;
+}
+
+
 /* 지도 & 로드뷰 */
 .const_info .map_wrap {
   display: flex;
@@ -2250,6 +2357,9 @@ a.ui-button:active,
   margin-right: 10px;
   background: #fff;
   border: 1px solid #bbb;
+}
+.map_page .mFilter_list .check_list label {
+  position: static;
 }
 .map_page .mFilter_list .check_list:first-child label {
   padding: 15px 35px;
