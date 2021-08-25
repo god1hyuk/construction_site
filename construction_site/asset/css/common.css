@@ -201,6 +201,12 @@ button {
   color: #fff;
   background: #2c3646;
 }
+.blue_btn {
+  color: #fff;
+  background: #5479f7;
+  border: 1px solid #1d308a;
+  border-radius: 2px;
+}
 /* info_btn */
 .info_btn button {
   display: flex;
@@ -217,6 +223,29 @@ button {
   color: #fff;
   background: #192b80;
 }
+/* close_box */
+.close_box {
+  position: absolute;
+  top: -44px;
+  right: 2px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: #7e7f82;
+  background-image: url(../images/icon/close_btn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+}
+/* exel */
+.exel {
+  background: #fff;
+  border: 1px solid #c0c9cb;
+}
+.exel img {
+  margin-right: 8px;
+}
+
 /* check_list */
 .check_list label {
   position: absolute;
@@ -286,4 +315,111 @@ input[type="radio"] + .checking.active::before {
   background: #354052;
   border-color: #354052;
   cursor: pointer;
+}
+
+/* 모달창 */
+.modal_bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.modal_bg .modal_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.9630vh 4.2593vh 5.5556vh;
+  background: #fff;
+  border-top: 8px solid #5479f7;
+  border-radius: 3px;
+  z-index: 800;
+}
+.modal_bg .modal_wrap::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 45px;
+  height: 7.5px;
+  background: #192b80;
+  border-radius: 3px 0 0 0;
+}
+.modal_bg .modal_top {
+  position: relative;
+  padding-top: 0.5208vw;
+  padding-bottom: 0.7813vw;
+  border-bottom: 3px solid #28344c;
+}
+.modal_bg .modal_top h1 {
+  font-size: 2.963vh;
+}
+.modal_bg .modal_top .close_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.8704vh;
+  height: 2.8704vh;
+  background-color: transparent;
+  background-image: url(../images/icon/close_grey.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.modal_bottom {
+  padding-top: 5.5556vh;
+  background: #fff;
+}
+.modal_bottom .modal_submit {
+  width: 100%;
+  font-size: 2.037vh;
+  padding-top: 4.6296vh;
+  border-top: 2px solid #ccc;
+}
+.modal_bottom .modal_submit button {
+  padding: 1.8519vh 5.5556vh;
+  border-radius: 5px;
+  transition: background 0.1s;
+}
+.modal_bottom .modal_submit button:first-child {
+  color: #2c3646;
+  margin-right: 16px;
+  border: 3px solid #72777e;
+}
+.modal_bottom .modal_submit button:last-child {
+  color: #192b80;
+  border: 3px solid #5479f7;
+}
+/* 서브 모달창 */
+.modal_sub {
+  display: none;
+  position: absolute;
+  background: rgb(232,238,248);
+  background: linear-gradient(0deg, rgba(232,238,248,1) 0%, rgba(255,255,255,1) 100%);
+  border: 1px solid #6372a1;
+  border-top: 4px solid #5479f7;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px 0px rgba(35, 31, 32, 0.35);
+  z-index: 900;
+}
+/* mSub_submit */
+.mSub_submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.mSub_submit button:first-child {
+  margin-right: 8px;
+  background: #fff;
+  border: 1px solid #99a0a2;
+  border-radius: 5px;
+}
+.mSub_submit button:last-child {
+  color: #fff;
+  background: #192b80;
+  border-radius: 5px;
 }

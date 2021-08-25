@@ -738,6 +738,10 @@
         margin-right: 5px;
     }
     .const_mgt .searchFilter_m .searchFilter_top h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 24px;
         color: #fff;
     }
@@ -753,7 +757,6 @@
     /* 검색조건 체크리스트 (모바일) */
     .const_mgt .searchFilter_list {
         height: 100%;
-        overflow-y: scroll;
         padding-top: 64px;
         /* padding-bottom: 250px; */
     }
@@ -802,6 +805,7 @@
         border: 1px solid #bbb;
     }
     .const_mgt .searchFilter_list .check_list label {
+        position: static;
         padding: 15px 35px;
     }
     .const_mgt .searchFilter_list .check_list li.active {
@@ -868,7 +872,7 @@
         right: 0;
         width: 100%;
     }
-    .const_mgt .keyword_save .close_btn {
+    .const_mgt .keyword_save .close_box {
         top: -68px;
     }
     .const_mgt .kSave_container {
@@ -956,10 +960,10 @@
         padding: 60px 20px;
         background: #fff;
     }
-    .responsibility .modal_bottom .save_btn {
+    .responsibility .modal_bottom .modal_submit {
         padding-top: 50px;
     }
-    .responsibility .modal_bottom .save_btn button {
+    .responsibility .modal_bottom .modal_submit button {
         width: 50%;
         padding: 20px 0;
     }
@@ -1062,21 +1066,66 @@
     }
 
     /* 공사장 진행사항 수정 */
-    .cProgress_list {
-        height: 70vh;
-        padding: 0 30px;
-        padding-top: 50px;
+    .constProgress .modal_wrap {
         background: #fff;
     }
-    .conctProgress .modal_bottom {
-        /* padding-bottom: 100%; */
+    .constProgress .modal_top {
+        margin-bottom: 0;
+        border-bottom: 10px solid #d5d6d9;
     }
-    .modal_bottom .save_btn {
+    .cProgress_list {
+        height: auto;
+        margin-left: 40px;
+        margin-right: 40px;
+        background: #fff;
+    }
+    .cProgress_list .check_wrap > li {
+        width: 100%;
+    }
+    .cProgress_list .check_wrap > li:nth-child(10),
+    .cProgress_list .check_wrap > li:nth-child(11),
+    .cProgress_list .check_wrap > li:nth-child(12),
+    .cProgress_list .check_wrap > li:nth-child(13),
+    .cProgress_list .check_wrap > li:nth-child(14),
+    .cProgress_list .check_wrap > li:nth-child(15),
+    .cProgress_list .check_wrap > li:nth-child(16),
+    .cProgress_list .check_wrap > li:nth-child(17),
+    .cProgress_list .check_wrap > li:nth-child(18),
+    .cProgress_list .check_wrap > li:nth-child(19),
+    .cProgress_list .check_wrap > li:nth-child(20),
+    .cProgress_list .check_wrap > li:nth-child(21),
+    .cProgress_list .check_wrap > li:nth-child(22) {
+        display: none;
+    }
+    .cProgress_list .check_wrap > li > span {
+        width: 25% !important;
+    }
+    .cProgress_list .check_wrap > li > p,
+    .cProgress_list .check_list {
+        width: 75% !important;
+    }
+    .cProgress_list .form_box {
+        width: 50% !important;
+    }
+    .cProgress_list input,
+    .cProgress_list select,
+    .cProgress_list .add_btn {
+        height: 50px;
+    }
+    .cProgress_list .check_list li {
+        margin-right: 20px;
+    }
+    .cProgress_list .check_list .checking {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .modal_bottom .modal_submit {
         padding: 0 30px;
         padding-bottom: 100%;
         border-top: none;
     }
-    .modal_bottom .save_btn button {
+    .modal_bottom .modal_submit button {
         width: 100%;
     }
 
@@ -1691,6 +1740,9 @@
     .info_modify .title_wrap::after {
         width: 70%;
     }
+    .const_mgt .searchFilter_list {
+        overflow-y: scroll;
+    }
     /* 검색 결과 */
     .sub_page .result_container .result_list {
         margin-left: -25px;
@@ -1700,6 +1752,22 @@
     .const_info .title_wrap::after {
         width: 65%;
     }
+
+    /* 공사장 진행사항 수정 */
+    .cProgress_list {
+        height: 65vh;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .cProgress_list .check_wrap > li > span {
+        font-size: 16px;
+    }
+    .cProgress_list .check_wrap > li > p, 
+    .cProgress_list .form_box, 
+    .cProgress_list .check_list {
+        font-size: 15px;
+    }
+
     /* 공사장 점검 탭 */
     .const_info .tab_index {
         margin-left: -25px;
@@ -2209,9 +2277,6 @@
     }
     
     /* 키워드 저장 */
-    .const_mgt .keyword_save .close_btn {
-        top: -59px;
-    }
     .const_mgt .keyword_save li:first-child {
         flex-direction: column;
         align-items: start;
@@ -2261,7 +2326,7 @@
     .responsibility .tab_content form li .guide_ment {
         line-height: 2;
     }
-    .responsibility .modal_bottom .save_btn button {
+    .responsibility .modal_bottom .modal_submit button {
         font-size: 16px;
     }
     /* 검색 결과 */
@@ -2289,6 +2354,44 @@
     .const_info .title_wrap::after {
         width: 50%;
     }
+
+    /* 공사장 진행사항 수정 */
+    .cProgress_list .check_wrap {
+        justify-content: center;
+        text-align: center;
+    }
+    .cProgress_list .check_wrap > li {
+        flex-direction: column;
+    }
+    .cProgress_list .check_wrap > li > span {
+        width: 100% !important;
+        padding: 15px 0;
+    }
+    .cProgress_list .check_wrap > li > p, 
+    .cProgress_list .form_box, 
+    .cProgress_list .check_list {
+        /* justify-content: space-between; */
+        justify-content: center;
+        font-size: 15px;
+        padding: 25px 0;
+    }
+    .cProgress_list .check_list {
+        width: 80% !important;
+    }
+    .cProgress_list .check_list > li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 15px;
+    }
+    .cProgress_list .form_box {
+        width: 70% !important;
+    }
+    .cProgress_list .check_list .checking {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    }
+
 
     /* 지도 & 로드뷰 */
     .const_info .map_wrap {
@@ -2950,6 +3053,19 @@
         display: none;
     }
 
+    /* 공사장 진행사항 수정 */
+    .cProgress_list {
+        height: 70vh;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .cProgress_list .check_list {
+        width: 100% !important;
+    }
+    .constProgress .modal_bottom {
+        padding-top: 30px;
+    }
+
     /* 공사장 점검 탭 */
     .const_info .tab_index li {
         font-size: 18px;
@@ -3246,6 +3362,18 @@
     }
 
     /* 공사장 정보보기 */
+
+    /* 공사장 진행사항 수정 */
+    .cProgress_list {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .cProgress_list .check_wrap > li > p, 
+    .cProgress_list .form_box, 
+    .cProgress_list .check_list {
+        width: 100% !important;
+        font-size: 14px;
+    }
 
     /* 공사장 점검 탭 */
     .const_info .tab_index {

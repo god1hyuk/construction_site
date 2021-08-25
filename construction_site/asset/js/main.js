@@ -484,10 +484,10 @@ $(function () {
   $(".search_decision .save_btn").click(function () {
     $(".keyword_save").fadeIn(200);
   });
-  $(".keyword_save button.kSave_cancel").click(function () {
+  $(".keyword_save .kSave_cancel").click(function () {
     $(".keyword_save").fadeOut(200);
   });
-  $(".keyword_save button.close_btn").click(function () {
+  $(".keyword_save .close_box").click(function () {
     $(".keyword_save").fadeOut(200);
   });
 });
@@ -536,31 +536,64 @@ $(function () {
 
 // 모달창
 $(function () {
+  // SMS 보내기
+  $(".sms_send").click(function () {
+    $(".sms_modal").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".sms_modal .close_btn").click(function () {
+      $(".sms_modal").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".sms_modal .modal_submit button:first-child").click(function () {
+      $(".sms_modal").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".sms_modal .tab_index > li").click(function () {
+      $(".sms_modal .tab_index > li").removeClass("active");
+      $(this).addClass("active");
+    });
+    // 개인별 (SMS)
+
+    // 그룹별 (SMS)
+
+    // 부서별 (SMS)
+    
+    // 비상연락망 (SMS)
+    $(".sms_modal .contactPick").click(function () {
+      $(".eContact").fadeIn(300);
+      $(".eContact .close_box").click(function () {
+        $(".eContact").fadeOut(300);
+        $(".sms_modal .tab_index > li:last-child").removeClass("active");
+      });
+      $(".eContact .mSub_submit button:first-child").click(function () {
+        $(".eContact").fadeOut(300);
+        $(".sms_modal .tab_index > li:last-child").removeClass("active");
+      });
+    });
+  });
   // 내 정보 보기
   $(".myInfo").hide();
   $(".user_name").click(function () {
     $(".myInfo").fadeIn(300);
     $("body").css("overflow", "hidden");
-  });
-  $(".myInfo .close_btn").click(function () {
-    $(".myInfo").fadeOut(300);
-    $("body").css("overflow", "visible");
+    $(".myInfo .close_btn").click(function () {
+      $(".myInfo").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
   });
   // 담당업무 설정
   $(".responsibility").hide();
   $(".resp_btn").click(function () {
     $(".responsibility").fadeIn(300);
     $("body").css("overflow", "hidden");
-    if ($(window).width() > 1024) {
-    }
-  });
-  $(".responsibility .close_btn").click(function () {
-    $(".responsibility").fadeOut(300);
-    $("body").css("overflow", "visible");
-  });
-  $(".responsibility .save_btn button").click(function () {
-    $(".responsibility").fadeOut(300);
-    $("body").css("overflow", "visible");    
+    $(".responsibility .close_btn").click(function () {
+      $(".responsibility").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".responsibility .modal_submit button:first-child").click(function () {
+      $(".responsibility").fadeOut(300);
+      $("body").css("overflow", "visible");    
+    });
   });
   // 공사장 진행사항 수정
   $(".cProgress_btn").click(function () {

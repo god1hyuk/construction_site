@@ -136,6 +136,187 @@ aside .home a {
   background: #5479f7;
   border-radius: 3px;
 }
+
+/* SMS 보내기 */
+.sms_modal .modal_wrap {
+  width: 40vw;
+}
+.sms_modal .tab_index {
+  margin: 3.7037vh 0;
+}
+.sms_modal .tab_index li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 5.5556vh;
+  font-size: 1.8519vh;
+  background: #fff;
+  border: 1px solid #6e6e6e;
+  box-sizing: border-box;
+}
+.sms_modal .tab_index li:not(:last-child) {
+  margin-right: 5px;
+}
+.sms_modal .tab_content {
+  padding: 2.7778vh;
+  background: #f9fafb;;
+  border: 1px solid #d7d7d7;
+}
+.sms_modal .tab_content button {
+  width: 15%;
+  height: 4.6296vh;
+  font-size: 1.4815vh;
+  margin-left: 1.3889vh;
+}
+.sms_modal .wrapper {
+  display: flex;
+  align-items: start;
+  width: 100%;
+}
+.sms_modal .contact {
+  padding-bottom: 2.3148vh;
+  border-bottom: 1px solid #d7d7d7;
+}
+.sms_modal h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 1.8519vh;
+  margin-bottom: 1.3889vh;
+}
+.sms_modal h3 sup {
+  width: 1.3889vh;
+  height: 1.3889vh;
+  margin-right: 0.7407vh;
+  background: #f0f4f8;
+  border: 3px solid #587cf7;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.sms_modal .contact ul {
+  width: 85%;
+  height: 13.8889vh;
+  padding: 1.8519vh;
+  background: #fff;
+  border: 1px solid #b7bac3;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05) inset;
+}
+.sms_modal .contact li {
+  display: flex;
+  width: 100%;
+  font-size: 1.3889vh;
+}
+.sms_modal .contact li:not(:first-child) {
+  padding-top: 0.9259vh;
+}
+.sms_modal .contact p {
+  position: relative;
+}
+.sms_modal .contact p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -40%; 
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1.3889vh;
+  background: #000;
+}
+.sms_modal .contact span {
+  padding-left: 4.1667vh;
+}
+.sms_modal .descript {
+  margin-top: 2.3148vh;
+}
+.sms_modal select {
+  width: 85%;
+  height: 4.6296vh;
+  font-size: 1.4815vh;
+  border: 1px solid #2c3646;
+}
+.sms_modal textarea {
+  display: block;
+  width: 100%;
+  height: 13.8889vh;
+  font-size: 1.3889vh;
+  margin-top: 1.3889vh;
+  padding: 1.8519vh;
+  border: 1px solid #b7bac3;
+  border-radius: 0;
+}
+.sms_modal .modal_submit {
+  padding-top: 0 !important;
+  border-top: none !important;
+}
+/* 비상연락망 (SMS) */
+.sms_modal .eContact {
+  top: 25%;
+  /* transform: translateY(-50%); */
+  left: 60%;
+  padding: 0 2.963vh;
+}
+.sms_modal .eContact_list {
+  margin-top: 4.1667vh;
+  padding: 2.3148vh 1.8519vh;
+  background: #fff;
+  border-top: 4px solid #192b80;
+  border-bottom: 1px solid #8a8a8a;
+}
+.sms_modal .eContact_list > li {
+  position: relative;
+}
+.sms_modal .eContact_list > li:not(:last-child) {
+  padding-bottom: 2.3148vh;
+  /* padding-bottom: 25px; */
+}
+.sms_modal .eContact_info {
+  display: flex;
+}
+.sms_modal .eContact_info > li {
+  font-size: 1.2963vh;
+  /* font-size: 14px; */
+}
+.sms_modal .eContact_info label {
+  position: absolute;
+}
+.sms_modal .eContact_info > li:not(:first-child) {
+  padding: 0 1.8519vh;
+  /* padding: 0 20px; */
+  border-right: 1px solid #d0d1d2;
+}
+.sms_modal .eContact_info > li:last-child {
+  border-right: none;
+}
+.sms_modal .pagination {
+  /* padding: 1.8519vh 0; */
+  padding: 20px 0;
+  background: #eaeff9;
+}
+.sms_modal .exel {
+  /* font-size: 15px; */
+  font-size: 1.3889vh;
+  /* margin-top: 15px; */
+  margin-top: 1.3889vh;
+  margin-left: auto;
+  /* padding: 12px 15px; */
+  padding: 1.1111vh 1.3889vh;
+}
+.sms_modal .mSub_submit {
+  margin-top: 15px;
+  margin-bottom: 3.7037vh;
+}
+.sms_modal .mSub_submit button {
+  width: 86px;
+  /* width: 7.963vh; */
+  height: 40px;
+  /* height: 3.7037vh; */
+  font-size: 15px;
+  /* font-size: 1.3889vh; */
+}
+
+
 /* 야간 모드 */
 .night_mode {
   position: absolute;
@@ -332,7 +513,7 @@ header {
   width: 38px;
   margin-right: 16px;
 }
-.msg_send_m {
+.sms_send_m {
   background: rgb(195,202,213);
   background: linear-gradient(0deg, rgba(195,202,213,1) 0%, rgba(255,255,255,1) 100%);
 }
@@ -738,7 +919,7 @@ header {
   background: rgb(66,87,190);
   background: linear-gradient(360deg, rgba(66,87,190,1) 0%, rgba(110,128,213,1) 100%);
 }
-.sub_page .msg_send {
+.sub_page .sms_send {
   background: rgb(195,202,213);
   background: linear-gradient(0deg, rgba(195,202,213,1) 0%, rgba(255,255,255,1) 100%);
 }

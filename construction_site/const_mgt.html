@@ -136,7 +136,7 @@
             <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
             <p class="text-center ns_b">상황전파</p>
           </button>
-          <button class="msg_send">
+          <button class="sms_send">
             <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
             <p class="text-center ns_b">문자전송</p>
           </button>
@@ -418,10 +418,152 @@
         <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
         <p>상황전파</p>
       </button>
-      <button class="msg_send_m">
+      <button class="sms_send_m">
         <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
         <p class="text-center">문자전송</p>
       </button>
+    </div>
+
+    <!-- SMS 보내기 -->
+    <div class="sms_modal modal_bg">
+      <div class="modal_wrap">
+        <div class="modal_top d-flex justify-content-center">
+          <h1 class="ns_b">SMS 보내기</h1>
+          <button class="close_btn"></button>
+        </div>
+        <div class="tab_wrap">
+          <ul class="tab_index nt_b d-flex align-items-center">
+            <li class="active">개인별</li>
+            <li>그룹별</li>
+            <li>부서별</li>
+            <li>비상연락망</li>
+          </ul>
+          <div class="tab_content">
+            <div class="contact">
+              <h3><sup></sup>리스트</h3>
+              <div class="wrapper">
+                <ul>
+                  <li>
+                    <p>1. 홍길동</p>
+                    <span>010-2602-6050</span>
+                  </li>
+                  <li>
+                    <p>2. 홍길남</p>
+                    <span>010-1234-5678</span>
+                  </li>
+                </ul>
+                <button class="contactPick blue_btn">연락처 선택</button>
+              </div>
+            </div>
+            <div class="descript">
+              <h3><sup></sup>내용</h3>
+              <div class="wrapper">
+                <select name="" id="">
+                  <option value="">템플릿 #1</option>
+                </select>
+                <button class="add_btn">템플릿 추가</button>
+              </div>
+              <textarea name="" id="" cols="30" rows="10">서울시 강남구 XXX-XXX 사고발생</textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal_bottom">
+          <div class="modal_submit nt_b d-flex justify-content-center">
+            <button>취소</button>
+            <button>보내기</button>
+          </div>
+        </div>
+      </div>
+      <!-- 비상연락망 (SMS) -->
+      <div class="eContact modal_sub">
+        <button class="close_box"></button>
+        <ul class="eContact_list">
+          <li>
+            <ul class="eContact_info">
+              <li>
+                <label for="contact_user0"></label>
+                <input type="checkbox" name="contact_user" id="contact_user0" />
+                <div class="checking"></div>
+              </li>
+              <li>홍길동</li>
+              <li>010-2602-6050</li>
+              <li>test@gmail.com</li>
+              <li>지역안전건축센터</li>
+            </ul>
+          </li>
+          <li>
+            <ul class="eContact_info">
+              <li>
+                <label for="contact_user1"></label>
+                <input type="checkbox" name="contact_user" id="contact_user1" />
+                <div class="checking"></div>
+              </li>
+              <li>홍길남</li>
+              <li>010-2602-6050</li>
+              <li>test@gmail.com</li>
+              <li>지역안전건축센터</li>
+            </ul>
+          </li>
+          <li>
+            <ul class="eContact_info">
+              <li>
+                <label for="contact_user2"></label>
+                <input type="checkbox" name="contact_user" id="contact_user2" />
+                <div class="checking"></div>
+              </li>
+              <li>홍길남</li>
+              <li>010-2602-6050</li>
+              <li>test@gmail.com</li>
+              <li>지역안전건축센터</li>
+            </ul>
+          </li>
+          <li>
+            <ul class="eContact_info">
+              <li>
+                <label for="contact_user3"></label>
+                <input type="checkbox" name="contact_user" id="contact_user3" />
+                <div class="checking"></div>
+              </li>
+              <li>홍길남</li>
+              <li>010-2602-6050</li>
+              <li>test@gmail.com</li>
+              <li>지역안전건축센터</li>
+            </ul>
+          </li>
+          <li>
+            <ul class="eContact_info">
+              <li>
+                <label for="contact_user4"></label>
+                <input type="checkbox" name="contact_user" id="contact_user4" />
+                <div class="checking"></div>
+              </li>
+              <li>홍길남</li>
+              <li>010-2602-6050</li>
+              <li>test@gmail.com</li>
+              <li>지역안전건축센터</li>
+            </ul>
+          </li>
+        </ul>
+        <!-- 페이지네이션 -->
+        <ul class="pagination">
+          <li class="prev move"></li>
+          <li class="page_item active">1</li>
+          <li class="page_item">2</li>
+          <li class="page_item">3</li>
+          <li class="page_item">4</li>
+          <li class="page_item">5</li>
+          <li class="next move"></li>
+          <li class="superNext move"></li>
+        </ul>
+        <button class="exel" type="button">
+          <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
+          엑셀 업로드
+        </button>
+        <div class="mSub_submit">
+          <button type="reset">취소</button>
+          <button type="button">선택</button>
+        </div>
+      </div>
     </div>
 
     <!-- 내 정보 보기 -->
@@ -677,7 +819,7 @@
                     <select name="" id="">
                       <option value=""></option>
                     </select>
-                    <button>추가</button>
+                    <button class="add_btn">추가</button>
                   </div>
                 </li>
                 <li>
@@ -689,7 +831,7 @@
                     <select name="" id="">
                       <option value=""></option>
                     </select>
-                    <button>추가</button>
+                    <button class="add_btn">추가</button>
                   </div>
                 </li>
                 <li>
@@ -706,7 +848,7 @@
           </div>
         </div>
         <div class="modal_bottom d-flex justify-content-center">
-          <div class="save_btn d-flex justify-content-center align-items-center">
+          <div class="modal_submit nt_b d-flex justify-content-center">
             <button type="reset">취소</button>
             <button type="submit">저장</button>
           </div>
@@ -1153,26 +1295,26 @@
                     </ul>
                     <button class="kEdit_btn">키워드 편집</button>
                     <!-- 키워드 저장 -->
-                    <div class="keyword_save">
-                      <button class="close_btn"></button>
-                      <div class="kSave_container">
-                        <div class="kSave_wrap">
-                          <form action="">
-                            <ul>
-                              <li class="justify-content-between">
-                                <label for="">
-                                  <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘" />
-                                  키워드
-                                </label>
-                                <input type="text" placeholder="키워드를 입력해주세요." />
-                              </li>
-                              <li class="justify-content-center">
+                    <div class="keyword_save modal_sub">
+                      <button class="close_box"></button>
+                      <div class="kSave_wrap">
+                        <form action="">
+                          <ul>
+                            <li class="justify-content-between">
+                              <label for="">
+                                <img src="asset/images/icon/title_icon1.png" alt="타이틀_아이콘" />
+                                키워드
+                              </label>
+                              <input type="text" placeholder="키워드를 입력해주세요." />
+                            </li>
+                            <li>
+                              <div class="mSub_submit">
                                 <button type="reset" class="kSave_cancel">취소</button>
                                 <button type="button" class="kSave_save">저장</button>
-                              </li>
-                            </ul>
-                          </form>
-                        </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </form>
                       </div>
                     </div>
                   </div>

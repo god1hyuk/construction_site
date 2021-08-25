@@ -8,59 +8,8 @@
 }
 
 /* 내 정보 보기 */
-.modal_bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-.modal_bg .modal_wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2.9630vh 4.2593vh 5.5556vh;
-  background: #fff;
-  border-top: 8px solid #5479f7;
-  border-radius: 3px;
-  z-index: 999;
-}
 .myInfo .modal_wrap {
   width: 55.5556vh;
-}
-.modal_bg .modal_wrap::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 0;
-  width: 45px;
-  height: 7.5px;
-  background: #192b80;
-  border-radius: 3px 0 0 0;
-}
-.modal_bg .modal_top {
-  position: relative;
-  padding-top: 0.5208vw;
-  padding-bottom: 0.7813vw;
-  border-bottom: 3px solid #28344c;
-}
-.modal_bg .modal_top h1 {
-  font-size: 2.963vh;
-}
-.modal_bg .modal_top .close_btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2.8704vh;
-  height: 2.8704vh;
-  background-color: transparent;
-  background-image: url(../images/icon/close_grey.png);
-  background-repeat: no-repeat;
-  background-position: center;
-
 }
 .myInfo table {
   width: 100%;
@@ -745,7 +694,9 @@
 .construction_site .weather_wrap .weather_main {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;  
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 .construction_site .weather_wrap .weather_main img {
   width: 2.5vh;
@@ -1080,10 +1031,6 @@
 .const_mgt .searchRqt_tab .tab_index li:not(:last-child) {
   margin-bottom: 20px;
 }
-.const_mgt .searchRqt_tab .tab_index li.active {
-  /* color: #fff;
-  background: #192b80; */
-}
 .const_mgt .searchRqt_tab .tab_content {
   display: none;
   width: 90%;
@@ -1325,34 +1272,11 @@ a.ui-button:active,
   position: absolute;
   top: 50px;
   right: 200px;
-  z-index: 888;
-}
-.const_mgt .keyword_save .close_btn {
-  position: absolute;
-  top: -58px;
-  right: 0;
-  width: 39px;
-  height: 42px;
-  padding: 0;
-  background-color: #7e7f82;
-  background-image: url(../images/icon/close_btn.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px;
-  border-radius: 0;
-  z-index: -1;
-}
-.const_mgt .kSave_container {
   width: 357px;
   padding: 40px 30px;
-  background: rgb(232,238,248);
-  background: linear-gradient(0deg, rgba(232,238,248,1) 0%, rgba(255,255,255,1) 100%);
-  border: 1px solid #6372a1;
-  border-top: 4px solid #5479f7;
-  border-radius: 5px;
-  box-shadow: 0px 1px 4px 0px rgba(35, 31, 32, 0.35);
+  z-index: 888;
 }
-.const_mgt .kSave_container::before {
+.const_mgt .keyword_save::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1362,7 +1286,7 @@ a.ui-button:active,
   background: #6372a1;
   transform: rotate(45deg) translate(5px, -4px);
 }
-.const_mgt .kSave_container::after {
+.const_mgt .keyword_save::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1395,19 +1319,9 @@ a.ui-button:active,
   width: 17px;
   margin-right: 8px;
 }
-.const_mgt .keyword_save button {
+.const_mgt .kSave_wrap .mSub_submit button {
   margin-top: 20px;
   padding: 13px 30px;
-  border-radius: 5px;
-}
-.const_mgt .keyword_save button.kSave_cancel {
-  margin-right: 8px;
-  background: #fff;
-  border: 1px solid #99a0a2;
-}
-.const_mgt .keyword_save button.kSave_save {
-  color: #fff;
-  background: #192b80;
 }
 
 /* 초기화 / 검색 / 저장 버튼 */
@@ -1638,13 +1552,6 @@ a.ui-button:active,
   height: 40px;
   border-radius: 2px;
 }
-.sub_page .result_container .exel {
-  background: #fff;
-  border: 1px solid #c0c9cb;
-}
-.sub_page .result_container .exel img {
-  margin-right: 8px;
-}
 /* 카피라이트 */
 .copyright {
   font-size: 14px;
@@ -1737,30 +1644,6 @@ a.ui-button:active,
   width: 1.4815vh;
   margin-left: 2.3148vh;
 }
-.modal_bottom {
-  padding-top: 5.5556vh;
-  background: #fff;
-}
-.modal_bottom .save_btn {
-  width: 100%;
-  font-size: 2.037vh;
-  padding-top: 4.6296vh;
-  border-top: 2px solid #ccc;
-}
-.modal_bottom .save_btn button {
-  padding: 1.8519vh 5.5556vh;
-  border-radius: 5px;
-  transition: background 0.1s;
-}
-.modal_bottom .save_btn button:first-child {
-  color: #2c3646;
-  margin-right: 16px;
-  border: 3px solid #72777e;
-}
-.modal_bottom .save_btn button:last-child {
-  color: #192b80;
-  border: 3px solid #5479f7;
-}
 
 /* 공사장 정보보기 */
 .const_info .title_wrap::after {
@@ -1777,11 +1660,8 @@ a.ui-button:active,
 }
 .cProgress_list {
   height: 65%;
-  /* margin-top: 3.7037vh; */
-}
-.cProgress_list form {
-  height: 100%;
   overflow-y: scroll;
+  margin-top: 3.7037vh;
   border-top: 1px solid #192b80;
 }
 .cProgress_list .check_wrap {
@@ -1792,7 +1672,7 @@ a.ui-button:active,
   display: flex;
   align-items: center;
   width: 50%;
-  height: 9.2593vh;
+  /* height: 9.2593vh; */
   border-bottom: 1px solid #d7d7d7;
 }
 .cProgress_list .check_wrap > li > span {
@@ -1811,11 +1691,11 @@ a.ui-button:active,
   font-family: 'NotoSansKR-Regular';
 }
 .cProgress_list .check_wrap > li > p,
-.cProgress_list .check_wrap > li > div,
-.cProgress_list .check_wrap > li > ul {
-  width: 68%;
+.cProgress_list .form_box,
+.cProgress_list .check_list {
+  width: 68% !important;
   font-size: 1.3889vh;
-  padding: 0 1.3889vh;
+  padding: 2.1296vh 1.3889vh;
 }
 .cProgress_list .check_wrap > li:nth-child(5),
 .cProgress_list .check_wrap > li:nth-child(6) {
@@ -1860,6 +1740,7 @@ a.ui-button:active,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 .cProgress_list .check_wrap li:nth-child(8) input {
   margin: 0 10px;
@@ -2006,10 +1887,8 @@ input[type="file"] {
   padding: 14px 20px;
   border-radius: 2px;
 }
-.const_info .cInfoList_btn button:first-child {
+.const_info .cProgress_btn {
   margin-right: 5px;
-  background: #5479f7;
-  border: 1px solid #1d308a;
 }
 .const_info .cInfoList_btn button:last-child {
   background: #464646;
@@ -2030,10 +1909,6 @@ input[type="file"] {
   background: #fff;
   border: 1px solid #6e6e6e;
   border-bottom: none;
-}
-.const_info .tab_index li.active {
-  color: #fff;
-  background: #192b80;
 }
 
 /* 공사장 점검 결과 */
