@@ -423,7 +423,6 @@ $(function () {
     if ($("ul li a").not(this).children(".accordion_btn").hasClass("active")) {
       $("ul li a").not(this).children(".accordion_btn").removeClass("active");
     }
-    return false;
   });
 });
 
@@ -449,12 +448,12 @@ $(function () {
     $(".header_m").hide();
     $(".main_content").hide();
     $(".acdnt_sprd_m").hide();
-  });
-  $(".sub_page .searchFilter_m .close_btn").click(function () {
-    $(".searchFilter_m").hide();
-    $(".header_m").show();
-    $(".main_content").show();
-    $(".acdnt_sprd_m").show();
+    $(".sub_page .searchFilter_m .close_btn").click(function () {
+      $(".searchFilter_m").hide();
+      $(".header_m").show();
+      $(".main_content").show();
+      $(".acdnt_sprd_m").show();
+    });
   });
 });
 
@@ -552,22 +551,31 @@ $(function () {
       $(".sms_modal .tab_index > li").removeClass("active");
       $(this).addClass("active");
     });
-    // 개인별 (SMS)
-
-    // 그룹별 (SMS)
-
-    // 부서별 (SMS)
-    
-    // 비상연락망 (SMS)
-    $(".sms_modal .contactPick").click(function () {
-      $(".eContact").fadeIn(300);
-      $(".eContact .close_box").click(function () {
-        $(".eContact").fadeOut(300);
-        $(".sms_modal .tab_index > li:last-child").removeClass("active");
+    $(".sms_modal .tab_index > li").click(function () {
+      var tab_id = $(this).attr('data-tab');
+      $(".sms_modal .tab_index > li").removeClass("active");
+      $(".sms_modal .tab_content").removeClass("active");
+      $(this).addClass("active");
+      $("#" + tab_id).addClass('active');
+    });
+    // 연락처 추가 (SMS)
+    $(".sms_modal .contactPick_btn").click(function () {
+      $(".contactPick").fadeIn(300);
+      $(".contactPick .close_box").click(function () {
+        $(".contactPick").fadeOut(300);
       });
-      $(".eContact .mSub_submit button:first-child").click(function () {
-        $(".eContact").fadeOut(300);
-        $(".sms_modal .tab_index > li:last-child").removeClass("active");
+      $(".contactPick .mSub_submit button:first-child").click(function () {
+        $(".contactPick").fadeOut(300);
+      });
+    });
+    // 템플릿 추가 (SMS)
+    $(".addTemplate_btn").click(function () {
+      $(".addTemplate").fadeIn(300);
+      $(".addTemplate .close_box").click(function () {
+        $(".addTemplate").fadeOut(300);
+      });
+      $(".addTemplate .mSub_submit button:first-child").click(function () {
+        $(".addTemplate").fadeOut(300);
       });
     });
   });
@@ -599,19 +607,20 @@ $(function () {
   $(".cProgress_btn").click(function () {
     $(".constProgress").fadeIn(300);
     $("body").css("overflow", "hidden");
-  });
-  $(".constProgress button").click(function () {
-    $(".constProgress").fadeOut(300);
-    $("body").css("overflow", "visible");
-  });
-  // 파일 업로드
-  $(function(){ 
-    let fileTarget = $('input[type="file"]');
-    console.log(fileTarget);
-    fileTarget.on('change', function () {
-      let fileName = $(this).val().split('\\');
-      $(this).next('.upload_name').val(fileName[fileName.length-1]);
+    $(".constProgress button").click(function () {
+      $(".constProgress").fadeOut(300);
+      $("body").css("overflow", "visible");
     });
+  });
+});
+
+// 파일 업로드
+$(function(){ 
+  let fileTarget = $('input[type="file"]');
+  console.log(fileTarget);
+  fileTarget.on('change', function () {
+    let fileName = $(this).val().split('\\');
+    $(this).next('.upload_name').val(fileName[fileName.length-1]);
   });
 });
 

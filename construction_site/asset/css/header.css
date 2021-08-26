@@ -158,21 +158,15 @@ aside .home a {
 .sms_modal .tab_index li:not(:last-child) {
   margin-right: 5px;
 }
-.sms_modal .tab_content {
+.sms_modal .tab_box {
   padding: 2.7778vh;
   background: #f9fafb;;
   border: 1px solid #d7d7d7;
 }
-.sms_modal .tab_content button {
-  width: 15%;
+.sms_modal .tab_box button:not(.groupEdit) {
   height: 4.6296vh;
   font-size: 1.4815vh;
   margin-left: 1.3889vh;
-}
-.sms_modal .wrapper {
-  display: flex;
-  align-items: start;
-  width: 100%;
 }
 .sms_modal .contact {
   padding-bottom: 2.3148vh;
@@ -195,26 +189,10 @@ aside .home a {
   border-radius: 100%;
   box-sizing: border-box;
 }
-.sms_modal .contact ul {
-  width: 85%;
-  height: 13.8889vh;
-  padding: 1.8519vh;
-  background: #fff;
-  border: 1px solid #b7bac3;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05) inset;
-}
-.sms_modal .contact li {
-  display: flex;
-  width: 100%;
-  font-size: 1.3889vh;
-}
-.sms_modal .contact li:not(:first-child) {
-  padding-top: 0.9259vh;
-}
-.sms_modal .contact p {
+.sms_modal p {
   position: relative;
 }
-.sms_modal .contact p::after {
+.sms_modal .tab_content:not(.pContact) p::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -224,8 +202,111 @@ aside .home a {
   height: 1.3889vh;
   background: #000;
 }
-.sms_modal .contact span {
+.sms_modal span {
   padding-left: 4.1667vh;
+}
+.sms_modal .tab_content {
+  display: none;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  height: 13.8889vh;
+}
+.sms_modal .tab_content.active {
+  display: flex;
+}
+.sms_modal .tab_content > img {
+  align-self: center;
+  padding: 0 15px;
+}
+.sms_modal .contactList, 
+.sms_modal .wrapper {
+  height: 100%;
+}
+.sms_modal .contactList,
+.sms_modal .bundleList {
+  overflow-y: scroll;
+  padding: 1.8519vh;
+  background: #fff;
+  border: 1px solid #b7bac3;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05) inset;
+}
+.sms_modal .contactList:not(.gContactList, .dContactList) > li,
+.sms_modal .contactBundle > li {
+  display: flex;
+  width: 100%;
+  font-size: 1.3889vh;
+  padding: 0.6481vh 0.9259vh;
+}
+.sms_modal .tab_content:not(.pContact, .eContact) .contactList > li:not(:first-child) {
+  margin-top: 2.037vh;
+}
+.sms_modal .contactList:not(.gContactList, .dContactList) > li:hover,
+.sms_modal .contactBundle > li:hover {
+  background-color: #f3f5ff;
+  background-image: url(../images/icon/mView_pop_close.png);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  background-size: 1.1111vh;
+  cursor: pointer;
+}
+.sms_modal h5 {
+  font-size: 1.2963vh;
+  color: #3978fc;
+  padding: 0 0.3241vh 0.9259vh;
+}
+.sms_modal .gGroupList {
+  height: 60%;
+}
+.sms_modal .groupEdit {
+  height: 40%;
+  padding: 0 1.8519vh;
+  font-size: 1.2963vh;
+  margin-top: 0.9259vh;
+  margin-left: auto;
+}
+.sms_modal .bundleList li {
+  font-size: 1.3889vh;
+  padding: 0.6481vh 0.9259vh;
+}
+.sms_modal .bundleList li:hover {
+  background-color: #f3f5ff;
+}
+.sms_modal .bundleList li.active {
+  background-color: #f3f5ff;
+}
+.sms_modal h4 {
+  font-family: 'NotoSansKR-Bold';
+  font-size: 1.6667vh;
+  padding-top: 0.9259vh;
+  padding-bottom: 1.8519vh;
+}
+.sms_modal .gContact .wrapper,
+.sms_modal .dContact .wrapper {
+  flex-direction: column;
+}
+.sms_modal .tab_content:not(:last-child) .contactList {
+  width: 50%;  
+}
+.sms_modal .tab_content:not(:last-child) form,
+.sms_modal .gContact .wrapper,
+.sms_modal .dContact .wrapper {
+  width: 50%;
+}
+.sms_modal .tab_content:not(:last-child) form input {
+  width: 80%;
+}
+.sms_modal .tab_content:not(:last-child) form button {
+  width: 20%;
+}
+.sms_modal .contactBundle {
+  width: 100%;
+}
+.sms_modal .eContact .contactList {
+  width: 85%;
+}
+.sms_modal .eContact .contactPick_btn {
+  width: 15%;
 }
 .sms_modal .descript {
   margin-top: 2.3148vh;
@@ -235,6 +316,9 @@ aside .home a {
   height: 4.6296vh;
   font-size: 1.4815vh;
   border: 1px solid #2c3646;
+}
+.sms_modal select + .add_btn {
+  width: 15%;
 }
 .sms_modal textarea {
   display: block;
@@ -250,72 +334,116 @@ aside .home a {
   padding-top: 0 !important;
   border-top: none !important;
 }
-/* 비상연락망 (SMS) */
-.sms_modal .eContact {
+/* 연락처 선택 (SMS) */
+.sms_modal .contactPick {
   top: 25%;
-  /* transform: translateY(-50%); */
   left: 60%;
   padding: 0 2.963vh;
 }
-.sms_modal .eContact_list {
+.sms_modal .contactPick_list {
   margin-top: 4.1667vh;
   padding: 2.3148vh 1.8519vh;
   background: #fff;
   border-top: 4px solid #192b80;
   border-bottom: 1px solid #8a8a8a;
 }
-.sms_modal .eContact_list > li {
+.sms_modal .contactPick_list > li {
   position: relative;
 }
-.sms_modal .eContact_list > li:not(:last-child) {
+.sms_modal .contactPick_list > li:not(:last-child) {
   padding-bottom: 2.3148vh;
-  /* padding-bottom: 25px; */
 }
-.sms_modal .eContact_info {
+.sms_modal .contactPick_info {
   display: flex;
 }
-.sms_modal .eContact_info > li {
+.sms_modal .contactPick_info > li {
   font-size: 1.2963vh;
-  /* font-size: 14px; */
 }
-.sms_modal .eContact_info label {
+.sms_modal .contactPick_info label {
   position: absolute;
 }
-.sms_modal .eContact_info > li:not(:first-child) {
+.sms_modal .contactPick_info > li:not(:first-child) {
   padding: 0 1.8519vh;
-  /* padding: 0 20px; */
   border-right: 1px solid #d0d1d2;
 }
-.sms_modal .eContact_info > li:last-child {
+.sms_modal .contactPick_info > li:last-child {
   border-right: none;
 }
 .sms_modal .pagination {
-  /* padding: 1.8519vh 0; */
   padding: 20px 0;
   background: #eaeff9;
 }
 .sms_modal .exel {
-  /* font-size: 15px; */
   font-size: 1.3889vh;
-  /* margin-top: 15px; */
   margin-top: 1.3889vh;
   margin-left: auto;
-  /* padding: 12px 15px; */
   padding: 1.1111vh 1.3889vh;
 }
-.sms_modal .mSub_submit {
+.sms_modal .contactPick .mSub_submit {
   margin-top: 15px;
   margin-bottom: 3.7037vh;
 }
 .sms_modal .mSub_submit button {
   width: 86px;
-  /* width: 7.963vh; */
   height: 40px;
-  /* height: 3.7037vh; */
   font-size: 15px;
-  /* font-size: 1.3889vh; */
 }
-
+/* 템플릿 추가 (SMS) */
+.sms_modal .addTemplate {
+  top: 62%;
+  left: 55%;
+  /* padding: 30px; */
+  padding: 2.7778vh;
+}
+.sms_modal .addTemplate li {
+  display: flex;
+  justify-content: space-between;
+}
+.sms_modal .addTemplate li:first-child p {
+  align-self: center;
+}
+.sms_modal .addTemplate li:last-child {
+  /* margin-top: 10px; */
+  margin-top: 0.9259vh;
+}
+.sms_modal .addTemplate li:last-child p {
+  align-self: start;
+}
+.sms_modal .addTemplate p {
+  display: flex;
+  align-items: center;
+  font-size: 1.4815vh;
+  margin-right: 20px;
+}
+.sms_modal .addTemplate p sub {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-right: 9px;
+  background: #5479f7;
+  border-radius: 100px;
+}
+.sms_modal .addTemplate input {
+  /* width: 290px; */
+  width: 26.8519vh;
+  /* height: 40px; */
+  height: 3.7037vh;
+  background: #fff;
+}
+.sms_modal .addTemplate textarea {
+  /* width: 290px; */
+  width: 26.8519vh;
+  /* height: 100px; */
+  height: 9.2593vh;
+  margin: 0;
+}
+.sms_modal .addTemplate .mSub_submit {
+  /* margin-top: 20px; */
+  margin-top: 1.8519vh;
+  /* padding-top: 23px; */
+  padding-top: 2.1296vh;
+  border-top: 1px solid #192b80;
+}
 
 /* 야간 모드 */
 .night_mode {

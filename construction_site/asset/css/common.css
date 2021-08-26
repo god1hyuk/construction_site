@@ -143,6 +143,10 @@ header .title {
   text-align: end;
 }
 
+.wrapper {
+  display: flex;
+}
+
 /* Input */
 input, select {
   color: #2c2c2c;
@@ -155,6 +159,10 @@ input:focus, select:focus {
 }
 input:hover, select:hover, label:hover {
   cursor: pointer;
+}
+.select_wrap {
+  display: flex;
+  align-items: center;
 }
 select {
   background-color: #f3f5f6;
@@ -231,7 +239,7 @@ button {
   width: 40px;
   height: 40px;
   padding: 0;
-  background-color: #7e7f82;
+  background-color: rgba(21, 21, 21, 0.5);
   background-image: url(../images/icon/close_btn.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -411,6 +419,26 @@ input[type="radio"] + .checking.active::before {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+.modal_sub::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 15px;
+  background: #6372a1;
+  transform: rotate(45deg) translate(5px, -4px);
+}
+.modal_sub::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 15px;
+  background: #6372a1;
+  transform: rotate(-45deg) translate(-5px, -4px);
 }
 .mSub_submit button:first-child {
   margin-right: 8px;

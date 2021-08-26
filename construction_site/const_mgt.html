@@ -433,16 +433,169 @@
         </div>
         <div class="tab_wrap">
           <ul class="tab_index nt_b d-flex align-items-center">
-            <li class="active">개인별</li>
-            <li>그룹별</li>
-            <li>부서별</li>
-            <li>비상연락망</li>
+            <li class="active" data-tab="contact_tab0">개인별</li>
+            <li data-tab="contact_tab1">그룹별</li>
+            <li data-tab="contact_tab2">부서별</li>
+            <li data-tab="contact_tab3">비상연락망</li>
           </ul>
-          <div class="tab_content">
+          <div class="tab_box">
             <div class="contact">
               <h3><sup></sup>리스트</h3>
-              <div class="wrapper">
-                <ul>
+              <!-- 개인별 (SMS) -->
+              <div id="contact_tab0" class="pContact tab_content active">
+                <ul class="contactList pContactList">
+                  <li>
+                    <p>1. 010-2602-6050</p>
+                  </li>
+                  <li>
+                    <p>2. 010-1234-5678</p>
+                  </li>
+                </ul>
+                <img src="asset/images/icon/contact_arrow.png" alt="연락처_화살표" />
+                <form action="">
+                  <h4>휴대폰 번호</h4>
+                  <div class="wrapper">
+                    <input type="text" />
+                    <button class="add_btn">추가</button>
+                  </div>
+                </form>
+              </div>
+              <!-- 그룹별 (SMS) -->
+              <div id="contact_tab1" class="gContact tab_content">
+                <ul class="contactList gContactList">
+                  <li>
+                    <h5>그룹 01</h5>
+                    <ul class="group01 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                      </li>
+                    </ul>        
+                  </li>
+                  <li>
+                    <h5>그룹 02</h5>
+                    <ul class="group02 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>그룹 03</h5>
+                    <ul class="group03 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <img src="asset/images/icon/contact_arrow.png" alt="연락처_화살표" />
+                <div class="wrapper">
+                  <ul class="bundleList">
+                    <li>그룹 01</li>
+                    <li>그룹 02</li>
+                    <li>그룹 03</li>
+                  </ul>
+                  <button class="groupEdit blue_btn">그룹편집</button>
+                </div>
+              </div>
+              <!-- 부서별 (SMS) -->
+              <div id="contact_tab2" class="dContact tab_content">
+                <ul class="contactList gContactList">
+                  <li>
+                    <h5>부서 01</h5>
+                    <ul class="deparment01 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                      </li>
+                    </ul>        
+                  </li>
+                  <li>
+                    <h5>부서 02</h5>
+                    <ul class="deparment02 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>부서 03</h5>
+                    <ul class="deparment03 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>부서 04</h5>
+                    <ul class="deparment04 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>부서 05</h5>
+                    <ul class="deparment05 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <img src="asset/images/icon/contact_arrow.png" alt="연락처_화살표" />
+                <div class="wrapper">
+                  <ul class="bundleList">
+                    <li>부서 01</li>
+                    <li>부서 02</li>
+                    <li>부서 03</li>
+                    <li>부서 04</li>
+                    <li>부서 05</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 비상연락망 (SMS) -->
+              <div id="contact_tab3" class="eContact tab_content">
+                <ul class="contactList">
                   <li>
                     <p>1. 홍길동</p>
                     <span>010-2602-6050</span>
@@ -452,16 +605,16 @@
                     <span>010-1234-5678</span>
                   </li>
                 </ul>
-                <button class="contactPick blue_btn">연락처 선택</button>
+                <button class="contactPick_btn blue_btn">연락처 선택</button>
               </div>
             </div>
             <div class="descript">
               <h3><sup></sup>내용</h3>
-              <div class="wrapper">
+              <div class="select_wrap">
                 <select name="" id="">
                   <option value="">템플릿 #1</option>
                 </select>
-                <button class="add_btn">템플릿 추가</button>
+                <button class="addTemplate_btn add_btn">템플릿 추가</button>
               </div>
               <textarea name="" id="" cols="30" rows="10">서울시 강남구 XXX-XXX 사고발생</textarea>
             </div>
@@ -474,12 +627,12 @@
           </div>
         </div>
       </div>
-      <!-- 비상연락망 (SMS) -->
-      <div class="eContact modal_sub">
+      <!-- 연락처 선택 (SMS) -->
+      <div class="contactPick modal_sub">
         <button class="close_box"></button>
-        <ul class="eContact_list">
+        <ul class="contactPick_list">
           <li>
-            <ul class="eContact_info">
+            <ul class="contactPick_info">
               <li>
                 <label for="contact_user0"></label>
                 <input type="checkbox" name="contact_user" id="contact_user0" />
@@ -492,7 +645,7 @@
             </ul>
           </li>
           <li>
-            <ul class="eContact_info">
+            <ul class="contactPick_info">
               <li>
                 <label for="contact_user1"></label>
                 <input type="checkbox" name="contact_user" id="contact_user1" />
@@ -505,7 +658,7 @@
             </ul>
           </li>
           <li>
-            <ul class="eContact_info">
+            <ul class="contactPick_info">
               <li>
                 <label for="contact_user2"></label>
                 <input type="checkbox" name="contact_user" id="contact_user2" />
@@ -518,7 +671,7 @@
             </ul>
           </li>
           <li>
-            <ul class="eContact_info">
+            <ul class="contactPick_info">
               <li>
                 <label for="contact_user3"></label>
                 <input type="checkbox" name="contact_user" id="contact_user3" />
@@ -531,7 +684,7 @@
             </ul>
           </li>
           <li>
-            <ul class="eContact_info">
+            <ul class="contactPick_info">
               <li>
                 <label for="contact_user4"></label>
                 <input type="checkbox" name="contact_user" id="contact_user4" />
@@ -562,6 +715,26 @@
         <div class="mSub_submit">
           <button type="reset">취소</button>
           <button type="button">선택</button>
+        </div>
+      </div>
+      <!-- 템플릿 추가 (SMS) -->
+      <div class="addTemplate modal_sub">
+        <button class="close_box"></button>
+        <form action="">
+          <ul>
+            <li>
+              <p><sub></sub>템플릿 명칭</p>
+              <input type="text" />
+            </li>
+            <li>
+              <p><sub></sub>내용</p>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </li>
+          </ul>
+        </form>
+        <div class="mSub_submit">
+          <button type="reset">취소</button>
+          <button type="button">추가</button>
         </div>
       </div>
     </div>
