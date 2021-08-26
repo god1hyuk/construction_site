@@ -558,16 +558,6 @@ $(function () {
       $(this).addClass("active");
       $("#" + tab_id).addClass('active');
     });
-    // 연락처 추가 (SMS)
-    $(".sms_modal .contactPick_btn").click(function () {
-      $(".contactPick").fadeIn(300);
-      $(".contactPick .close_box").click(function () {
-        $(".contactPick").fadeOut(300);
-      });
-      $(".contactPick .mSub_submit button:first-child").click(function () {
-        $(".contactPick").fadeOut(300);
-      });
-    });
     // 템플릿 추가 (SMS)
     $(".addTemplate_btn").click(function () {
       $(".addTemplate").fadeIn(300);
@@ -576,6 +566,26 @@ $(function () {
       });
       $(".addTemplate .mSub_submit button:first-child").click(function () {
         $(".addTemplate").fadeOut(300);
+      });
+    });
+    // 그룹편집 (SMS)
+    $(".groupEdit_btn").click(function () {
+      $(".groupEdit").fadeIn(300);
+      $(".groupEdit .close_box").click(function () {
+        $(".groupEdit").fadeOut(300);
+      });
+      $(".groupEdit .mSub_submit button:first-child").click(function () {
+        $(".groupEdit").fadeOut(300);
+      });
+    });
+    // 연락처 추가 (SMS)
+    $(".sms_modal .contactPick_btn").click(function () {
+      $(".contactPick").fadeIn(300);
+      $(".contactPick .close_box").click(function () {
+        $(".contactPick").fadeOut(300);
+      });
+      $(".contactPick .mSub_submit button:first-child").click(function () {
+        $(".contactPick").fadeOut(300);
       });
     });
   });

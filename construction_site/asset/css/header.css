@@ -163,7 +163,11 @@ aside .home a {
   background: #f9fafb;;
   border: 1px solid #d7d7d7;
 }
-.sms_modal .tab_box button:not(.groupEdit) {
+.sms_modal input {
+  background: #fff;
+}
+.sms_modal .add_btn,
+.sms_modal .contactPick_btn {
   height: 4.6296vh;
   font-size: 1.4815vh;
   margin-left: 1.3889vh;
@@ -234,6 +238,7 @@ aside .home a {
 .sms_modal .contactList:not(.gContactList, .dContactList) > li,
 .sms_modal .contactBundle > li {
   display: flex;
+  position: relative;
   width: 100%;
   font-size: 1.3889vh;
   padding: 0.6481vh 0.9259vh;
@@ -241,14 +246,29 @@ aside .home a {
 .sms_modal .tab_content:not(.pContact, .eContact) .contactList > li:not(:first-child) {
   margin-top: 2.037vh;
 }
+.sms_modal .contactList:not(.gContactList, .dContactList) > li button,
+.sms_modal .contactBundle > li button,
+.sms_modal .groupEdit .bundleList button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 1.1111vh;
+  height: 1.1111vh;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .sms_modal .contactList:not(.gContactList, .dContactList) > li:hover,
 .sms_modal .contactBundle > li:hover {
   background-color: #f3f5ff;
-  background-image: url(../images/icon/mView_pop_close.png);
-  background-repeat: no-repeat;
-  background-position: 98% 50%;
-  background-size: 1.1111vh;
   cursor: pointer;
+}
+.sms_modal .contactList:not(.gContactList, .dContactList) > li:hover button,
+.sms_modal .contactBundle > li:hover button,
+.sms_modal .groupEdit .bundleList li:hover button {
+  background-image: url(../images/icon/contact_delete.png);
 }
 .sms_modal h5 {
   font-size: 1.2963vh;
@@ -258,7 +278,7 @@ aside .home a {
 .sms_modal .gGroupList {
   height: 60%;
 }
-.sms_modal .groupEdit {
+.sms_modal .groupEdit_btn {
   height: 40%;
   padding: 0 1.8519vh;
   font-size: 1.2963vh;
@@ -295,6 +315,7 @@ aside .home a {
 }
 .sms_modal .tab_content:not(:last-child) form input {
   width: 80%;
+  height: 4.6296vh;
 }
 .sms_modal .tab_content:not(:last-child) form button {
   width: 20%;
@@ -388,12 +409,13 @@ aside .home a {
   height: 40px;
   font-size: 15px;
 }
+.sms_modal .modal_sub {
+  padding: 2.7778vh;
+}
 /* 템플릿 추가 (SMS) */
 .sms_modal .addTemplate {
   top: 62%;
   left: 55%;
-  /* padding: 30px; */
-  padding: 2.7778vh;
 }
 .sms_modal .addTemplate li {
   display: flex;
@@ -403,46 +425,111 @@ aside .home a {
   align-self: center;
 }
 .sms_modal .addTemplate li:last-child {
-  /* margin-top: 10px; */
   margin-top: 0.9259vh;
 }
 .sms_modal .addTemplate li:last-child p {
   align-self: start;
 }
-.sms_modal .addTemplate p {
+.sms_modal .modal_sub p {
   display: flex;
   align-items: center;
   font-size: 1.4815vh;
-  margin-right: 20px;
 }
-.sms_modal .addTemplate p sub {
+.sms_modal .modal_sub p sub {
   display: block;
   width: 5px;
   height: 5px;
-  margin-right: 9px;
+  margin-right: 0.4630vh;
   background: #5479f7;
   border-radius: 100px;
 }
+.sms_modal .addTemplate p {
+  margin-right: 1.8519vh;
+}
 .sms_modal .addTemplate input {
-  /* width: 290px; */
   width: 26.8519vh;
-  /* height: 40px; */
   height: 3.7037vh;
-  background: #fff;
 }
 .sms_modal .addTemplate textarea {
-  /* width: 290px; */
   width: 26.8519vh;
-  /* height: 100px; */
   height: 9.2593vh;
   margin: 0;
 }
 .sms_modal .addTemplate .mSub_submit {
-  /* margin-top: 20px; */
   margin-top: 1.8519vh;
-  /* padding-top: 23px; */
   padding-top: 2.1296vh;
   border-top: 1px solid #192b80;
+}
+/* 그룹편집 (SMS) */
+.sms_modal .groupEdit {
+  top: 48%;
+  left: 51%;
+}
+.sms_modal .groupEdit .makeGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sms_modal .groupEdit .makeGroup input {
+  height: 3.7037vh;
+  margin: 0 0.9259vh;
+}
+.sms_modal .groupEdit .makeGroup button {
+  height: 3.7037vh;
+  font-size: 1.4815vh;
+  color: #fff;
+  padding: 0 1.3889vh;
+  background: #5479f7;
+  border: 1px solid #1b57d4;
+  border-radius: 3px;
+}
+.sms_modal .groupEdit .bundleList {
+  margin-top: 1.3889vh;
+}
+.sms_modal .groupEdit .bundleList li {
+  position: relative;
+}
+.sms_modal .groupEdit .gPhoneNum {
+  padding: 1.8519vh;
+  background: #f0f2f5;
+  border: 1px solid #b7bac3;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.05) inset;
+}
+.sms_modal .groupEdit .gPhoneNum .bundleList {
+  height: 6.8519vh;
+  margin-top: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.sms_modal .groupEdit .gPhoneNum .bundleList strong {
+  color: #4166e4;
+  margin-right: 5px;
+}
+.sms_modal .groupEdit .gPhoneNum .bundleList li:hover {
+  background: #fff;
+}
+.sms_modal .groupEdit .gPhoneNum .input_wrap {
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.sms_modal .groupEdit .gPhoneNum input {
+  width: 80%;
+  height: 3.7037vh;
+}
+.sms_modal .groupEdit .gPhoneNum .addPN_btn {
+  width: 20%;
+  height: 3.7037vh;
+  font-size: 1.3889vh;
+  margin-left: 0.9259vh;
+  background: rgb(244,246,249);
+  background: linear-gradient(0deg, rgba(244,246,249,1) 0%, rgba(255,255,255,1) 100%);
+  border: 1px solid #2c3646;
+  border-radius: 3px;
+}
+.sms_modal .groupEdit .mSub_submit {
+  margin-top: 2.2222vh;
 }
 
 /* 야간 모드 */

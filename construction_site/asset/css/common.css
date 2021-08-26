@@ -160,6 +160,7 @@ input:focus, select:focus {
 input:hover, select:hover, label:hover {
   cursor: pointer;
 }
+.input_wrap,
 .select_wrap {
   display: flex;
   align-items: center;
