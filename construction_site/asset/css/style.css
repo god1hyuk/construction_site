@@ -1276,26 +1276,6 @@ a.ui-button:active,
   padding: 40px 30px;
   z-index: 888;
 }
-.const_mgt .keyword_save::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 1px;
-  height: 15px;
-  background: #6372a1;
-  transform: rotate(45deg) translate(5px, -4px);
-}
-.const_mgt .keyword_save::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 1px;
-  height: 15px;
-  background: #6372a1;
-  transform: rotate(-45deg) translate(-5px, -4px);
-}
 .const_mgt .keyword_save li {
   display: flex;
   align-items: center;
@@ -1319,7 +1299,7 @@ a.ui-button:active,
   width: 17px;
   margin-right: 8px;
 }
-.const_mgt .kSave_wrap .mSub_submit button {
+.const_mgt .kSave_wrap .subModal_submit button {
   margin-top: 20px;
   padding: 13px 30px;
 }

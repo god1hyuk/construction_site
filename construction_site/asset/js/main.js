@@ -536,14 +536,23 @@ $(function () {
 // 모달창
 $(function () {
   // SMS 보내기
-  $(".sms_send").click(function () {
+  $(".sms_send, .sms_send_m").click(function () {
+    if ($(window).width() <= 1024) {
+      $(".send_btn_m").fadeOut(300);
+    }
     $(".sms_modal").fadeIn(300);
     $("body").css("overflow", "hidden");
     $(".sms_modal .close_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
       $(".sms_modal").fadeOut(300);
       $("body").css("overflow", "visible");
     });
     $(".sms_modal .modal_submit button:first-child").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
       $(".sms_modal").fadeOut(300);
       $("body").css("overflow", "visible");
     });
@@ -560,31 +569,46 @@ $(function () {
     });
     // 템플릿 추가 (SMS)
     $(".addTemplate_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
       $(".addTemplate").fadeIn(300);
       $(".addTemplate .close_box").click(function () {
+        $(".subModal_bg").fadeOut(300);
         $(".addTemplate").fadeOut(300);
       });
-      $(".addTemplate .mSub_submit button:first-child").click(function () {
+      $(".addTemplate .subModal_submit button:first-child").click(function () {
+        $(".subModal_bg").fadeOut(300);
         $(".addTemplate").fadeOut(300);
       });
     });
     // 그룹편집 (SMS)
     $(".groupEdit_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
       $(".groupEdit").fadeIn(300);
       $(".groupEdit .close_box").click(function () {
+        $(".subModal_bg").fadeOut(300);
         $(".groupEdit").fadeOut(300);
       });
-      $(".groupEdit .mSub_submit button:first-child").click(function () {
+      $(".groupEdit .subModal_submit button:first-child").click(function () {
+        $(".subModal_bg").fadeOut(300);
         $(".groupEdit").fadeOut(300);
       });
     });
     // 연락처 추가 (SMS)
-    $(".sms_modal .contactPick_btn").click(function () {
+    $(".contactPick_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
       $(".contactPick").fadeIn(300);
       $(".contactPick .close_box").click(function () {
+        $(".subModal_bg").fadeOut(300);
         $(".contactPick").fadeOut(300);
       });
-      $(".contactPick .mSub_submit button:first-child").click(function () {
+      $(".contactPick .subModal_submit button:first-child").click(function () {
+        $(".subModal_bg").fadeOut(300);
         $(".contactPick").fadeOut(300);
       });
     });

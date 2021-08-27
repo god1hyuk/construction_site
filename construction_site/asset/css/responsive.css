@@ -463,6 +463,140 @@
     background-color: #20b5c8;
     }
 
+    /* SMS 보내기 */
+    .sms_modal .tab_wrap {
+        padding: 0 30px;
+        background: #fff;
+    }
+    .sms_modal .modal_sub {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        z-index: 997;
+    }
+    /* 템플릿 추가 (SMS) */
+    .sms_modal .addTemplate li:last-child {
+        margin-top: 15px;
+    }
+    .sms_modal .addTemplate p {
+        width:max-content;
+        font-size: 16px;
+        margin-right: 15px;
+    }
+    .sms_modal .addTemplate input {
+        width: 48.8281vw;
+        height: 50px;
+    }
+    .sms_modal .addTemplate textarea {
+        width: 48.8281vw;
+        height: 120px;
+    }
+    .sms_modal .subModal_submit button {
+        width: 50%;
+        height: 50px;
+        font-size: 18px;
+    }
+    .sms_modal .addTemplate .subModal_submit {
+        margin-top: 30px;
+        padding-top: 23px;
+    }
+    /* 그룹편집 (SMS) */
+    .sms_modal .groupEdit .makeGroup p {
+        width: max-content;
+        font-size: 16px;
+        margin-right: 3.9063vw;
+    }
+    .sms_modal .groupEdit .makeGroup input {
+        width: 41.0156vw;
+        height: 50px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .sms_modal .groupEdit .makeGroup button {
+        width: 66px;
+        height: 50px;
+        font-size: 16px;
+    }
+    .sms_modal .groupEdit .bundleList {
+        margin-top: 20px;
+    }
+    .sms_modal .groupEdit .gPhoneNum .bundleList {
+        height: 14.6484vw;
+    }
+    .sms_modal .groupEdit .gPhoneNum input {
+        width: 100%;
+        height: 50px;
+    }
+    .sms_modal .groupEdit .gPhoneNum .addPN_btn {
+        width: 66px;
+        height: 50px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    /* 연락처 추가 (SMS) */
+    .sms_modal .contactPick_list {
+        margin-top: 0;
+        padding: 0;
+    }
+    .sms_modal .contactPick_list > li {
+        padding: 25px 20px;
+    }
+    .sms_modal .contactPick_list > li:not(:last-child) {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #d0d1d2;
+    }
+    .sms_modal .contactPick_info > li {
+        margin-right: 15px;
+    }
+    .sms_modal .contactPick_list .checking {
+        width: 20px;
+        height: 20px;
+    }
+    .sms_modal .contactPick .wrapper {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: max-content;
+    }
+    .sms_modal .contactPick .wrapper > li {
+        position: relative;
+        width: max-content;
+        font-size: 16px;
+        padding: 0;
+        border-right: none;
+    }
+    .sms_modal .contactPick .wrapper li:first-child {
+        width: 100%;
+        font-size: 24px;
+        padding: 0;
+    }
+    .sms_modal .contactPick .wrapper li:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -15%;
+        width: 1px;
+        height: 20px;
+        background: #d0d1d2;
+    }
+    .sms_modal .contactPick .wrapper li:nth-child(2),
+    .sms_modal .contactPick .wrapper li:nth-child(3) {
+        font-size: 16px;
+        color: #555;
+    }
+    .sms_modal .contactPick .wrapper li:last-child {
+        font-size: 16px;
+        padding: 10px 15px;
+        background: #e9eef8;
+    }
+    .sms_modal .exel {
+        font-size: 15px;
+        margin-top: 15px;
+        padding: 12px 15px;
+    }
+
     /* 내 정보 보기 */
     .modal_bg {
         background: #d5d6d9;
@@ -872,9 +1006,6 @@
         right: 0;
         width: 100%;
     }
-    .const_mgt .keyword_save .close_box {
-        top: -68px;
-    }
     .const_mgt .kSave_container {
         width: 100% !important;
     }
@@ -887,15 +1018,6 @@
     .const_mgt .keyword_save input[type="text"] {
         width: 85%;
         height: 50px;
-    }
-    .const_mgt .keyword_save button {
-        width: 50%;
-        font-size: 18px;
-        margin-top: 30px;
-        padding: 17px 0;
-    }
-    .const_mgt .keyword_save button.kSave_cancel {
-        margin-right: 20px;
     }
     
     /* 담당업무 설정 */
@@ -1550,6 +1672,159 @@
         margin-right: 0;
     }
 
+    /* header.css */
+
+    /* SMS 보내기 */
+    .sms_modal .tab_wrap {
+        padding: 0 25px;
+    }
+    .sms_modal .tab_index {
+        padding: 30px 0;
+    }
+    .sms_modal .tab_index li {
+        height: 60px;
+        font-size: 20px;
+    }
+    .sms_modal .tab_box {
+        height: 62vh;
+        overflow-y: scroll;
+        padding: 25px;
+    }
+    .sms_modal .contactList {
+        width: 100% !important;
+        height: 155px !important;
+    }
+    .sms_modal h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .sms_modal h3 sup {
+        width: 17px;
+        height: 17px;
+        margin-top: 2px;
+    }
+    .sms_modal .tab_content {
+        flex-direction: column;
+        height: auto;
+    }
+    .sms_modal .pContactList > li,
+    .sms_modal .eContactList > li, 
+    .sms_modal .contactBundle > li {
+        font-size: 18px;
+        padding: 12px 15px;
+    }   
+    .sms_modal .contactList, 
+    .sms_modal .bundleList,
+    .sms_modal .groupEdit .gPhoneNum {
+        padding: 15px 10px;
+    }
+    .sms_modal .pContactList > li button,
+    .sms_modal .eContactList > li button, 
+    .sms_modal .contactBundle > li button, 
+    .sms_modal .groupEdit .bundleList button {
+        right: 15px;
+        width: 12px;
+        height: 12px;
+    }
+    .sms_modal .tab_content > img {
+        width: 9px;
+        padding: 20px 0;
+        transform: rotate(90deg);
+    }
+    .sms_modal h4 {
+        font-size: 18px;
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+    .sms_modal .tab_content:not(:last-child) form, 
+    .sms_modal .gContact .wrapper, 
+    .sms_modal .dContact .wrapper {
+        width: 100%;
+    }
+    .sms_modal .tab_content:not(:last-child) form input {
+        height: 50px;
+    }
+    .sms_modal .add_btn, 
+    .sms_modal .contactPick_btn {
+        height: 50px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .sms_modal select {
+        height: 50px;
+        font-size: 16px;
+    }
+    .sms_modal textarea {
+        height: 150px;
+        font-size: 15px;
+        margin-top: 15px;
+        padding: 20px;
+    }
+    .sms_modal .gContactList > li:not(:first-child),
+    .sms_modal .dContactList > li:not(:first-child) {
+        margin-top: 15px;
+    }
+    .sms_modal h5 {
+        font-size: 14px;
+        padding: 0px 15px 5px;
+    }
+    .sms_modal .tab_content:not(.pContact) p::after {
+        right: -35%;
+    }
+    .sms_modal span {
+        padding-left: 45px;
+    }
+    .sms_modal .bundleList li {
+        font-size: 15px;
+        padding: 7px 10px;
+    }
+    .sms_modal .groupEdit_btn {
+        width: 100%;
+        height: 45px;
+        font-size: 18px;
+        margin-top: 15px;
+        padding: 0;
+    }
+    .sms_modal .eContact .contactPick_btn {
+        width: 100%;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    .sms_modal .modal_bottom {
+        padding-top: 40px;
+    }
+    .sms_modal .modal_submit {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    /* 템플릿 추가 (SMS) */
+    .sms_modal .modal_sub {
+        padding: 25px;
+    }
+    /* 연락처 추가 (SMS) */
+    .sms_modal .contactPick_list .checking {
+        width: 2.6042vw;
+        height: 2.6042vw;
+    }
+    .sms_modal .contactPick .wrapper li:first-child {
+        width: 100%;
+        font-size: 3.1250vw;
+        padding: 0;
+    }
+    .sms_modal .contactPick .wrapper li:nth-child(2),
+    .sms_modal .contactPick .wrapper li:nth-child(3) {
+        font-size: 2.0833vw;
+    }
+    .sms_modal .contactPick .wrapper li:nth-child(2)::after {
+        right: -16%;
+    }
+    .sms_modal .contactPick .wrapper li:last-child {
+        font-size: 2.0833vw;
+        padding: 1.3021vw 1.9531vw;
+        background: #e9eef8;
+    }
+
     /* 내 정보 수정 */
     .info_modify .form_container {
         padding: 0 !important;
@@ -1932,6 +2207,118 @@
         width: 30px;
     }
 
+    /* SMS 보내기 */
+    .sms_modal .tab_index {
+        padding: 20px 0;
+    }
+    .sms_modal .tab_index li {
+        height: 50px;
+        font-size: 16px;
+    }
+    .sms_modal .tab_box {
+        height: 60vh;
+    }
+    .sms_modal h3 {
+        font-size: 16px;
+    }
+    .sms_modal h3 sup {
+        width: 15px;
+        height: 15px;
+    }
+    .sms_modal h5 {
+        padding: 0px 10px 5px;
+    }
+    .sms_modal .pContactList > li,
+    .sms_modal .eContactList > li, 
+    .sms_modal .contactBundle > li {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .sms_modal h4 {
+        font-size: 16px;
+    }
+    .sms_modal .input_wrap,
+    .sms_modal .select_wrap {
+        flex-direction: column;
+    }
+    .sms_modal .tab_content:not(:last-child) form input {
+        width: 100%;
+    }
+    .sms_modal .tab_content:not(:last-child) form button {
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    .sms_modal .descript {
+        position: relative;
+    }
+    .sms_modal select {
+        width: 100%;
+    }
+    .sms_modal select + .add_btn {
+        width: 100%;
+        margin-top: 180px;
+        margin-left: 0;
+    }
+    .sms_modal .descript textarea {
+        position: absolute;
+        top: 98px;
+        margin-top: 0;
+    }
+    .sms_modal .modal_bottom {
+        padding-top: 30px;
+    }
+    /* 템플릿 추가 (SMS) */
+    .sms_modal .addTemplate li {
+        flex-direction: column;
+    }
+    .sms_modal .addTemplate input,
+    .sms_modal .addTemplate textarea {
+        width: 74.0741vw;
+    }
+    .sms_modal .addTemplate p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .sms_modal .addTemplate li:first-child p {
+        align-self: start;
+    }
+    .sms_modal .addTemplate li:last-child {
+        margin-top: 15px;
+    }
+    /* 그룹편집 (SMS) */
+    .sms_modal .groupEdit .makeGroup {
+        flex-direction: column;
+    }
+    .sms_modal .groupEdit .makeGroup p {
+        align-self: start;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .sms_modal .groupEdit .makeGroup input {
+        width: 70.3704vw;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .sms_modal .groupEdit .makeGroup button {
+        width: 100%;
+    }
+    .sms_modal .groupEdit .gPhoneNum .addPN_btn {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    /* 연락처 추가 (SMS) */
+    .sms_modal .contactPick_list > li {
+        padding: 15px !important;
+    }
+    .sms_modal .modal_sub {
+        padding: 2.6042vw;
+    }
+    .sms_modal .contactPick .subModal_submit {
+        margin-bottom: 2.6042vw;
+    }
+
     /* 내 정보 수정 */
     .info_modify .infoModify_form {
         padding: 0 25px;
@@ -2289,9 +2676,6 @@
         width: 100%;
         margin-top: 15px;
     }
-    .const_mgt .keyword_save button {
-        margin-top: 20px;
-    }
 
     /* 담당업무 설정 */
     .responsibility .tab_wrap {
@@ -2640,6 +3024,27 @@
     }
     .send_btn_m img {
         width: 25px;
+    }
+
+    /* SMS 보내기 */
+    .sms_modal .tab_wrap {
+        padding: 0 20px;
+    }
+    .sms_modal .tab_wrap button {
+        font-size: 16px !important;
+    }
+    .sms_modal .tab_index {
+        padding: 15px 0;
+    }
+    .sms_modal .tab_index li {
+        font-size: 15px;
+    }
+    .sms_modal .tab_box {
+        padding: 20px;
+    }
+    .sms_modal .modal_submit {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     /* 모바일 메뉴 (로그인) */
@@ -3223,6 +3628,19 @@
     .info_btn button {
         padding: 15px 0 !important;
         font-size: 16px !important;
+    }
+
+    /* header.css */
+
+    /* SMS 보내기 */
+    .sms_modal .tab_index li {
+        font-size: 14px;
+    }
+    .sms_modal .tab_box {
+        height: 68vh;
+    }
+    .sms_modal .modal_bottom {
+        padding-top: 20px;
     }
 
     /* 메인페이지 */

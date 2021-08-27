@@ -613,7 +613,7 @@
               </div>
               <!-- 비상연락망 (SMS) -->
               <div id="contact_tab3" class="eContact tab_content">
-                <ul class="contactList">
+                <ul class="eContactList contactList">
                   <li>
                     <p>1. 홍길동</p>
                     <span>010-2602-6050</span>
@@ -647,6 +647,26 @@
           </div>
         </div>
       </div>
+      <!-- 템플릿 추가 (SMS) -->
+      <div class="addTemplate modal_sub">
+        <button class="close_box"></button>
+        <form action="">
+          <ul>
+            <li>
+              <p><sub></sub>템플릿 명칭</p>
+              <input type="text" />
+            </li>
+            <li>
+              <p><sub></sub>내용</p>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </li>
+          </ul>
+        </form>
+        <div class="subModal_submit">
+          <button type="reset">취소</button>
+          <button type="button">추가</button>
+        </div>
+      </div>      
       <!-- 그룹편집 (SMS) -->
       <div class="groupEdit modal_sub">
         <button class="close_box"></button>
@@ -685,29 +705,9 @@
             <button class="addPN_btn">추가</button>
           </div>
         </div>
-        <div class="mSub_submit">
+        <div class="subModal_submit">
           <button type="reset">취소</button>
           <button type="button">확인</button>
-        </div>
-      </div>
-      <!-- 템플릿 추가 (SMS) -->
-      <div class="addTemplate modal_sub">
-        <button class="close_box"></button>
-        <form action="">
-          <ul>
-            <li>
-              <p><sub></sub>템플릿 명칭</p>
-              <input type="text" />
-            </li>
-            <li>
-              <p><sub></sub>내용</p>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-            </li>
-          </ul>
-        </form>
-        <div class="mSub_submit">
-          <button type="reset">취소</button>
-          <button type="button">추가</button>
         </div>
       </div>
       <!-- 연락처 선택 (SMS) -->
@@ -721,10 +721,12 @@
                 <input type="checkbox" name="contact_user" id="contact_user0" />
                 <div class="checking"></div>
               </li>
-              <li>홍길동</li>
-              <li>010-2602-6050</li>
-              <li>test@gmail.com</li>
-              <li>지역안전건축센터</li>
+              <div class="wrapper">
+                <li>홍길동</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
             </ul>
           </li>
           <li>
@@ -734,10 +736,12 @@
                 <input type="checkbox" name="contact_user" id="contact_user1" />
                 <div class="checking"></div>
               </li>
-              <li>홍길남</li>
-              <li>010-2602-6050</li>
-              <li>test@gmail.com</li>
-              <li>지역안전건축센터</li>
+              <div class="wrapper">
+                <li>홍길남</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
             </ul>
           </li>
           <li>
@@ -747,10 +751,12 @@
                 <input type="checkbox" name="contact_user" id="contact_user2" />
                 <div class="checking"></div>
               </li>
-              <li>홍길남</li>
-              <li>010-2602-6050</li>
-              <li>test@gmail.com</li>
-              <li>지역안전건축센터</li>
+              <div class="wrapper">
+                <li>홍길남</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
             </ul>
           </li>
           <li>
@@ -760,10 +766,12 @@
                 <input type="checkbox" name="contact_user" id="contact_user3" />
                 <div class="checking"></div>
               </li>
-              <li>홍길남</li>
-              <li>010-2602-6050</li>
-              <li>test@gmail.com</li>
-              <li>지역안전건축센터</li>
+              <div class="wrapper">
+                <li>홍길남</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
             </ul>
           </li>
           <li>
@@ -773,10 +781,12 @@
                 <input type="checkbox" name="contact_user" id="contact_user4" />
                 <div class="checking"></div>
               </li>
-              <li>홍길남</li>
-              <li>010-2602-6050</li>
-              <li>test@gmail.com</li>
-              <li>지역안전건축센터</li>
+              <div class="wrapper">
+                <li>홍길남</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
             </ul>
           </li>
         </ul>
@@ -795,11 +805,12 @@
           <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
           엑셀 업로드
         </button>
-        <div class="mSub_submit">
+        <div class="subModal_submit">
           <button type="reset">취소</button>
           <button type="button">선택</button>
         </div>
       </div>
+      <div class="subModal_bg"></div>
     </div>
 
     <!-- 내 정보 보기 -->
@@ -1544,7 +1555,7 @@
                               <input type="text" placeholder="키워드를 입력해주세요." />
                             </li>
                             <li>
-                              <div class="mSub_submit">
+                              <div class="subModal_submit">
                                 <button type="reset" class="kSave_cancel">취소</button>
                                 <button type="button" class="kSave_save">저장</button>
                               </div>
