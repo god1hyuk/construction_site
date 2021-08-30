@@ -1369,7 +1369,6 @@ a.ui-button:active,
 }
 /* 검색결과 리스트 */
 .sub_page .result_container .result_list {
-  
   margin-top: 14px;
 }
 .sub_page .result_container .subject_wrap {
@@ -1377,6 +1376,10 @@ a.ui-button:active,
   background: #e8eef8;
   border-top: 2px solid #192b80;
   border-bottom: 1px solid #d0d1d2;
+}
+.sub_page .result_container .subject {
+  display: flex;
+  align-items: center;
 }
 .sub_page .result_container .subject > li {
   padding: 15px 0;
@@ -1774,6 +1777,253 @@ input[type="file"] {
   border: 1px solid #c0c9cb;
 }
 
+/* 공사장 점검 계획 등록 */
+.constPlan_enroll {
+  /* display: block; */
+}
+.constPlan_enroll .form_wrap {
+  height: 60vh;
+  overflow-y: scroll;
+}
+.cpEnroll_form {
+  width: 67.4074vh;
+  margin-top: 3.7037vh;
+  border: 1px solid #d7d7d7;
+}
+.cpEnroll_form > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3889vh 2.3148vh;
+}
+.cpEnroll_form > li:not(:last-child) {
+  border-bottom: 1px solid #d7d7d7;
+}
+.cpEnroll_form > li > p {
+  width: 25%;
+  font-size: 1.6667vh;
+  padding: 2.7778vh 0;
+}
+.cpEnroll_form .input_wrap,
+.cpEnroll_form .select_wrap,
+.cpEnroll_form .check_list,
+.cpEnroll_form textarea {
+  width: 75%;
+}
+.cpEnroll_form input,
+.cpEnroll_form select,
+.cpEnroll_form button {
+  height: 4.6296vh;
+}
+.cpEnroll_form .check_list li {
+  display: flex;
+  position: relative;
+  margin-right: 3.2407vh;
+}
+.cpEnroll_form .checking {
+  margin-right: 10px;
+}
+.cpEnroll_form .datepicker {
+  width: 80%;
+}
+.cpEnroll_form > li button {
+  width: 20%;
+  font-size: 1.4815vh;
+  margin-left: 15px;
+}
+.cpEnroll_form > li:nth-child(4) input,
+.cpEnroll_form select {
+  width: 100%;
+}
+.cpEnroll_form > li:nth-child(4) input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #28344c;
+}
+.cpEnroll_form textarea {
+  height: 11.1111vh;
+  background: #f3f5f6;
+  border-color: #cccfd8;
+}
+.constPlan_enroll .result_btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  margin-top: 1.8519vh;
+}
+.constPlan_enroll .result_btn button {
+  padding: 0 1.6667vh;
+}
+.constPlan_enroll .add_btn {
+  height: 4.6296vh;
+}
+.constPlan_enroll .add_btn img {
+  margin-right: 12px;
+}
+.constPlan_enroll .exel {
+  position: absolute;
+  right: 0;
+  height: 3.7037vh;
+  font-size: 15px;
+  border-radius: 2px;
+}
+.cpEnroll_list {
+  margin-top: 2.7778vh;
+}
+.cpEnroll_item {
+  display: flex;
+  align-items: center;
+  padding: 1.8519vh 0;
+  background: #f4f6f9;
+}
+.cpEnroll_item:last-child {
+  margin-top: 2px;
+}
+.cpEnroll_item li {
+  display: flex;
+  align-items: center;
+  font-size: 1.3889vh;
+}
+.cpEnroll_item li:first-child {
+  width: 10%;
+  justify-content: center;
+}
+.cpEnroll_item li:nth-child(2) {
+  width: 20%;
+  border-right: 1px solid #cccfd8;
+}
+.cpEnroll_item li:nth-child(3) {
+  width: 50%;
+  border-right: 1px solid #cccfd8;
+}
+.cpEnroll_item li:nth-child(4) {
+  width: 18%;
+}
+.cpEnroll_item li:nth-child(3),
+.cpEnroll_item li:nth-child(4) {
+  padding-left: 1.8519vh;
+}
+.cpEnroll_item li:last-child {
+  width: 12%;
+  justify-content: center;
+}
+.cpEnroll_item li:last-child button {
+  height: 2.3148vh;
+  font-size: 1.2037vh;
+  color: #e45151;
+  background: #fff;
+  border: 1px solid #e45151;
+  border-radius: 3px;
+}
+.cpEnroll_item li:nth-child(2) li {
+  justify-self: flex-start;
+}
+.cpEnroll_item li:first-child strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3148vh;
+  height: 2.3148vh;
+  color: #fff;
+  background: #192b80;
+  border-radius: 3px;
+}
+.constPlan_enroll .modal_bottom {
+  padding-top: 3.1481vh;
+}
+/* 자문단 선택 */
+.advisoryGroup {
+  /* display: block; */
+  top: 10%;
+  left: 50%;
+  padding: 3.7037vh;
+}
+.aGroup_search {
+  padding: 0 2.3148vh;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+}
+.aGroup_search input,
+.aGroup_search select,
+.aGroup_search button {
+  height: 40px;
+  /* height: 3.7037vh; */
+}
+.aGroup_search li {
+  display: flex;
+  align-items: center;
+  padding: 1.3889vh 0;
+}
+.aGroup_search li p {
+  font-family: 'NotoSansKR-Bold';
+  font-size: 1.6667vh;
+}
+.aGroup_search li:first-child {
+  border-bottom: 1px solid #d7d7d7;
+}
+.aGroup_search p {
+  width: 8.8889vh;
+}
+.aGroup_search .select_wrap:first-child {
+  margin-right: 2.963vh;
+}
+.aGroup_search select {
+  width: 15.7407vh;
+}
+.aGroup_search .input_wrap {
+  width: 100%;
+}
+.aGroup_search input {
+  width: 32.4074vh;
+}
+.aGroup_search button {
+  margin-left: auto;
+  padding: 0 2.1296vh;
+}
+.aGroup_search button img {
+  width: 1.6667vh;
+  margin-right: 0.463vh;
+}
+.aGroup_list {
+  margin-top: 2.7778vh;
+  padding: 2.3148vh;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+}
+.advisoryGroup .result_list {
+  margin-top: 0 !important;
+}
+.advisoryGroup .subject > li:nth-child(1),
+.advisoryGroup .result_item > li:nth-child(1) {
+  width: 10%;
+}
+.advisoryGroup .subject > li:nth-child(2),
+.advisoryGroup .result_item > li:nth-child(2) {
+  width: 25%;
+}
+.advisoryGroup .subject > li:nth-child(3),
+.advisoryGroup .result_item > li:nth-child(3) {
+  width: 25%;
+}
+.advisoryGroup .subject > li:nth-child(4),
+.advisoryGroup .result_item > li:nth-child(4) {
+  width: 20%;
+}
+.advisoryGroup .subject > li:nth-child(5),
+.advisoryGroup .result_item > li:nth-child(5) {
+  width: 20%;
+}
+.aGroup_list .result_container .result_bottom {
+  margin-top: 2.963vh;
+}
+.advisoryGroup .subModal_submit {
+  margin-top: 3.2407vh;
+}
+.advisoryGroup .subModal_submit button {
+  width: 86px;
+  height: 40px;
+}
 
 /* 지도 & 로드뷰 */
 .const_info .map_wrap {

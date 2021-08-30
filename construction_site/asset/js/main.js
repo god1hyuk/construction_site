@@ -207,13 +207,6 @@ $(function () {
     $(this).addClass("active");
     $("#" + tab_id).addClass('active');
   });
-  $(".const_info .tab_index li").click(function () {
-    var tab_id = $(this).attr('data-tab');
-    $(".const_info .tab_index li").removeClass("active");
-    $(".const_info .tab_content").removeClass("active");
-    $(this).addClass("active");
-    $("#" + tab_id).addClass('active');
-  });
 });
 
 // 날씨정보 영역
@@ -557,10 +550,6 @@ $(function () {
       $("body").css("overflow", "visible");
     });
     $(".sms_modal .tab_index > li").click(function () {
-      $(".sms_modal .tab_index > li").removeClass("active");
-      $(this).addClass("active");
-    });
-    $(".sms_modal .tab_index > li").click(function () {
       var tab_id = $(this).attr('data-tab');
       $(".sms_modal .tab_index > li").removeClass("active");
       $(".sms_modal .tab_content").removeClass("active");
@@ -646,12 +635,40 @@ $(function () {
       $("body").css("overflow", "visible");
     });
   });
+  // 공사장 점검 계획 등록
+  $(".constCheck_tab .tab_index > li").click(function () {
+    var tab_id = $(this).attr('data-tab');
+    $(".constCheck_tab .tab_index > li").removeClass("active");
+    $(this).addClass("active");
+    $(".constCheck_tab .tab_content").removeClass("active");
+    $("#" + tab_id).addClass('active');
+  });
+  $(".cPlanEnroll_btn").click(function () {
+    $(".constPlan_enroll").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".constPlan_enroll .close_btn").click(function () {
+      $(".constPlan_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".constPlan_enroll .modal_submit button:first-child").click(function () {
+      $(".constPlan_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".constPlan_enroll .advisoryGroup_btn").click(function () {
+      $(".advisoryGroup").fadeIn(300);
+      $(".advisoryGroup .close_box").click(function () {
+        $(".advisoryGroup").fadeOut(300);
+      });
+      $(".advisoryGroup .subModal_submit button:first-child").click(function () {
+        $(".advisoryGroup").fadeOut(300);
+      });
+    });
+  });
 });
 
 // 파일 업로드
 $(function(){ 
   let fileTarget = $('input[type="file"]');
-  console.log(fileTarget);
   fileTarget.on('change', function () {
     let fileName = $(this).val().split('\\');
     $(this).next('.upload_name').val(fileName[fileName.length-1]);

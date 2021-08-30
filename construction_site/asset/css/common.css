@@ -146,6 +146,9 @@ header .title {
 .wrapper {
   display: flex;
 }
+.check_list {
+  display: flex;
+}
 
 /* Input */
 input, select {
@@ -193,6 +196,9 @@ label {
   background-image: url(../images/icon/date_icon.png);
   background-repeat: no-repeat;
   background-position: 10px center;
+}
+.ui-datepicker {
+  z-index: 990 !important;
 }
 button {
   display: flex;
@@ -302,6 +308,12 @@ input[type="radio"] + .checking.active::before {
 /* 탭 */
 .tab_index li:hover {
   cursor: pointer;
+}
+.tab_content {
+  display: none;
+}
+.tab_content.active {
+  display: block;
 }
 .sub_page .tab_index li.active {
   color: #fff;
