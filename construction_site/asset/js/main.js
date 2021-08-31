@@ -655,6 +655,9 @@ $(function () {
       $("body").css("overflow", "visible");
     });
     $(".constPlan_enroll .advisoryGroup_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
       $(".advisoryGroup").fadeIn(300);
       $(".advisoryGroup .close_box").click(function () {
         $(".advisoryGroup").fadeOut(300);
@@ -664,6 +667,12 @@ $(function () {
       });
     });
   });
+  // 자문단 선택
+  if ($(window).width() <= 540 ) {
+    $(".aGroup_list .result_item > li:nth-child(2)").prepend("<span>분야</span>");
+    $(".aGroup_list .result_item > li:nth-child(3)").prepend("<span>부서</span>");
+    $(".aGroup_list .result_item > li:nth-child(4)").prepend("<span>성명</span>");
+  }
 });
 
 // 파일 업로드

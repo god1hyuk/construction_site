@@ -273,7 +273,8 @@ button {
   top: 0;
   left: 0;
 }
-input[type="checkbox"] + .checking {
+input[type="checkbox"] + .checking,
+.checking {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -436,7 +437,7 @@ input[type="radio"] + .checking.active::before {
   border-top: 4px solid #5479f7;
   border-radius: 5px;
   box-shadow: 0px 1px 4px 0px rgba(35, 31, 32, 0.35);
-  z-index: 900;
+  z-index: 997;
 }
 /* subModal_submit */
 .subModal_submit {
@@ -475,4 +476,60 @@ input[type="radio"] + .checking.active::before {
   color: #fff;
   background: #192b80;
   border-radius: 5px;
+}
+
+/* result_container */
+.result_container .subject {
+  display: flex;
+  align-items: center;
+}
+.result_container .subject_wrap {
+  background: #e8eef8;
+  border-top: 2px solid #192b80;
+  border-bottom: 1px solid #d0d1d2;
+}
+.result_container .result_wrap {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #464646;
+}
+.result_container .result > li {
+  position: relative;
+  color: #555;
+  background: #fff;
+  transition: background .1s;
+}
+.result_container .result > li:hover {
+  background: #f7f9fd;
+  cursor: pointer;
+}
+.result_container .result_item {
+  display: flex;
+  align-items: center;
+}
+.result_container .result_item li label {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.search_container .checking {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #eaeaea;
+}
+.search_container .checking.active {
+  background-color: #5479f7;
+  background-image: url(../images/icon/search_check.png);
+  border: none;
+}
+.result_container .result > li:not(:last-child) {
+  border-bottom: 1px solid #d0d1d2;
+}
+.result_container .result_bottom {
+  position: relative;
 }
