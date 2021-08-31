@@ -892,7 +892,6 @@
     .const_mgt .searchFilter_list {
         height: 100%;
         padding-top: 64px;
-        /* padding-bottom: 250px; */
     }
     .const_mgt .searchFilter_list form > ul > li {
         padding: 25px 30px;
@@ -1360,7 +1359,59 @@
         margin-left: 0 !important;
         padding: 30px 0;
     }
-    
+
+    /* 공사장 점검 계획 등록 */
+    .constPlan_enroll .form_wrap {
+        padding: 0 30px;
+        height: 68vh;
+        background: #fff;
+    }
+    .cpEnroll_form {
+        width: 100%;
+    }
+    .cpEnroll_form > li {
+        padding: 15px 25px;
+    }
+    .cpEnroll_form > li > p {
+        font-size: 18px;
+    }
+    .cpEnroll_form > li button {
+        font-size: 16px;
+    }
+    .cpEnroll_form input, 
+    .cpEnroll_form select, 
+    .cpEnroll_form button {
+        height: 50px;
+    }
+    .cpEnroll_form textarea {
+        height: 120px;
+    }
+    .constPlan_enroll .result_btn button {
+        padding: 0 18px;
+    }
+    .constPlan_enroll .add_btn {
+        height: 50px;
+    }
+    .constPlan_enroll .exel {
+        height: 40px;
+    }
+    .cpEnroll_item {
+        padding: 20px 0;
+    }
+    .cpEnroll_item li {
+       font-size: 15px; 
+    }
+    .cpEnroll_item li:first-child strong {
+        width: 25px;
+        height: 25px;
+    }
+    .constPlan_enroll .modal_bottom {
+        padding-top: 35px;
+    }
+    .cpEnroll_item li:last-child button {
+        height: 25px;
+        font-size: 13px;
+    }
 
     /* 카피라이트 */
     .copyright {
@@ -2057,6 +2108,12 @@
         padding: 25px 0;
     }
 
+    /* 공사장 점검 계획 등록 */
+    .constPlan_enroll .form_wrap {
+        height: 62vh;
+        padding: 0 25px;
+    }
+
     /* 카피라이트 */
     .copyright {
         margin-left: -25px;
@@ -2160,6 +2217,14 @@
     /* 공사장 정보보기 */
     .const_info .title_wrap::after {
         width: 58%;
+    }
+
+    /* 공사장 점검 계획 등록 */
+    .cpEnroll_form .datepicker {
+        width: 70%;
+    }
+    .cpEnroll_form > li button {
+        width: 30%;
     }
 
     /* 로그인 페이지 */
@@ -2834,6 +2899,62 @@
         font-size: 18px;
     }
 
+    /* 공사장 점검 계획 등록 */
+    .constPlan_enroll .form_wrap {
+        height: 58vh;
+    }
+    .cpEnroll_form > li {
+        flex-direction: column;
+        align-items: start;
+    }
+    .cpEnroll_form > li > p {
+        width: max-content;
+        font-size: 16px;
+    }
+    .cpEnroll_form .input_wrap, 
+    .cpEnroll_form .select_wrap, 
+    .cpEnroll_form .check_list, 
+    .cpEnroll_form textarea {
+        width: 100%;
+    }
+    .cpEnroll_item {
+        flex-wrap: wrap;
+        justify-content: flex-start !important;
+        position: relative;
+    }
+    .cpEnroll_item {
+        padding: 20px;
+    }
+    .cpEnroll_item li:nth-child(1) {
+        width: auto;
+        justify-content: start;
+    }
+    .cpEnroll_item li:nth-child(2) {
+        width: max-content;
+        margin-left: 10px;
+        border-right: none;
+    }
+    .cpEnroll_item li:nth-child(3) {
+        width: 100%;
+        margin-top: 20px;
+        padding-left: 0;
+        border-right: none;
+    }
+    .cpEnroll_item li:nth-child(4) {
+        width: max-content;
+        margin-top: 15px;
+        margin-left: auto;
+        padding-left: 0;
+    }
+    .cpEnroll_item li:nth-child(5) {
+        width: max-content;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+    .constPlan_enroll .modal_bottom {
+        padding-top: 25px;
+    }
+    
     /* 로그인 페이지 */
     .login_page .login_box .loginBox_title {
         padding-top: 20px;
@@ -3490,6 +3611,22 @@
     }
     .const_info .result_bottom .result_btn {
         padding: 0 20px;
+    }
+
+    /* 공사장 점검 계획 등록 */
+    .constPlan_enroll .form_wrap {
+        padding: 0 20px;
+    }
+    .cpEnroll_form > li:first-child .input_wrap {
+        flex-direction: column;
+    }
+    .cpEnroll_form .datepicker {
+        width: 100%;
+    }
+    .cpEnroll_form > li button {
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0;
     }
 
     /* 로그인 페이지 */

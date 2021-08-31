@@ -153,7 +153,13 @@ header .title {
 /* Input */
 input, select {
   color: #2c2c2c;
-  padding: 0 16px;
+  padding: 0 15px;
+  background: #f3f5f6;
+  border: 1px solid #cccfd8;
+}
+textarea {
+  color: #2c2c2c;
+  padding: 15px;
   background: #f3f5f6;
   border: 1px solid #cccfd8;
 }
