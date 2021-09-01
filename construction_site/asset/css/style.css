@@ -1589,6 +1589,72 @@ a.ui-button:active,
   margin-left: 2.3148vh;
 }
 
+/* 그룹관리 */
+.group_mgt .form_wrap {
+  height: 50vh;
+  overflow-y: scroll;
+}
+.group_mgt .group_add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 18px 25px;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+}
+.group_mgt .group_add p {
+  font-size: 18px;
+  margin-right: 75px;
+}
+.group_mgt .group_add input,
+.group_mgt .group_add button {
+  height: 50px;
+}
+.group_mgt .group_add input {
+  width: 460px;
+}
+.group_mgt .group_add button {
+  margin-left: 10px;
+  padding: 0 20px;
+}
+.group_mgt .group_list {
+  margin-top: 30px;
+  padding: 30px;
+  background: #f9fafb;
+  border: 1px solid #d7d7d7;
+}
+.group_mgt .subject > li:nth-child(1),
+.group_mgt .result_item > li:nth-child(1) {
+  width: 10%;
+}
+.group_mgt .subject > li:nth-child(2),
+.group_mgt .result_item > li:nth-child(2) {
+  width: 10%;
+}
+.group_mgt .subject > li:nth-child(3),
+.group_mgt .result_item > li:nth-child(3) {
+  width: 60%;
+}
+.group_mgt .subject > li:nth-child(4),
+.group_mgt .result_item > li:nth-child(4) {
+  width: 20%;
+}
+.group_mgt .result_item li label {
+  width: 10%;
+}
+.group_mgt .delete_btn {
+  width: 110px;
+  height: 40px;
+  margin-top: 20px;
+}
+.group_mgt .pagination {
+  margin: 45px 0;
+}
+.group_mgt .modal_bottom {
+  padding-top: 0;
+}
+
 /* 공사장 정보보기 */
 .const_info .title_wrap::after {
   width: 84%;
@@ -1879,10 +1945,6 @@ input[type="file"] {
 .cpEnroll_item li:last-child button {
   height: 2.3148vh;
   font-size: 1.2037vh;
-  color: #e45151;
-  background: #fff;
-  border: 1px solid #e45151;
-  border-radius: 3px;
 }
 .cpEnroll_item li:nth-child(2) li {
   justify-self: flex-start;
@@ -2172,7 +2234,7 @@ input[type="file"] {
   width: 15%;
 }
 .sub_page .insp_result .subject li:nth-child(4) {
-  padding-bottom: 0;
+  padding-top: 12px;
   border-left: 1px solid #d0d1d2;
   border-right: 1px solid #d0d1d2;
 }

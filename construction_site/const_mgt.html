@@ -1103,6 +1103,125 @@
       </div>
     </div>
 
+    <!-- 그룹관리 -->
+    <div id="modal0" class="group_mgt modal_bg" data-value="modal">
+      <div class="modal_wrap">
+        <div class="modal_top d-flex justify-content-center">
+          <h1 class="ns_b">그룹관리</h1>
+          <button id="modal0_off" class="close_btn" data-value="modal"></button>
+        </div>
+        <div class="form_wrap">
+          <div class="group_add">
+            <p class="nt_b">그룹추가</p>
+            <div class="input_wrap">
+              <input type="text" placeholder="그룹명을 입력하세요." />
+              <button class="add_btn">추가</button>
+            </div>
+          </div>
+          <div class="group_list">
+            <div class="result_container">
+              <div class="result_list text-center">
+                <div class="subject_wrap">
+                  <ul class="subject">
+                    <li>
+                      <div class="checking"></div>
+                    </li>
+                    <li>연번</li>
+                    <li>그룹명</li>
+                    <li>등록시설물</li>
+                  </ul>
+                </div>
+                <div class="result_wrap">
+                  <ul class="result">
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>5</li>
+                        <li>하반기 정기점검</li>
+                        <li>21</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>4</li>
+                        <li>상반기 정기점검</li>
+                        <li>2</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>3</li>
+                        <li>우기대비 수시점검</li>
+                        <li>13</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>2</li>
+                        <li>해빙기 점검</li>
+                        <li>9</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>1</li>
+                        <li>하반기 정기점검</li>
+                        <li>73</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>      
+            </div>
+            <div class="result_bottom">
+              <button class="delete_btn">선택그룹 삭제</button>
+            </div>
+          </div>
+          <!-- 페이지네이션 -->
+          <ul class="pagination">
+            <li class="prev move"></li>
+            <li class="page_item active">1</li>
+            <li class="page_item">2</li>
+            <li class="page_item">3</li>
+            <li class="page_item">4</li>
+            <li class="page_item">5</li>
+            <li class="next move"></li>
+            <li class="superNext move"></li>
+          </ul>
+        </div>
+        <div class="modal_bottom d-flex justify-content-center">
+          <div class="modal_submit nt_b d-flex justify-content-center">
+            <button type="reset" id="modal0_cancel" data-value="modal">취소</button>
+            <button type="submit">보내기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="main_content">
       <div class="container">
         <div class="row">
@@ -1591,7 +1710,7 @@
                 </div>
                 <div class="result_option d-flex">
                   <button class="resp_btn">담당업무</button>
-                  <button>재난관리 그룹추가</button>
+                  <button id="modal0_on" class="groupMgt_btn" data-value="modal">재난관리 그룹추가</button>
                 </div>
               </div>
               <!-- 검색결과 리스트 -->
