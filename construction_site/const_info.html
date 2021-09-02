@@ -823,6 +823,194 @@
       </div>
     </div>
 
+    <!-- 공사장 점검 결과 등록 -->
+    <div class="constResult_enroll modal_bg">
+      <div class="modal_wrap">
+        <div class="modal_top d-flex justify-content-center">
+          <h1 class="ns_b">공사장 점검 결과 등록</h1>
+          <button class="close_btn"></button>
+        </div>
+        <div class="form_wrap">
+          <div class="cResult_top">
+            <div class="select_wrap">
+              <h3><sub></sub>체크리스트</h3>
+              <select name="" id="">
+                <option value="">건축법</option>
+              </select>
+            </div>
+            <button class="blue_btn">
+              <!-- <img src="" alt="분야추가_아이콘" /> -->
+              분야 추가
+            </button>
+          </div>
+          <ul class="cResult_menu">
+            <li>
+              <button>
+                철거공사(전문가)
+              </button>
+              <div class="result_container">
+                <div class="result_list">
+
+                </div>
+                <button>항목 추가</button>
+              </div>
+            </li>
+            <li>
+              <button>
+                굴토공사(전문가)
+              </button>
+              <form action="">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="modal_bottom">
+          <div class="modal_submit nt_b d-flex justify-content-center">
+            <button>취소</button>
+            <button>저장</button>
+          </div>
+        </div>
+      </div>
+      <!-- 자문단 선택 -->
+      <div class="advisoryGroup modal_sub">
+        <button class="close_box"></button>
+        <form action="">
+          <ul class="aGroup_search">
+            <li>
+              <p>점검분야</p>
+              <div class="select_wrap">
+                <select name="" id="">
+                  <option value="">정기안전점검</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <p>부서</p>
+              <div class="select_wrap">
+                <select name="" id="">
+                  <option value="">전체</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <p>성명</p>
+              <div class="input_wrap">
+                <input type="text" />
+                <button class="blue_btn">
+                  <img src="asset/images/icon/searching.png" alt="검색_아이콘" />
+                  검색  
+                </button>
+              </div>
+            </li>
+          </ul>
+        </form>
+        <div class="aGroup_list">
+          <div class="result_container">
+            <div class="result_list text-center">
+              <div class="subject_wrap">
+                <ul class="subject">
+                  <li>
+                    <div class="checking"></div>
+                  </li>
+                  <li>분야</li>
+                  <li>부서</li>
+                  <li>성명</li>
+                  <li>중복여부</li>
+                </ul>
+              </div>
+              <div class="result_wrap">
+                <ul class="result">
+                  <li>
+                    <ul class="result_item">
+                      <li>
+                        <label for="result_checking0"></label>
+                        <input type="checkbox" name="result_checking" id="result_checking0" />
+                        <div class="checking"></div>
+                      </li>
+                      <li>정기안전점검</li>
+                      <li>지역안전건축센터</li>
+                      <li>홍길동</li>
+                      <li>중복</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul class="result_item">
+                      <li>
+                        <label for="result_checking0"></label>
+                        <input type="checkbox" name="result_checking" id="result_checking0" />
+                        <div class="checking"></div>
+                      </li>
+                      <li>정기안전점검</li>
+                      <li>지역안전건축센터</li>
+                      <li>홍길동</li>
+                      <li></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul class="result_item">
+                      <li>
+                        <label for="result_checking0"></label>
+                        <input type="checkbox" name="result_checking" id="result_checking0" />
+                        <div class="checking"></div>
+                      </li>
+                      <li>정기안전점검</li>
+                      <li>지역안전건축센터</li>
+                      <li>홍길동</li>
+                      <li>중복</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul class="result_item">
+                      <li>
+                        <label for="result_checking0"></label>
+                        <input type="checkbox" name="result_checking" id="result_checking0" />
+                        <div class="checking"></div>
+                      </li>
+                      <li>정기안전점검</li>
+                      <li>지역안전건축센터</li>
+                      <li>홍길동</li>
+                      <li></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul class="result_item">
+                      <li>
+                        <label for="result_checking0"></label>
+                        <input type="checkbox" name="result_checking" id="result_checking0" />
+                        <div class="checking"></div>
+                      </li>
+                      <li>정기안전점검</li>
+                      <li>지역안전건축센터</li>
+                      <li>홍길동</li>
+                      <li>중복</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="result_bottom d-flex align-items-center justify-content-center">
+                <!-- 페이지네이션 -->
+                <ul class="pagination">
+                  <li class="prev move"></li>
+                  <li class="page_item active">1</li>
+                  <li class="page_item">2</li>
+                  <li class="page_item">3</li>
+                  <li class="page_item">4</li>
+                  <li class="page_item">5</li>
+                  <li class="next move"></li>
+                  <li class="superNext move"></li>
+                </ul>
+              </div>
+            </div>      
+          </div>
+        </div>
+        <div class="subModal_submit">
+          <button>취소</button>
+          <button>확인</button>
+        </div>
+      </div>
+    </div>       
+
     <!-- 공사장 점검계획 등록 -->
     <div class="constPlan_enroll modal_bg">
       <div class="modal_wrap">
@@ -1073,7 +1261,7 @@
         </div>
       </div>
       <div class="subModal_bg"></div>
-    </div>
+    </div> 
 
     <div class="main_content">
       <div class="container">
@@ -1168,7 +1356,7 @@
               </ul>
               <div class="cInfoList_btn d-flex justify-content-end">
                 <button class="cProgress_btn blue_btn">진행사항 수정</button>
-                <button>목록</button>
+                <button class="dimgray_btn">목록</button>
               </div>
             </div>
             <!-- 공사장 점검 탭 -->
@@ -1384,7 +1572,7 @@
                         <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
                         엑셀
                       </button>
-                      <button type="button">등록</button>
+                      <button type="button" class="cResultEnroll_btn">등록</button>
                     </div>
                   </div>
                 </div>

@@ -1368,7 +1368,7 @@ a.ui-button:active,
   margin-left: 8px;
 }
 /* 검색결과 리스트 */
-.const_mgt .result_container .result_list,
+.const_mgt .search_result .result_list,
 .constCheck_tab .result_container .result_list {
   margin-top: 14px;
 }
@@ -1376,12 +1376,11 @@ a.ui-button:active,
 .constCheck_tab .result_container .subject_wrap {
   padding: 0 15px;
 }
-.const_mgt .result_container .subject > li,
-.constcheck_tab .result_container .subject > li {
+.const_mgt .result_container .subject > li {
   padding: 15px 0;
 }
 .const_mgt .result_container .result_wrap,
-.constcheck_tab .result_container .result_wrap {
+.constCheck_tab .result_container .result_wrap {
   padding: 15px;
 }
 .const_mgt .search_result .subject li:nth-child(1),
@@ -1598,12 +1597,13 @@ a.ui-button:active,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
-  padding: 18px 25px;
+  margin-top: 3.7037vh;
+  padding: 1.6667vh 2.3148vh;
   background: #fff;
   border: 1px solid #d7d7d7;
 }
 .group_mgt .group_add p {
+  width: max-content;
   font-size: 18px;
   margin-right: 75px;
 }
@@ -1619,8 +1619,8 @@ a.ui-button:active,
   padding: 0 20px;
 }
 .group_mgt .group_list {
-  margin-top: 30px;
-  padding: 30px;
+  margin-top: 2.7778vh;
+  padding: 2.7778vh;
   background: #f9fafb;
   border: 1px solid #d7d7d7;
 }
@@ -1643,16 +1643,42 @@ a.ui-button:active,
 .group_mgt .result_item li label {
   width: 10%;
 }
-.group_mgt .delete_btn {
-  width: 110px;
-  height: 40px;
+.group_mgt .result_bottom {
   margin-top: 20px;
+}
+.group_mgt .result_bottom button {
+  height: 40px;
+  padding: 0 15px;
+}
+.group_mgt .dimgray_btn {
+  margin-right: 10px;
 }
 .group_mgt .pagination {
   margin: 45px 0;
 }
 .group_mgt .modal_bottom {
   padding-top: 0;
+}
+/* 삭제 경고팝업 (그룹관리) */
+.delete_pop {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  padding: 30px;
+}
+.delete_pop p {
+  line-height: 24px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.delete_pop .subModal_submit {
+  padding-top: 28px;
+  border-top: 1px solid #192b80;
+}
+.delete_pop button {
+  width: 86px;
+  height: 40px;
 }
 
 /* 공사장 정보보기 */
@@ -1794,20 +1820,79 @@ input[type="file"] {
   border: none;
   border-bottom: 1px solid #000;
 }
-.file_btn {
+.cProgress_list .file_btn {
   width: 30%;
   height: 32px;
   font-size: 1.2037vh;
-  background: rgb(244,246,249);
-  background: linear-gradient(0deg, rgba(244,246,249,1) 0%, rgba(255,255,255,1) 100%);
-  border-radius: 5px;
-  border: 1px solid #c0c9cb;
+}
+
+/* 공사장 점검 결과 등록 */
+.constResult_enroll .modal_wrap {
+  width: 946px;
+}
+.cResult_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.cResult_top select,
+.cResult_top button {
+  height: 40px;
+}
+.cResult_top select {
+  width: 230px;
+  margin-left: 25px;
+}
+.cResult_top button {
+  width: 120px;
+}
+.cResult_menu > li > button {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+}
+.cResult_menu > li:first-child > button {
+  color: #fff;
+  background: #192b80;
+}
+.cResult_menu > li:last-child {
+  margin-top: 40px;
+}
+.cResult_menu > li:last-child > button {
+  background: #edeff2;
+  border: 1px solid #192b80;
+}
+.constResult_enroll .result_container,
+.constResult_enroll form { 
+  display: none;
+  padding: 0 25px;
+}
+.constResult_enroll .result_list {
+  width: 100%;
+  height: 250px;
+  margin-top: 25px;
+  background: pink;
+}
+.constResult_enroll textarea {
+  width: 100%;
+  margin-top: 25px;
+}
+.constResult_enroll .result_container > button {
+  width: 120px;
+  height: 40px;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: auto;
+  background: #72777e;
+  border: 1px solid #3d3f43;
+  border-radius: 2px;
 }
 
 /* 공사장 점검 계획 등록 */
-.constPlan_enroll {
-  /* display: block; */
-}
 .constPlan_enroll .form_wrap {
   height: 60vh;
   overflow-y: scroll;
@@ -2176,17 +2261,11 @@ input[type="file"] {
 }
 .const_info .cInfoList_btn button {
   font-size: 14px;
-  color: #fff;
   margin-top: 25px;
   padding: 14px 20px;
-  border-radius: 2px;
 }
 .const_info .cProgress_btn {
   margin-right: 5px;
-}
-.const_info .cInfoList_btn button:last-child {
-  background: #464646;
-  border: 1px solid #232323;
 }
 
 /* 공사장 점검 탭 */

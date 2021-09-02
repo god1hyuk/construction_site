@@ -1089,6 +1089,64 @@
         padding: 20px 0;
     }
 
+    /* 그룹관리 */
+    .group_mgt .form_wrap {
+        height: 70vh;
+    }
+    .group_mgt .group_add {
+        margin-top: 0;
+        padding: 18px 25px;
+    }
+    .group_mgt .group_add p {
+        margin-right: 0;
+    }
+    .group_mgt .group_add input {
+        width: 54.6875vw;
+      }
+    .group_mgt .form_wrap {
+        padding: 52px 30px 0px;
+        background: #fff;
+    }
+    .group_mgt .result_list {
+        width: auto !important;
+        margin-left: 0 !important;
+    }
+    .group_mgt .result_item {
+        padding: 30px 0;
+    }
+    .group_mgt .result_item > li:nth-child(1) {
+        display: flex;
+        justify-content: start;
+        padding-left: 30px;
+    }
+    .group_mgt .result_item .checking {
+        width: 20px;
+        height: 20px;
+    }
+    .group_mgt .result_item > li:nth-child(2) {
+        display: none;
+    }
+    .group_mgt .result_item > li:nth-child(3) {
+        width: 50%;
+        font-size: 24px;
+    }
+    .group_mgt .result_item > li:nth-child(4) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 40%;
+        padding-right: 30px;
+    }
+    .group_mgt .result_item > li:nth-child(4) p {
+        color: #555;
+    }
+    .group_mgt .result_item > li:nth-child(4) span {
+        width: 100px;
+        padding: 12px 0;
+        background: #e9eef8;
+        margin-left: 24px;
+    }
+
     /* 검색 결과 */
     .const_mgt .search_result .result_top {
         flex-direction: column-reverse;
@@ -1119,7 +1177,7 @@
         font-size: 26px;
     }
     /* 검색결과 리스트 */
-    .const_mgt .result_container .result_list,
+    .const_mgt .search_result .result_list,
     .constCheck_tab .result_container .result_list {
         width: 100vw;
         margin-left: -40px;
@@ -1142,25 +1200,25 @@
     .constCheck_tab .result_container .result > li:hover {
         background: none;
     }
-    .const_mgt .result_container .result > li:nth-child(2n),
+    .const_mgt .search_result .result > li:nth-child(2n),
     .constCheck_tab .result_container .result > li:nth-child(2n) {
         background: #f4f8ff !important;
     }
-    .const_mgt .result_container .result_item,
+    .const_mgt .search_result .result_item,
     .constCheck_tab .result_container .result_item {
         flex-wrap: wrap;
         padding: 45px;
     }
-    .const_mgt .result_container .result_item li,
+    .const_mgt .search_result .result_item li,
     .constCheck_tab .result_container .result_item li {
         text-align: left;
         padding-bottom: 0;
     }
-    .const_mgt .result_container .result_item > li:first-child,
+    .const_mgt .search_result .result_item > li:first-child,
     .constCheck_tab .result_container .result_item > li:first-child {
         display: none; 
     }
-    .const_mgt .result_container .result_item > li:nth-child(2),
+    .const_mgt .search_result .result_item > li:nth-child(2),
     .constCheck_tab .result_container .result_item > li:nth-child(2) {
         display: block;
         width: 100%;
@@ -1169,19 +1227,19 @@
         padding-top: 0;
         padding-bottom: 45px;
     }
-    .const_mgt .result_container .result_item > li:not(:nth-child(2)),
+    .const_mgt .search_result .result_item > li:not(:nth-child(2)),
     .constCheck_tab .result_container .result_item > li:not(:nth-child(2)) {
         width: 50%;
         font-size: 20px;
         padding-top: 35px;
     }
-    .const_mgt .result_container .result_item > li:nth-child(3),
-    .const_mgt .result_container .result_item > li:nth-child(4),
+    .const_mgt .search_result .result_item > li:nth-child(3),
+    .const_mgt .search_result .result_item > li:nth-child(4),
     .constCheck_tab .result_container .result_item > li:nth-child(3),
     .constCheck_tab .result_container .result_item > li:nth-child(4) {
         padding-top: 0;
     }
-    .const_mgt .result_container .result_item > li:not(:nth-child(2)) span,
+    .const_mgt .search_result .result_item > li:not(:nth-child(2)) span,
     .constCheck_tab .result_container .result_item > li:not(:nth-child(2)) span {
         display: inline-block;
         width: 50%;
@@ -1189,8 +1247,8 @@
         margin-right: 26px;
         border-right: 2px solid #d0d0d0;
     }
-    .const_mgt .result_container .pagination,
-    .const_mgt .result_container .exel,
+    .const_mgt .search_result .pagination,
+    .const_mgt .search_result .exel,
     .constCheck_tab .result_container .pagination,
     .constCheck_tab .result_container .exel {
         display: none;
@@ -1776,6 +1834,10 @@
     .info_btn button:first-child {
         margin-right: 0;
     }
+    .modal_bottom .modal_submit {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 
     /* header.css */
 
@@ -2123,6 +2185,14 @@
     .const_mgt .searchFilter_list {
         overflow-y: scroll;
     }
+
+    /* 그룹관리 */
+    .group_mgt .form_wrap {
+        padding-top: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
     /* 검색 결과 */
     .const_mgt .result_container .result_list,
     .constCheck_tab .result_container .result_list {
@@ -2230,6 +2300,7 @@
     .info_modify .title_wrap::after {
         width: 66%;
     }
+
     /* 조건검색 키워드 */
     .const_mgt .search_decision .keyword_wrap {
         flex-direction: column;
@@ -2264,29 +2335,29 @@
         font-size: 24px;
     }
     /* 검색결과 리스트 */
-    .const_mgt .result_container .result_item,
+    .const_mgt .search_result .result_item,
     .constCheck_tab .result_container .result_item {
         flex-direction: column;
         align-items: start;
         padding: 40px;
     }
-    .const_mgt .result_container .result_item > li:nth-child(2),
+    .const_mgt .search_result .result_item > li:nth-child(2),
     .constCheck_tab .result_container .result_item > li:nth-child(2) {
         font-size: 24px;
         margin-left: 0;
         padding-bottom: 0;
     }
-    .const_mgt .result_container .result_item > li:not(:nth-child(2)),
+    .const_mgt .search_result .result_item > li:not(:nth-child(2)),
     .constCheck_tab .result_container .result_item > li:not(:nth-child(2)) {
         width: 100%;
         font-size: 18px;
         padding-top: 35px;
     }
-    .const_mgt .result_container .result_item > li:not(:nth-child(2)) span,
+    .const_mgt .search_result .result_item > li:not(:nth-child(2)) span,
     .constCheck_tab .result_container .result_item > li:not(:nth-child(2)) span {
         width: 30%;
     }
-    .const_mgt .result_container .result_item > li:not(:nth-child(2)) p,
+    .const_mgt .search_result .result_item > li:not(:nth-child(2)) p,
     .constCheck_tab .result_container .result_item > li:not(:nth-child(2)) p {
         width: 70%;
     }
@@ -2855,9 +2926,64 @@
     .responsibility .modal_bottom .modal_submit button {
         font-size: 16px;
     }
+
+    /* 그룹관리 */
+    .group_mgt .form_wrap {
+        height: 65vh;
+    }
+    .group_mgt .group_add {
+        display: block;
+        padding: 20px;
+    }
+    .group_mgt .input_wrap {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .group_mgt .group_add input {
+        width: 80%;
+    }
+    .group_mgt .group_add button {
+        width: 20%;
+    }
+    .group_mgt .group_list {
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+    .group_mgt .result_wrap {
+        border-left: 1px solid #d7d7d7;
+        border-right: 1px solid #d7d7d7;
+    }
+    .group_mgt .result_list {
+        margin-top: 0;
+    }
+    .group_mgt .result_item > li:nth-child(1) {
+        display: none;
+    }
+    .group_mgt .result_item > li:nth-child(3) {
+        font-family: 'NotoSansKR-Bold';
+        font-size: 18px;
+    }
+    .group_mgt .result_item > li:nth-child(4) {
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding-right: 0;
+    }
+    .group_mgt .result_item > li:nth-child(4) span {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .group_mgt .result_bottom {
+        margin-bottom: 20px;
+    }
+    .group_mgt .pagination {
+        display: none;
+    } 
+
     /* 검색 결과 */
     /* 검색결과 리스트 */
-    .const_mgt .result_container .result_item,
+    .const_mgt .search_result .result_item,
     .constCheck_tab .result_container .result_item {
         padding: 30px;
     }
@@ -2959,11 +3085,11 @@
 
     /* 공사장 점검 결과 */
     /* 점검 결과 리스트 */
-    .const_mgt .result_container .result_item > li:nth-child(2),
+    .const_mgt .search_result .result_item > li:nth-child(2),
     .constCheck_tab .result_container .result_item > li:nth-child(2) {
         font-size: 20px;
     }
-    .const_mgt .result_container .result_item > li:not(:nth-child(2)),
+    .const_mgt .search_result .result_item > li:not(:nth-child(2)),
     .constCheck_tab .result_container .result_item > li:not(:nth-child(2)) {
         font-size: 16px;
     }
@@ -3287,6 +3413,10 @@
     .col-4 {
         margin-top: 60px;
         padding: 0 20px;
+    }
+    .modal_bottom .modal_submit {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     /* header.css */
@@ -3724,6 +3854,14 @@
         padding-top: 30px;
     }
 
+    /* 그룹관리 */
+    .group_mgt .group_add p {
+        font-size: 16px;
+    }
+    .group_mgt .result_item > li:nth-child(3) {
+        font-size: 16px;
+    }
+
     /* 검색 결과 */
     .const_mgt .search_result .result_option button {
         font-size: 18px;
@@ -4082,6 +4220,26 @@
         margin-right: 6px;
     }
 
+    /* 그룹관리 */
+    .group_mgt .input_wrap {
+        display: block;
+    }
+    .group_mgt .group_add input {
+        width: 100%;
+    }
+    .group_mgt .group_add button {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .group_mgt .result_item {
+        padding: 25px;
+    }
+    /* 삭제 경고팝업 (그룹관리) */
+    .delete_pop {
+        width: 300px;
+    }
+
     /* 검색결과 */
     .sub_page .search_result .result_option {
         margin-bottom: 20px;
@@ -4105,7 +4263,7 @@
     .constCheck_tab .result_container .result_item > li:not(:nth-child(2)) {
         font-size: 14px;
     }
-    .const_mgt .result_container .result_item > li:not(:nth-child(2)) span,
+    .const_mgt .search_result .result_item > li:not(:nth-child(2)) span,
     .constCheck_tab .result_container .result_item > li:not(:nth-child(2)) span {
         width: 35%;
     }

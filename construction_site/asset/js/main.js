@@ -378,8 +378,6 @@ $(function () {
   });
 });
 
-// 서브메뉴 (아코디언)
-
 // 서브페이지
 $(function () {
   let sideMenu_num;
@@ -526,157 +524,203 @@ $(function () {
   }
 });
 
-// // 모달창
-// $(function () {
-//   // SMS 보내기
-//   $(".sms_send, .sms_send_m").click(function () {
-//     if ($(window).width() <= 1024) {
-//       $(".send_btn_m").fadeOut(300);
-//     }
-//     $(".sms_modal").fadeIn(300);
-//     $("body").css("overflow", "hidden");
-//     $(".sms_modal .close_btn").click(function () {
-//       if ($(window).width() <= 1024) {
-//         $(".send_btn_m").fadeIn(300);
-//       }
-//       $(".sms_modal").fadeOut(300);
-//       $("body").css("overflow", "visible");
-//     });
-//     $(".sms_modal .modal_submit button:first-child").click(function () {
-//       if ($(window).width() <= 1024) {
-//         $(".send_btn_m").fadeIn(300);
-//       }
-//       $(".sms_modal").fadeOut(300);
-//       $("body").css("overflow", "visible");
-//     });
-//     $(".sms_modal .tab_index > li").click(function () {
-//       var tab_id = $(this).attr('data-tab');
-//       $(".sms_modal .tab_index > li").removeClass("active");
-//       $(".sms_modal .tab_content").removeClass("active");
-//       $(this).addClass("active");
-//       $("#" + tab_id).addClass('active');
-//     });
-//     // 템플릿 추가 (SMS)
-//     $(".addTemplate_btn").click(function () {
-//       if ($(window).width() <= 1024) {
-//         $(".subModal_bg").fadeIn(300);
-//       }
-//       $(".addTemplate").fadeIn(300);
-//       $(".addTemplate .close_box").click(function () {
-//         $(".subModal_bg").fadeOut(300);
-//         $(".addTemplate").fadeOut(300);
-//       });
-//       $(".addTemplate .subModal_submit button:first-child").click(function () {
-//         $(".subModal_bg").fadeOut(300);
-//         $(".addTemplate").fadeOut(300);
-//       });
-//     });
-//     // 그룹편집 (SMS)
-//     $(".groupEdit_btn").click(function () {
-//       if ($(window).width() <= 1024) {
-//         $(".subModal_bg").fadeIn(300);
-//       }
-//       $(".groupEdit").fadeIn(300);
-//       $(".groupEdit .close_box").click(function () {
-//         $(".subModal_bg").fadeOut(300);
-//         $(".groupEdit").fadeOut(300);
-//       });
-//       $(".groupEdit .subModal_submit button:first-child").click(function () {
-//         $(".subModal_bg").fadeOut(300);
-//         $(".groupEdit").fadeOut(300);
-//       });
-//     });
-//     // 연락처 추가 (SMS)
-//     $(".contactPick_btn").click(function () {
-//       if ($(window).width() <= 1024) {
-//         $(".subModal_bg").fadeIn(300);
-//       }
-//       $(".contactPick").fadeIn(300);
-//       $(".contactPick .close_box").click(function () {
-//         $(".subModal_bg").fadeOut(300);
-//         $(".contactPick").fadeOut(300);
-//       });
-//       $(".contactPick .subModal_submit button:first-child").click(function () {
-//         $(".subModal_bg").fadeOut(300);
-//         $(".contactPick").fadeOut(300);
-//       });
-//     });
-//   });
-//   // 내 정보 보기
-//   $(".myInfo").hide();
-//   $(".user_name").click(function () {
-//     $(".myInfo").fadeIn(300);
-//     $("body").css("overflow", "hidden");
-//     $(".myInfo .close_btn").click(function () {
-//       $(".myInfo").fadeOut(300);
-//       $("body").css("overflow", "visible");
-//     });
-//   });
-//   // 담당업무 설정
-//   $(".responsibility").hide();
-//   $(".resp_btn").click(function () {
-//     $(".responsibility").fadeIn(300);
-//     $("body").css("overflow", "hidden");
-//     $(".responsibility .close_btn").click(function () {
-//       $(".responsibility").fadeOut(300);
-//       $("body").css("overflow", "visible");
-//     });
-//     $(".responsibility .modal_submit button:first-child").click(function () {
-//       $(".responsibility").fadeOut(300);
-//       $("body").css("overflow", "visible");    
-//     });
-//   });
-//   // 공사장 진행사항 수정
-//   $(".cProgress_btn").click(function () {
-//     $(".constProgress").fadeIn(300);
-//     $("body").css("overflow", "hidden");
-//     $(".constProgress button").click(function () {
-//       $(".constProgress").fadeOut(300);
-//       $("body").css("overflow", "visible");
-//     });
-//   });
-//   // 공사장 점검 계획 등록
-//   $(".constCheck_tab .tab_index > li").click(function () {
-//     var tab_id = $(this).attr('data-tab');
-//     $(".constCheck_tab .tab_index > li").removeClass("active");
-//     $(this).addClass("active");
-//     $(".constCheck_tab .tab_content").removeClass("active");
-//     $("#" + tab_id).addClass('active');
-//   });
-//   $(".cPlanEnroll_btn").click(function () {
-//     $(".constPlan_enroll").fadeIn(300);
-//     $("body").css("overflow", "hidden");
-//     $(".constPlan_enroll .close_btn").click(function () {
-//       $(".constPlan_enroll").fadeOut(300);
-//       $("body").css("overflow", "visible");
-//     });
-//     $(".constPlan_enroll .modal_submit button:first-child").click(function () {
-//       $(".constPlan_enroll").fadeOut(300);
-//       $("body").css("overflow", "visible");
-//     });
-//     // 자문단 선택
-//     $(".constPlan_enroll .advisoryGroup_btn").click(function () {
-//       if ($(window).width() <= 1024) {
-//         $(".subModal_bg").fadeIn(300);
-//       }
-//       $(".advisoryGroup").fadeIn(300);
-//       $(".advisoryGroup .close_box").click(function () {
-//         $(".advisoryGroup").fadeOut(300);
-//         $(".subModal_bg").fadeOut(300);
-//       });
-//       $(".advisoryGroup .subModal_submit button:first-child").click(function () {
-//         $(".advisoryGroup").fadeOut(300);
-//         $(".subModal_bg").fadeOut(300);
-//       });
-//     });
-//   });
-//   if ($(window).width() <= 540 ) {
-//     $(".aGroup_list .result_item > li:nth-child(2)").prepend("<span>분야</span>");
-//     $(".aGroup_list .result_item > li:nth-child(3)").prepend("<span>부서</span>");
-//     $(".aGroup_list .result_item > li:nth-child(4)").prepend("<span>성명</span>");
-//     $(".aGroup_list .result_item > li:nth-child(5)").prepend("<span>중복여부</span>");
-//   }
-// });
+// 모달창
+$(function () {
+  // SMS 보내기
+  $(".sms_send, .sms_send_m").click(function () {
+    if ($(window).width() <= 1024) {
+      $(".send_btn_m").fadeOut(300);
+    }
+    $(".sms_modal").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".sms_modal .close_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
+      $(".sms_modal").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".sms_modal .modal_submit button:first-child").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
+      $(".sms_modal").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".sms_modal .tab_index > li").click(function () {
+      var tab_id = $(this).attr('data-tab');
+      $(".sms_modal .tab_index > li").removeClass("active");
+      $(".sms_modal .tab_content").removeClass("active");
+      $(this).addClass("active");
+      $("#" + tab_id).addClass('active');
+    });
+    // 템플릿 추가 (SMS)
+    $(".addTemplate_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
+      $(".addTemplate").fadeIn(300);
+      $(".addTemplate .close_box").click(function () {
+        $(".subModal_bg").fadeOut(300);
+        $(".addTemplate").fadeOut(300);
+      });
+      $(".addTemplate .subModal_submit button:first-child").click(function () {
+        $(".subModal_bg").fadeOut(300);
+        $(".addTemplate").fadeOut(300);
+      });
+    });
+    // 그룹편집 (SMS)
+    $(".groupEdit_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
+      $(".groupEdit").fadeIn(300);
+      $(".groupEdit .close_box").click(function () {
+        $(".subModal_bg").fadeOut(300);
+        $(".groupEdit").fadeOut(300);
+      });
+      $(".groupEdit .subModal_submit button:first-child").click(function () {
+        $(".subModal_bg").fadeOut(300);
+        $(".groupEdit").fadeOut(300);
+      });
+    });
+    // 연락처 추가 (SMS)
+    $(".contactPick_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
+      $(".contactPick").fadeIn(300);
+      $(".contactPick .close_box").click(function () {
+        $(".subModal_bg").fadeOut(300);
+        $(".contactPick").fadeOut(300);
+      });
+      $(".contactPick .subModal_submit button:first-child").click(function () {
+        $(".subModal_bg").fadeOut(300);
+        $(".contactPick").fadeOut(300);
+      });
+    });
+  });
+  // 내 정보 보기
+  $(".myInfo").hide();
+  $(".user_name").click(function () {
+    $(".myInfo").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".myInfo .close_btn").click(function () {
+      $(".myInfo").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+  });
+  // 담당업무 설정
+  $(".responsibility").hide();
+  $(".resp_btn").click(function () {
+    $(".responsibility").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".responsibility .close_btn").click(function () {
+      $(".responsibility").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".responsibility .modal_submit button:first-child").click(function () {
+      $(".responsibility").fadeOut(300);
+      $("body").css("overflow", "visible");    
+    });
+  });
+  // 그룹관리
+  $(".groupMgt_btn").click(function () {
+    $(".group_mgt").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".group_mgt .close_btn").click(function () {
+      $(".group_mgt").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".group_mgt .modal_submit button:first-child").click(function () {
+      $(".group_mgt").fadeOut(300);
+      $("body").css("overflow", "visible");    
+    });
+    // 삭제 경고팝업 (그룹관리)
+    $(".group_mgt .delete_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
+      $(".group_mgt .delete_pop").fadeIn(300);
+      $(".group_mgt .form_wrap").css("overflow", "hidden");
+      $(".delete_pop .subModal_submit button").click(function () {
+        $(".subModal_bg").fadeOut(300);
+        $(".group_mgt .delete_pop").fadeOut(300);
+        $(".group_mgt .form_wrap").css("overflow", "scroll");
+      });
+    });
+    if ($(window).width() <= 1024) {
+      $(".group_mgt .result_item > li:nth-child(4)").prepend("<p>등록시설물</p>");
+      
+    }
+  });
+  // 공사장 진행사항 수정
+  $(".cProgress_btn").click(function () {
+    $(".constProgress").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".constProgress button").click(function () {
+      $(".constProgress").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+  });
+  // 공사장 점검 계획 등록
+  $(".constCheck_tab .tab_index > li").click(function () {
+    var tab_id = $(this).attr('data-tab');
+    $(".constCheck_tab .tab_index > li").removeClass("active");
+    $(this).addClass("active");
+    $(".constCheck_tab .tab_content").removeClass("active");
+    $("#" + tab_id).addClass('active');
+  });
+  $(".cPlanEnroll_btn").click(function () {
+    $(".constPlan_enroll").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".constPlan_enroll .close_btn").click(function () {
+      $(".constPlan_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".constPlan_enroll .modal_submit button:first-child").click(function () {
+      $(".constPlan_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    // 자문단 선택
+    $(".constPlan_enroll .advisoryGroup_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".subModal_bg").fadeIn(300);
+      }
+      $(".advisoryGroup").fadeIn(300);
+      $(".advisoryGroup .close_box").click(function () {
+        $(".advisoryGroup").fadeOut(300);
+        $(".subModal_bg").fadeOut(300);
+      });
+      $(".advisoryGroup .subModal_submit button:first-child").click(function () {
+        $(".advisoryGroup").fadeOut(300);
+        $(".subModal_bg").fadeOut(300);
+      });
+      if ($(window).width() <= 540 ) {
+        $(".aGroup_list .result_item > li:nth-child(2)").prepend("<span>분야</span>");
+        $(".aGroup_list .result_item > li:nth-child(3)").prepend("<span>부서</span>");
+        $(".aGroup_list .result_item > li:nth-child(4)").prepend("<span>성명</span>");
+        $(".aGroup_list .result_item > li:nth-child(5)").prepend("<span>중복여부</span>");
+      }
+    });
+  });
+  // 공사장 점검 결과 등록
+  $(".cResultEnroll_btn").click(function () {
+    $(".constResult_enroll").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".constResult_enroll .close_btn").click(function () {
+      $(".constResult_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".constResult_enroll .modal_submit button:first-child").click(function () {
+      $(".constResult_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".cResult_menu > li > button").click(function () {
+      $(this).next().slideToggle(300);
+    });
+  });
+});
 
 // 파일 업로드
 $(function(){ 
@@ -730,22 +774,21 @@ $(function () {
   });
 });
 
-// 모달 (임시)
-let modal_on = document.getElementById("modal" + 0 + "_on");
-console.log(modal_on);
-let modal_off = document.getElementById("modal" + 0 + "_off");
-let modal_cancel = document.getElementById("modal" + 0 + "_cancel");
+// // 모달 (임시)
+// let modal = document.querySelectorAll(".modal_bg");
+// let modalOn = document.querySelectorAll(".modal_on");
+// let modalOff = document.querySelectorAll(".modal_off");
+// let modalCancel = document.querySelectorAll(".modal_cancel");
 
-modal_on.addEventListener("click", function () {
-  let modal_id = document.getElementById(this);
-  modal_id.classList.remove("hide");
-  modal_id.classList.add("show");
-});
-modal_off.addEventListener("click", function () {
-  let target = this.closest(".modal_bg");
-  target.classList.add("hide");
-  setTimeout(function () {
-    target.classList.remove("show");
-  }, 280);
-});
+// modalOn.addEventListener("click", function () {
+//   modal.classList.remove("hide");
+//   modal.classList.add("show");
+// });
+// modalOff.addEventListener("click", function () {
+//   let target = this.closest(".modal_bg");
+//   target.classList.add("hide");
+//   setTimeout(function () {
+//     target.classList.remove("show");
+//   }, 280);
+// });
 
