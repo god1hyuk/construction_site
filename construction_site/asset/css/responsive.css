@@ -1327,9 +1327,6 @@
     .const_info .map_wrap {
         background: #fff;
     }
-    .const_info .map_wrap .map {
-        margin-right: 15px;
-    }
     /* 공사장 정보 리스트 */
     .const_info .cInfo_list {
         flex-wrap: wrap;
@@ -3051,9 +3048,6 @@
     .const_info .map_wrap > div {
         width: 100%;
     }
-    .const_info .map_wrap .map {
-        margin-bottom: 15px;
-    }
     
     /* 공사장 정보 리스트 */
     .const_info .cInfo_list > li {
@@ -3767,8 +3761,7 @@
         padding-right: 20px;
     }
     .sub_page .title_wrap {
-        flex-direction: column;
-
+        /* flex-direction: column; */
     }
     .const_mgt .title_wrap .title_icon {
         margin: 0;
