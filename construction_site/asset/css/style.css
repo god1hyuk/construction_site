@@ -762,6 +762,8 @@
   background: #fff;
 }
 .construction_site .area_info .tab_main > .tab_content {
+  /* 임시 */
+  display: flex;
   height: 90%;
   padding: 50px 20px 30px;
   background: #fff;
@@ -836,6 +838,8 @@
   border-bottom: none;
 }
 .construction_site .tab_sub > .tab_content {
+  /* 임시 */
+  display: flex;
   padding-top: 1.8519vh;
 }
 .construction_site .area_info .safechk_circle {
