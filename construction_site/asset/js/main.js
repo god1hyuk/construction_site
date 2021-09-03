@@ -663,7 +663,7 @@ $(function () {
       $("body").css("overflow", "visible");
     });
   });
-  // 공사장 점검 계획 등록
+  // 공사장 점검 결과 등록
   $(".constCheck_tab .tab_index > li").click(function () {
     var tab_id = $(this).attr('data-tab');
     $(".constCheck_tab .tab_index > li").removeClass("active");
@@ -671,6 +671,24 @@ $(function () {
     $(".constCheck_tab .tab_content").removeClass("active");
     $("#" + tab_id).addClass('active');
   });
+  $(".cResultEnroll_btn").click(function () {
+    $(".constResult_enroll").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".cResult_menu > li > button").click(function () {
+      $(this).next().slideToggle(300);
+      $(this).toggleClass("active");
+    });
+    $(".constResult_enroll .close_btn").click(function () {
+      $(".constResult_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".constResult_enroll .modal_submit button:first-child").click(function () {
+      $(".constResult_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+
+  });
+  // 공사장 점검 계획 등록
   $(".cPlanEnroll_btn").click(function () {
     $(".constPlan_enroll").fadeIn(300);
     $("body").css("overflow", "hidden");
@@ -702,22 +720,6 @@ $(function () {
         $(".aGroup_list .result_item > li:nth-child(4)").prepend("<span>성명</span>");
         $(".aGroup_list .result_item > li:nth-child(5)").prepend("<span>중복여부</span>");
       }
-    });
-  });
-  // 공사장 점검 결과 등록
-  $(".cResultEnroll_btn").click(function () {
-    $(".constResult_enroll").fadeIn(300);
-    $("body").css("overflow", "hidden");
-    $(".constResult_enroll .close_btn").click(function () {
-      $(".constResult_enroll").fadeOut(300);
-      $("body").css("overflow", "visible");
-    });
-    $(".constResult_enroll .modal_submit button:first-child").click(function () {
-      $(".constResult_enroll").fadeOut(300);
-      $("body").css("overflow", "visible");
-    });
-    $(".cResult_menu > li > button").click(function () {
-      $(this).next().slideToggle(300);
     });
   });
 });

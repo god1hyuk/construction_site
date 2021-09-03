@@ -1864,8 +1864,8 @@ input[type="file"] {
   /* margin-right: 10px; */
   margin-right: 0.9259vh;
 }
-.cResult_menu .result_list {
-  max-height: 25vh;
+.cResult_menu {
+  max-height: 45vh;
   overflow-y: scroll;
 }
 .cResult_menu > li > button {
@@ -1886,8 +1886,9 @@ input[type="file"] {
 .cResult_menu > li > button img:last-child {
   width: 2.4074vh;
   margin-left: auto;
+  transition: transform .3s;
 }
-.cResult_menu > li.active > button img:last-child {
+.cResult_menu > li > button.active img:last-child {
   transform: rotate(180deg);
 }
 .cResult_menu > li:first-child > button {
@@ -1915,6 +1916,8 @@ input[type="file"] {
 .constResult_enroll .subject > li:first-child,
 .constResult_enroll .result_item > li:first-child {
   width: 35%;
+  /* line-height: 20px; */
+  line-height: 1.8519vh;
   /* font-size: 15px; */
   font-size: 1.3889vh;
   /* padding: 0 20px; */
