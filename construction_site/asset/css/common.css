@@ -448,6 +448,21 @@ input[type="radio"] + .checking.active::before {
   color: #192b80;
   border: 3px solid #5479f7;
 }
+.modal_bg h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.8519vh;
+}
+.modal_bg h3 sup {
+  width: 1.3889vh;
+  height: 1.3889vh;
+  margin-right: 0.7407vh;
+  background: #f0f4f8;
+  border: 3px solid #587cf7;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
 /* 서브 모달창 */
 .modal_sub {
   display: none;
@@ -503,6 +518,7 @@ input[type="radio"] + .checking.active::before {
 .result_container .subject {
   display: flex;
   align-items: center;
+  text-align: center;
 }
 .result_container .subject_wrap {
   background: #e8eef8;
