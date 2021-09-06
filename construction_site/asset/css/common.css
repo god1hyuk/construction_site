@@ -375,6 +375,8 @@ input[type="radio"] + .checking.active::before {
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding-bottom: 200px;
+  overflow-y: scroll;
   background: rgba(0, 0, 0, 0.5);
 }
 .modal_bg {
@@ -384,10 +386,11 @@ input[type="radio"] + .checking.active::before {
   z-index: 990;
 }
 .modal_bg .modal_wrap {
-  position: absolute;
-  top: 50%;
+  /* position: absolute; */
+  position: relative;
+  top: 15%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   padding: 2.9630vh 4.2593vh 5.5556vh;
   background: #fff;
   border-top: 8px solid #5479f7;
@@ -571,6 +574,17 @@ input[type="radio"] + .checking.active::before {
   position: relative;
 }
 
+/* signBoard */
+.signBoard {
+  width: 10.1852vh;
+  height: 3.7037vh;
+  padding: 0;
+  border: 1px solid #cb0000;
+}
+.signBoard img {
+  width: 3.5185vh;
+}
+
 /* 애니메이션 */
 .show {
   opacity: 1;
@@ -599,4 +613,15 @@ input[type="radio"] + .checking.active::before {
 .hidden {
   display: none;
   opacity: 0;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar,
+.modal_bg::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb,
+.modal_bg::-webkit-scrollbar-thumb {
+  background: #5479f7;
+  border-radius: 100px;
 }

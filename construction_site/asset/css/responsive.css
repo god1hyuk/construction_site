@@ -406,6 +406,9 @@
 
 @media (max-width: 1024px) {
     /* 공통 영역 */
+    .modal_bg::-webkit-scrollbar {
+        display: none;
+    }
     .container {
         margin-bottom: 150px;
     }
@@ -599,7 +602,7 @@
 
     /* 내 정보 보기 */
     .modal_bg {
-        background: #d5d6d9;
+        background: #fff;
     }
     .modal_bg .modal_wrap {
         position: static;
@@ -607,15 +610,13 @@
         width: 100vw;
         height: 100vh;
         padding: 0;
-        background: transparent;
         border-top: none;
         border-radius: 0;
     }
     .modal_bg .modal_top {
-        margin-bottom: 10px;
         padding: 36px 0;
         background: #5479f7;
-        border-bottom: none;
+        border-bottom: 10px solid #d5d6d9;
     }
     .modal_bg .modal_top h1 {
         font-family: 'NanumSquareEB';
@@ -629,6 +630,9 @@
         width: 31px;
         height: 31px;
         background-image: url(../images/icon/close_btn.png);
+    }
+    .myInfo {
+        padding-bottom: 0;
     }
     .myInfo .table_wrap {
         padding: 52px 30px 0;
@@ -644,7 +648,7 @@
     }
     .myInfo .info_btn {
         margin-top: 0;
-        padding: 60px 30px 100%;
+        padding: 60px 30px 0;
         background: #fff;
     }
     .myInfo .info_btn button {
@@ -1024,8 +1028,7 @@
         top: 0;
         left: 0;
         transform: none;
-        height: auto;
-        overflow-y: scroll;
+        padding-bottom: 0;
     }
     .responsibility .tab_wrap {
         padding: 52px 30px 0;
@@ -1066,7 +1069,6 @@
         margin-right: 6px;
     }
     .responsibility .hash_tags {
-        margin-top: 36px;
         padding: 20px 24px;
     }
     .responsibility .hash_tags li {
@@ -1078,7 +1080,7 @@
         margin-left: 40px;
     }
     .responsibility .modal_bottom {
-        padding: 60px 20px;
+        padding: 60px 30px;
         background: #fff;
     }
     .responsibility .modal_bottom .modal_submit {
@@ -1090,19 +1092,13 @@
     }
 
     /* 그룹관리 */
-    .group_mgt .form_wrap {
-        height: 70vh;
-    }
     .group_mgt .group_add {
         margin-top: 0;
         padding: 18px 25px;
     }
     .group_mgt .group_add p {
-        margin-right: 0;
+        font-size: 18px;
     }
-    .group_mgt .group_add input {
-        width: 54.6875vw;
-      }
     .group_mgt .form_wrap {
         padding: 52px 30px 0px;
         background: #fff;
@@ -1315,8 +1311,6 @@
         margin-right: 10px;
     }
     .modal_bottom .modal_submit {
-        padding: 0 30px;
-        padding-bottom: 100%;
         border-top: none;
     }
     .modal_bottom .modal_submit button {
@@ -1430,10 +1424,99 @@
         padding: 30px 0;
     }
 
+    /* 공사장 점검 결과 등록 */
+    .constResult_enroll .form_wrap,
+    .constResult_enroll .modal_bottom {
+        padding: 0 30px;
+    }
+    .result_container .subject_wrap {
+        border: none;
+    }
+    .result_container .result_wrap {
+        border-top: 1px solid #192b80;
+        border-bottom: none;
+    }
+    .cResult_menu .subject {
+        display: none;
+    }
+    .constResult_enroll .subject > li:last-child, 
+    .constResult_enroll .result_item > li:last-child {
+        border: none;
+    }
+    .result_container .result > li:last-child {
+        border-bottom: 1px solid #d0d1d2;
+    }
+    .cResult_menu .result_item {
+        flex-direction: column;
+        padding: 2.9297vw; 
+    }
+    .cResult_menu .result_item * {
+        padding: 0 !important;
+    }
+    .cResult_menu .result_item ul {
+        font-size: 1.7578vw;
+        background: #f8f8f8;
+    }
+    .cResult_menu .result_item > li {
+        width: 100% !important;
+    }
+    .cResult_menu .result_item > li .checking {
+        width: 2.1484vw !important;
+        height: 2.1484vw !important;
+        margin-left: 1.4648vw;
+    }
+    .cResult_menu .result_item > li:first-child {
+        font-size: 2.7344vw;
+        margin-bottom: 27px;
+    }
+    .cResult_menu .result_item > li li {
+        justify-content: start;
+        width: 16.6666% !important;
+        border: none !important;
+    }
+    .cResult_menu .result_item > li li:nth-child(4) {
+        display: none;
+    }
+    .cResult_menu .result_item > li li:last-child {
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+    .cResult_menu .result_item > li .file_btn {
+        width: 13.0859vw;
+        height: 3.6133vw;
+        font-size: 1.4648vw;
+    }
+    .cResult_menu .result_item textarea {
+        display: block;
+        width: 100%;
+        height: 85px;
+        font-size: 1.4648vw;
+        color: #555;
+        padding: 1.4648vw !important;
+        background: #fff;
+    }
+    .cResult_bottom > li:first-child {
+        width: 35%;
+    }
+    .cResult_bottom > li:last-child {
+        width: 65%;
+    }
+    .cResult_bottom .input_wrap {
+        width: 80%;
+    }
+    .cResult_bottom input {
+        width: 100%;
+    }
+    .cResult_bottom .input_wrap p {
+        display: none;
+    }
+    .constResult_enroll .modal_submit {
+        padding-top: 54px;
+    }
+
     /* 공사장 점검 계획 등록 */
     .constPlan_enroll .form_wrap {
         padding: 0 30px;
-        height: 68vh;
         background: #fff;
     }
     .cpEnroll_form {
@@ -1489,17 +1572,14 @@
     }
     .constPlan_enroll .modal_bottom {
         padding-top: 35px;
+        padding-bottom: 120px;
     }
     .cpEnroll_item li:last-child button {
         height: 25px;
         font-size: 13px;
     }
     /* 자문단 선택 */
-    .constPlan_enroll {
-        /* display: block; */
-    }
     .advisoryGroup {
-        /* display: block; */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -1831,7 +1911,7 @@
     .info_btn button:first-child {
         margin-right: 0;
     }
-    .modal_bottom .modal_submit {
+    .modal_bottom {
         padding-left: 25px;
         padding-right: 25px;
     }
@@ -1850,8 +1930,6 @@
         font-size: 20px;
     }
     .sms_modal .tab_box {
-        height: 62vh;
-        overflow-y: scroll;
         padding: 25px;
     }
     .sms_modal .contactList {
@@ -2184,6 +2262,9 @@
     }
 
     /* 그룹관리 */
+    .group_mgt {
+        overflow-y: scroll;
+    }
     .group_mgt .form_wrap {
         padding-top: 30px;
         padding-left: 25px;
@@ -2203,7 +2284,6 @@
 
     /* 공사장 진행사항 수정 */
     .cProgress_list {
-        height: 65vh;
         margin-left: 25px;
         margin-right: 25px;
     }
@@ -2230,9 +2310,14 @@
         padding: 25px 0;
     }
 
+    /* 공사장 점검 결과 등록 */
+    .constResult_enroll .form_wrap,
+    .constResult_enroll .modal_bottom {
+        padding: 0 25px;
+    }
+
     /* 공사장 점검 계획 등록 */
     .constPlan_enroll .form_wrap {
-        height: 62vh;
         padding: 0 25px;
     }
     /* 자문단 선택 */
@@ -2402,6 +2487,9 @@
 	.col-6 {
 		height: 600px;
 	}
+    .modal_bottom {
+        padding-bottom: 120px;
+    }
 
     /* header.css */
     /* 상황전파 버튼 (모바일) */
@@ -2424,9 +2512,6 @@
     .sms_modal .tab_index li {
         height: 50px;
         font-size: 16px;
-    }
-    .sms_modal .tab_box {
-        height: 60vh;
     }
     .sms_modal h3 {
         font-size: 16px;
@@ -2657,6 +2742,9 @@
     }
 
     /* 내 정보 보기 */
+    .modal_bg {
+        overflow-y: scroll;
+    }
     .modal_bg .modal_top {
         padding: 24px 0;
     }
@@ -2905,9 +2993,6 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-    .responsibility .tab_content form li:last-child {
-        height: 50px;
-    }
     .responsibility .tab_content form span {
         width: 100%;
         font-size: 16px;
@@ -2925,16 +3010,16 @@
     }
 
     /* 그룹관리 */
-    .group_mgt .form_wrap {
-        height: 65vh;
-    }
     .group_mgt .group_add {
         display: block;
         padding: 20px;
     }
-    .group_mgt .input_wrap {
+    .group_mgt .group_add .input_wrap {
         width: 100%;
         margin-top: 15px;
+    }
+    .group_mgt .group_add p {
+        width: 100%;
     }
     .group_mgt .group_add input {
         width: 80%;
@@ -2976,7 +3061,10 @@
     }
     .group_mgt .pagination {
         display: none;
-    } 
+    }
+    .group_mgt .modal_bottom {
+        padding-bottom: 120px;
+    }
 
     /* 검색 결과 */
     /* 검색결과 리스트 */
@@ -3040,6 +3128,9 @@
         height: 15px;
         margin-right: 5px;
     }
+    .constProgress .modal_bottom {
+        padding-bottom: 120px;
+    }
 
     /* 지도 & 로드뷰 */
     .const_info .map_wrap {
@@ -3097,10 +3188,10 @@
         font-size: 18px;
     }
 
+    /* 공사장 점검 결과 등록 */
+
+
     /* 공사장 점검 계획 등록 */
-    .constPlan_enroll .form_wrap {
-        height: 58vh;
-    }
     .cpEnroll_form > li {
         flex-direction: column;
         align-items: start;
@@ -3408,7 +3499,7 @@
         margin-top: 60px;
         padding: 0 20px;
     }
-    .modal_bottom .modal_submit {
+    .modal_bottom {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -3878,7 +3969,6 @@
 
     /* 공사장 진행사항 수정 */
     .cProgress_list {
-        height: 70vh;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -3887,6 +3977,7 @@
     }
     .constProgress .modal_bottom {
         padding-top: 30px;
+        /* padding-bottom: 200px; */
     }
 
     /* 공사장 점검 탭 */
@@ -4099,9 +4190,6 @@
     /* SMS 보내기 */
     .sms_modal .tab_index li {
         font-size: 14px;
-    }
-    .sms_modal .tab_box {
-        height: 68vh;
     }
     .sms_modal .modal_bottom {
         padding-top: 20px;

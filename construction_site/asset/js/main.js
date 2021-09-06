@@ -604,9 +604,11 @@ $(function () {
   $(".myInfo").hide();
   $(".user_name").click(function () {
     $(".myInfo").fadeIn(300);
+    $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
     $(".myInfo .close_btn").click(function () {
       $(".myInfo").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");
     });
   });
@@ -614,26 +616,32 @@ $(function () {
   $(".responsibility").hide();
   $(".resp_btn").click(function () {
     $(".responsibility").fadeIn(300);
+    $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
     $(".responsibility .close_btn").click(function () {
       $(".responsibility").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");
     });
     $(".responsibility .modal_submit button:first-child").click(function () {
       $(".responsibility").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");    
     });
   });
   // 그룹관리
   $(".groupMgt_btn").click(function () {
     $(".group_mgt").fadeIn(300);
+    $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
     $(".group_mgt .close_btn").click(function () {
       $(".group_mgt").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");
     });
     $(".group_mgt .modal_submit button:first-child").click(function () {
       $(".group_mgt").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");    
     });
     // 삭제 경고팝업 (그룹관리)
@@ -657,9 +665,11 @@ $(function () {
   // 공사장 진행사항 수정
   $(".cProgress_btn").click(function () {
     $(".constProgress").fadeIn(300);
+    $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
     $(".constProgress button").click(function () {
       $(".constProgress").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");
     });
   });
@@ -673,6 +683,7 @@ $(function () {
   });
   $(".cResultEnroll_btn").click(function () {
     $(".constResult_enroll").fadeIn(300);
+    $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
     $(".cResult_menu > li > button").click(function () {
       $(this).next().slideToggle(300);
@@ -680,24 +691,34 @@ $(function () {
     });
     $(".constResult_enroll .close_btn").click(function () {
       $(".constResult_enroll").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");
     });
     $(".constResult_enroll .modal_submit button:first-child").click(function () {
       $(".constResult_enroll").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");
     });
-
+    if ($(window).width() <= 1024) {
+      $(".constResult_enroll .result_item ul li:nth-child(1)").prepend("<span>적합</span>");
+      $(".constResult_enroll .result_item ul li:nth-child(2)").prepend("<span>부적합</span>");
+      $(".constResult_enroll .result_item ul li:nth-child(3)").prepend("<span>해당없음</span>");
+      $(".constResult_enroll .result_item > li:last-child").append("<textarea>내용입니다.</textarea>");
+    }
   });
   // 공사장 점검 계획 등록
   $(".cPlanEnroll_btn").click(function () {
     $(".constPlan_enroll").fadeIn(300);
+    $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
     $(".constPlan_enroll .close_btn").click(function () {
       $(".constPlan_enroll").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");
     });
     $(".constPlan_enroll .modal_submit button:first-child").click(function () {
       $(".constPlan_enroll").fadeOut(300);
+      $(".send_btn_m").fadeIn(300);
       $("body").css("overflow", "visible");
     });
     // 자문단 선택
