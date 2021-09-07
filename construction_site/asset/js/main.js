@@ -491,7 +491,7 @@ $(function () {
       $(this).children(".result_item").children("li").children(".checking").removeClass("active");
     }
   });
-  $(".search_result .result_item li:not(:first-child)").click(function () {
+  $(".const_mgt .result_item li:not(:first-child)").click(function () {
     location.href = "const_info.html";
   });
   $(".pagination li.page_item").click(function () {

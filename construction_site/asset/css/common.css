@@ -310,7 +310,9 @@ input[type="checkbox"] + .checking.active {
   border: none;
 }
 input[type="radio"] + .checking {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 18px;
   height: 18px;
   background-color: #fff;
@@ -321,16 +323,15 @@ input[type="radio"] + .checking.active {
   background-color: #5479f7;
   border: none;
 }
-input[type="radio"] + .checking.active::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.radio_inner {
+  display: none;
   width: 45%;
   height: 45%;
   background-color: #fff;
   border-radius: 100px;
+}
+input[type="radio"] + .checking.active .radio_inner {
+  display: block;
 }
 
 /* 탭 */
