@@ -139,7 +139,7 @@ aside .home a {
 
 /* 상황전파 */
 .situ_modal {
-  display: block;
+  /* display: block; */
 }
 .situ_modal .modal_wrap {
   width: 54.1667vw;
