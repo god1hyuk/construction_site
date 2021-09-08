@@ -1914,6 +1914,50 @@
     .acdnt_info .search_form .search_name ul li:not(:first-child) {
         width: 10%;
     }
+    .bldg_mgt .result_item {
+        position: relative;
+    }
+    .bldg_mgt .search_result .result_item > li:nth-child(2) {
+        margin-left: 0;
+    }
+    .bldg_mgt .result_item > li:nth-child(5) {
+        position: absolute;
+        top: 56px;
+        left: 160px;
+        width: auto !important;
+        font-size: 16px !important;
+        color: #777;
+        padding-top: 0 !important;
+    }
+
+    /* 사고정보 페이지 */
+    .acdnt_info .result_item > li:nth-child(1) {
+        display: block !important;
+        width: 100% !important;
+        font-size: 20px !important;
+        margin-bottom: 20px;
+        padding-top: 0 !important;
+    }
+    .acdnt_info .result_item > li:nth-child(1) span {
+        width: auto !important;
+        margin-right: 0 !important;
+        border: none !important;
+    }
+    .acdnt_info .result_item > li:nth-child(2) {
+        margin-left: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .acdnt_info .result_item > li:nth-child(3) {
+        width: 100% !important;
+        padding-top: 15px !important;
+    }
+    .acdnt_info .result_item > li:nth-child(4) {
+        padding-top: 35px !important;
+    }
+    .acdnt_info .result_container .result_btn .blue_btn {
+        margin-left: 0;
+        margin-right: 40px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2530,6 +2574,10 @@
     .bldg_mgt .search_form .search_name ul li:not(:first-child), 
     .acdnt_info .search_form .search_name ul li:not(:first-child) {
         width: 18%;
+    }
+    .bldg_mgt .result_item > li:nth-child(5) {
+        top: 50px;
+        left: 145px;
     }
 }
 
@@ -3650,13 +3698,16 @@
     }
 
     /* 건축물 관리 페이지 */
-    .bldg_mgt .search_form .search_name {
+    .bldg_mgt .search_form .search_name,
+    .acdnt_info .search_form .search_name {
         display: block;
     }
-    .bldg_mgt .search_form .search_name h3 {
+    .bldg_mgt .search_form .search_name h3,
+    .acdnt_info .search_form .search_name h3 {
         width: auto;
     }
-    .bldg_mgt .search_form .search_name ul {
+    .bldg_mgt .search_form .search_name ul,
+    .acdnt_info .search_form .search_name ul {
         flex-wrap: wrap;
         margin-top: 15px;
     }
@@ -3673,6 +3724,10 @@
     .acdnt_info .search_form .search_name ul li:not(:first-child) {
         width: 20%;
         margin-top: 15px;
+    }
+    .bldg_mgt .result_item > li:nth-child(5) {
+        top: 35px;
+        left: 120px;
     }
 }
 
@@ -4683,5 +4738,15 @@
     .map_page .loc_shift {
         width: 40px;
         height: 40px;
+    }
+
+    /* 건축물 관리 페이지 */
+    .bldg_mgt .result_item > li:nth-child(3) {
+        padding-top: 50px !important;
+    }
+    .bldg_mgt .result_item > li:nth-child(5) {
+        font-size: 13px !important;
+        left: 30px;
+        top: 60px;
     }
 }

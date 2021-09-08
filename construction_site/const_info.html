@@ -43,7 +43,7 @@
 
 <body>
   <!-- 공사장 정보보기 서브페이지 -->
-  <div class="const_info sub_page d-flex">
+  <div class="const_info sub_page sub_info d-flex">
 
     <!-- 서브페이지 사이드 메뉴 (PC) -->
     <aside>
@@ -68,7 +68,7 @@
             </a>
           </li>
           <li class="sideMenu_item" value="2">
-            <a href="javascript: void(0);">
+            <a href="acdnt_info.html">
               <div class="sideMenu_icon"></div>
               <p>사고정보</p>
             </a>
@@ -129,12 +129,12 @@
           </li>
         </ul>
         <div class="send_btn d-flex align-items-center justify-content-center">
-          <button class="acdnt_sprd">
+          <button class="situSend_btn">
             <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
             <p class="text-center ns_b">상황전파</p>
           </button>
-          <button class="sms_send">
-            <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+          <button class="smsSend_btn">
+            <img src="asset/images/icon/message_icon.png" alt="문자전송_아이콘" />
             <p class="text-center ns_b">문자전송</p>
           </button>
         </div>
@@ -221,7 +221,7 @@
               </a>
             </li>
             <li>
-              <a href="javascript: void(0);">
+              <a href="acdnt_info.html">
                 <p>사고정보</p>
                 <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
               </a>
@@ -329,7 +329,7 @@
               </a>
             </li>
             <li>
-              <a href="javascript: void(0);">
+              <a href="acdnt_info.html">
                 <p>사고정보</p>
                 <img src="asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
               </a>
@@ -411,14 +411,403 @@
 
     <!-- 상황전파 버튼 (모바일) -->
     <div class="send_btn_m nt_b d-flex align-items-center justify-content-center">
-      <button class="acdnt_sprd_m d-flex align-items-center justify-content-center">
+      <button class="situ_send_m d-flex align-items-center justify-content-center">
         <img src="asset/images/icon/spread_icon.png" alt="상황전파_아이콘" />
         <p>상황전파</p>
       </button>
       <button class="sms_send_m">
-        <img src="asset/images/icon/message_icon.png" alt="상황전파_아이콘" />
+        <img src="asset/images/icon/message_icon.png" alt="문자전송_아이콘" />
         <p class="text-center">문자전송</p>
       </button>
+    </div>
+
+    <!-- SMS 보내기 -->
+    <div class="sms_modal modal_bg">
+      <div class="modal_wrap">
+        <div class="modal_top d-flex justify-content-center">
+          <h1 class="ns_b">SMS 보내기</h1>
+          <button class="close_btn"></button>
+        </div>
+        <div class="tab_wrap">
+          <ul class="tab_index nt_b d-flex align-items-center">
+            <li class="active" data-tab="contact_tab0">개인별</li>
+            <li data-tab="contact_tab1">그룹별</li>
+            <li data-tab="contact_tab2">부서별</li>
+            <li data-tab="contact_tab3">비상연락망</li>
+          </ul>
+          <div class="tab_box">
+            <div class="contact">
+              <h3 class="content_title"><sup></sup>리스트</h3>
+              <!-- 개인별 (SMS) -->
+              <div id="contact_tab0" class="pContact tab_content active">
+                <ul class="contactList pContactList">
+                  <li>
+                    <p>1. 010-2602-6050</p>
+                    <button></button>
+                  </li>
+                  <li>
+                    <p>2. 010-1234-5678</p>
+                    <button></button>
+                  </li>
+                </ul>
+                <img src="asset/images/icon/contact_arrow.png" alt="연락처_화살표" />
+                <form action="">
+                  <h4>휴대폰 번호</h4>
+                  <div class="input_wrap">
+                    <input type="tel" placeholder="휴대폰 번호 입력" />
+                    <button class="add_btn">추가</button>
+                  </div>
+                </form>
+              </div>
+              <!-- 그룹별 (SMS) -->
+              <div id="contact_tab1" class="gContact tab_content">
+                <ul class="contactList gContactList">
+                  <li>
+                    <h5>그룹 01</h5>
+                    <ul class="group01 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                        <button></button>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>그룹 02</h5>
+                    <ul class="group02 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                        <button></button>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>그룹 03</h5>
+                    <ul class="group03 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                        <button></button>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <img src="asset/images/icon/contact_arrow.png" alt="연락처_화살표" />
+                <div class="wrapper">
+                  <ul class="bundleList">
+                    <li>그룹 01</li>
+                    <li>그룹 02</li>
+                    <li>그룹 03</li>
+                  </ul>
+                  <button class="groupEdit_btn blue_btn">그룹편집</button>
+                </div>
+              </div>
+              <!-- 부서별 (SMS) -->
+              <div id="contact_tab2" class="dContact tab_content">
+                <ul class="contactList gContactList">
+                  <li>
+                    <h5>부서 01</h5>
+                    <ul class="deparment01 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                        <button></button>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>부서 02</h5>
+                    <ul class="deparment02 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                        <button></button>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>부서 03</h5>
+                    <ul class="deparment03 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                        <button></button>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>부서 04</h5>
+                    <ul class="deparment04 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                        <button></button>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h5>부서 05</h5>
+                    <ul class="deparment05 contactBundle">
+                      <li>
+                        <p>1. 홍길동</p>
+                        <span>010-2602-6050</span>
+                        <button></button>
+                      </li>
+                      <li>
+                        <p>2. 홍길남</p>
+                        <span>010-1234-5678</span>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <img src="asset/images/icon/contact_arrow.png" alt="연락처_화살표" />
+                <div class="wrapper">
+                  <ul class="bundleList">
+                    <li>부서 01</li>
+                    <li>부서 02</li>
+                    <li>부서 03</li>
+                    <li>부서 04</li>
+                    <li>부서 05</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 비상연락망 (SMS) -->
+              <div id="contact_tab3" class="eContact tab_content">
+                <ul class="eContactList contactList">
+                  <li>
+                    <p>1. 홍길동</p>
+                    <span>010-2602-6050</span>
+                    <button></button>
+                  </li>
+                  <li>
+                    <p>2. 홍길남</p>
+                    <span>010-1234-5678</span>
+                    <button></button>
+                  </li>
+                </ul>
+                <button class="contactPick_btn blue_btn">연락처 선택</button>
+              </div>
+            </div>
+            <div class="descript">
+              <h3 class="content_title"><sup></sup>내용</h3>
+              <div class="select_wrap">
+                <select name="" id="">
+                  <option value="">템플릿 #1</option>
+                </select>
+                <button class="addTemplate_btn add_btn">템플릿 추가</button>
+              </div>
+              <textarea name="" id="" cols="30" rows="10">서울시 강남구 XXX-XXX 사고발생</textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal_bottom">
+          <div class="modal_submit nt_b d-flex justify-content-center">
+            <button>취소</button>
+            <button>보내기</button>
+          </div>
+        </div>
+      </div>
+      <!-- 템플릿 추가 (SMS) -->
+      <div class="addTemplate modal_sub">
+        <button class="close_box"></button>
+        <form action="">
+          <ul>
+            <li>
+              <p><sub></sub>템플릿 명칭</p>
+              <input type="text" />
+            </li>
+            <li>
+              <p><sub></sub>내용</p>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </li>
+          </ul>
+        </form>
+        <div class="subModal_submit">
+          <button type="reset">취소</button>
+          <button type="button">추가</button>
+        </div>
+      </div>
+      <!-- 그룹편집 (SMS) -->
+      <div class="groupEdit modal_sub">
+        <button class="close_box"></button>
+        <form class="makeGroup" action="">
+          <p><sub></sub>그룹생성</p>
+          <input type="text" />
+          <button class="nt_m">확인</button>
+        </form>
+        <ul class="bundleList">
+          <li>
+            그룹 01
+            <button></button>
+          </li>
+          <li>
+            그룹 02
+            <button></button>
+          </li>
+          <li>
+            그룹 03
+            <button></button>
+          </li>
+        </ul>
+        <div class="gPhoneNum">
+          <ul class="bundleList">
+            <li>
+              <p><strong>1.</strong>010-2602-6050</p>
+              <button></button>
+            </li>
+            <li>
+              <p><strong>2.</strong>010-1234-5678</p>
+              <button></button>
+            </li>
+          </ul>
+          <div class="input_wrap">
+            <input type="tel" placeholder="휴대폰 번호 입력" />
+            <button class="addPN_btn">추가</button>
+          </div>
+        </div>
+        <div class="subModal_submit">
+          <button type="reset">취소</button>
+          <button type="button">확인</button>
+        </div>
+      </div>
+      <!-- 연락처 선택 (SMS) -->
+      <div class="contactPick modal_sub">
+        <button class="close_box"></button>
+        <ul class="contactPick_list">
+          <li>
+            <ul class="contactPick_info">
+              <li>
+                <label for="contact_user0"></label>
+                <input type="checkbox" name="contact_user" id="contact_user0" />
+                <div class="checking"></div>
+              </li>
+              <div class="wrapper">
+                <li>홍길동</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <ul class="contactPick_info">
+              <li>
+                <label for="contact_user1"></label>
+                <input type="checkbox" name="contact_user" id="contact_user1" />
+                <div class="checking"></div>
+              </li>
+              <div class="wrapper">
+                <li>홍길남</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <ul class="contactPick_info">
+              <li>
+                <label for="contact_user2"></label>
+                <input type="checkbox" name="contact_user" id="contact_user2" />
+                <div class="checking"></div>
+              </li>
+              <div class="wrapper">
+                <li>홍길남</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <ul class="contactPick_info">
+              <li>
+                <label for="contact_user3"></label>
+                <input type="checkbox" name="contact_user" id="contact_user3" />
+                <div class="checking"></div>
+              </li>
+              <div class="wrapper">
+                <li>홍길남</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <ul class="contactPick_info">
+              <li>
+                <label for="contact_user4"></label>
+                <input type="checkbox" name="contact_user" id="contact_user4" />
+                <div class="checking"></div>
+              </li>
+              <div class="wrapper">
+                <li>홍길남</li>
+                <li>010-2602-6050</li>
+                <li>test@gmail.com</li>
+                <li>지역안전건축센터</li>
+              </div>
+            </ul>
+          </li>
+        </ul>
+        <!-- 페이지네이션 -->
+        <ul class="pagination">
+          <li class="prev move"></li>
+          <li class="page_item active">1</li>
+          <li class="page_item">2</li>
+          <li class="page_item">3</li>
+          <li class="page_item">4</li>
+          <li class="page_item">5</li>
+          <li class="next move"></li>
+          <li class="superNext move"></li>
+        </ul>
+        <button class="white_btn exel" type="button">
+          <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
+          엑셀 업로드
+        </button>
+        <div class="subModal_submit">
+          <button type="reset">취소</button>
+          <button type="button">선택</button>
+        </div>
+      </div>
+      <div class="subModal_bg"></div>
     </div>
 
     <!-- 내 정보 보기 -->
@@ -837,7 +1226,7 @@
         <div class="form_wrap">
           <div class="cResult_top">
             <div class="select_wrap">
-              <h3><sup></sup>체크리스트</h3>
+              <h3 class="content_title"><sup></sup>체크리스트</h3>
               <select name="" id="">
                 <option value="">건축법</option>
               </select>
@@ -867,7 +1256,7 @@
                           <li>해당없음</li>
                           <li>내용</li>
                           <li>파일 업로드</li>
-                        </ul>                  
+                        </ul>
                       </li>
                     </ul>
                   </div>
@@ -1052,7 +1441,7 @@
                   </div>
                 </div>
                 <button>
-                  <img src="asset/images/icon/cResult_add1.png" alt="항목추가_아이콘" />  
+                  <img src="asset/images/icon/cResult_add1.png" alt="항목추가_아이콘" />
                   항목 추가
                 </button>
               </div>
@@ -1080,7 +1469,7 @@
                 <ul class="signature">
                   <li>
                     <p>점검자 : <span>○○○기술사 <strong>○○○</strong></span></p>
-                    
+
                     <button class="signBoard">
                       <img src="asset/images/icon/signature.png" alt="서명_이미지" />
                     </button>
@@ -1136,7 +1525,7 @@
                 <input type="text" />
                 <button class="blue_btn">
                   <img src="asset/images/icon/searching.png" alt="검색_아이콘" />
-                  검색  
+                  검색
                 </button>
               </div>
             </li>
@@ -1238,7 +1627,7 @@
                   <li class="superNext move"></li>
                 </ul>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
         <div class="subModal_submit">
@@ -1246,7 +1635,7 @@
           <button>확인</button>
         </div>
       </div>
-    </div>       
+    </div>
 
     <!-- 공사장 점검계획 등록 -->
     <div class="constPlan_enroll modal_bg">
@@ -1311,7 +1700,7 @@
               <img src="asset/images/icon/add_btn.png" alt="추가버튼_아이콘" />
               추가
             </button>
-            <button class="exel">
+            <button class="white_btn exel">
               <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
               엑셀
             </button>
@@ -1391,7 +1780,7 @@
                 <input type="text" />
                 <button class="blue_btn">
                   <img src="asset/images/icon/searching.png" alt="검색_아이콘" />
-                  검색  
+                  검색
                 </button>
               </div>
             </li>
@@ -1493,7 +1882,7 @@
                   <li class="superNext move"></li>
                 </ul>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
         <div class="subModal_submit">
@@ -1502,7 +1891,7 @@
         </div>
       </div>
       <div class="subModal_bg"></div>
-    </div> 
+    </div>
 
     <div class="main_content">
       <div class="container">
@@ -1601,7 +1990,7 @@
               </div>
             </div>
             <!-- 공사장 점검 탭 -->
-            <div class="constCheck_tab tab_wrap">
+            <div class="check_tab tab_wrap">
               <ul class="tab_index nt_b d-flex align-items-center">
                 <li data-tab="constCheck_tab0" class="active">공사장 점검 결과</li>
                 <li data-tab="constCheck_tab1">공사장 점검 계획</li>
@@ -1809,7 +2198,7 @@
                       <li class="superNext move"></li>
                     </ul>
                     <div class="result_btn">
-                      <button class="exel" type="button">
+                      <button class="white_btn exel" type="button">
                         <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
                         엑셀
                       </button>
@@ -2021,7 +2410,7 @@
                       <li class="superNext move"></li>
                     </ul>
                     <div class="result_btn">
-                      <button class="exel" type="button">
+                      <button class="white_btn exel" type="button">
                         <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
                         엑셀
                       </button>

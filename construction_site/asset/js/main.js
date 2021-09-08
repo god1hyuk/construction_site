@@ -521,13 +521,48 @@ $(function () {
     $(".const_info .insp_result .bScale_list > li:nth-child(3)").prepend("<strong>미조치</strong>");
     $(".const_info .insp_result .result_item > li:nth-child(6)").prepend("<span>점검자</span>");
     $(".const_info .insp_result .result_item > li:nth-child(7)").prepend("<span>관리출처</span>");
+    // 건축물 관리 페이지
+    $(".bldg_mgt .result_item > li:nth-child(3)").prepend("<span>유형</span>");
+    $(".bldg_mgt .result_item > li:nth-child(4)").prepend("<span>등급</span>");
+    $(".bldg_mgt .result_item > li:nth-child(6)").prepend("<span>점검예정일</span>");
+    $(".bldg_mgt .result_item > li:nth-child(7)").prepend("<span>전회점검일</span>");
+    $(".bldg_mgt .result_item > li:nth-child(8)").prepend("<span>관리출처</span>");
+    // 사고정보 페이지
+    $(".acdnt_info .result_item > li:nth-child(1)").prepend("<span>#</span>");
+    $(".acdnt_info .result_item > li:nth-child(4)").prepend("<span>등급</span>");
+    $(".acdnt_info .result_item > li:nth-child(5)").prepend("<span>점검예정일</span>");
+    $(".acdnt_info .result_item > li:nth-child(6)").prepend("<span>전회점검일</span>");
+    $(".acdnt_info .result_item > li:nth-child(7)").prepend("<span>관리출처</span>");
+    $(".acdnt_info .result_item > li:nth-child(8)").prepend("<span>관리출처</span>");
   }
 });
 
 // 모달창
 $(function () {
+  // 상황전파
+  $(".situSend_btn, .situ_send_m").click(function () {
+    if ($(window).width() <= 1024) {
+      $(".send_btn_m").fadeOut(300);
+    }
+    $(".situ_modal").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".situ_modal .close_btn").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
+      $(".situ_modal").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+    $(".situ_modal .modal_submit button:first-child").click(function () {
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
+      $(".situ_modal").fadeOut(300);
+      $("body").css("overflow", "visible");
+    });
+  });
   // SMS 보내기
-  $(".sms_send, .sms_send_m").click(function () {
+  $(".smsSend_btn, .sms_send_m").click(function () {
     if ($(window).width() <= 1024) {
       $(".send_btn_m").fadeOut(300);
     }
@@ -674,11 +709,11 @@ $(function () {
     });
   });
   // 공사장 점검 결과 등록
-  $(".constCheck_tab .tab_index > li").click(function () {
+  $(".check_tab .tab_index > li").click(function () {
     var tab_id = $(this).attr('data-tab');
-    $(".constCheck_tab .tab_index > li").removeClass("active");
+    $(".check_tab .tab_index > li").removeClass("active");
     $(this).addClass("active");
-    $(".constCheck_tab .tab_content").removeClass("active");
+    $(".check_tab .tab_content").removeClass("active");
     $("#" + tab_id).addClass('active');
   });
   $(".cResultEnroll_btn").click(function () {

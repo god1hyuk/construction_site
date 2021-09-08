@@ -146,9 +146,7 @@ header .title {
 .wrapper {
   display: flex;
 }
-.check_list {
-  display: flex;
-}
+
 
 /* Input */
 input, select {
@@ -259,7 +257,7 @@ button {
   background-size: 40%;
 }
 /* exel */
-.exel {
+.white_btn {
   background: #fff;
   border: 1px solid #c0c9cb;
 }
@@ -288,7 +286,31 @@ button {
   border: 1px solid #c0c9cb;
 }
 
+/* check_wrap */
+.check_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.check_wrap > li {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  border-bottom: 1px solid #d7d7d7;
+}
+.check_wrap > li > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 32%;
+  height: 100%;
+  font-family: 'NotoSansKR-Bold';
+  background: #f5f6fa;
+}
+
 /* check_list */
+.check_list {
+  display: flex;
+}
 .check_list label {
   position: absolute;
   top: 0;
@@ -332,6 +354,19 @@ input[type="radio"] + .checking.active {
 }
 input[type="radio"] + .checking.active .radio_inner {
   display: block;
+}
+
+/* content_title */
+.content_title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content_title sup {
+  background: #f0f4f8;
+  border: 3px solid #587cf7;
+  border-radius: 100%;
+  box-sizing: border-box;
 }
 
 /* 탭 */
@@ -452,20 +487,13 @@ input[type="radio"] + .checking.active .radio_inner {
   color: #192b80;
   border: 3px solid #5479f7;
 }
-.modal_bg h3 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.modal_bg .content_title {
   font-size: 1.8519vh;
 }
-.modal_bg h3 sup {
+.modal_bg .content_title sup {
   width: 1.3889vh;
   height: 1.3889vh;
   margin-right: 0.7407vh;
-  background: #f0f4f8;
-  border: 3px solid #587cf7;
-  border-radius: 100%;
-  box-sizing: border-box;
 }
 /* 서브 모달창 */
 .modal_sub {

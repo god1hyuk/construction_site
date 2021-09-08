@@ -117,15 +117,15 @@ aside .home a {
 }
 
 /* 상황전파 */
-.construction_site li.acdnt_sprd {
+.construction_site li.situSendBtn_wrap {
   border-top: 1px solid #595a65;
   border-bottom: none;
   box-shadow: none;
 }
-.construction_site .acdnt_sprd {
+.construction_site .situSendBtn_wrap {
   padding-top: 2.2222vh;
 }
-.construction_site .acdnt_sprd button {
+.construction_site .situSendBtn_wrap button {
   display: block;
   width: 85%;
   font-size: 13px;
@@ -135,6 +135,29 @@ aside .home a {
   padding: 5px 0;
   background: #5479f7;
   border-radius: 3px;
+}
+
+/* 상황전파 */
+.situ_modal {
+  display: block;
+}
+.situ_modal .modal_wrap {
+  width: 54.1667vw;
+}
+.situ_modal label {
+  position: absolute;
+}
+.situ_modal .damage_option {
+  display: flex;
+}
+.situ_modal .damage_option li,
+.situ_modal .check_list > li {
+  display: flex;
+  position: relative;
+  margin-right: 15px;
+}
+.situ_modal .damage_option .checking {
+  margin-right: 5px;
 }
 
 /* SMS 보내기 */
@@ -725,7 +748,7 @@ header {
   height: 90px;
   line-height: 1;
 }
-.acdnt_sprd_m {
+.situ_send_m {
   color: #fff;
   margin-right: 10px;
   background: rgb(84,121,247);
@@ -1136,13 +1159,13 @@ header {
 .sub_page .send_btn button:hover {
   opacity: 90%;
 }
-.sub_page .acdnt_sprd {
+.sub_page .situSend_btn {
   color: #fff;
   margin-right: 0.5208vw;
   background: rgb(66,87,190);
   background: linear-gradient(360deg, rgba(66,87,190,1) 0%, rgba(110,128,213,1) 100%);
 }
-.sub_page .sms_send {
+.sub_page .smsSend_btn {
   background: rgb(195,202,213);
   background: linear-gradient(0deg, rgba(195,202,213,1) 0%, rgba(255,255,255,1) 100%);
 }
