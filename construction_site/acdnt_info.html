@@ -424,6 +424,318 @@
             </button>
         </div>
 
+        <!-- 상황전파 -->
+        <div class="situ_modal modal_bg">
+            <div class="modal_wrap">
+                <div class="modal_top d-flex justify-content-center">
+                    <h1 class="ns_b">상황전파</h1>
+                    <button class="close_btn"></button>
+                </div>
+                <div class="form_wrap">
+                    <form action="">
+                        <ul class="damage_option">
+                            <li>
+                                <label for="contact_user0"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user0" />
+                                <div class="checking active"></div>
+                                <p>인적피해발생</p>
+                            </li>
+                            <li>
+                                <label for="contact_user1"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user1" />
+                                <div class="checking"></div>
+                                <p>물적피해발생</p>
+                            </li>
+                        </ul>
+                        <ul class="check_wrap">
+                            <li>
+                                <span>주소</span>
+                                <div class="input_wrap">
+                                    <input type="text" />
+                                    <button class="add_btn">확인</button>
+                                </div>
+                            </li>
+                            <li>
+                                <span>발생일시</span>
+                                <input type="text" class="datepicker" />
+                            </li>
+                            <li>
+                                <span>유형</span>
+                                <ul class="check_list">
+                                    <li>
+                                        <label for="mainUse_check0"></label>
+                                        <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                                        <div class="checking"></div>
+                                        <p>추락</p>
+                                    </li>
+                                    <li>
+                                        <label for="mainUse_check0"></label>
+                                        <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                                        <div class="checking"></div>
+                                        <p>붕괴</p>
+                                    </li>
+                                    <li>
+                                        <label for="mainUse_check0"></label>
+                                        <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                                        <div class="checking"></div>
+                                        <p>전도</p>
+                                    </li>
+                                    <li>
+                                        <label for="mainUse_check0"></label>
+                                        <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                                        <div class="checking"></div>
+                                        <p>화재</p>
+                                    </li>
+                                    <li>
+                                        <label for="mainUse_check0"></label>
+                                        <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                                        <div class="checking"></div>
+                                        <p>낙하</p>
+                                    </li>
+                                    <li>
+                                        <label for="mainUse_check0"></label>
+                                        <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
+                                        <div class="checking"></div>
+                                        <p>기계장비</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>물적피해</span>
+                                <div class="input_wrap">
+                                    금액
+                                    <input type="text" />
+                                    원
+                                </div>
+                            </li>
+                            <li>
+                                <span>사망자</span>
+                                <div class="input_wrap">
+                                    <div class="wrapper">
+                                        내국인
+                                        <input type="text" />
+                                        명
+                                    </div>
+                                    <div class="wrapper">
+                                        외국인
+                                        <input type="text" />
+                                        명
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>부상자</span>
+                                <div class="input_wrap">
+                                    <div class="wrapper">
+                                        내국인
+                                        <input type="text" />
+                                        명
+                                    </div>
+                                    <div class="wrapper">
+                                        외국인
+                                        <input type="text" />
+                                        명
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>사고내용</span>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="contact">
+                    <h3 class="content_title"><sup></sup>비상연락망</h3>
+                    <div class="eContact">
+                        <ul class="eContactList contactList">
+                            <li>
+                                <p>1. 홍길동</p>
+                                <span>010-2602-6050</span>
+                                <button></button>
+                            </li>
+                            <li>
+                                <p>2. 홍길남</p>
+                                <span>010-1234-5678</span>
+                                <button></button>
+                            </li>
+                        </ul>
+                        <button class="contactPick_btn blue_btn">연락처 선택</button>
+                    </div>
+                </div>
+                <div class="modal_bottom">
+                    <div class="modal_submit nt_b d-flex justify-content-center">
+                        <button>취소</button>
+                        <button>저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 템플릿 추가 (SMS) -->
+            <div class="addTemplate modal_sub">
+                <button class="close_box"></button>
+                <form action="">
+                    <ul>
+                        <li>
+                            <p><sub></sub>템플릿 명칭</p>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            <p><sub></sub>내용</p>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </li>
+                    </ul>
+                </form>
+                <div class="subModal_submit">
+                    <button type="reset">취소</button>
+                    <button type="button">추가</button>
+                </div>
+            </div>
+            <!-- 그룹편집 (SMS) -->
+            <div class="groupEdit modal_sub">
+                <button class="close_box"></button>
+                <form class="makeGroup" action="">
+                    <p><sub></sub>그룹생성</p>
+                    <input type="text" />
+                    <button class="nt_m">확인</button>
+                </form>
+                <ul class="bundleList">
+                    <li>
+                        그룹 01
+                        <button></button>
+                    </li>
+                    <li>
+                        그룹 02
+                        <button></button>
+                    </li>
+                    <li>
+                        그룹 03
+                        <button></button>
+                    </li>
+                </ul>
+                <div class="gPhoneNum">
+                    <ul class="bundleList">
+                        <li>
+                            <p><strong>1.</strong>010-2602-6050</p>
+                            <button></button>
+                        </li>
+                        <li>
+                            <p><strong>2.</strong>010-1234-5678</p>
+                            <button></button>
+                        </li>
+                    </ul>
+                    <div class="input_wrap">
+                        <input type="tel" placeholder="휴대폰 번호 입력" />
+                        <button class="addPN_btn">추가</button>
+                    </div>
+                </div>
+                <div class="subModal_submit">
+                    <button type="reset">취소</button>
+                    <button type="button">확인</button>
+                </div>
+            </div>
+            <!-- 연락처 선택 (SMS) -->
+            <div class="contactPick modal_sub">
+                <button class="close_box"></button>
+                <ul class="contactPick_list">
+                    <li>
+                        <ul class="contactPick_info">
+                            <li>
+                                <label for="contact_user0"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user0" />
+                                <div class="checking"></div>
+                            </li>
+                            <div class="wrapper">
+                                <li>홍길동</li>
+                                <li>010-2602-6050</li>
+                                <li>test@gmail.com</li>
+                                <li>지역안전건축센터</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="contactPick_info">
+                            <li>
+                                <label for="contact_user1"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user1" />
+                                <div class="checking"></div>
+                            </li>
+                            <div class="wrapper">
+                                <li>홍길남</li>
+                                <li>010-2602-6050</li>
+                                <li>test@gmail.com</li>
+                                <li>지역안전건축센터</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="contactPick_info">
+                            <li>
+                                <label for="contact_user2"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user2" />
+                                <div class="checking"></div>
+                            </li>
+                            <div class="wrapper">
+                                <li>홍길남</li>
+                                <li>010-2602-6050</li>
+                                <li>test@gmail.com</li>
+                                <li>지역안전건축센터</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="contactPick_info">
+                            <li>
+                                <label for="contact_user3"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user3" />
+                                <div class="checking"></div>
+                            </li>
+                            <div class="wrapper">
+                                <li>홍길남</li>
+                                <li>010-2602-6050</li>
+                                <li>test@gmail.com</li>
+                                <li>지역안전건축센터</li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="contactPick_info">
+                            <li>
+                                <label for="contact_user4"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user4" />
+                                <div class="checking"></div>
+                            </li>
+                            <div class="wrapper">
+                                <li>홍길남</li>
+                                <li>010-2602-6050</li>
+                                <li>test@gmail.com</li>
+                                <li>지역안전건축센터</li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 페이지네이션 -->
+                <ul class="pagination">
+                    <li class="prev move"></li>
+                    <li class="page_item active">1</li>
+                    <li class="page_item">2</li>
+                    <li class="page_item">3</li>
+                    <li class="page_item">4</li>
+                    <li class="page_item">5</li>
+                    <li class="next move"></li>
+                    <li class="superNext move"></li>
+                </ul>
+                <button class="white_btn exel" type="button">
+                    <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                    엑셀 업로드
+                </button>
+                <div class="subModal_submit">
+                    <button type="reset">취소</button>
+                    <button type="button">선택</button>
+                </div>
+            </div>
+            <div class="subModal_bg"></div>
+        </div>
+
         <!-- SMS 보내기 -->
         <div class="sms_modal modal_bg">
             <div class="modal_wrap">
@@ -1261,7 +1573,7 @@
                                                 <label for="cctv_check0"></label>
                                                 <input type="radio" name="cctv_check" id="cctv_check0" checked />
                                                 <div class="checking active">
-                                                  <div class="radio_inner"></div>
+                                                    <div class="radio_inner"></div>
                                                 </div>
                                                 <p>명칭</p>
                                             </li>
@@ -1269,7 +1581,7 @@
                                                 <label for="cctv_check0"></label>
                                                 <input type="radio" name="cctv_check" id="cctv_check0" />
                                                 <div class="checking">
-                                                  <div class="radio_inner"></div>
+                                                    <div class="radio_inner"></div>
                                                 </div>
                                                 <p>지역</p>
                                             </li>
@@ -1464,25 +1776,29 @@
                                                 <ul class="check_list d-flex">
                                                     <li>
                                                         <label for="constType_check0"></label>
-                                                        <input type="checkbox" name="constType_check" id="constType_check0" />
+                                                        <input type="checkbox" name="constType_check"
+                                                            id="constType_check0" />
                                                         <div class="checking"></div>
                                                         <p>사망 1명 이상</p>
                                                     </li>
                                                     <li>
                                                         <label for="constType_check1"></label>
-                                                        <input type="checkbox" name="constType_check" id="constType_check1" />
+                                                        <input type="checkbox" name="constType_check"
+                                                            id="constType_check1" />
                                                         <div class="checking"></div>
                                                         <p>3일 이상 휴업이 필요한 부상</p>
                                                     </li>
                                                     <li>
                                                         <label for="constType_check2"></label>
-                                                        <input type="checkbox" name="constType_check" id="constType_check2" />
+                                                        <input type="checkbox" name="constType_check"
+                                                            id="constType_check2" />
                                                         <div class="checking"></div>
                                                         <p>1000만원 이상의 재산피해</p>
                                                     </li>
                                                     <li>
                                                         <label for="constType_check3"></label>
-                                                        <input type="checkbox" name="constType_check" id="constType_check3" />
+                                                        <input type="checkbox" name="constType_check"
+                                                            id="constType_check3" />
                                                         <div class="checking"></div>
                                                         <p>기타</p>
                                                     </li>

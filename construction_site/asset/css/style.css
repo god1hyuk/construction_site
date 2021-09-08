@@ -1218,16 +1218,16 @@
 .sub_page .search_add .check_wrap > li {
   display: flex;
   align-items: center;
-  padding: 25px 0;
+  padding: 17.5px 0;
   border-bottom: 1px solid #eaeaea;
 }
 .sub_page .search_add .check_wrap > li > h3 {
-  width: 10%;
+  width: 15%;
 }
 .sub_page .search_add .check_list {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 70%;
 }
 .sub_page .search_add .check_list li {
   position: relative;
@@ -1236,9 +1236,8 @@
 .sub_page .search_add .check_list li:not(:last-child) {
   margin-right: 40px;
 }
-.sub_page .search_add .check_wrap li:first-child li:nth-child(10),
-.sub_page .search_add .check_wrap li:first-child li:nth-child(11) {
-  margin-top: 15px;
+.sub_page .search_add .check_wrap  ul li {
+  margin: 7.5px 0;
 }
 .sub_page .search_add .check_list p {
   font-size: 15px;
@@ -1857,9 +1856,27 @@ a.ui-button:active,
   margin-top: 3.7037vh;
   border-top: 1px solid #192b80;
 }
+.cProgress_list .check_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cProgress_list .check_wrap > li {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  /* height: 9.2593vh; */
+  border-bottom: 1px solid #d7d7d7;
+}
 .cProgress_list .check_wrap > li > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 32%;
+  height: 100%;
+  font-family: 'NotoSansKR-Bold';
   font-size: 1.4815vh;
   padding-left: 1.3889vh;
+  background: #f5f6fa;
 }
 .cProgress_list .check_wrap > li > span > strong {
   line-height: 2;

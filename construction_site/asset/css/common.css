@@ -145,6 +145,7 @@ header .title {
 
 .wrapper {
   display: flex;
+  align-items: center;
 }
 
 
@@ -284,27 +285,6 @@ button {
   background: linear-gradient(0deg, rgba(244,246,249,1) 0%, rgba(255,255,255,1) 100%);
   border-radius: 5px;
   border: 1px solid #c0c9cb;
-}
-
-/* check_wrap */
-.check_wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-.check_wrap > li {
-  display: flex;
-  align-items: center;
-  width: 50%;
-  border-bottom: 1px solid #d7d7d7;
-}
-.check_wrap > li > span {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 32%;
-  height: 100%;
-  font-family: 'NotoSansKR-Bold';
-  background: #f5f6fa;
 }
 
 /* check_list */
@@ -646,11 +626,15 @@ input[type="radio"] + .checking.active .radio_inner {
 
 /* scrollbar */
 body::-webkit-scrollbar,
-.modal_bg::-webkit-scrollbar {
+.modal_bg::-webkit-scrollbar,
+.contactList::-webkit-scrollbar, 
+.bundleList::-webkit-scrollbar {
   width: 8px;
 }
 body::-webkit-scrollbar-thumb,
-.modal_bg::-webkit-scrollbar-thumb {
+.modal_bg::-webkit-scrollbar-thumb,
+.contactList::-webkit-scrollbar-thumb, 
+.bundleList::-webkit-scrollbar-thumb {
   background: #5479f7;
   border-radius: 100px;
 }

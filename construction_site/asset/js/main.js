@@ -619,20 +619,20 @@ $(function () {
         $(".groupEdit").fadeOut(300);
       });
     });
-    // 연락처 추가 (SMS)
-    $(".contactPick_btn").click(function () {
-      if ($(window).width() <= 1024) {
-        $(".subModal_bg").fadeIn(300);
-      }
-      $(".contactPick").fadeIn(300);
-      $(".contactPick .close_box").click(function () {
-        $(".subModal_bg").fadeOut(300);
-        $(".contactPick").fadeOut(300);
-      });
-      $(".contactPick .subModal_submit button:first-child").click(function () {
-        $(".subModal_bg").fadeOut(300);
-        $(".contactPick").fadeOut(300);
-      });
+  });
+  // 연락처 선택 (SMS)
+  $(".contactPick_btn").click(function () {
+    if ($(window).width() <= 1024) {
+      $(".subModal_bg").fadeIn(300);
+    }
+    $(".contactPick").fadeIn(300);
+    $(".contactPick .close_box").click(function () {
+      $(".subModal_bg").fadeOut(300);
+      $(".contactPick").fadeOut(300);
+    });
+    $(".contactPick .subModal_submit button:first-child").click(function () {
+      $(".subModal_bg").fadeOut(300);
+      $(".contactPick").fadeOut(300);
     });
   });
   // 내 정보 보기
