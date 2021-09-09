@@ -530,6 +530,16 @@ $(function () {
     $(".bldg_mgt .result_item > li:nth-child(6)").prepend("<span>점검예정일</span>");
     $(".bldg_mgt .result_item > li:nth-child(7)").prepend("<span>전회점검일</span>");
     $(".bldg_mgt .result_item > li:nth-child(8)").prepend("<span>관리출처</span>");
+    // 건축물 정보보기 페이지
+    $(".bldg_info .insp_result .result_item > li:nth-child(2)").prepend("<span>점검일자</span>");
+    $(".bldg_info .insp_result .result_item > li:nth-child(3)").prepend("<span>점검종류</span>");
+    $(".bldg_info .insp_result .result_item > li:nth-child(4)").prepend("<span>점검내역</span>");
+    $(".bldg_info .insp_result .result_item > li:nth-child(4) ul").addClass("bScale_list");
+    $(".bldg_info .insp_result .bScale_list > li:nth-child(1)").prepend("<strong>적합</strong>");
+    $(".bldg_info .insp_result .bScale_list > li:nth-child(2)").prepend("<strong>부적합</strong>");
+    $(".bldg_info .insp_result .bScale_list > li:nth-child(3)").prepend("<strong>미조치</strong>");
+    $(".bldg_info .insp_result .result_item > li:nth-child(5)").prepend("<span>점검자</span>");
+    $(".bldg_info .insp_result .result_item > li:nth-child(6)").prepend("<span>관리출처</span>");
     // 사고정보 페이지
     $(".acdnt_info .result_item > li:nth-child(1)").prepend("<span>#</span>");
     $(".acdnt_info .result_item > li:nth-child(4)").prepend("<span>등급</span>");
