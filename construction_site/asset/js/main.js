@@ -1,7 +1,5 @@
 var count = 0;
 
-
-
 // 야간모드 스위치
 $(function () {
   $(".construction_site .switch_wrap").click(function () {
@@ -643,12 +641,17 @@ $(function () {
   // 내 정보 보기
   $(".myInfo").hide();
   $(".user_name").click(function () {
+    if ($(window).width() <= 1024) {
+      $(".send_btn_m").fadeOut(300);
+    }
     $(".myInfo").fadeIn(300);
     $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
-    $(".myInfo .close_btn").click(function () {
+    $(".myInfo .close_btn, .myInfo .info_btn").click(function () {
       $(".myInfo").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
       $("body").css("overflow", "visible");
     });
   });
@@ -658,15 +661,12 @@ $(function () {
     $(".responsibility").fadeIn(300);
     $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
-    $(".responsibility .close_btn").click(function () {
+    $(".responsibility .close_btn, .responsibility .modal_submit button:first-child").click(function () {
       $(".responsibility").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
       $("body").css("overflow", "visible");
-    });
-    $(".responsibility .modal_submit button:first-child").click(function () {
-      $(".responsibility").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
-      $("body").css("overflow", "visible");    
     });
   });
   // 그룹관리
@@ -674,15 +674,12 @@ $(function () {
     $(".group_mgt").fadeIn(300);
     $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
-    $(".group_mgt .close_btn").click(function () {
+    $(".group_mgt .close_btn, .group_mgt .modal_submit button:first-child").click(function () {
       $(".group_mgt").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
       $("body").css("overflow", "visible");
-    });
-    $(".group_mgt .modal_submit button:first-child").click(function () {
-      $(".group_mgt").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
-      $("body").css("overflow", "visible");    
     });
     // 삭제 경고팝업 (그룹관리)
     $(".group_mgt .delete_btn").click(function () {
@@ -699,7 +696,6 @@ $(function () {
     });
     if ($(window).width() <= 1024) {
       $(".group_mgt .result_item > li:nth-child(4)").prepend("<p>등록시설물</p>");
-      
     }
   });
   // 공사장 진행사항 수정
@@ -709,7 +705,9 @@ $(function () {
     $("body").css("overflow", "hidden");
     $(".constProgress button").click(function () {
       $(".constProgress").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
       $("body").css("overflow", "visible");
     });
   });
@@ -729,14 +727,11 @@ $(function () {
       $(this).next().slideToggle(300);
       $(this).toggleClass("active");
     });
-    $(".constResult_enroll .close_btn").click(function () {
+    $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
       $(".constResult_enroll").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
-      $("body").css("overflow", "visible");
-    });
-    $(".constResult_enroll .modal_submit button:first-child").click(function () {
-      $(".constResult_enroll").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
       $("body").css("overflow", "visible");
     });
     if ($(window).width() <= 1024) {
@@ -751,14 +746,11 @@ $(function () {
     $(".constPlan_enroll").fadeIn(300);
     $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
-    $(".constPlan_enroll .close_btn").click(function () {
+    $(".constPlan_enroll .close_btn, .constPlan_enroll .modal_submit button:first-child").click(function () {
       $(".constPlan_enroll").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
-      $("body").css("overflow", "visible");
-    });
-    $(".constPlan_enroll .modal_submit button:first-child").click(function () {
-      $(".constPlan_enroll").fadeOut(300);
-      $(".send_btn_m").fadeIn(300);
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
       $("body").css("overflow", "visible");
     });
     // 자문단 선택
