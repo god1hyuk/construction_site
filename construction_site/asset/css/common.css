@@ -165,7 +165,7 @@ textarea {
 input:focus, select:focus {
   outline: none;
 }
-input:hover, select:hover, label:hover {
+label:hover {
   cursor: pointer;
 }
 .input_wrap,
@@ -513,6 +513,11 @@ input[type="radio"] + .checking.active .radio_inner {
   height: 15px;
   background: #6372a1;
   transform: rotate(-45deg) translate(-5px, -4px);
+}
+.subModal_submit button {
+  width: 86px;
+  height: 40px;
+  font-size: 15px;
 }
 .subModal_submit button:first-child {
   margin-right: 8px;

@@ -1260,7 +1260,7 @@
   height: 40px;
 }
 .search_add .check_wrap .datepicker,
-.search_add .check_wrap input {
+.search_add .check_wrap input[type="text"] {
   width: 260px;
   height: 40px;
 }
@@ -1951,7 +1951,7 @@ a.ui-button:active,
   height: 32px;
   border-radius: 3px;
 }
-.cProgress_list input,
+.cProgress_list input[type="text"],
 .cProgress_list select {
   width: 100%;
   height: 32px;
@@ -3378,10 +3378,10 @@ input[type="file"] {
 .sub_info .cInfoList_btn button:not(:last-child) {
   margin-right: 5px;
 }
-.sub_info .tab_wrap .content_title {
+.sub_info .check_tab .content_title {
   font-size: 22px;
 }
-.sub_info .tab_wrap .content_title sup {
+.sub_info .check_tab .content_title sup {
   width: 22px;
   height: 22px;
   margin-top: 5px;

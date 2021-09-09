@@ -1,5 +1,7 @@
 var count = 0;
 
+
+
 // 야간모드 스위치
 $(function () {
   $(".construction_site .switch_wrap").click(function () {
@@ -450,17 +452,17 @@ $(function () {
 
 // 추가 검색조건 Inputs
 $(function () {
-  $(".check_wrap > li:not(:nth-child(3)) li").click(function () {
-    if ($(this).children("input[type='checkbox']").is(":checked")) {
-      $(this).children(".checking").addClass("active");
-    } else {
-      $(this).children(".checking").removeClass("active");
-    }
-  });
-  $(".check_wrap > li:nth-child(3) li").click(function () {
-    $(".check_wrap > li:nth-child(3) li .checking").removeClass("active");
-    $(this).children(".checking").addClass("active");
-  });
+  // $(".check_wrap > li:not(:nth-child(3)) li").click(function () {
+  //   if ($(this).children("input[type='checkbox']").is(":checked")) {
+  //     $(this).children(".checking").addClass("active");
+  //   } else {
+  //     $(this).children(".checking").removeClass("active");
+  //   }
+  // });
+  // $(".check_wrap > li:nth-child(3) li").click(function () {
+  //   $(".check_wrap > li:nth-child(3) li .checking").removeClass("active");
+  //   $(this).children(".checking").addClass("active");
+  // });
 });
 
 // 조건검색 키워드
@@ -485,14 +487,17 @@ $(function () {
 // 검색결과 리스트
 $(function () {
   $(".result_list .result > li").click(function () {
-    if ($(this).children(".result_item").children("li").children("input[type='checkbox']").is(":checked")) {
-      $(this).children(".result_item").children("li").children(".checking").addClass("active");
-    } else {
-      $(this).children(".result_item").children("li").children(".checking").removeClass("active");
-    }
+    // if ($(this).children(".result_item").children("li").children("input[type='checkbox']").is(":checked")) {
+    //   $(this).children(".result_item").children("li").children(".checking").addClass("active");
+    // } else {
+    //   $(this).children(".result_item").children("li").children(".checking").removeClass("active");
+    // }
   });
   $(".const_mgt .result_item li:not(:first-child)").click(function () {
     location.href = "const_info.html";
+  });
+  $(".bldg_mgt .result_item li:not(:first-child)").click(function () {
+    location.href = "bldg_info.html";
   });
   $(".pagination li.page_item").click(function () {
     $(".pagination li.page_item").removeClass("active");
@@ -802,11 +807,11 @@ $(function () {
     $(".map_page .mAdress_sub").slideToggle(200);
   });
   $(".map_page .mountain_check").click(function () {
-    if ($(this).children("input[type='checkbox']").is(":checked")) {
-      $(this).addClass("active");
-    } else {
-      $(this).removeClass("active");
-    }
+    // if ($(this).children("input[type='checkbox']").is(":checked")) {
+    //   $(this).addClass("active");
+    // } else {
+    //   $(this).removeClass("active");
+    // }
   });
   $(".map_page .mFilter_btn").click(function () {
     $(".mFilter").fadeToggle(300);
@@ -850,3 +855,13 @@ $(function () {
 //   }, 280);
 // });
 
+// 체크박스
+$(function () {
+  $("input[type='checkbox']").prev("label").click(function () {
+    if ($(this).next("input[type='checkbox']").is(":checked")) {
+      $(this).next().next(".checking").addClass("active");
+    } else {
+      $(this).next().next(".checking").removeClass("active");
+    }
+  });
+});

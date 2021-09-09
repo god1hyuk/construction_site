@@ -465,7 +465,7 @@
                                     <li>
                                         <label for="mainUse_check0"></label>
                                         <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
-                                        <div class="checking"></div>
+                                        <div class="checking active"></div>
                                         <p>추락</p>
                                     </li>
                                     <li>
@@ -570,69 +570,6 @@
                     </div>
                 </div>
             </div>
-            <!-- 템플릿 추가 (SMS) -->
-            <div class="addTemplate modal_sub">
-                <button class="close_box"></button>
-                <form action="">
-                    <ul>
-                        <li>
-                            <p><sub></sub>템플릿 명칭</p>
-                            <input type="text" />
-                        </li>
-                        <li>
-                            <p><sub></sub>내용</p>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                        </li>
-                    </ul>
-                </form>
-                <div class="subModal_submit">
-                    <button type="reset">취소</button>
-                    <button type="button">추가</button>
-                </div>
-            </div>
-            <!-- 그룹편집 (SMS) -->
-            <div class="groupEdit modal_sub">
-                <button class="close_box"></button>
-                <form class="makeGroup" action="">
-                    <p><sub></sub>그룹생성</p>
-                    <input type="text" />
-                    <button class="nt_m">확인</button>
-                </form>
-                <ul class="bundleList">
-                    <li>
-                        그룹 01
-                        <button></button>
-                    </li>
-                    <li>
-                        그룹 02
-                        <button></button>
-                    </li>
-                    <li>
-                        그룹 03
-                        <button></button>
-                    </li>
-                </ul>
-                <div class="gPhoneNum">
-                    <ul class="bundleList">
-                        <li>
-                            <p><strong>1.</strong>010-2602-6050</p>
-                            <button></button>
-                        </li>
-                        <li>
-                            <p><strong>2.</strong>010-1234-5678</p>
-                            <button></button>
-                        </li>
-                    </ul>
-                    <div class="input_wrap">
-                        <input type="tel" placeholder="휴대폰 번호 입력" />
-                        <button class="addPN_btn">추가</button>
-                    </div>
-                </div>
-                <div class="subModal_submit">
-                    <button type="reset">취소</button>
-                    <button type="button">확인</button>
-                </div>
-            </div>
             <!-- 연락처 선택 (SMS) -->
             <div class="contactPick modal_sub">
                 <button class="close_box"></button>
@@ -642,7 +579,7 @@
                             <li>
                                 <label for="contact_user0"></label>
                                 <input type="checkbox" name="contact_user" id="contact_user0" />
-                                <div class="checking"></div>
+                                <div class="checking active"></div>
                             </li>
                             <div class="wrapper">
                                 <li>홍길동</li>
@@ -1031,7 +968,7 @@
                             <li>
                                 <label for="contact_user0"></label>
                                 <input type="checkbox" name="contact_user" id="contact_user0" />
-                                <div class="checking"></div>
+                                <div class="checking active"></div>
                             </li>
                             <div class="wrapper">
                                 <li>홍길동</li>
@@ -1321,235 +1258,6 @@
             </div>
         </div>
 
-        <!-- 담당업무 설정 -->
-        <div class="responsibility modal_bg">
-            <div class="modal_wrap">
-                <div class="modal_top d-flex justify-content-center">
-                    <h1 class="ns_b">담당업무 설정</h1>
-                    <button class="close_btn"></button>
-                </div>
-                <div class="tab_wrap">
-                    <ul class="tab_index ns_b d-flex justify-content-center">
-                        <li class="active" data-tab="resp_tab0">공사장 설정</li>
-                        <li data-tab="resp_tab1">건축물 설정</li>
-                    </ul>
-                    <div id="resp_tab0" class="tab_content active">
-                        <form action="">
-                            <ul>
-                                <li>
-                                    <span class="nt_b">공사장 분류</span>
-                                    <div class="select_wrap">
-                                        <select name="" id="">
-                                            <option value=""></option>
-                                        </select>
-                                        <button class="add_btn">추가</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="nt_b">지역</span>
-                                    <div class="select_wrap">
-                                        <select name="" id="">
-                                            <option value="">서울특별시</option>
-                                        </select>
-                                        <select name="" id="">
-                                            <option value=""></option>
-                                        </select>
-                                        <button class="add_btn">추가</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p class="guide_ment"><sub></sub>시설물의 경우 법정동 기준으로 설정합니다.</p>
-                                </li>
-                            </ul>
-                        </form>
-                        <ul class="hash_tags">
-                            <li>
-                                단독주택
-                                <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="resp_tab1" class="tab_content">
-                        <form action="">
-                            <ul>
-                                <li>
-                                    <span class="nt_b">건축물 분류</span>
-                                    <div class="select_wrap">
-                                        <select name="" id="">
-                                            <option value=""></option>
-                                        </select>
-                                        <button class="add_btn">추가</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="nt_b">지역</span>
-                                    <div class="select_wrap">
-                                        <select name="" id="">
-                                            <option value="">서울특별시</option>
-                                        </select>
-                                        <select name="" id="">
-                                            <option value=""></option>
-                                        </select>
-                                        <button class="add_btn">추가</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p class="guide_ment"><sub></sub>건축물의 경우 행정동 기준으로 설정하며, 건축물 주소 표현은 설정하신 행정동의 속해 있는
-                                        법정동으로 표현됩니다.</p>
-                                </li>
-                            </ul>
-                        </form>
-                        <ul class="hash_tags">
-                            <li>
-                                단독주택
-                                <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="modal_bottom d-flex justify-content-center">
-                    <div class="modal_submit nt_b d-flex justify-content-center">
-                        <button type="reset">취소</button>
-                        <button type="submit">저장</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 그룹관리 -->
-        <div class="modal_bg group_mgt">
-            <div class="modal_wrap">
-                <div class="modal_top d-flex justify-content-center">
-                    <h1 class="ns_b">그룹관리</h1>
-                    <button class="close_btn"></button>
-                </div>
-                <div class="form_wrap">
-                    <div class="group_add">
-                        <p class="nt_b">그룹추가</p>
-                        <div class="input_wrap">
-                            <input type="text" placeholder="그룹명을 입력하세요." />
-                            <button class="add_btn">추가</button>
-                        </div>
-                    </div>
-                    <div class="group_list">
-                        <div class="result_container">
-                            <div class="result_list text-center">
-                                <div class="subject_wrap">
-                                    <ul class="subject">
-                                        <li>
-                                            <div class="checking"></div>
-                                        </li>
-                                        <li>연번</li>
-                                        <li>그룹명</li>
-                                        <li>등록시설물</li>
-                                    </ul>
-                                </div>
-                                <div class="result_wrap">
-                                    <ul class="result">
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking0"></label>
-                                                    <input type="checkbox" name="result_checking"
-                                                        id="result_checking0" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>5</li>
-                                                <li>하반기 정기점검</li>
-                                                <li><span>21</span></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking0"></label>
-                                                    <input type="checkbox" name="result_checking"
-                                                        id="result_checking0" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>4</li>
-                                                <li>상반기 정기점검</li>
-                                                <li><span>2</span></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking0"></label>
-                                                    <input type="checkbox" name="result_checking"
-                                                        id="result_checking0" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>3</li>
-                                                <li>우기대비 수시점검</li>
-                                                <li><span>2</span></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking0"></label>
-                                                    <input type="checkbox" name="result_checking"
-                                                        id="result_checking0" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>2</li>
-                                                <li>해빙기 점검</li>
-                                                <li><span>9</span></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking0"></label>
-                                                    <input type="checkbox" name="result_checking"
-                                                        id="result_checking0" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>1</li>
-                                                <li>하반기 정기점검</li>
-                                                <li><span>73</span></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="result_bottom d-flex align-items-center">
-                            <button class="dimgray_btn">전체선택</button>
-                            <button class="delete_btn">선택그룹 삭제</button>
-                        </div>
-                    </div>
-                    <!-- 페이지네이션 -->
-                    <ul class="pagination">
-                        <li class="prev move"></li>
-                        <li class="page_item active">1</li>
-                        <li class="page_item">2</li>
-                        <li class="page_item">3</li>
-                        <li class="page_item">4</li>
-                        <li class="page_item">5</li>
-                        <li class="next move"></li>
-                        <li class="superNext move"></li>
-                    </ul>
-                </div>
-                <div class="modal_bottom d-flex justify-content-center">
-                    <div class="modal_submit nt_b d-flex justify-content-center">
-                        <button type="reset">취소</button>
-                        <button type="submit">보내기</button>
-                    </div>
-                </div>
-            </div>
-            <!-- 삭제 경고팝업 (그룹관리) -->
-            <div class="delete_pop modal_sub">
-                <p>등록된 시설물이 존재합니다.<br />그룹을 삭제 하시겠습니까?</p>
-                <div class="subModal_submit">
-                    <button>취소</button>
-                    <button>확인</button>
-                </div>
-            </div>
-            <div class="subModal_bg"></div>
-        </div>
-
         <div class="main_content">
             <div class="container">
                 <div class="row">
@@ -1600,7 +1308,7 @@
                                             <p class="text-center">구분</p>
                                             <form action="">
                                                 <ul>
-                                                    <li>
+                                                    <li class="active">
                                                         <label for="scale_check0">전체</label>
                                                         <input type="checkbox" name="scale_check" id="scale_check0" />
                                                     </li>
@@ -1673,7 +1381,7 @@
                                             <p class="text-center">공종</p>
                                             <form action="">
                                                 <ul>
-                                                    <li>
+                                                    <li class="active">
                                                         <label for="scale_check0">전체</label>
                                                         <input type="checkbox" name="scale_check" id="scale_check0" />
                                                     </li>
@@ -1778,7 +1486,7 @@
                                                         <label for="constType_check0"></label>
                                                         <input type="checkbox" name="constType_check"
                                                             id="constType_check0" />
-                                                        <div class="checking"></div>
+                                                        <div class="checking active"></div>
                                                         <p>사망 1명 이상</p>
                                                     </li>
                                                     <li>
@@ -1948,10 +1656,6 @@
                             <div class="result_top">
                                 <div class="total">
                                     <p>총 <strong class="ns_b">289</strong> 건</p>
-                                </div>
-                                <div class="result_option d-flex">
-                                    <button class="resp_btn">담당업무</button>
-                                    <button class="groupMgt_btn">재난관리 그룹추가</button>
                                 </div>
                             </div>
                             <!-- 검색결과 리스트 -->

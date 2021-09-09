@@ -387,6 +387,7 @@ aside .home a {
 }
 .sms_modal .contactList,
 .sms_modal .bundleList {
+  width: 100%;
   overflow-y: scroll;
   padding: 1.3889vh 0.9259vh;
   background: #fff;
@@ -578,8 +579,6 @@ aside .home a {
   margin-bottom: 3.7037vh;
 }
 .contactPick .subModal_submit button {
-  width: 86px;
-  height: 40px;
   font-size: 15px;
 }
 .contactPick .modal_sub {
@@ -637,6 +636,7 @@ aside .home a {
 .sms_modal .groupEdit {
   top: 48%;
   left: 51%;
+  padding: 30px;
 }
 .sms_modal .groupEdit .makeGroup {
   display: flex;
