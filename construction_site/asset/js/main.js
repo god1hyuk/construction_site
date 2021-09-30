@@ -867,3 +867,32 @@ $(function () {
     }
   });
 });
+
+// 실시간 모니터링
+
+
+$(document).ready(function () {
+  // 헤더 (CCTV)
+  function getTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = ('00' + (now.getMonth()+1)).slice(-2);
+    const date = ('00' + now.getDate()).slice(-2);
+    const time = now.toLocaleTimeString();
+
+    $('.cctv_page .date').text(year + '-' + month + '-' + date);
+    $('.cctv_page .time').text(time);
+  }
+
+  function timeInit() {
+    setInterval(getTime, 1000);
+  }
+
+  timeInit();
+  
+  // cctv 메뉴
+  $('.cctv_list li').on('click', function () {
+    $('.cctv_list li').removeClass('active');
+    $(this).addClass('active');
+  });
+});

@@ -8,6 +8,42 @@ html,body {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+
+  /* scrollbar for IE */
+	scrollbar-base-color: #5479f7; 
+	scrollbar-Face-Color: #5479f7;
+  scrollbar-shadow-color: #5479f7;
+  scrollbar-arrow-color: #2c3646;
+	scrollbar-Track-Color: #e8eef8;
+	/* scrollbar-arrow-color: #fff; 
+	scrollbar-Track-Color: #272d35;   */
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 8px;
+  background: #e8eef8;
+}
+body::-webkit-scrollbar-thumb,
+.modal_bg::-webkit-scrollbar-thumb,
+.contactList::-webkit-scrollbar-thumb, 
+.bundleList::-webkit-scrollbar-thumb,
+.cctv_list::-webkit-scrollbar-thumb {
+  background: #5479f7;
+  border-radius: 100px;
+}
+.modal_bg::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+.contactList::-webkit-scrollbar,
+.bundleList::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+.cctv_list::-webkit-scrollbar {
+  width: 5px;
+  background: #272d35;
 }
 
 /* fonts */
@@ -392,6 +428,7 @@ input[type="radio"] + .checking.active .radio_inner {
   width: 100vw;
   height: 100vh;
   padding-bottom: 200px;
+  overflow-x: hidden;
   overflow-y: scroll;
   background: rgba(0, 0, 0, 0.5);
 }
@@ -627,19 +664,4 @@ input[type="radio"] + .checking.active .radio_inner {
 .hidden {
   display: none;
   opacity: 0;
-}
-
-/* scrollbar */
-body::-webkit-scrollbar,
-.modal_bg::-webkit-scrollbar,
-.contactList::-webkit-scrollbar, 
-.bundleList::-webkit-scrollbar {
-  width: 8px;
-}
-body::-webkit-scrollbar-thumb,
-.modal_bg::-webkit-scrollbar-thumb,
-.contactList::-webkit-scrollbar-thumb, 
-.bundleList::-webkit-scrollbar-thumb {
-  background: #5479f7;
-  border-radius: 100px;
 }
