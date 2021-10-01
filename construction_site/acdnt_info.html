@@ -52,10 +52,10 @@
         <aside>
             <nav class="side_menu ns_b">
                 <div class="home d-flex align-items-center">
-                    <a href="index.html" class="d-flex align-items-center justify-content-between">
-                        <span>Menu</span>
-                        <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
-                    </a>
+                    <span>Menu</span>
+                    <button>
+                      <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
+                    </button>
                 </div>
                 <ul>
                     <li class="sideMenu_item" value="0">
@@ -437,7 +437,7 @@
                             <li>
                                 <label for="contact_user0"></label>
                                 <input type="checkbox" name="contact_user" id="contact_user0" />
-                                <div class="checking active"></div>
+                                <div class="checking"></div>
                                 <p>인적피해발생</p>
                             </li>
                             <li>
@@ -465,7 +465,7 @@
                                     <li>
                                         <label for="mainUse_check0"></label>
                                         <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
-                                        <div class="checking active"></div>
+                                        <div class=" active"></div>
                                         <p>추락</p>
                                     </li>
                                     <li>
@@ -579,7 +579,7 @@
                             <li>
                                 <label for="contact_user0"></label>
                                 <input type="checkbox" name="contact_user" id="contact_user0" />
-                                <div class="checking active"></div>
+                                <div class="checking"></div>
                             </li>
                             <div class="wrapper">
                                 <li>홍길동</li>
@@ -968,7 +968,7 @@
                             <li>
                                 <label for="contact_user0"></label>
                                 <input type="checkbox" name="contact_user" id="contact_user0" />
-                                <div class="checking active"></div>
+                                <div class="checking"></div>
                             </li>
                             <div class="wrapper">
                                 <li>홍길동</li>
@@ -1258,6 +1258,190 @@
             </div>
         </div>
 
+        <!-- 사고등록 -->
+        <div class="acdnt_enroll modal_bg">
+            <div class="modal_wrap">
+                <div class="modal_top d-flex justify-content-center">
+                    <h1 class="ns_b">사고등록</h1>
+                    <button class="close_btn"></button>
+                </div>
+                <div class="table_wrap">
+                    <form action="">
+                        <table>
+                            <colgroup>
+                                <col width="10%" />
+                                <col width="10%" />
+                                <col width="30%" />
+                                <col width="10%" />
+                                <col width="10%" />
+                                <col width="30%" />
+                            </colgroup>
+                            <tr>
+                                <th rowspan="5">사고현황</th>
+                                <th>공사명</th>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                                <th colspan="2">사고발생일시</th>
+                                <td>
+                                    <input type="text" class="datepicker" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사고발생<br />장소</th>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                                <th rowspan="3">피해상황</th>
+                                <th>사망자수(명)</th>
+                                <td>
+                                    <div class="input_wrap">
+                                        <div class="wrapper">
+                                          내국인
+                                          <input type="text" />
+                                          명
+                                        </div>
+                                        <div class="wrapper">
+                                          외국인
+                                          <input type="text" />
+                                          명
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">사고발생<br />경위</th>
+                                <td rowspan="2">
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </td>
+                                <th>부상자수(명)</th>
+                                <td>
+                                    <div class="input_wrap">
+                                        <div class="wrapper">
+                                            내국인
+                                            <input type="text" />
+                                            명
+                                        </div>
+                                        <div class="wrapper">
+                                            외국인
+                                            <input type="text" />
+                                            명
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>물적피해</th>
+                                <td>
+                                    <div class="check_wrap">
+                                        <ul class="check_list">
+                                            <li>
+                                                <p>무</p>
+                                                <label for="materialDamage"></label>
+                                                <input type="checkbox" name="materialDamage" id="materialDamage"/>
+                                                <div class="checking"></div>
+                                            </li>
+                                        </ul>
+                                        <div class="input_wrap">
+                                            <div class="wrapper">
+                                                금액
+                                                <input type="text" />
+                                                원
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사고신고<br />사유</th>
+                                <td colspan="4">
+                                    <div class="check_wrap">
+                                        <ul class="check_list">
+                                            <li>
+                                              <label for="aReport_reason0"></label>
+                                              <input type="checkbox" name="aReport_reason" id="aReport_reason0" />
+                                              <div class="checking"></div>
+                                              <p>사망 1명 이상</p>
+                                            </li>
+                                            <li>
+                                              <label for="aReport_reason1"></label>
+                                              <input type="checkbox" name="aReport_reason" id="aReport_reason1" />
+                                              <div class="checking"></div>
+                                              <p>3일이상 휴업이 필요한 부상</p>
+                                            </li>
+                                            <li>
+                                              <label for="aReport_reason2"></label>
+                                              <input type="checkbox" name="aReport_reason" id="aReport_reason2" />
+                                              <div class="checking"></div>
+                                              <p>1000만원 이상의 재산피해</p>
+                                            </li>
+                                            <li>
+                                              <label for="aReport_reason3"></label>
+                                              <input type="checkbox" name="aReport_reason" id="aReport_reason3" />
+                                              <div class="checking"></div>
+                                              <p>기타</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">공사개요</th>
+                                <td colspan="4">
+                                    <p>규모, 용도, 허가/착공일, 공정률, 공사관계자 현황 (시스템 자동연계)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">사후조치</th>
+                                <th>사고원인</th>
+                                <td colspan="4">
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>인적피해<br />조치결과</th>
+                                <td colspan="4">
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>물적피해<br />조치결과</th>
+                                <td colspan="4">
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>행정조치</th>
+                                <td colspan="4">
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>기타</th>
+                                <th>언론보도</th>
+                                <td colspan="2">
+                                    <input type="text" />
+                                </td>
+                                <td colspan="2">
+                                    <div class="form_box">
+                                        <input type="file" id="birdsEye_view" />
+                                        <input type="text" class="upload_name" />
+                                        <label class="file_btn" for="birdsEye_view">파일선택</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="modal_bottom">
+                    <div class="modal_submit nt_b d-flex justify-content-center">
+                      <button>취소</button>
+                      <button>저장</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
         <div class="main_content">
             <div class="container">
                 <div class="row">
@@ -1486,7 +1670,7 @@
                                                         <label for="constType_check0"></label>
                                                         <input type="checkbox" name="constType_check"
                                                             id="constType_check0" />
-                                                        <div class="checking active"></div>
+                                                        <div class="checking"></div>
                                                         <p>사망 1명 이상</p>
                                                     </li>
                                                     <li>
@@ -1813,7 +1997,7 @@
                                             <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
                                             엑셀
                                         </button>
-                                        <button class="blue_btn">등록</button>
+                                        <button class="acdntEnroll_btn blue_btn">등록</button>
                                     </div>
                                 </div>
                             </div>

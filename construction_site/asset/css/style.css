@@ -1168,6 +1168,10 @@
   border-right: none;
   transition: all .1s;
 }
+.sub_page .searchRqt_tab .tab_index li.active {
+  color: #fff;
+  background: #192b80;
+}
 .sub_page .searchRqt_tab .tab_index li:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -1931,7 +1935,7 @@ a.ui-button:active,
   height: 1.8519vh;
   margin-right: 0.9259vh;
 }
-.cProgress_list .form_box {
+.form_box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3306,6 +3310,9 @@ input[type="file"] {
   background-image: url(../images/icon/bldg_mgt_title.png) !important;
   background-size: 55%;
 }
+.bldg_mgt .form_wrap {
+  overflow: visible !important;
+}
 .bldg_mgt .search_form .search_name ul li:first-child,
 .acdnt_info .search_form .search_name ul li:first-child {
   width: 86%;
@@ -3398,7 +3405,8 @@ input[type="file"] {
 }
 
 /* 사고정보 페이지 */
-.acdnt_info .title_icon {
+.acdnt_info .title_icon,
+.acdnt_enroll .title_icon {
   background-image: url(../images/icon/acdnt_info_title.png) !important;
   background-size: 55%;
 }
@@ -3439,12 +3447,96 @@ input[type="file"] {
 }
 .acdnt_info .result_container .result_btn {
   display: flex;
-  /* justify-content: space-between; */
   justify-content: flex-end;
   width: 100%;
 }
 .acdnt_info .result_container .result_btn .blue_btn {
   margin-left: 5px;
+}
+/* 사고등록 */
+.acdnt_enroll .modal_wrap {
+  width: 70vw;
+}
+.acdnt_enroll .table_wrap {
+  margin-top: 45px;
+  border-top: 1px solid #192b80;
+}
+.acdnt_enroll table {
+  width: 100%;
+}
+.acdnt_enroll tr {
+  border-bottom: 1px solid #d7d7d7;
+}
+.acdnt_enroll tr:nth-child(1) th:nth-child(1),
+.acdnt_enroll tr:nth-child(2) th:nth-child(3),
+.acdnt_enroll tr:nth-child(7) th:nth-child(1),
+.acdnt_enroll tr:nth-child(11) th:nth-child(1) {
+  border-right: 1px solid #d7d7d7;
+}
+.acdnt_enroll th {
+  line-height: 1.3;
+  font-family: 'NotoSansKR-Bold';
+  font-size: 16px;
+  background: #f5f6fa;
+}
+.acdnt_enroll td {
+  font-size: 15px;
+  padding: 20px 15px;
+}
+.acdnt_enroll td input[type="text"] {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+}
+.acdnt_enroll tr:nth-child(3) textarea {
+  width: 100%;
+  height: 120px;
+}
+.acdnt_enroll .check_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.acdnt_enroll .input_wrap {
+  justify-content: space-between;
+}
+.acdnt_enroll .input_wrap .wrapper {
+  width: 50%;
+}
+.acdnt_enroll .input_wrap .wrapper:last-child {
+  justify-content: flex-end;
+}
+.acdnt_enroll .input_wrap input {
+  width: 45% !important;
+  margin: 0 10px !important;
+}
+.acdnt_enroll .check_list li {
+  display: flex;
+  position: relative;
+  margin-right: 20px;
+}
+.acdnt_enroll .check_list .checking {
+  margin-right: 10px;
+}
+.acdnt_enroll tr:nth-child(4) .check_list {
+  width: 20%;
+}
+.acdnt_enroll tr:nth-child(4) .check_list p {
+  margin-right: 10px;
+}
+.acdnt_enroll tr:nth-child(4) .input_wrap {
+  width: 80%;
+}
+.acdnt_enroll tr:nth-child(4) .wrapper {
+  width: 100%;
+}
+.acdnt_enroll tr:nth-child(4) input[type="text"] {
+  width: 70% !important;
+}
+.acdnt_enroll .file_btn {
+  width: 20%;
+  height: 40px;
 }
 
 /* 실시간 모니터링 */

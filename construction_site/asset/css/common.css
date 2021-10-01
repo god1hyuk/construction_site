@@ -73,6 +73,9 @@ body::-webkit-scrollbar-thumb,
 header .title {
   font-family: 'NanumSquareEB';
 }
+.br_none {
+  display: none;
+}
 
 /* flex */
 .d-flex {

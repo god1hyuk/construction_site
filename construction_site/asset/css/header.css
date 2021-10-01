@@ -16,16 +16,12 @@ aside {
   color: #cdced8;
 }
 .construction_site .home {
+  width: 100%;
   height: 70px;
   background-image: url("../images/icon/home_btn.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #20b5c8;
-}
-aside .home a {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 .construction_site .sideMenu_item {
   position: relative;
@@ -1150,25 +1146,19 @@ header {
   background: rgb(0,204,178);
   background: linear-gradient(-45deg, rgba(0,204,178,1) 31%, rgba(57,120,252,1) 100%);  
 }
-.sub_page .home a::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10.7813vw;
-  width: 1px;
-  height: 3.5185vh;
-  background: #00a28d;
+.sub_page .home span {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 45%;
+  border-right: 1px solid #00a28d;
 }
-.sub_page .home a::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10.8333vw;
-  width: 1px;
-  height: 3.5185vh;
-  background: #80e6d9;
+.sub_page .home button {
+  justify-content: flex-end;
+  width: 20%;
+  height: 45%;
+  padding: 0;
+  border-left: 1px solid #80e6d9;
 }
 .sub_page .side_menu > ul {
   padding-top: 1.5625vw;

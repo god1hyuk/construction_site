@@ -22,7 +22,7 @@ $(function () {
 
 // 링크 이동
 $(function () {
-  $(".home").click(function () {
+  $(".home button").click(function () {
     location.href = "index.html";
   });
   $(".go_map button").click(function () {
@@ -785,6 +785,19 @@ $(function () {
       }
     });
   });
+  // 사고등록
+  $(".acdntEnroll_btn").click(function () {
+    $(".acdnt_enroll").fadeIn(200);
+    $(".send_btn_m").fadeOut(300);
+    $("body").css("overflow", "hidden");
+    $(".acdnt_enroll .close_btn, .acdnt_enroll .modal_submit button:first-child").click(function () {
+      $(".acdnt_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
+    });
+  });
 });
 
 // 파일 업로드
@@ -858,19 +871,32 @@ $(function () {
 // });
 
 // 체크박스
+// $(function () {
+//   $("input[type='checkbox']").prev("label").click(function () {
+//     if ($(this).next("input[type='checkbox']").is(":checked")) {
+//       $(this).next().next(".checking").addClass("active");
+//     } else {
+//       $(this).next().next(".checking").removeClass("active");
+//     }
+//   });
+// });
 $(function () {
-  $("input[type='checkbox']").prev("label").click(function () {
-    if ($(this).next("input[type='checkbox']").is(":checked")) {
-      $(this).next().next(".checking").addClass("active");
+  $(".check_list > li").click(function () {
+    if ($(this).children("input[type='checkbox']").is(":checked")) {
+      $(this).children(".checking").addClass("active");
     } else {
-      $(this).next().next(".checking").removeClass("active");
+      $(this).children(".checking").removeClass("active");
+    }
+    if($("#materialDamage").is(":checked")) {
+      $(".acdnt_enroll tr:nth-child(4) input[type='text']").val("");
+      $(".acdnt_enroll tr:nth-child(4) input[type='text']").attr("disabled", true);
+    } else {
+      $(".acdnt_enroll tr:nth-child(4) input[type='text']").removeAttr("disabled", false);
     }
   });
 });
 
 // 실시간 모니터링
-
-
 $(document).ready(function () {
   // 헤더 (CCTV)
   function getTime() {
