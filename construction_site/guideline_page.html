@@ -45,8 +45,8 @@
 </head>
 
 <body>
-    <!-- 공사장관리 서브페이지 -->
-    <div class="acdnt_info sub_page d-flex">
+    <!-- 관련법규/지침 서브페이지 -->
+    <div class="guideline_page noticeField sub_page d-flex">
 
         <!-- 서브페이지 사이드 메뉴 (PC) -->
         <aside>
@@ -435,14 +435,14 @@
                     <form action="">
                         <ul class="damage_option">
                             <li>
-                                <label for="damage_option0"></label>
-                                <input type="checkbox" name="damage_option" id="damage_option0" />
+                                <label for="contact_user0"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user0" />
                                 <div class="checking"></div>
                                 <p>인적피해발생</p>
                             </li>
                             <li>
-                                <label for="damage_option1"></label>
-                                <input type="checkbox" name="damage_option" id="damage_option1" />
+                                <label for="contact_user1"></label>
+                                <input type="checkbox" name="contact_user" id="contact_user1" />
                                 <div class="checking"></div>
                                 <p>물적피해발생</p>
                             </li>
@@ -465,7 +465,7 @@
                                     <li>
                                         <label for="mainUse_check0"></label>
                                         <input type="checkbox" name="mainUse_check" id="mainUse_check0" />
-                                        <div class="checking active"></div>
+                                        <div class="checking"></div>
                                         <p>추락</p>
                                     </li>
                                     <li>
@@ -570,7 +570,7 @@
                     </div>
                 </div>
             </div>
-            <!-- 연락처 선택 (SMS) -->
+            <!-- 연락처 선택 (상황전파) -->
             <div class="contactPick modal_sub">
                 <button class="close_box"></button>
                 <ul class="contactPick_list">
@@ -1140,720 +1140,46 @@
             </div>
         </div>
 
-        <!-- 검색조건 선택 (모바일) -->
-        <div class="searchFilter_m">
-            <div class="searchFilter_top d-flex align-items-center justify-content-between">
-                <button class="init_btn_m">
-                    <img src="asset/images/icon/searchFilter_init.png" alt="초기화_아이콘" />
-                    초기화
-                </button>
-                <h2 class="ns_b">필터</h2>
-                <button class="close_btn"></button>
-            </div>
-            <!-- 검색조건 체크리스트 (모바일) -->
-            <div class="searchFilter_list">
-                <form action="">
-                    <ul>
-                        <li>
-                            <h3>규모</h3>
-                            <h4>대형</h4>
-                            <ul class="check_list">
-                                <li class="active">
-                                    <label for="division_check0_m">대형</label>
-                                    <input type="checkbox" name="division_check" id="division_check0_m" />
-                                </li>
-                                <li>
-                                    <label for="division_check1_m">중형</label>
-                                    <input type="checkbox" name="division_check" id="division_check1_m" />
-                                </li>
-                                <li>
-                                    <label for="division_check2_m">소형</label>
-                                    <input type="checkbox" name="division_check" id="division_check2_m" />
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>공정</h3>
-                            <h4>철거 - <span>허가</span></h4>
-                            <ul class="check_list">
-                                <li class="active">
-                                    <label for="processM_check0_m">철거</label>
-                                    <input type="checkbox" name="processM_check" id="processM_check0_m" />
-                                </li>
-                                <li>
-                                    <label for="processM_check1_m">해체</label>
-                                    <input type="checkbox" name="processM_check" id="processM_check1_m" />
-                                </li>
-                                <li>
-                                    <label for="processM_check2_m">굴토</label>
-                                    <input type="checkbox" name="processM_check" id="processM_check2_m" />
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <ul class="check_list">
-                                <li class="active">
-                                    <label for="processS_check0_m">허가</label>
-                                    <input type="checkbox" name="processS_check" id="processS_check0_m" />
-                                </li>
-                                <li>
-                                    <label for="processS_check1_m">신고</label>
-                                    <input type="checkbox" name="processS_check" id="processS_check1_m" />
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>주용도</h3>
-                            <h4>단독주택</h4>
-                            <ul class="check_list">
-                                <li class="active">
-                                    <label for="division_check0">단독주택</label>
-                                    <input type="checkbox" name="division_check" id="division_check0" />
-                                </li>
-                                <li>
-                                    <label for="division_check1">공동주택</label>
-                                    <input type="checkbox" name="division_check" id="division_check1" />
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>구조</h3>
-                            <h4>철근콘크리트조</h4>
-                            <ul class="check_list">
-                                <li class="active">
-                                    <label for="division_check0">철근콘크리트조</label>
-                                    <input type="checkbox" name="division_check" id="division_check0" />
-                                </li>
-                                <li>
-                                    <label for="division_check1">철골철근콘크리트조</label>
-                                    <input type="checkbox" name="division_check" id="division_check1" />
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>CCTV 설치여부</h3>
-                            <h4>설치</h4>
-                            <ul class="check_list">
-                                <li class="active">
-                                    <label for="division_check0">설치</label>
-                                    <input type="checkbox" name="division_check" id="division_check0" />
-                                </li>
-                                <li>
-                                    <label for="division_check1">미설치</label>
-                                    <input type="checkbox" name="division_check" id="division_check1" />
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>허가일자</h3>
-                            <h4>2021-01-08</h4>
-                            <input type="text" id="permitDate_m" class="datepicker" />
-                        </li>
-                    </ul>
-                </form>
-            </div>
-            <div class="searchFilter_bottom d-flex align-items-center">
-                <button>취소</button>
-                <button>적용</button>
-            </div>
-        </div>
-
-        <!-- 사고등록 -->
-        <div class="acdnt_enroll modal_enroll modal_bg">
-            <div class="modal_wrap">
-                <div class="modal_top d-flex justify-content-center">
-                    <h1 class="ns_b">사고등록</h1>
-                    <button class="close_btn"></button>
-                </div>
-                <div class="table_wrap">
-                    <form action="">
-                        <table>
-                            <colgroup>
-                                <col width="10%" />
-                                <col width="10%" />
-                                <col width="30%" />
-                                <col width="10%" />
-                                <col width="10%" />
-                                <col width="30%" />
-                            </colgroup>
-                            <tr>
-                                <th rowspan="5">사고현황</th>
-                                <th>공사명</th>
-                                <td>
-                                    <input type="text" />
-                                </td>
-                                <th colspan="2">사고발생일시</th>
-                                <td>
-                                    <input type="text" class="datepicker" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>사고발생<br />장소</th>
-                                <td>
-                                    <input type="text" />
-                                </td>
-                                <th rowspan="3">피해상황</th>
-                                <th>사망자수(명)</th>
-                                <td>
-                                    <div class="input_wrap">
-                                        <div class="wrapper">
-                                          내국인
-                                          <input type="text" />
-                                          명
-                                        </div>
-                                        <div class="wrapper">
-                                          외국인
-                                          <input type="text" />
-                                          명
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th rowspan="2">사고발생<br />경위</th>
-                                <td rowspan="2">
-                                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                                </td>
-                                <th>부상자수(명)</th>
-                                <td>
-                                    <div class="input_wrap">
-                                        <div class="wrapper">
-                                            내국인
-                                            <input type="text" />
-                                            명
-                                        </div>
-                                        <div class="wrapper">
-                                            외국인
-                                            <input type="text" />
-                                            명
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>물적피해</th>
-                                <td>
-                                    <div class="check_wrap">
-                                        <ul class="check_list">
-                                            <li>
-                                                <p>무</p>
-                                                <label for="materialDamage"></label>
-                                                <input type="checkbox" name="materialDamage" id="materialDamage"/>
-                                                <div class="checking"></div>
-                                            </li>
-                                        </ul>
-                                        <div class="input_wrap">
-                                            <div class="wrapper">
-                                                금액
-                                                <input type="text" />
-                                                원
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>사고신고<br />사유</th>
-                                <td colspan="4">
-                                    <div class="check_wrap">
-                                        <ul class="check_list">
-                                            <li>
-                                              <label for="aReport_reason0"></label>
-                                              <input type="checkbox" name="aReport_reason" id="aReport_reason0" />
-                                              <div class="checking"></div>
-                                              <p>사망 1명 이상</p>
-                                            </li>
-                                            <li>
-                                              <label for="aReport_reason1"></label>
-                                              <input type="checkbox" name="aReport_reason" id="aReport_reason1" />
-                                              <div class="checking"></div>
-                                              <p>3일이상 휴업이 필요한 부상</p>
-                                            </li>
-                                            <li>
-                                              <label for="aReport_reason2"></label>
-                                              <input type="checkbox" name="aReport_reason" id="aReport_reason2" />
-                                              <div class="checking"></div>
-                                              <p>1000만원 이상의 재산피해</p>
-                                            </li>
-                                            <li>
-                                              <label for="aReport_reason3"></label>
-                                              <input type="checkbox" name="aReport_reason" id="aReport_reason3" />
-                                              <div class="checking"></div>
-                                              <p>기타</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th colspan="2">공사개요</th>
-                                <td colspan="4">
-                                    <p>규모, 용도, 허가/착공일, 공정률, 공사관계자 현황 (시스템 자동연계)</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th rowspan="4">사후조치</th>
-                                <th>사고원인</th>
-                                <td colspan="4">
-                                    <input type="text" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>인적피해<br />조치결과</th>
-                                <td colspan="4">
-                                    <input type="text" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>물적피해<br />조치결과</th>
-                                <td colspan="4">
-                                    <input type="text" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>행정조치</th>
-                                <td colspan="4">
-                                    <input type="text" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>기타</th>
-                                <th>언론보도</th>
-                                <td colspan="2">
-                                    <input type="text" />
-                                </td>
-                                <td colspan="2">
-                                    <div class="form_box">
-                                        <input type="file" id="birdsEye_view" />
-                                        <input type="text" class="upload_name" />
-                                        <label class="file_btn" for="birdsEye_view">파일선택</label>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-                <div class="modal_bottom">
-                    <div class="modal_submit nt_b d-flex justify-content-center">
-                      <button>취소</button>
-                      <button>저장</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="main_content">
             <div class="container">
                 <div class="row">
                     <div class="title_wrap">
                         <div class="title_icon"></div>
-                        <h3 class="ns_eb">사고정보</h3>
+                        <h3 class="ns_eb">관련법규/지침</h3>
                     </div>
                     <div class="form_container">
                         <div class="form_wrap">
                             <!-- 검색 폼 영역 -->
                             <div class="search_form content_form">
-                                <!-- 주소선택 -->
-                                <div class="acdnt_name search_name">
-                                    <h3 class="ns_b">사고명</h3>
+                                <div class="search_name">
                                     <form action="">
                                         <ul class="d-flex">
+                                            <li>
+                                                <select name="" id="">
+                                                    <option value="">제목</option>
+                                                    <option value="">등록자</option>
+                                                </select>
+                                            </li>
                                             <li>
                                                 <input type="text" />
                                             </li>
                                             <li>
-                                                <label for="cctv_check0"></label>
-                                                <input type="radio" name="cctv_check" id="cctv_check0" checked />
-                                                <div class="checking active">
-                                                    <div class="radio_inner"></div>
-                                                </div>
-                                                <p>명칭</p>
-                                            </li>
-                                            <li>
-                                                <label for="cctv_check0"></label>
-                                                <input type="radio" name="cctv_check" id="cctv_check0" />
-                                                <div class="checking">
-                                                    <div class="radio_inner"></div>
-                                                </div>
-                                                <p>지역</p>
+                                                <button class="blue_btn">검색</button>
                                             </li>
                                         </ul>
                                     </form>
-                                </div>
-                                <!-- 검색조건 탭 -->
-                                <div class="searchRqt_tab d-flex">
-                                    <ul class="tab_index ns_b">
-                                        <li class="active" data-tab="searchRqt_tab0">사고유형</li>
-                                        <li data-tab="searchRqt_tab1">사고발생 공종</li>
-                                        <li data-tab="searchRqt_tab2">발생일자</li>
-                                    </ul>
-                                    <div id="searchRqt_tab0" class="tab_content active">
-                                        <div class="scale">
-                                            <p class="text-center">구분</p>
-                                            <form action="">
-                                                <ul>
-                                                    <li class="active">
-                                                        <label for="scale_check0">전체</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check0" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check1">추락</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check1" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check2">넘어짐</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check2" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check3">부딪힘</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check3" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check4">물체에 맞음</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check4" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check5">깔림</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check5" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check6">끼임</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check6" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check7">감전</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check7" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check8">절단, 베임, 찔림</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check8" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check9">질식</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check9" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check10">질병</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check10" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check11">붕괴</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check11" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check12">진도</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check12" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check13">화재, 폭발, 파열</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check13" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check14">교통사고</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check14" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check15">기타</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check15" />
-                                                    </li>
-                                                </ul>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div id="searchRqt_tab1" class="tab_content">
-                                        <div class="scale">
-                                            <p class="text-center">공종</p>
-                                            <form action="">
-                                                <ul>
-                                                    <li class="active">
-                                                        <label for="scale_check0">전체</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check0" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check1">철거</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check1" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check2">굴토</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check2" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check3">기초</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check3" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check4">골조</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check4" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check5">미장, 방수</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check5" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check6">창호</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check6" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check7">조경</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check7" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check8">건설기계</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check8" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check9">설비</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check9" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="scale_check10">기타</label>
-                                                        <input type="checkbox" name="scale_check" id="scale_check10" />
-                                                    </li>
-                                                </ul>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div id="searchRqt_tab2" class="tab_content">
-                                        <div class="checkType">
-                                            <p class="text-center">사용승인일</p>
-                                            <form action="">
-                                                <ul>
-                                                    <li>
-                                                        <div class="input_wrap">
-                                                            <p>시작일</p>
-                                                            <input type="text" class="datepicker" />
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="input_wrap">
-                                                            <p>종료일</p>
-                                                            <input type="text" class="datepicker" />
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 추가 검색조건 -->
-                                <div class="search_add">
-                                    <form action="">
-                                        <ul class="check_wrap">
-                                            <li>
-                                                <h3>공사명</h3>
-                                                <ul class="check_list d-flex">
-                                                    <li>
-                                                        <input type="text" />
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <h3>사고발생 장소</h3>
-                                                <ul class="check_list d-flex">
-                                                    <li>
-                                                        <input type="text" />
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <h3>사고발생 경위</h3>
-                                                <ul class="check_list d-flex">
-                                                    <li>
-                                                        <input type="text" />
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <h3>사고신고 사유</h3>
-                                                <ul class="check_list d-flex">
-                                                    <li>
-                                                        <label for="constType_check0"></label>
-                                                        <input type="checkbox" name="constType_check"
-                                                            id="constType_check0" />
-                                                        <div class="checking"></div>
-                                                        <p>사망 1명 이상</p>
-                                                    </li>
-                                                    <li>
-                                                        <label for="constType_check1"></label>
-                                                        <input type="checkbox" name="constType_check"
-                                                            id="constType_check1" />
-                                                        <div class="checking"></div>
-                                                        <p>3일 이상 휴업이 필요한 부상</p>
-                                                    </li>
-                                                    <li>
-                                                        <label for="constType_check2"></label>
-                                                        <input type="checkbox" name="constType_check"
-                                                            id="constType_check2" />
-                                                        <div class="checking"></div>
-                                                        <p>1000만원 이상의 재산피해</p>
-                                                    </li>
-                                                    <li>
-                                                        <label for="constType_check3"></label>
-                                                        <input type="checkbox" name="constType_check"
-                                                            id="constType_check3" />
-                                                        <div class="checking"></div>
-                                                        <p>기타</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </form>
-                                    <div class="addSearch_btn d-flex align-items-center justify-content-center">
-                                        <p>추가 검색조건 더보기</p>
-                                        <img src="asset/images/icon/search_add.png" alt="추가검색버튼_아이콘" />
-                                    </div>
-                                </div>
-                                <!-- 검색조건 선택버튼 (모바일) -->
-                                <button class="searchFilter_btn ns_b">
-                                    <img src="asset/images/icon/search_add_m.png" alt="검색조건 선택_아이콘" />
-                                    검색조건 선택
-                                </button>
-
-                            </div>
-                            <!-- 검색 결정 -->
-                            <div class="search_decision">
-                                <ul class="hash_tags">
-                                    <li>
-                                        위험건축물
-                                        <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-                                    </li>
-                                    <li>
-                                        D > 3종
-                                        <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-                                    </li>
-                                    <li>
-                                        2021-09-08 ~ 2021-12-11
-                                        <img src="asset/images/icon/search_delete.png" alt="삭제_아이콘" />
-                                    </li>
-                                </ul>
-                                <!-- 조건검색 키워드 -->
-                                <div class="keyword">
-                                    <div class="keyword_wrap d-flex align-items-center justify-content-between">
-                                        <ul class="keyword_list d-flex">
-                                            <li>
-                                                <div class="sBubble">
-                                                    <ul>
-                                                        <li>면적 : 1,000m² 미만</li>
-                                                        <li>용도 : 업무시설</li>
-                                                        <li>층수 : 지하1층/지상5층</li>
-                                                    </ul>
-                                                </div>
-                                                <a href="javascript: void(0)">
-                                                    키워드1
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <div class="sBubble">
-                                                    <ul>
-                                                        <li>면적 : 1,000m² 미만</li>
-                                                        <li>용도 : 업무시설</li>
-                                                        <li>층수 : 지하1층/지상5층</li>
-                                                    </ul>
-                                                </div>
-                                                <a href="javascript: void(0)">
-                                                    키워드2
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <div class="sBubble">
-                                                    <ul>
-                                                        <li>면적 : 1,000m² 미만</li>
-                                                        <li>용도 : 업무시설</li>
-                                                        <li>층수 : 지하1층/지상5층</li>
-                                                    </ul>
-                                                </div>
-                                                <a href="javascript: void(0)">
-                                                    키워드3
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <div class="sBubble">
-                                                    <ul>
-                                                        <li>면적 : 1,000m² 미만</li>
-                                                        <li>용도 : 업무시설</li>
-                                                        <li>층수 : 지하1층/지상5층</li>
-                                                    </ul>
-                                                </div>
-                                                <a href="javascript: void(0)">
-                                                    키워드4
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <div class="sBubble">
-                                                    <ul>
-                                                        <li>면적 : 1,000m² 미만</li>
-                                                        <li>용도 : 업무시설</li>
-                                                        <li>층수 : 지하1층/지상5층</li>
-                                                    </ul>
-                                                </div>
-                                                <a href="javascript: void(0)">
-                                                    키워드5
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <button class="kEdit_btn">키워드 편집</button>
-                                        <!-- 키워드 저장 -->
-                                        <div class="keyword_save modal_sub">
-                                            <button class="close_box"></button>
-                                            <div class="kSave_wrap">
-                                                <form action="">
-                                                    <ul>
-                                                        <li class="justify-content-between">
-                                                            <label for="">
-                                                                <img src="asset/images/icon/title_icon1.png"
-                                                                    alt="타이틀_아이콘" />
-                                                                키워드
-                                                            </label>
-                                                            <input type="text" placeholder="키워드를 입력해주세요." />
-                                                        </li>
-                                                        <li>
-                                                            <div class="subModal_submit">
-                                                                <button type="reset" class="kSave_cancel">취소</button>
-                                                                <button type="button" class="kSave_save">저장</button>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 초기화 / 검색 / 저장 버튼 -->
-                                <div class="decisionBtn d-flex align-items-center justify-content-center">
-                                    <button type="reset" class="init_btn">
-                                        <img src="asset/images/icon/initialization.png" alt="초기화_아이콘" />
-                                        초기화
-                                    </button>
-                                    <button type="submit" class="search_btn">
-                                        <img src="asset/images/icon/searching.png" alt="검색_아이콘" />
-                                        검색
-                                    </button>
-                                    <button type="button" class="save_btn">
-                                        <img src="asset/images/icon/search_save.png" alt="저장_아이콘" />
-                                        검색조건 저장
-                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <!-- 검색 결과 -->
+                        <!-- 관련법규/지침 리스트 -->
                         <div class="search_result result_container">
-                            <div class="result_top">
-                                <div class="total">
-                                    <p>총 <strong class="ns_b">289</strong> 건</p>
-                                </div>
-                            </div>
-                            <!-- 검색결과 리스트 -->
                             <div class="result_list text-center">
                                 <div class="subject_wrap">
                                     <ul class="subject d-flex align-items-center">
-                                        <li>#</li>
-                                        <li>공사명</li>
-                                        <li>위치</li>
-                                        <li>사고유형</li>
-                                        <li>공종</li>
-                                        <li>사고일시</li>
-                                        <li>피해상황</li>
-                                        <li>관리출처</li>
+                                        <li>번호</li>
+                                        <li>제목</li>
+                                        <li>등록자</li>
+                                        <li>등록날짜</li>
                                     </ul>
                                 </div>
                                 <div class="result_wrap">
@@ -1861,121 +1187,101 @@
                                         <li>
                                             <ul class="result_item">
                                                 <li>10</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>넘어짐</li>
-                                                <li>붕괴</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>CSI</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료10
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>9</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>감전</li>
-                                                <li>진도</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>CSI</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료9
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>8</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>넘어짐</li>
-                                                <li>붕괴</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>-</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료8
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>7</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>추락</li>
-                                                <li>화재</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>CSI</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료7
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>6</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>깔림</li>
-                                                <li>폭발</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>-</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료6
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>5</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>넘어짐</li>
-                                                <li>붕괴</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>CSI</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료5
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>4</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>넘어짐</li>
-                                                <li>붕괴</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>CSI</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료4
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>3</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>넘어짐</li>
-                                                <li>붕괴</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>-</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료3
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>2</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>넘어짐</li>
-                                                <li>붕괴</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>CSI</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료2
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>1</li>
-                                                <li>○○아파트</li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>넘어짐</li>
-                                                <li>붕괴</li>
-                                                <li>2021-11-10</li>
-                                                <li>무</li>
-                                                <li>CSI</li>
+                                                <li>
+                                                    서울시 민간건축공사장 안전관리 정보화시스템 문서자료1
+                                                </li>
+                                                <li>지역건축안전센터 홍길동</li>
+                                                <li>2021-06-17</li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -1992,13 +1298,6 @@
                                         <li class="next move"></li>
                                         <li class="superNext move"></li>
                                     </ul>
-                                    <div class="result_btn">
-                                        <button class="white_btn exel" type="button">
-                                            <img src="asset/images/icon/exel.png" alt="엑셀_아이콘" />
-                                            엑셀
-                                        </button>
-                                        <button class="acdntEnroll_btn blue_btn">등록</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -497,6 +497,9 @@ $(function () {
   $(".bldg_mgt .result_item li:not(:first-child)").click(function () {
     location.href = "bldg_info.html";
   });
+  $(".acdnt_info .result_item li:not(:first-child)").click(function () {
+    location.href = "acdnt_view.html";
+  });
   $(".pagination li.page_item").click(function () {
     $(".pagination li.page_item").removeClass("active");
     $(this).addClass("active");
@@ -798,6 +801,19 @@ $(function () {
       }
     });
   });
+  // 자문단 점검이력 등록
+  $(".aGroupEnroll_btn").click(function () {
+    $(".aGroup_enroll").fadeIn(200);
+    $(".send_btn_m").fadeOut(300);
+    $("body").css("overflow", "hidden");
+    $(".aGroup_enroll .close_btn, .aGroup_enroll .modal_submit button:first-child").click(function () {
+      $(".aGroup_enroll").fadeOut(300);
+      $("body").css("overflow", "visible");
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
+    });
+  });
 });
 
 // 파일 업로드
@@ -892,6 +908,15 @@ $(function () {
       $(".acdnt_enroll tr:nth-child(4) input[type='text']").attr("disabled", true);
     } else {
       $(".acdnt_enroll tr:nth-child(4) input[type='text']").removeAttr("disabled", false);
+    }
+  });
+  $(".damage_option > li").click(function () {
+    if ($(this).children("input[type='checkbox']").is(":checked")) {
+      $(this).addClass("active");
+      $(this).children(".checking").addClass("active");
+    } else {
+      $(this).removeClass("active");
+      $(this).children(".checking").removeClass("active");
     }
   });
 });

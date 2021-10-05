@@ -144,10 +144,41 @@ aside {
   display: flex;
   font-family: 'NotoSansKR-Bold';
   font-size: 1.0417vw;
-  margin: 32px 0px 20px;
+  margin: 1.6667vw 0px 20px;
 }
-.situ_modal .damage_option li,
-.situ_modal .check_list > li {
+.situ_modal .damage_option li {
+  justify-content: center;
+  width: 50%;
+  height: 3.125vw;
+  margin: 0 !important;
+  border: 1px solid #6e6e6e;
+}
+.situ_modal .damage_option li:hover {
+  cursor: pointer;
+}
+.situ_modal .damage_option li:first-child {
+  margin-right: 1.0417vw !important;
+}
+.situ_modal .damage_option .checking {
+  width: 1.0417vw;
+  height: 1.0417vw;
+  margin-right: 8px;
+  border-radius: 100px;
+}
+.situ_modal .damage_option li.active {
+  color: #fff;
+  background-color: #192b80;
+  border-color: #192b80;
+}
+.situ_modal .damage_option .checking.active {
+  background-color: #fff;
+  background-image: url(../images/icon/cResult_menu1.png);
+  background-size: 50%;
+}
+.situ_modal .damage_option p {
+  font-size: 1.0417vw;
+}
+.situ_modal .damage_option li,.situ_modal .check_list > li {
   display: flex;
   align-items: center;
   position: relative;
@@ -161,9 +192,9 @@ aside {
   margin: 5px 0px;
   margin-right: 1.5625vw;
 }
-.situ_modal .checking {
-  width: 1.0417vw !important;
-  height: 1.0417vw !important;
+.situ_modal .check_list .checking {
+  width: 1.0417vw;
+  height: 1.0417vw;
   margin-right: 5px;
 }
 .situ_modal .check_wrap {

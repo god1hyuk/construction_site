@@ -468,31 +468,31 @@ input[type="radio"] + .checking.active .radio_inner {
   border-bottom: 3px solid #28344c;
 }
 .modal_bg .modal_top h1 {
-  font-size: 2.963vh;
+  font-size: 1.6667vw;
 }
 .modal_bg .modal_top .close_btn {
   position: absolute;
   top: 0;
   right: 0;
-  width: 2.8704vh;
-  height: 2.8704vh;
+  width: 1.6667vw;
+  height: 1.6667vw;
   background-color: transparent;
   background-image: url(../images/icon/close_grey.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 .modal_bottom {
-  padding-top: 5.5556vh;
+  padding-top: 3.125vw;
   background: #fff;
 }
 .modal_bottom .modal_submit {
   width: 100%;
-  font-size: 2.037vh;
-  padding-top: 4.6296vh;
+  font-size: 1.1458vw;
+  padding-top: 2.6042vw;
   border-top: 2px solid #ccc;
 }
 .modal_bottom .modal_submit button {
-  padding: 1.8519vh 5.5556vh;
+  padding: 1.0417vw 3.125vw;
   border-radius: 5px;
   transition: background 0.1s;
 }

@@ -1120,7 +1120,6 @@
 .sub_page .search_form .search_name {
   display: flex;
   align-items: center;
-  width: 100%;
   padding: 30px 0;
 }
 .sub_page .search_form .search_name h3 {
@@ -1643,6 +1642,8 @@ a.ui-button:active,
   background: #5479f7;
 }
 .sub_page .result_container .result_btn {
+  display: flex;
+  align-items: center;
   position: absolute;
   right: 0;
 }
@@ -1860,7 +1861,7 @@ a.ui-button:active,
   width: 60vw;
 }
 .cProgress_list {
-  margin-top: 3.7037vh;
+  margin-top: 2.0833vw;
   border-top: 1px solid #192b80;
 }
 .cProgress_list .check_wrap {
@@ -1871,7 +1872,6 @@ a.ui-button:active,
   display: flex;
   align-items: center;
   width: 50%;
-  /* height: 9.2593vh; */
   border-bottom: 1px solid #d7d7d7;
 }
 .cProgress_list .check_wrap > li > span {
@@ -1881,8 +1881,8 @@ a.ui-button:active,
   width: 32%;
   height: 100%;
   font-family: 'NotoSansKR-Bold';
-  font-size: 1.4815vh;
-  padding-left: 1.3889vh;
+  font-size: 0.8333vw;
+  padding-left: 0.7813vw;
   background: #f5f6fa;
 }
 .cProgress_list .check_wrap > li > span > strong {
@@ -1893,8 +1893,8 @@ a.ui-button:active,
 .cProgress_list .form_box,
 .cProgress_list .check_list {
   width: 68% !important;
-  font-size: 1.3889vh;
-  padding: 2.1296vh 1.3889vh;
+  font-size: 0.7813vw;
+  padding: 1.1979vw 0.7813vw;
 }
 .cProgress_list .check_wrap > li:nth-child(5),
 .cProgress_list .check_wrap > li:nth-child(6) {
@@ -1918,12 +1918,12 @@ a.ui-button:active,
   position: relative;
   margin-top: 7px;
   margin-bottom: 7px;
-  margin-right: 1.8519vh;
+  margin-right: 1.0417vw;
 }
 .cProgress_list li:nth-child(5) .check_list strong {
   display: flex;
   align-items: center;
-  font-size: 1.2037vh;
+  font-size: 0.6771vw;
   color: #757575;
   margin-left: 5px;
 }
@@ -1931,9 +1931,9 @@ a.ui-button:active,
   padding-right: 3px;
 }
 .cProgress_list .check_list .checking {
-  width: 1.8519vh;
-  height: 1.8519vh;
-  margin-right: 0.9259vh;
+  width: 1.0417vw;
+  height: 1.0417vw;
+  margin-right: 0.5208vw;
 }
 .form_box {
   display: flex;
@@ -1946,7 +1946,7 @@ a.ui-button:active,
 }
 .cProgress_list .form_box strong {
   width: 100%;
-  font-size: 1.2037vh;
+  font-size: 0.6771vw;
   color: #757575;
   margin-top: 10px;
 }
@@ -1961,7 +1961,7 @@ a.ui-button:active,
 .cProgress_list input[type="text"],
 .cProgress_list select {
   width: 100%;
-  height: 32px;
+  height: 2.0833vw;
 }
 .cProgress_list .datepicker {
   background-size: 20px;
@@ -1976,17 +1976,17 @@ input[type="file"] {
 }
 .upload_name {
   width: 70% !important;
-  font-size: 1.3889vh;
+  font-size: 0.7813vw;
   margin-right: 10px;
   padding: 0 10px;
   background: transparent;
   border: none;
   border-bottom: 1px solid #000;
 }
-.cProgress_list .file_btn {
+.file_btn {
   width: 30%;
   height: 32px;
-  font-size: 1.2037vh;
+  font-size: 0.6771vw;
 }
 
 /* 공사장 점검 결과 등록 */
@@ -2691,8 +2691,6 @@ input[type="file"] {
   background: #5479f7;
   border: 1px solid #1d308a;
 }
-
-
 
 /* 지도 페이지 */
 .map_page {
@@ -3406,7 +3404,7 @@ input[type="file"] {
 
 /* 사고정보 페이지 */
 .acdnt_info .title_icon,
-.acdnt_enroll .title_icon {
+.acdnt_view .title_icon {
   background-image: url(../images/icon/acdnt_info_title.png) !important;
   background-size: 55%;
 }
@@ -3454,17 +3452,17 @@ input[type="file"] {
   margin-left: 5px;
 }
 /* 사고등록 */
-.acdnt_enroll .modal_wrap {
+.modal_enroll .modal_wrap {
   width: 70vw;
 }
-.acdnt_enroll .table_wrap {
-  margin-top: 45px;
+.modal_enroll .table_wrap {
+  margin-top: 2.0833vw;
   border-top: 1px solid #192b80;
 }
-.acdnt_enroll table {
+.modal_enroll table {
   width: 100%;
 }
-.acdnt_enroll tr {
+.modal_enroll tr {
   border-bottom: 1px solid #d7d7d7;
 }
 .acdnt_enroll tr:nth-child(1) th:nth-child(1),
@@ -3473,70 +3471,99 @@ input[type="file"] {
 .acdnt_enroll tr:nth-child(11) th:nth-child(1) {
   border-right: 1px solid #d7d7d7;
 }
-.acdnt_enroll th {
+.modal_enroll th {
   line-height: 1.3;
   font-family: 'NotoSansKR-Bold';
-  font-size: 16px;
+  font-size: 0.8333vw;
   background: #f5f6fa;
 }
-.acdnt_enroll td {
-  font-size: 15px;
-  padding: 20px 15px;
+.modal_enroll td {
+  font-size: 0.7813vw;
+  padding: 1.1979vw 0.7813vw;
 }
-.acdnt_enroll td input[type="text"] {
+.modal_enroll td input[type="text"] {
   display: block;
   width: 100%;
-  height: 40px;
-  margin: 0 auto;
+  height: 2.0833vw;
 }
-.acdnt_enroll tr:nth-child(3) textarea {
+.modal_enroll textarea {
   width: 100%;
-  height: 120px;
+  height: 6.25vw;
 }
-.acdnt_enroll .check_wrap {
+.modal_enroll .check_wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.acdnt_enroll .input_wrap {
+.modal_enroll .input_wrap {
   justify-content: space-between;
 }
-.acdnt_enroll .input_wrap .wrapper {
+.modal_enroll .input_wrap .wrapper {
   width: 50%;
 }
-.acdnt_enroll .input_wrap .wrapper:last-child {
+.modal_enroll .input_wrap .wrapper:last-child {
   justify-content: flex-end;
 }
-.acdnt_enroll .input_wrap input {
+.modal_enroll .input_wrap input {
   width: 45% !important;
-  margin: 0 10px !important;
+  margin: 0 0.5208vw !important;
 }
-.acdnt_enroll .check_list li {
+.modal_enroll .check_list li {
   display: flex;
   position: relative;
-  margin-right: 20px;
+  margin-right: 1.0417vw;
 }
-.acdnt_enroll .check_list .checking {
-  margin-right: 10px;
+.modal_enroll .check_list .checking {
+  margin-right: 0.5208vw;
 }
-.acdnt_enroll tr:nth-child(4) .check_list {
+.modal_enroll tr:nth-child(4) .check_list {
   width: 20%;
 }
-.acdnt_enroll tr:nth-child(4) .check_list p {
-  margin-right: 10px;
+.modal_enroll tr:nth-child(4) .check_list p {
+  margin-right: 0.5208vw;
 }
-.acdnt_enroll tr:nth-child(4) .input_wrap {
+.modal_enroll tr:nth-child(4) .input_wrap {
   width: 80%;
 }
-.acdnt_enroll tr:nth-child(4) .wrapper {
+.modal_enroll tr:nth-child(4) .wrapper {
   width: 100%;
 }
 .acdnt_enroll tr:nth-child(4) input[type="text"] {
   width: 70% !important;
 }
-.acdnt_enroll .file_btn {
-  width: 20%;
-  height: 40px;
+/* 사고정보 보기 */
+.acdnt_view table {
+  width: 100%;
+  margin-top: 40px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.acdnt_view table th {
+  position: relative;
+  background: #d1e0f5;  
+  border-bottom: 1px solid #9aa0ab;
+  border-right: 1px solid #9aa0ab;
+}
+table th.th_sub {
+  background: #e0e9f5;
+}
+.acdnt_view table th::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #eff5ff;
+}
+.acdnt_view table tr:nth-child(1) th:nth-child(4),
+.acdnt_view table tr:nth-child(2) th:nth-child(3) {
+  border-left: 1px solid #9aa0ab;
+}
+.acdnt_view table td {
+  color: #555;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
 }
 
 /* 실시간 모니터링 */
@@ -3715,4 +3742,180 @@ input[type="file"] {
 }
 .cctv_page .cams_list li button:hover {
   opacity: 80%;
+}
+
+/* 자문단 점검이력 */
+.aGroupHistory .title_wrap .title_icon {
+  background-image: url(../images/icon/advs_group_title.png);
+}
+.aGroupHistory .search_result {
+  margin-top: 0;
+}
+.aGroupHistory .search_result .subject li:nth-child(1), 
+.aGroupHistory .search_result .result_item li:nth-child(1) {
+  width: 7%;
+}
+.aGroupHistory .search_result .subject li:nth-child(2), 
+.aGroupHistory .search_result .result_item li:nth-child(2) {
+  width: 13%;
+}
+.aGroupHistory .search_result .subject li:nth-child(3), 
+.aGroupHistory .search_result .result_item li:nth-child(3) {
+  width: 13%;
+}
+.aGroupHistory .search_result .subject li:nth-child(4), 
+.aGroupHistory .search_result .result_item li:nth-child(4) {
+  width: 13%;
+}
+.aGroupHistory .search_result .subject li:nth-child(5), 
+.aGroupHistory .search_result .result_item li:nth-child(5) {
+  width: 13%;
+}
+.aGroupHistory .search_result .subject li:nth-child(6), 
+.aGroupHistory .search_result .result_item li:nth-child(6) {
+  width: 15%;
+}
+.aGroupHistory .search_result .subject li:nth-child(7), 
+.aGroupHistory .search_result .result_item li:nth-child(7) {
+  width: 13%;
+}
+.aGroupHistory .search_result .subject li:nth-child(8), 
+.aGroupHistory .search_result .result_item li:nth-child(8) {
+  width: 15%;
+}
+.sub_page .result_container .result_btn button:last-child {
+  margin-left: 5px;
+}
+/* 자문단 점검이력 등록 */
+.aGroup_enroll textarea {
+  height: 7.8125vw;
+}
+
+/* 공지사항 서브페이지 */
+.noticeField .title_wrap .title_icon {
+  background-image: url(../images/icon/notice_page_title.png);
+}
+.noticeField .form_container .search_form {
+  padding-top: 0;
+}
+.noticeField .search_form .search_name {
+  justify-content: flex-end;
+}
+.noticeField .search_form ul {
+  justify-content: flex-end;
+}
+.noticeField .search_form ul li {
+  width: auto !important;
+}
+.noticeField .search_form select {
+  width: 150px !important; 
+}
+.noticeField .search_form input {
+  width: 300px !important;
+}
+.noticeField .search_form .blue_btn {
+  width: 100px;
+  height: 100%;
+}
+.noticeField .subject > li:nth-child(1),
+.noticeField .result_item > li:nth-child(1) {
+  width: 7%;
+}
+.noticeField .subject > li:nth-child(2),
+.noticeField .result_item > li:nth-child(2) {
+  width: 63%;
+  text-align: left;
+  padding: 0 20px;
+}
+.noticeField .subject > li:nth-child(2) {
+  text-align: center;
+}
+.noticeField .subject > li:nth-child(3),
+.noticeField .result_item > li:nth-child(3) {
+  width: 20%;
+}
+.noticeField .subject > li:nth-child(4),
+.noticeField .result_item > li:nth-child(4) {
+  width: 10%;
+}
+/* 공지사항 보기 */
+.post_title h2 {
+  font-size: 32px;
+}
+.post_title .wrapper {
+  width: 100%;
+  color: #555;
+  margin-top: 1.0417vw;
+}
+.post_title .wrapper span {
+  text-align: right;
+}
+.post_content {
+  width: 100%;
+  margin-top: 50px;
+  padding: 3.1250vw;
+  background: #fff;
+  border: 1px solid #515463;
+}
+.post_content h3 {
+  font-size: 26px;
+}
+.post_content p {
+  padding-top: 3.1250vw;
+}
+.post_content h4 {
+  font-size: 18px;
+  padding-top: 3.1250vw;
+}
+.post_content h5 {
+  font-size: 20PX;
+  padding-top: 3.1250vw;
+}
+.post_content .attach_file {
+  text-align: start;
+  margin-top: 3.1250vw;
+  padding-top: 2.0833vw;
+  border-top: 1px solid #515463;
+}
+.post_content .attach_file span {
+  width: 8%;
+  font-size: 18px;
+  color: #555;
+  padding: 12px 0;
+  border-right: 2px solid #d0d1d2;
+}
+.post_content .attach_file .file_temp {
+  text-align: start;
+  width: 92%;
+  color: #545463;
+  padding-left: 25px;
+}
+.post_navigation button {
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 20px;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #bbc5d8;
+  transition: border .1s
+}
+.post_navigation button:first-child {
+  margin-right: 8px;
+}
+.post_navigation button:hover {
+  border-color: #545463;
+}
+.post_navigation + button {
+  width: 132px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 3.1250vw;
+  background: #fff;
+  border: 1px solid #cfdaee;
+  border-radius: 100px;
+  transition: border .1s;
+}
+.post_navigation + button:hover {
+  opacity: 1;
+  border-color: #545463;
 }
