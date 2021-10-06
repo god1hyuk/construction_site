@@ -500,6 +500,15 @@ $(function () {
   $(".acdnt_info .result_item li:not(:first-child)").click(function () {
     location.href = "acdnt_view.html";
   });
+  $(".aGroupHistory .result_item li:not(:first-child)").click(function () {
+    location.href = "aGroupHistory_view.html";
+  });
+  $(".notice_page .result_item li:not(:first-child)").click(function () {
+    location.href = "notice_view.html";
+  });
+  $(".promotion_page .result_item li:not(:first-child)").click(function () {
+    location.href = "promotion_view.html";
+  });
   $(".pagination li.page_item").click(function () {
     $(".pagination li.page_item").removeClass("active");
     $(this).addClass("active");

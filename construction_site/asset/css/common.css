@@ -396,6 +396,7 @@ input[type="radio"] + .checking.active .radio_inner {
 .tab_content.active {
   display: block;
 }
+.modal_bg .tab_index li.active,
 .sub_info .tab_index li.active {
   color: #fff;
   background: #192b80 !important;

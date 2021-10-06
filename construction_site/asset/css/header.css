@@ -335,7 +335,7 @@ aside {
   width: 40vw;
 }
 .sms_modal .tab_index {
-  padding: 3.7037vh 0;
+  padding: 2.0833vw 0;
   background: #fff;
 }
 .sms_modal .tab_index li {
@@ -343,17 +343,23 @@ aside {
   align-items: center;
   justify-content: center;
   width: 25%;
-  height: 5.5556vh;
-  font-size: 1.8519vh;
+  height: 3.125vw;
+  font-size: 1.0417vw;
   background: #fff;
   border: 1px solid #6e6e6e;
   box-sizing: border-box;
+  transition: all .13s;
+}
+.sms_modal .tab_index li.active {
+  color: #fff;
+  background: #192b80;
+  border-color: #192b80;
 }
 .sms_modal .tab_index li:not(:last-child) {
   margin-right: 5px;
 }
 .sms_modal .tab_box {
-  padding: 2.7778vh;
+  padding: 1.5625vw;
   background: #f9fafb;;
   border: 1px solid #d7d7d7;
 }
@@ -362,19 +368,19 @@ aside {
 }
 .sms_modal .add_btn,
 .sms_modal .contactPick_btn {
-  height: 4.6296vh;
-  font-size: 1.4815vh;
-  margin-left: 1.3889vh;
+  height: 2.6042vw;
+  font-size: 0.8333vw;
+  margin-left: 0.7813vw;
 }
 .sms_modal .contact {
-  padding-bottom: 2.3148vh;
+  padding-bottom: 1.3021vw;
   border-bottom: 1px solid #d7d7d7;
 }
 .sms_modal h3 {
-  margin-bottom: 1.3889vh;
+  margin-bottom: 0.7813vw;
 }
 .sms_modal h3 sup {
-  margin-top: 0.1852vh;
+  margin-top: 0.1042vw;
 }
 .sms_modal p {
   position: relative;
@@ -388,18 +394,18 @@ aside {
   right: -40%; 
   transform: translateY(-50%);
   width: 1px;
-  height: 1.3889vh;
+  height: 0.7813vw;
   background: #000;
 }
 .sms_modal span {
-  padding-left: 4.1667vh;
+  padding-left: 2.3438vw;
 }
 .sms_modal .tab_content {
   display: none;
   align-items: start;
   justify-content: space-between;
   width: 100%;
-  height: 13.8889vh;
+  height: 7.8125vw;
 }
 .sms_modal .tab_content.active {
   display: flex;
@@ -416,7 +422,7 @@ aside {
 .sms_modal .bundleList {
   width: 100%;
   overflow-y: scroll;
-  padding: 1.3889vh 0.9259vh;
+  padding: 0.7813vw 0.5208vw;
   background: #fff;
   border: 1px solid #b7bac3;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.05) inset;
@@ -427,12 +433,12 @@ aside {
   display: flex;
   position: relative;
   width: 100%;
-  font-size: 1.3889vh;
-  padding: 0.6481vh 0.9259vh;
+  font-size: 0.7813vw;
+  padding: 0.3646vw 0.5208vw;
 }
 .sms_modal .gContactList > li:not(:first-child),
 .sms_modal .dContactList > li:not(:first-child) {
-  margin-top: 2.037vh;
+  margin-top: 1.1458vw;
 }
 .sms_modal .pContactList > li button,
 .eContactList > li button,
@@ -442,8 +448,8 @@ aside {
   top: 50%;
   transform: translateY(-50%);
   right: 10px;
-  width: 1.1111vh;
-  height: 1.1111vh;
+  width: 0.625vw;
+  height: 0.625vw;
   padding: 0;
   background-repeat: no-repeat;
   background-position: center;
@@ -462,23 +468,23 @@ aside {
   background-image: url(../images/icon/contact_delete.png);
 }
 .sms_modal h5 {
-  font-size: 1.2963vh;
+  font-size: 0.7292vw;
   color: #3978fc;
-  padding: 0 0.9259vh 0.3241vh;
+  padding: 0 0.5208vw 0.2083vw;
 }
 .sms_modal .gGroupList {
   height: 60%;
 }
 .sms_modal .groupEdit_btn {
   height: 40%;
-  padding: 0 1.8519vh;
-  font-size: 1.2963vh;
-  margin-top: 0.9259vh;
+  padding: 0 1.0417vw;
+  font-size: 0.7292vw;
+  margin-top: 0.5208vw;
   margin-left: auto;
 }
 .sms_modal .bundleList li {
-  font-size: 1.3889vh;
-  padding: 0.6481vh 0.9259vh;
+  font-size: 0.7813vw;
+  padding: 0.3646vw 0.5208vw;
 }
 .sms_modal .bundleList li:hover {
   background-color: #f3f5ff;
@@ -488,9 +494,9 @@ aside {
 }
 .sms_modal h4 {
   font-family: 'NotoSansKR-Bold';
-  font-size: 1.6667vh;
-  padding-top: 0.9259vh;
-  padding-bottom: 1.8519vh;
+  font-size: 0.9375vw;
+  padding-top: 0.5208vw;
+  padding-bottom: 1.0417vw;
 }
 .sms_modal .gContact .wrapper,
 .sms_modal .dContact .wrapper {
@@ -506,7 +512,7 @@ aside {
 }
 .sms_modal .tab_content:not(:last-child) form input {
   width: 80%;
-  height: 4.6296vh;
+  height: 2.6042vw;
 }
 .sms_modal .tab_content:not(:last-child) form button {
   width: 20%;
@@ -521,12 +527,12 @@ aside {
   width: 18%;
 }
 .sms_modal .descript {
-  margin-top: 2.3148vh;
+  margin-top: 1.3021vw;
 }
 .sms_modal select {
   width: 82%;
-  height: 4.6296vh;
-  font-size: 1.4815vh;
+  height: 2.6042vw;
+  font-size: 0.8333vw;
   border: 1px solid #2c3646;
 }
 .sms_modal select + .add_btn {
@@ -535,10 +541,10 @@ aside {
 .sms_modal textarea {
   display: block;
   width: 100%;
-  height: 13.8889vh;
-  font-size: 1.3889vh;
-  margin-top: 1.3889vh;
-  padding: 1.8519vh;
+  height: 7.8125vw;
+  font-size: 0.7813vw;
+  margin-top: 0.7813vw;
+  padding: 1.0417vw;
   border: 1px solid #b7bac3;
   border-radius: 0;
 }
@@ -550,11 +556,11 @@ aside {
 .sms_modal .contactPick {
   top: 25%;
   left: 60%;
-  padding: 0 2.963vh;
+  padding: 0 1.6667vw;
 }
 .contactPick_list {
-  margin-top: 4.1667vh;
-  padding: 2.3148vh 1.8519vh;
+  margin-top: 2.3438vw;
+  padding: 1.3021vw 1.0417vw;
   background: #fff;
   border-top: 4px solid #192b80;
   border-bottom: 1px solid #8a8a8a;
@@ -563,7 +569,7 @@ aside {
   position: relative;
 }
 .contactPick_list > li:not(:last-child) {
-  padding-bottom: 2.3148vh;
+  padding-bottom: 1.3021vw;
 }
 .contactPick_info {
   display: flex;
@@ -571,7 +577,7 @@ aside {
 .contactPick_info > li {
   display: flex;
   align-items: center;
-  margin-right: 1.8519vh;
+  margin-right: 1.0417vw;
 }
 .contactPick_info label {
   position: absolute;
@@ -582,7 +588,7 @@ aside {
   width: 100%;
 }
 .contactPick .wrapper > li {
-  padding: 0 1.8519vh;
+  padding: 0 1.0417vw;
   border-right: 1px solid #d0d1d2;
 }
 .contactPick .wrapper > li:first-child {
@@ -596,22 +602,23 @@ aside {
   background: #eaeff9;
 }
 .contactPick .exel {
-  font-size: 1.3889vh;
-  margin-top: 1.3889vh;
+  font-size: 0.7813vw;
+  margin-top: 0.7813vw;
   margin-left: auto;
-  padding: 1.1111vh 1.3889vh;
+  padding: 0.625vw 0.7813vw;
 }
 .contactPick .subModal_submit {
   margin-top: 15px;
-  margin-bottom: 3.7037vh;
+  margin-bottom: 2.0833vw;
 }
 .contactPick .modal_sub {
-  padding: 2.7778vh;
+  padding: 1.5625vw;
 }
 /* 템플릿 추가 (SMS) */
 .sms_modal .addTemplate {
   top: 62%;
   left: 55%;
+  padding: 30px;
 }
 .sms_modal .addTemplate li {
   display: flex;
@@ -621,7 +628,7 @@ aside {
   align-self: center;
 }
 .sms_modal .addTemplate li:last-child {
-  margin-top: 0.9259vh;
+  margin-top: 0.5208vw;
 }
 .sms_modal .addTemplate li:last-child p {
   align-self: start;
@@ -629,31 +636,31 @@ aside {
 .sms_modal .modal_sub p {
   display: flex;
   align-items: center;
-  /* font-size: 1.4815vh; */
+  font-size: 0.8333vw;
 }
 .sms_modal .modal_sub p sub {
   display: block;
   width: 5px;
   height: 5px;
-  margin-right: 0.4630vh;
+  margin-right: 0.2604vw;
   background: #5479f7;
   border-radius: 100px;
 }
 .sms_modal .addTemplate p {
-  margin-right: 1.8519vh;
+  margin-right: 1.0417vw;
 }
 .sms_modal .addTemplate input {
-  width: 26.8519vh;
-  height: 3.7037vh;
+  width: 15.1042vw;
+  height: 2.0833vw;
 }
 .sms_modal .addTemplate textarea {
-  width: 26.8519vh;
-  height: 9.2593vh;
+  width: 15.1042vw;
+  height: 5.2083vw;
   margin: 0;
 }
 .sms_modal .addTemplate .subModal_submit {
-  margin-top: 1.8519vh;
-  padding-top: 2.1296vh;
+  margin-top: 1.0417vw;
+  padding-top: 1.1979vw;
   border-top: 1px solid #192b80;
 }
 /* 그룹편집 (SMS) */
@@ -668,32 +675,32 @@ aside {
   justify-content: space-between;
 }
 .sms_modal .groupEdit .makeGroup input {
-  height: 3.7037vh;
-  margin: 0 0.9259vh;
+  height: 2.0833vw;
+  margin: 0 0.5208vw;
 }
 .sms_modal .groupEdit .makeGroup button {
-  height: 3.7037vh;
-  font-size: 1.4815vh;
+  height: 2.0833vw;
+  font-size: 0.8333vw;
   color: #fff;
-  padding: 0 1.3889vh;
+  padding: 0 0.7813vw;
   background: #5479f7;
   border: 1px solid #1b57d4;
   border-radius: 3px;
 }
 .sms_modal .groupEdit .bundleList {
-  margin-top: 1.3889vh;
+  margin-top: 0.7813vw;
 }
 .sms_modal .groupEdit .bundleList li {
   position: relative;
 }
 .sms_modal .groupEdit .gPhoneNum {
-  padding: 1.3889vh 0.9259vh;
+  padding: 0.7813vw 0.5208vw;
   background: #f0f2f5;
   border: 1px solid #b7bac3;
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.05) inset;
 }
 .sms_modal .groupEdit .gPhoneNum .bundleList {
-  height: 6.8519vh;
+  height: 3.8542vw;
   margin-top: 0;
   padding: 0;
   background: transparent;
@@ -713,20 +720,20 @@ aside {
 }
 .sms_modal .groupEdit .gPhoneNum input {
   width: 80%;
-  height: 3.7037vh;
+  height: 2.0833vw;
 }
 .sms_modal .groupEdit .gPhoneNum .addPN_btn {
   width: 20%;
-  height: 3.7037vh;
-  font-size: 1.3889vh;
-  margin-left: 0.9259vh;
+  height: 2.0833vw;
+  font-size: 0.7813vw;
+  margin-left: 0.5208vw;
   background: rgb(244,246,249);
   background: linear-gradient(0deg, rgba(244,246,249,1) 0%, rgba(255,255,255,1) 100%);
   border: 1px solid #2c3646;
   border-radius: 3px;
 }
 .sms_modal .groupEdit .subModal_submit {
-  margin-top: 2.2222vh;
+  margin-top: 1.25vw;
 }
 
 /* 야간 모드 */
