@@ -896,21 +896,17 @@ $(function () {
 // });
 
 // 체크박스
-// $(function () {
-//   $("input[type='checkbox']").prev("label").click(function () {
-//     if ($(this).next("input[type='checkbox']").is(":checked")) {
-//       $(this).next().next(".checking").addClass("active");
-//     } else {
-//       $(this).next().next(".checking").removeClass("active");
-//     }
-//   });
-// });
 $(function () {
   $(".check_list > li").click(function () {
-    if ($(this).children("input[type='checkbox']").is(":checked")) {
+    if($(this).children("input[type='checkbox']").is(":checked")) {
       $(this).children(".checking").addClass("active");
     } else {
       $(this).children(".checking").removeClass("active");
+    }
+    if($(this).children("input[type='radio']").is(":checked")) {
+      $(this).children(".checking").addClass("active");
+    } else {
+      $(this).siblings().children(".checking").removeClass("active");
     }
     if($("#materialDamage").is(":checked")) {
       $(".acdnt_enroll tr:nth-child(4) input[type='text']").val("");
