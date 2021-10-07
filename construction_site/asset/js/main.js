@@ -1,4 +1,4 @@
-var count = 0;
+let count = 0;
 
 // 야간모드 스위치
 $(function () {
@@ -746,22 +746,50 @@ $(function () {
     $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
     $(".cResult_menu > li > button").click(function () {
-      $(this).next().slideToggle(300);
-      $(this).toggleClass("active");
-    });
-    $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
-      $(".constResult_enroll").fadeOut(300);
-      if ($(window).width() <= 1024) {
-        $(".send_btn_m").fadeIn(300);
+      if(!$(this).hasClass("active")) {
+        $(this).next().slideDown(300);
+        $(this).addClass("active");
+      } else {
+        $(this).next().slideUp(300);
+        $(this).removeClass("active");
       }
-      $("body").css("overflow", "visible");
+      // $(this).next().slideToggle(300);
+      // $(this).toggleClass("active");
     });
+    // $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
+    //     $(".cResult_menu > li > button").next().slideUp();
+    //     $(".cResult_menu > li > button").removeClass("active");
+    //     alert("hi");
+    //   $(".constResult_enroll").fadeOut(300);
+    //   if ($(window).width() <= 1024) {
+    //     $(".send_btn_m").fadeIn(300);
+    //   }
+    //   $("body").css("overflow", "visible");
+    // });
     if ($(window).width() <= 1024) {
       $(".constResult_enroll .result_item ul li:nth-child(1)").prepend("<span>적합</span>");
       $(".constResult_enroll .result_item ul li:nth-child(2)").prepend("<span>부적합</span>");
       $(".constResult_enroll .result_item ul li:nth-child(3)").prepend("<span>해당없음</span>");
       $(".constResult_enroll .result_item > li:last-child").append("<textarea>내용입니다.</textarea>");
     }
+    $(".constResult_enroll .check_list > li:nth-child(2)").click(function () {
+      if($(this).children("input[type='radio']").is(":checked")) {
+        $(".pointOut").fadeIn(200);
+        $(".pointOut .close_box, .subModal_submit button:first-child").click(function () {
+          $(".pointOut").fadeOut(200);
+        });
+      }
+    });
+  });
+  $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
+    $(".cResult_menu > li > button").next().slideUp();
+    $(".cResult_menu > li > button").removeClass("active");
+    // alert("hi");
+    $(".constResult_enroll").fadeOut(300);
+    if ($(window).width() <= 1024) {
+      $(".send_btn_m").fadeIn(300);
+    }
+    $("body").css("overflow", "visible");
   });
   // 공사장 점검 계획 등록
   $(".cPlanEnroll_btn").click(function () {
@@ -824,6 +852,17 @@ $(function () {
     });
   });
 });
+// $(function () {
+//   $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
+//     $(".constResult_enroll").fadeOut(300);
+//     $(".cResult_menu > li > button.active").next().slideUp();
+//     $(".cResult_menu > li > button.active").removeClass("active");
+//     if ($(window).width() <= 1024) {
+//       $(".send_btn_m").fadeIn(300);
+//     }
+//     $("body").css("overflow", "visible");
+//   });
+// });
 
 // 파일 업로드
 $(function(){ 
@@ -904,10 +943,15 @@ $(function () {
       $(this).children(".checking").removeClass("active");
     }
     if($(this).children("input[type='radio']").is(":checked")) {
-      $(this).children(".checking").addClass("active");
-    } else {
       $(this).siblings().children(".checking").removeClass("active");
+      $(this).children(".checking").addClass("active");
     }
+    // if($(".constResult_enroll .check_list > li:nth-child(1) input[type='radio']").is(":checked")) {
+    //   $(".pointOut").fadeIn(200);
+    //   $(".pointOut .close_box, .subModal_submit button:first-child").click(function () {
+    //     $(".pointOut").fadeOut(200);
+    //   });
+    // }
     if($("#materialDamage").is(":checked")) {
       $(".acdnt_enroll tr:nth-child(4) input[type='text']").val("");
       $(".acdnt_enroll tr:nth-child(4) input[type='text']").attr("disabled", true);

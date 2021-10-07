@@ -179,12 +179,10 @@ header .title {
 .text-end {
   text-align: end;
 }
-
 .wrapper {
   display: flex;
   align-items: center;
 }
-
 
 /* Input */
 input, select {
@@ -198,6 +196,7 @@ textarea {
   padding: 15px;
   background: #f3f5f6;
   border: 1px solid #cccfd8;
+  resize: none;
 }
 input:focus, select:focus {
   outline: none;
@@ -526,6 +525,14 @@ input[type="radio"] + .checking.active .radio_inner {
   box-shadow: 0px 1px 4px 0px rgba(35, 31, 32, 0.35);
   z-index: 997;
 }
+.modal_sub p sub {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-right: 0.2604vw;
+  background: #5479f7;
+  border-radius: 100px;
+}
 /* subModal_submit */
 .subModal_submit {
   display: flex;
@@ -552,6 +559,11 @@ input[type="radio"] + .checking.active .radio_inner {
   height: 15px;
   background: #6372a1;
   transform: rotate(-45deg) translate(-5px, -4px);
+}
+.subModal_submit {
+  margin-top: 1.0417vw;
+  padding-top: 1.1979vw;
+  border-top: 1px solid #192b80;
 }
 .subModal_submit button {
   width: 86px;

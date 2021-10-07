@@ -1320,11 +1320,11 @@ a.ui-button:active,
   align-items: center;
 }
 .sub_page .hash_tags li {
-  margin-bottom: 10px;
-  padding: 12px 15px;
-}
-.sub_page .hash_tags li img {
-  margin-left: 25px;
+  /* margin-bottom: 10px; */
+  padding: 12px 58px 12px 15px;
+  background-image: url(../images/icon/search_delete.png);
+  background-repeat: no-repeat;
+  background-position: center right 15px;
 }
 .sub_page .hash_tags li:not(:last-child) {
   margin-right: 20px;
@@ -1662,18 +1662,18 @@ a.ui-button:active,
 
 /* 담당업무 설정 */
 .responsibility .modal_wrap {
-  width: 75.7407vh;
+  width: 42.6042vw;
 }
 .responsibility .tab_wrap {
-  padding-top: 3.7037vh;
+  padding-top: 2.0833vw;
 }
 .responsibility .tab_index {
-  font-size: 1.8519vh;
+  font-size: 1.0417vw;
 }
 .responsibility .tab_index li {
   width: 50%;
   text-align: center;
-  padding: 1.8519vh 0;
+  padding: 1.0417vw 0;
   border: 1px solid #6e6e6e;
 }
 .responsibility .tab_index li:first-child {
@@ -1685,8 +1685,8 @@ a.ui-button:active,
 }
 .responsibility .tab_content {
   display: none;
-  margin-top: 5.0926vh;
-  padding: 0 1.4815vh;
+  margin-top: 2.8646vw;
+  padding: 0 0.8333vw;
 }
 .responsibility .tab_content.active {
   display: block;
@@ -1694,8 +1694,8 @@ a.ui-button:active,
 .responsibility .tab_content form li:not(:last-child) {
   display: flex;
   align-items: center;
-  padding: 1.6667vh 0;
-  padding-left: 2.3148vh;
+  padding: 0.9375vw 0;
+  padding-left: 1.3021vw;
   border: 1px solid #cccfd8;
 }
 .responsibility .tab_content form li:first-child {
@@ -1703,47 +1703,50 @@ a.ui-button:active,
 }
 .responsibility .tab_content form li:last-child {
   height: 50px;
-  margin-top: 1.6667vh;
+  margin-top: 0.9375vw;
 }
 .responsibility .tab_content form span {
   width: 20%;
-  font-size: 1.6667vh;
+  font-size: 0.9375vw;
 }
 .responsibility .tab_content form .select_wrap {
   display: flex;
   align-items: center;
   width: 80%;
-  font-size: 1.4815vh;
+  font-size: 0.8333vw;
 }
 .responsibility .tab_content form li select {
-  width: 18.5185vh;
-  height: 4.6296vh;
-  margin-right: 0.7407vh;
+  width: 10.4167vw;
+  height: 2.6042vw;
+  margin-right: 0.4167vw;
 }
 .responsibility .add_btn {
-  height: 4.6296vh;
-  padding: 0 1.8519vh;
+  height: 2.6042vw;
+  padding: 0 1.0417vw;
 }
 .responsibility .tab_content form li .guide_ment {
-  font-size: 1.2037vh;
+  font-size: 0.6771vw;
 }
 .responsibility .tab_content form li .guide_ment sub {
-  width: 1.2037vh;
-  height: 1.2037vh;
+  width: 0.6771vw;
+  height: 0.6771vw;
   box-sizing: border-box;
-  margin-right: 0.5556vh;
+  margin-right: 0.3125vw;
 }
 .responsibility .hash_tags {
-  padding: 1.8519vh 2.3148vh;
+  padding: 1.0417vw 1.3021vw;
   background: #e8eaef;
 }
 .responsibility .hash_tags li {
-  font-size: 1.4815vh;
-  padding: 1.1111vh 1.3889vh;
+  font-size: 0.8333vw;
+  padding: 0.625vw 3.0208vw 0.625vw 0.7813vw;
+  background-image: url(../images/icon/search_delete.png);
+  background-repeat: no-repeat;
+  background-position: center right 15px;
 }
 .responsibility .hash_tags li img {
-  width: 1.4815vh;
-  margin-left: 2.3148vh;
+  width: 0.8333vw;
+  margin-left: 1.3021vw;
 }
 .responsibility .modal_bottom .modal_submit {
   border-top: 2px solid #ccc;
@@ -1989,51 +1992,38 @@ input[type="file"] {
 
 /* 공사장 점검 결과 등록 */
 .constResult_enroll .modal_wrap {
-  /* width: 946px; */ 
-  width: 95.9259vh;
+  width: 49.2708vw;
 }
 .cResult_top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-top: 60px; */
-  margin-top: 5.5556vh;
-  /* margin-bottom: 20px; */
-  margin-bottom: 1.8519vh;
+  margin-top: 3.125vw;
+  margin-bottom: 1.0417vw;
 }
 .cResult_top select,
 .cResult_top button {
-  /* height: 40px; */
-  height: 3.7037vh;
+  height: 2.0833vw;
 }
 .cResult_top select {
-  /* width: 230px; */
   width: 11.9792vw;
-  /* font-size: 14px; */
   font-size: 0.7292vw;
-  /* margin-left: 25px; */
   margin-left: 1.3021vw;
 }
 .cResult_top button {
-  /* width: 120px; */
   width: 6.25vw;
-  /* font-size: 15px; */
   font-size: 0.7813vw;
 }
 .cResult_top button img {
   width: 1.0417vw;
-  /* margin-right: 10px; */
   margin-right: 0.5208vw;
 }
 .cResult_menu > li > button {
   align-items: center;
   justify-content: start;
   width: 100%;
-  /* height: 60px; */
   height: 3.125vw;
-  /* font-size: 18px; */
   font-size: 0.9375vw;
-  /* padding: 0 20px; */
   padding: 0 1.0417vw;
 }
 .cResult_menu > li > button img:first-child {
@@ -2053,7 +2043,6 @@ input[type="file"] {
   background: #192b80;
 }
 .cResult_menu > li:last-child {
-  /* margin-top: 40px; */
   margin-top: 2.0833vw;
 }
 .cResult_menu > li:last-child > button {
@@ -2062,7 +2051,6 @@ input[type="file"] {
 }
 .constResult_enroll .result_container { 
   display: none;
-  /* padding: 0 25px; */
   padding: 0 1.3021vw;
 }
 .cResult_menu form {
@@ -2073,17 +2061,13 @@ input[type="file"] {
   padding: 0 !important;
 }
 .constResult_enroll .result_list {
-  /* margin-top: 25px; */
   margin-top: 1.3021vw;
 }
 .constResult_enroll .subject > li:first-child,
 .constResult_enroll .result_item > li:first-child {
   width: 35%;
-  /* line-height: 20px; */
   line-height: 1.0417vw;
-  /* font-size: 15px; */
   font-size: 0.7813vw;
-  /* padding: 0 20px; */
   padding: 0 1.0417vw;
 }
 .constResult_enroll .result_item {
@@ -2099,7 +2083,6 @@ input[type="file"] {
   border-left: 1px solid #d7d7d7;
 }
 .constResult_enroll .subject ul {
-  /* margin-top: 12px; */
   margin-top: 0.625vw;
   background: #f7f9fb;
   border-top: 1px solid #d7d7d7;
@@ -2108,12 +2091,10 @@ input[type="file"] {
   padding: 0;
 }
 .constResult_enroll .subject > li:last-child {
-  /* padding-top: 12px; */
   padding-top: 0.625vw;
 }
 .constResult_enroll .subject ul li,
 .constResult_enroll .result_item ul li {
-  /* padding: 14px 0; */
   padding: 0.7292vw 0;
 }
 .constResult_enroll .result_item ul li {
@@ -2144,16 +2125,13 @@ input[type="file"] {
 }
 .constResult_enroll .result_item ul li:nth-child(4) {
   justify-content: start;
-  /* padding-left: 20px; */
   padding: 1.0417vw;
 }
 .constResult_enroll .subject > li:first-child {
-  /* font-size: 16px; */
   font-size: 0.8333vw;
 }
 .constResult_enroll .subject ul,
 .constResult_enroll .result_item ul {
-  /* font-size: 13px; */
   font-size: 0.6771vw;
 }
 .constResult_enroll .result_list .result > li, 
@@ -2166,28 +2144,21 @@ input[type="file"] {
 }
 .constResult_enroll .result_item .file_btn {
   position: static;
-  /* width: 78px; */
   width: 4.0625vw;
-  /* height: 30px; */
   height: 1.5625vw;
   color: #000;
 }
-.constResult_enroll textarea {
+.cResult_menu textarea {
   width: 100%;
-  /* height: 195px; */
-  height: 18.0556vh;
-  font-size: 1.4815vh;
-  /* margin-top: 25px; */
-  margin-top: 2.3148vh;
+  height: 10.1563vw;
+  font-size: 0.8333vw;
+  margin-top: 1.3021vw;
 }
 .constResult_enroll .result_container > button {
-  /* width: 120px; */
   width: 6.25vw;
-  /* height: 40px; */
   height: 2.0833vw;
   font-size: 0.7813vw;
   color: #fff;
-  /* margin-top: 10px; */
   margin-top: 0.5208vw;
   margin-left: auto;
   background: #72777e;
@@ -2196,7 +2167,6 @@ input[type="file"] {
 }
 .constResult_enroll .result_container > button img {
   width: 1.0417vw;
-  /* margin-right: 10px; */
   margin-right: 0.5208vw;
 }
 .cResult_bottom {
@@ -2236,7 +2206,58 @@ input[type="file"] {
   padding-top: 0;
   border-top: none;
 }
-
+/* 공사장 점검 결과 등록 부적합 체크 지적내용 */
+.pointOut {
+  /* display: block; */
+  top: 30%;
+  left: 50%;
+  width: 23.9583vw;
+  padding: 1.5625vw;
+}
+.pointOut + .subModal_bg {
+  /* display: block; */
+}
+.pointOut .check_list li {
+  display: flex;
+  position: relative;
+}
+.pointOut .check_list li p {
+  font-size: 0.7813vw;
+}
+.pointOut .check_list li:last-child p {
+  color: #ee5c50;
+}
+.pointOut .check_list li:not(:last-child) {
+  margin-right: 1.0417vw;
+}
+.pointOut .check_list .checking {
+  margin-right: 0.4167vw;
+}
+.pointOut .check_wrap > li {
+  display: flex;
+  justify-content: space-between;
+}
+.pointOut .check_wrap > li:not(:first-child) {
+  margin-top: 1.3021vw;
+}
+.pointOut .check_wrap > li > p {
+  display: flex;
+  align-items: center;
+  font-size: 0.8333vw;
+}
+.pointOut .check_wrap > li:not(:last-child) > p {
+  align-self: center;
+}
+.pointOut textarea {
+  width: 15.625vw;
+  height: 3.6458vw;
+  font-size: 0.7292vw;
+  background: #fff;
+}
+.pointOut input {
+  width: 15.625vw;
+  height: 2.0833vw;
+}
 /* 공사장 점검 계획 등록 */
 .constPlan_enroll .modal_wrap {
   width: 42.6042vw;
@@ -2442,7 +2463,6 @@ input[type="file"] {
   justify-content: space-between;
   width: 85%;
 }
-
 .aGroup_search input {
   width: 80%;
 }

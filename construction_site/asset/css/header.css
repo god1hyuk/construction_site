@@ -638,14 +638,7 @@ aside {
   align-items: center;
   font-size: 0.8333vw;
 }
-.sms_modal .modal_sub p sub {
-  display: block;
-  width: 5px;
-  height: 5px;
-  margin-right: 0.2604vw;
-  background: #5479f7;
-  border-radius: 100px;
-}
+
 .sms_modal .addTemplate p {
   margin-right: 1.0417vw;
 }
@@ -657,11 +650,6 @@ aside {
   width: 15.1042vw;
   height: 5.2083vw;
   margin: 0;
-}
-.sms_modal .addTemplate .subModal_submit {
-  margin-top: 1.0417vw;
-  padding-top: 1.1979vw;
-  border-top: 1px solid #192b80;
 }
 /* 그룹편집 (SMS) */
 .sms_modal .groupEdit {

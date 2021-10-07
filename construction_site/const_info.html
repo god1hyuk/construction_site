@@ -1810,144 +1810,60 @@
           </div>
         </div>
       </div>
-      <!-- 자문단 선택 -->
-      <div class="advisoryGroup modal_sub">
+      <!-- 공사장 점검 결과 등록 부적합 체크 지적내용 -->
+      <div class="pointOut modal_sub">
         <button class="close_box"></button>
         <form action="">
-          <ul class="aGroup_search">
+          <div class="check_wrap">
             <li>
-              <p>부문</p>
-              <div class="select_wrap">
-                <select name="" id="">
-                  <option value="">건축사</option>
-                  <option value="">건설공사</option>
-                </select>
-              </div>
+              <ul class="check_list d-flex">
+                <li>
+                  <label for="pointOut_check0"></label>
+                  <input type="radio" name="pointOut_check" id="pointOut_check0" checked />
+                  <div class="checking active">
+                    <div class="radio_inner"></div>
+                  </div>
+                  <p>조치완료</p>
+                </li>
+                <li>
+                  <label for="pointOut_check1"></label>
+                  <input type="radio" name="pointOut_check" id="pointOut_check1" />
+                  <div class="checking">
+                    <div class="radio_inner"></div>
+                  </div>
+                  <p>조치불가</p>
+                </li>
+              </ul>
             </li>
             <li>
-              <p>권역</p>
-              <div class="select_wrap">
-                <select name="" id="">
-                  <option value="">전체</option>
-                </select>
-              </div>
+              <p>
+                <sub></sub>
+                지적내용
+              </p>
+              <textarea>지적내용입니다.</textarea>
             </li>
             <li>
-              <p>성명</p>
-              <div class="input_wrap">
-                <input type="text" />
-                <button class="blue_btn">
-                  <img src="asset/images/icon/searching.png" alt="검색_아이콘" />
-                  검색
-                </button>
-              </div>
+              <p>
+                <sub></sub>
+                조치기한
+              </p>
+              <input type="text" class="datepicker" />
             </li>
-          </ul>
-        </form>
-        <div class="aGroup_list">
-          <div class="result_container">
-            <div class="result_list text-center">
-              <div class="subject_wrap">
-                <ul class="subject">
-                  <li>
-                    <div class="checking"></div>
-                  </li>
-                  <li>분야</li>
-                  <li>권역</li>
-                  <li>성명</li>
-                  <li>중복여부</li>
-                </ul>
-              </div>
-              <div class="result_wrap">
-                <ul class="result">
-                  <li>
-                    <ul class="result_item">
-                      <li>
-                        <label for="result_checking0"></label>
-                        <input type="checkbox" name="result_checking" id="result_checking0" />
-                        <div class="checking"></div>
-                      </li>
-                      <li>정기안전점검</li>
-                      <li>지역안전건축센터</li>
-                      <li>홍길동</li>
-                      <li>중복</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="result_item">
-                      <li>
-                        <label for="result_checking0"></label>
-                        <input type="checkbox" name="result_checking" id="result_checking0" />
-                        <div class="checking"></div>
-                      </li>
-                      <li>정기안전점검</li>
-                      <li>지역안전건축센터</li>
-                      <li>홍길동</li>
-                      <li></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="result_item">
-                      <li>
-                        <label for="result_checking0"></label>
-                        <input type="checkbox" name="result_checking" id="result_checking0" />
-                        <div class="checking"></div>
-                      </li>
-                      <li>정기안전점검</li>
-                      <li>지역안전건축센터</li>
-                      <li>홍길동</li>
-                      <li>중복</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="result_item">
-                      <li>
-                        <label for="result_checking0"></label>
-                        <input type="checkbox" name="result_checking" id="result_checking0" />
-                        <div class="checking"></div>
-                      </li>
-                      <li>정기안전점검</li>
-                      <li>지역안전건축센터</li>
-                      <li>홍길동</li>
-                      <li></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="result_item">
-                      <li>
-                        <label for="result_checking0"></label>
-                        <input type="checkbox" name="result_checking" id="result_checking0" />
-                        <div class="checking"></div>
-                      </li>
-                      <li>정기안전점검</li>
-                      <li>지역안전건축센터</li>
-                      <li>홍길동</li>
-                      <li>중복</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="result_bottom d-flex align-items-center justify-content-center">
-                <!-- 페이지네이션 -->
-                <ul class="pagination">
-                  <li class="prev move"></li>
-                  <li class="page_item active">1</li>
-                  <li class="page_item">2</li>
-                  <li class="page_item">3</li>
-                  <li class="page_item">4</li>
-                  <li class="page_item">5</li>
-                  <li class="next move"></li>
-                  <li class="superNext move"></li>
-                </ul>
-              </div>
-            </div>
+            <li>
+              <p>
+                <sub></sub>
+                조치내용
+              </p>
+              <textarea>조치내용입니다.</textarea>
+            </li>
           </div>
-        </div>
+        </form>
         <div class="subModal_submit">
-          <button>취소</button>
-          <button>확인</button>
+          <button type="reset">취소</button>
+          <button type="button">확인</button>
         </div>
       </div>
+      <div class="subModal_bg"></div>
     </div>
 
     <!-- 공사장 점검계획 등록 -->
