@@ -1432,10 +1432,6 @@ a.ui-button:active,
   display: flex;
   align-items: center;
 }
-.sub_page .keyword_save li:first-child {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #192b80;
-}
 .sub_page .keyword_save label {
   justify-content: start;
   font-size: 18px;
@@ -1452,7 +1448,6 @@ a.ui-button:active,
   margin-right: 8px;
 }
 .sub_page .kSave_wrap .subModal_submit button {
-  margin-top: 20px;
   padding: 13px 30px;
 }
 

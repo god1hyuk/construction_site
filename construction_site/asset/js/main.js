@@ -1,3 +1,23 @@
+// datepicker
+$(function () {
+  $.datepicker.setDefaults({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    showMonthAfterYear: true,
+    yearSuffix: '년'
+  });
+
+  $(function () {
+    $("input[name='datepicker']").datepicker().datepicker('setDate', new Date());
+  });
+});
+
 let count = 0;
 
 // 야간모드 스위치
@@ -22,7 +42,7 @@ $(function () {
 
 // 링크 이동
 $(function () {
-  $(".home button").click(function () {
+  $(".home").click(function () {
     location.href = "index.html";
   });
   $(".go_map button").click(function () {
@@ -745,27 +765,6 @@ $(function () {
     $(".constResult_enroll").fadeIn(300);
     $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
-    $(".cResult_menu > li > button").click(function () {
-      if(!$(this).hasClass("active")) {
-        $(this).next().slideDown(300);
-        $(this).addClass("active");
-      } else {
-        $(this).next().slideUp(300);
-        $(this).removeClass("active");
-      }
-      // $(this).next().slideToggle(300);
-      // $(this).toggleClass("active");
-    });
-    // $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
-    //     $(".cResult_menu > li > button").next().slideUp();
-    //     $(".cResult_menu > li > button").removeClass("active");
-    //     alert("hi");
-    //   $(".constResult_enroll").fadeOut(300);
-    //   if ($(window).width() <= 1024) {
-    //     $(".send_btn_m").fadeIn(300);
-    //   }
-    //   $("body").css("overflow", "visible");
-    // });
     if ($(window).width() <= 1024) {
       $(".constResult_enroll .result_item ul li:nth-child(1)").prepend("<span>적합</span>");
       $(".constResult_enroll .result_item ul li:nth-child(2)").prepend("<span>부적합</span>");
@@ -781,10 +780,13 @@ $(function () {
       }
     });
   });
+  $(".cResult_menu > li > button").click(function () {
+    $(this).next().slideToggle(300);
+    $(this).toggleClass("active");
+  });
   $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
     $(".cResult_menu > li > button").next().slideUp();
     $(".cResult_menu > li > button").removeClass("active");
-    // alert("hi");
     $(".constResult_enroll").fadeOut(300);
     if ($(window).width() <= 1024) {
       $(".send_btn_m").fadeIn(300);

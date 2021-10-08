@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
-    <!-- includeHTML -->
-    <script src="asset/js/includeHTML.js"></script>
-
     <!-- Favicon -->
     <link rel="icon" href="asset/images/icon/favicon.ico" />
     <link rel="shortcut icon" href="asset/images/icon/favicon.ico" />
@@ -34,9 +31,6 @@
     <!-- Style -->
     <link rel="stylesheet" id="changeStyle2" href="asset/css/style.css" />
 
-    <!-- datepicker -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
     <!-- Responsive -->
     <link rel="stylesheet" id="changeStyle3" href="asset/css/responsive.css" />
 
@@ -51,9 +45,9 @@
         <!-- 서브페이지 사이드 메뉴 (PC) -->
         <aside>
             <nav class="side_menu ns_b">
-                <div class="home d-flex align-items-center">
+                <div class="menu_title d-flex align-items-center">
                     <span>Menu</span>
-                    <button>
+                    <button class="home">
                       <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
                     </button>
                 </div>
@@ -457,7 +451,7 @@
                             </li>
                             <li>
                                 <span>발생일시</span>
-                                <input type="text" class="datepicker" />
+                                <input type="text" name="datepicker" class="datepicker" />
                             </li>
                             <li>
                                 <span>유형</span>
@@ -1247,7 +1241,7 @@
                         <li>
                             <h3>허가일자</h3>
                             <h4>2021-01-08</h4>
-                            <input type="text" id="permitDate_m" class="datepicker" />
+                            <input type="text" name="datepicker" class="datepicker" />
                         </li>
                     </ul>
                 </form>
@@ -1284,7 +1278,7 @@
                                 </td>
                                 <th colspan="2">사고발생일시</th>
                                 <td>
-                                    <input type="text" class="datepicker" />
+                                    <input type="text" name="datepicker" class="datepicker" />
                                 </td>
                             </tr>
                             <tr>
@@ -1621,13 +1615,13 @@
                                                     <li>
                                                         <div class="input_wrap">
                                                             <p>시작일</p>
-                                                            <input type="text" class="datepicker" />
+                                                            <input type="text" name="datepicker" class="datepicker" />
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="input_wrap">
                                                             <p>종료일</p>
-                                                            <input type="text" class="datepicker" />
+                                                            <input type="text" name="datepicker" class="datepicker" />
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -2002,32 +1996,6 @@
     <!-- jQuery -->
     <script src="asset/js/plugin/jquery-3.2.1.min.js"></script>
     <script src="asset/js/plugin/jquery-ui.min.js"></script>
-
-    <!-- datepicker -->
-    <script>
-        $.datepicker.setDefaults({
-            dateFormat: 'yy-mm-dd',
-            prevText: '이전 달',
-            nextText: '다음 달',
-            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-            dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-            dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-            showMonthAfterYear: true,
-            yearSuffix: '년'
-        });
-
-        $(function () {
-            $("#permitDate").datepicker().datepicker('setDate', new Date());
-            $("#permitDate_m").datepicker().datepicker('setDate', new Date());
-            $("#startDate").datepicker().datepicker('setDate', new Date());
-            $("#useOkDate").datepicker().datepicker('setDate', new Date());
-        });
-    </script>
-
-    <!-- includeHTML -->
-    <script>includeHTML();</script>
 
     <!-- Main JS -->
     <script src="asset/js/main.js"></script>

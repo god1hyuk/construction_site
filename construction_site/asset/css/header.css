@@ -1164,7 +1164,7 @@ header {
 .sub_page aside nav {
   padding-top: 70px;
 }
-.sub_page .home {
+.sub_page .menu_title {
   height: 75px;
   font-size: 24px;
   color: #fff;
@@ -1172,14 +1172,14 @@ header {
   background: rgb(0,204,178);
   background: linear-gradient(-45deg, rgba(0,204,178,1) 31%, rgba(57,120,252,1) 100%);  
 }
-.sub_page .home span {
+.sub_page .menu_title span {
   display: flex;
   align-items: center;
   width: 80%;
   height: 45%;
   border-right: 1px solid #00a28d;
 }
-.sub_page .home button {
+.sub_page button.home {
   justify-content: flex-end;
   width: 20%;
   height: 45%;

@@ -45,9 +45,9 @@
     <!-- 서브페이지 사이드 메뉴 (PC) -->
     <aside>
       <nav class="side_menu ns_b">
-        <div class="home d-flex align-items-center">
+        <div class="menu_title d-flex align-items-center">
           <span>Menu</span>
-          <button>
+          <button class="home">
             <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
           </button>
         </div>
@@ -451,7 +451,7 @@
               </li>
               <li>
                 <span>발생일시</span>
-                <input type="text" class="datepicker" />
+                <input type="text" name="datepicker" class="datepicker" />
               </li>
               <li>
                 <span>유형</span>
@@ -1255,34 +1255,6 @@
   <!-- jQuery -->
   <script src="asset/js/plugin/jquery-3.2.1.min.js"></script>
   <script src="asset/js/plugin/jquery-ui.min.js"></script>
-
-  <!-- datepicker -->
-  <script>
-    $.datepicker.setDefaults({
-      dateFormat: 'yy-mm-dd',
-      prevText: '이전 달',
-      nextText: '다음 달',
-      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-      showMonthAfterYear: true,
-      yearSuffix: '년'
-    });
-
-    $(function () {
-      $("#cpEnroll_datepicker").datepicker().datepicker('setDate', new Date());
-      $("#permitDate").datepicker().datepicker('setDate', new Date());
-      $("#permitDate_m").datepicker().datepicker('setDate', new Date());
-      $("#startDate").datepicker().datepicker('setDate', new Date());
-      $("#useOkDate").datepicker().datepicker('setDate', new Date());
-      $("#reviewDate").datepicker().datepicker('setDate', new Date());
-    });
-  </script>
-
-  <!-- includeHTML -->
-  <script>includeHTML();</script>
 
   <!-- Main JS -->
   <script src="asset/js/main.js"></script>
