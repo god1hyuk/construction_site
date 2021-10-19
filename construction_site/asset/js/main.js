@@ -22,7 +22,7 @@ let count = 0;
 
 // 야간모드 스위치
 $(function () {
-  $(".construction_site .switch_wrap").click(function () {
+  $(".main_page .switch_wrap").click(function () {
     if (count % 2 === 0) {
       $(this).prev("p").text("주간모드");
       $(this).children(".switch_btn").addClass("active");
@@ -52,10 +52,10 @@ $(function () {
 
 // 사이드 서브메뉴
 $(function () {
-  $(".construction_site .sideMenu_item").mouseover(function () {
+  $(".main_page .sideMenu_item").mouseover(function () {
     $(this).children(".pc_submenu").stop().fadeIn(150);
   });
-  $(".construction_site .sideMenu_item").mouseout(function () {
+  $(".main_page .sideMenu_item").mouseout(function () {
     $(this).children(".pc_submenu").stop().fadeOut(150);
   });
 });
@@ -87,7 +87,7 @@ $(function () {
     shadow: "0px 1px 5px rgba(35, 31, 32, 0.45)",
   };
   var optionValue;
-  $(".construction_site .map_option li").click(function () {
+  $(".main_page .map_option li").click(function () {
     optionValue = this.value;
     if ($(this).children("input[type='checkbox']").is(":checked")) {
       $(this)
@@ -125,7 +125,7 @@ $(function () {
 
 // 지도영역 뷰
 $(function () {
-  $(".construction_site .map_view .all_area").click(function () {
+  $(".main_page .map_view .all_area").click(function () {
     switch (count % 2) {
       case 0:
         $(this).addClass("active");
@@ -231,13 +231,13 @@ $(function () {
 
 // 날씨정보 영역
 $(function () {
-  $(".construction_site .weather .storm").click(function () {
+  $(".main_page .weather .storm").click(function () {
     if (count % 2 === 0) {
       $(this).children("span").text("날씨");
-      $(".construction_site .weather .storm_alert").css("opacity", "1");
+      $(".main_page .weather .storm_alert").css("opacity", "1");
     } else {
       $(this).children("span").text("태풍");
-      $(".construction_site .weather .storm_alert").css("opacity", "0");
+      $(".main_page .weather .storm_alert").css("opacity", "0");
     }
     count++;
   });

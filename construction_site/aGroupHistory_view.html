@@ -47,16 +47,29 @@
       <nav class="side_menu ns_b">
         <div class="menu_title d-flex align-items-center">
           <span>Menu</span>
-          <button class="home">
-            <img src="asset/images/icon/home_btn.png" alt="홈버튼_아이콘" />
-          </button>
+          <a href="index.html" class="home"></a>
         </div>
         <ul>
-          <li class="sideMenu_item" value="0">
-            <a href="const_mgt.html">
+          <li class="sideMenu_item toggle" value="0">
+            <a href="javascript: void(0);">
               <div class="sideMenu_icon"></div>
               <p>공사장관리</p>
+              <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
             </a>
+            <ul class="pc_submenu">
+              <li>
+                <a href="const_mgt.html">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>공사장관리</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>사전작업허가</span>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="sideMenu_item" value="1">
             <a href="bldg_mgt.html">
@@ -71,13 +84,13 @@
             </a>
           </li>
           <li class="sideMenu_item" value="3">
-            <a href="cctv.html">
+            <a href="cctv.html" target="_blank">
               <div class="sideMenu_icon"></div>
               <p>실시간 모니터링</p>
             </a>
           </li>
           <li class="sideMenu_item toggle" value="4">
-            <a href="aGroupHIstory.html">
+            <a href="javascript: void(0);">
               <div class="sideMenu_icon"></div>
               <p>자문단관리</p>
               <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
@@ -98,7 +111,7 @@
             </ul>
           </li>
           <li class="sideMenu_item toggle" value="5">
-            <a href="notice_page.html">
+            <a href="javascript: void(0);">
               <div class="sideMenu_icon"></div>
               <p>알림마당</p>
               <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />

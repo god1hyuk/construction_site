@@ -253,6 +253,12 @@ button {
 .modal_wrap button:hover {
   opacity: 90%;
 }
+/* home */
+a.home {
+  display: block;
+  background-image: url("../images/icon/home_btn.png");
+  background-repeat: no-repeat;
+}
 /* add_btn */
 .add_btn {
   color: #fff;

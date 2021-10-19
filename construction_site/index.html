@@ -46,20 +46,34 @@
 
 <body>
   <!-- 메인 페이지 -->
-  <div class="construction_site d-flex justify-content-between">
+  <div class="main_page d-flex justify-content-between">
 
     <!-- 사이드 메뉴 (PC) -->
     <aside>
       <nav class="side_menu text-center nt_rg">
         <ul>
-          <li class="home">
-            <a href="index.html" class="d-flex align-items-center justify-content-center"></a>
+          <li>
+            <a href="index.html" class="home"></a>
           </li>
           <li class="sideMenu_item" value="0">
-            <a href="const_mgt.html">
+            <a href="javascript: void(0);">
               <div class="sideMenu_icon"></div>
               <p>공사장관리</p>
             </a>
+            <ul class="pc_submenu">
+              <li>
+                <a href="const_mgt.html">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>공사장관리</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript: void(0);">
+                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                  <span>사전작업허가</span>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="sideMenu_item" value="1">
             <a href="bldg_mgt.html">
@@ -74,7 +88,7 @@
             </a>
           </li>
           <li class="sideMenu_item" value="3">
-            <a href="cctv.html">
+            <a href="cctv.html" target="_blank">
               <div class="sideMenu_icon"></div>
               <p>모니터링</p>
             </a>
