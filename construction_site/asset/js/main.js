@@ -18,10 +18,9 @@ $(function () {
   });
 });
 
-let count = 0;
-
 // 야간모드 스위치
 $(function () {
+  let count = 0;
   $(".main_page .switch_wrap").click(function () {
     if (count % 2 === 0) {
       $(this).prev("p").text("주간모드");
@@ -125,6 +124,7 @@ $(function () {
 
 // 지도영역 뷰
 $(function () {
+  let count = 0;
   $(".main_page .map_view .all_area").click(function () {
     switch (count % 2) {
       case 0:
@@ -231,6 +231,7 @@ $(function () {
 
 // 날씨정보 영역
 $(function () {
+  let count = 0;
   $(".main_page .weather .storm").click(function () {
     if (count % 2 === 0) {
       $(this).children("span").text("날씨");
@@ -523,11 +524,17 @@ $(function () {
   $(".aGroupHistory .result_item li:not(:first-child)").click(function () {
     location.href = "aGroupHistory_view.html";
   });
-  $(".notice_page .result_item li:not(:first-child)").click(function () {
+  $(".notice_page.official .result_item li:not(:first-child)").click(function () {
     location.href = "notice_view.html";
   });
   $(".promotion_page .result_item li:not(:first-child)").click(function () {
     location.href = "promotion_view.html";
+  });
+  $(".notice_page_mgr .result_item li:not(:first-child)").click(function () {
+    location.href = "notice_view_mgr.html";
+  });
+  $(".data_share_mgr .result_item li:not(:first-child)").click(function () {
+    location.href = "share_view_mgr.html";
   });
   $(".pagination li.page_item").click(function () {
     $(".pagination li.page_item").removeClass("active");
@@ -854,6 +861,23 @@ $(function () {
     });
   });
 });
+// 사전작업 허가 신청
+$(function () {
+  $(".preworkPermit_btn").click(function () {
+    $(".prework_permit").fadeIn(300);
+    $("body").css("overflow", "hidden");
+    $(".prework_permit .close_btn, .prework_permit .modal_submit button:first-child").click(function () {
+      $(".prework_permit").fadeOut(300);
+      if ($(window).width() <= 1024) {
+        $(".send_btn_m").fadeIn(300);
+      }
+      $("body").css("overflow", "visible");
+    });
+  });
+  $(".prework_permit .modal_submit button:last-child").click(function () {
+    alert("다른 사용자가 이미 신청하였습니다.");
+  });
+});
 // $(function () {
 //   $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
 //     $(".constResult_enroll").fadeOut(300);
@@ -996,5 +1020,48 @@ $(document).ready(function () {
   $('.cctv_list li').on('click', function () {
     $('.cctv_list li').removeClass('active');
     $(this).addClass('active');
+  });
+});
+
+
+// 점검 카드
+$(function () {
+  $(".checkCard .menu").hide();
+  $(".checkCard .menu ul").hide();
+  $(".checkCard .menu_btn button").click(function () {
+    $(this).toggleClass("on");
+    if($(this).hasClass("on")) {
+      $(this).text("x").css("color", "#fff");
+      $(this).parent().next(".menu").fadeIn(200);
+      $(this).parent().next(".menu").children("ul").delay(100).slideDown(500);
+    } else {
+      $(this).text("⋮").css("color", "#b0b0b0");
+      $(this).parent().next(".menu").delay(200).fadeOut(200);
+      $(this).parent().next(".menu").children("ul").slideUp(300);
+    }
+  });
+});
+$(function () {
+  $(".checkCard .menu .addCheck_btn").click(function () {
+    $(this).toggleClass("on");
+    if($(this).hasClass("on")) {
+      $(this).text("OFF");
+      $(this).addClass("active");
+    } else {
+      $(this).text("ON");
+      $(this).removeClass("active");
+    }
+  });
+});
+$(function () {
+  $(".checkCard_wrap .tab_index li").click(function () {
+    $(".checkCard_wrap .tab_index li").removeClass("active");
+    $(this).addClass("active");
+  });
+});
+$(function () {
+  $(".addCheck button").click(function () {
+    $(".addCheck button").removeClass("active");
+    $(this).addClass("active");
   });
 });

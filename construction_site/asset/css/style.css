@@ -1071,6 +1071,8 @@
   font-size: 26px;
 }
 .sub_page .title_wrap::after {
+  /* 임시 */
+  display: none;
   content: "";
   position: absolute;
   bottom: 12px;
@@ -1141,7 +1143,7 @@
 .sub_page .search_form .search_name ul li:last-child {
   width: 60%;
 }
-.sub_page .search_form .search_name input[type="text"] {
+.sub_page .search_form .search_name input {
   width: 100%;
   height: 45px;
   font-size: 16px;
@@ -1246,7 +1248,7 @@
   font-size: 15px;
   padding-left: 10px;
 }
-.search_add .check_wrap > li:nth-child(5) p {
+.search_add .check_wrap > li:nth-child(7) p {
   padding: 0 26px;
   padding-top: 12px;
 }
@@ -1254,7 +1256,7 @@
 .search_add .check_wrap select {
   font-size: 15px;
 }
-.search_add .check_wrap > li:nth-child(5) select {
+.search_add .check_wrap > li:nth-child(7) select {
   width: 100px;
   height: 40px;
 }
@@ -1507,12 +1509,10 @@ a.ui-button:active,
 .sub_page .search_result .result_option button {
   font-size: 14px;
   padding: 10px 15px;
-  background: #fff;
-  border: 1px solid #c0c9cb;
   border-radius: 5px;
 }
-.sub_page .search_result .result_option button:last-child {
-  margin-left: 8px;
+.sub_page .search_result .result_option button:not(:last-child) {
+  margin-right: 8px;
 }
 /* 검색결과 리스트 */
 .sub_info .check_tab {
@@ -1539,35 +1539,47 @@ a.ui-button:active,
 }
 .const_mgt .search_result .subject li:nth-child(2),
 .const_mgt .search_result .result_item li:nth-child(2) {
-  width: 20%;
+  width: 17%;
 }
 .const_mgt .search_result .subject li:nth-child(3),
 .const_mgt .search_result .result_item li:nth-child(3) {
-  width: 8%;
+  width: 7%;
 }
 .const_mgt .search_result .subject li:nth-child(4),
 .const_mgt .search_result .result_item li:nth-child(4) {
-  width: 8%;
+  width: 7%;
 }
 .const_mgt .search_result .subject li:nth-child(5),
 .const_mgt .search_result .result_item li:nth-child(5) {
-  width: 13%;
+  width: 10.5%;
 }
 .const_mgt .search_result .subject li:nth-child(6),
 .const_mgt .search_result .result_item li:nth-child(6) {
-  width: 13%;
+  width: 10.5%;
 }
 .const_mgt .search_result .subject li:nth-child(7),
 .const_mgt .search_result .result_item li:nth-child(7) {
-  width: 13%;
+  width: 10.5%;
 }
 .const_mgt .search_result .subject li:nth-child(8),
 .const_mgt .search_result .result_item li:nth-child(8) {
-  width: 8%;
+  width: 10.5%;
 }
 .const_mgt .search_result .subject li:nth-child(9),
 .const_mgt .search_result .result_item li:nth-child(9) {
-  width: 10%;
+  width: 10.5%;
+}
+.const_mgt .search_result .subject li:nth-child(10),
+.const_mgt .search_result .result_item li:nth-child(10) {
+  width: 9.5%;
+}
+.const_mgt .search_result .subject li:nth-child(11),
+.const_mgt .search_result .result_item li:nth-child(11) {
+  width: 10.5%;
+}
+.const_mgt .search_result .subject li:nth-child(12),
+.const_mgt .search_result .result_item li:nth-child(12) {
+  width: 10.5%;
 }
 .sub_page .result_list .result > li,
 .check_tab .result_list .result > li {
@@ -1653,6 +1665,48 @@ a.ui-button:active,
   font-size: 14px;
   color: #5a5a5a;
   margin-top: 33px;
+}
+
+/* 사전작업 허가 신청 */
+.prework_permit .modal_wrap {
+  width: 35vw;
+}
+.prework_permit .cProgress_list .check_wrap > li {
+  width: 100%;
+}
+.prework_permit a.download {
+  transition: opacity .13s;
+}
+.prework_permit a.download:hover {
+  opacity: 70%;
+}
+.prework_permit .form_box ol {
+  width: 100%;
+}
+.prework_permit .form_box ol li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 5px;
+}
+.prework_permit .form_box ol span {
+  margin-left: 5px;
+}
+.prework_permit .form_box ol li button {
+  display: none;
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  background-image: url(../images/icon/contact_delete.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.prework_permit .form_box ol li:hover {
+  background-color: #f3f5ff;
+  cursor: pointer;
+}
+.prework_permit .form_box ol li:hover button {
+  display: flex;
 }
 
 /* 담당업무 설정 */
@@ -2632,6 +2686,42 @@ input[type="file"] {
 }
 .sub_info .cProgress_btn {
   margin-right: 5px;
+}
+
+/* 공사관계자 리스트 */
+.const_info .constInsider_list {
+  margin-top: 60px;
+}
+.const_info .constInsider_list .result_list {
+  margin-top: 14px;
+}
+.const_info .constInsider_list .subject li:nth-child(1), 
+.const_info .constInsider_list .result_item li:nth-child(1) {
+  width: 7%;
+}
+.const_info .constInsider_list .subject li:nth-child(2), 
+.const_info .constInsider_list .result_item li:nth-child(2) {
+  width: 20%;
+}
+.const_info .constInsider_list .subject li:nth-child(3), 
+.const_info .constInsider_list .result_item li:nth-child(3) {
+  width: 20%;
+}
+.const_info .constInsider_list .subject li:nth-child(4), 
+.const_info .constInsider_list .result_item li:nth-child(4) {
+  width: 20%;
+}
+.const_info .constInsider_list .subject li:nth-child(5), 
+.const_info .constInsider_list .result_item li:nth-child(5) {
+  width: 33%;
+}
+.const_info .constInsider_list button.sms {
+  width: 120px;
+  height: 45px;
+}
+.const_info .constInsider_list button.sms img {
+  width: 20px;
+  margin-right: 8px;
 }
 
 /* 공사장 점검 탭 */
@@ -3833,11 +3923,11 @@ table th.th_sub {
 .noticeField .search_form ul li {
   width: auto !important;
 }
-.noticeField .search_form select {
-  width: 150px !important; 
+.noticeField .search_form .search_name select {
+  width: 150px;
 }
-.noticeField .search_form input {
-  width: 300px !important;
+.noticeField .search_form input[type="text"] {
+  width: 300px;
 }
 .noticeField .search_form .blue_btn {
   width: 100px;
@@ -3944,4 +4034,455 @@ table th.th_sub {
 .post_navigation + button:hover {
   opacity: 1;
   border-color: #545463;
+}
+
+
+
+/* 관리자 페이지 */
+
+/* 사용자 승인 */
+.user_approval .title_wrap .title_icon {
+  background-image: none;
+}
+.user_approval .subject > li:nth-child(1),
+.user_approval .result_item > li:nth-child(1) {
+  width: 7%;
+}
+.user_approval .subject > li:nth-child(2),
+.user_approval .result_item > li:nth-child(2) {
+  width: 17%;
+  text-align: center;
+}
+.user_approval .subject > li:nth-child(3),
+.user_approval .result_item > li:nth-child(3) {
+  width: 17%;
+}
+.user_approval .subject > li:nth-child(4),
+.user_approval .result_item > li:nth-child(4) {
+  width: 25%;
+}
+.user_approval .subject > li:nth-child(5),
+.user_approval .result_item > li:nth-child(5) {
+  width: 17%;
+}
+.user_approval .subject > li:nth-child(6),
+.user_approval .result_item > li:nth-child(6) {
+  width: 17%;
+}
+.user_approval .approval_btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.user_approval .approval_btn button {
+  width: 100px;
+  height: 40px;
+}
+
+/* 접속자 로그 */
+.accessor_log .title_wrap .title_icon {
+  background-image: none;
+}
+.accessor_log .search_form .search_name {
+  /* justify-content: start; */
+}
+.accessor_log .search_form .search_name form {
+  width: 100%;
+}
+.accessor_log .search_name li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  margin-right: 0 !important;
+}
+.accessor_log .search_name li:last-child {
+  margin-top: 20px;
+}
+.accessor_log .search_name li > * {
+  margin: 0 15px;
+}
+.accessor_log .search_name li:first-child input {
+  margin-left: 25px;
+}
+.accessor_log .search_form .search_name select {
+  width: 250px;
+}
+.accessor_log .search_form .search_name input {
+  width: 250px;
+}
+.accessor_log .search_form .search_name .datepicker {
+  background: #f3f5f6;
+}
+.accessor_log .search_name button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.accessor_log .subject > li:nth-child(1),
+.accessor_log .result_item > li:nth-child(1) {
+  width: 7%;
+}
+.accessor_log .subject > li:nth-child(2),
+.accessor_log .result_item > li:nth-child(2) {
+  width: 12%;
+  text-align: center;
+}
+.accessor_log .subject > li:nth-child(3),
+.accessor_log .result_item > li:nth-child(3) {
+  width: 15%;
+}
+.accessor_log .subject > li:nth-child(4),
+.accessor_log .result_item > li:nth-child(4) {
+  width: 12%;
+}
+.accessor_log .subject > li:nth-child(5),
+.accessor_log .result_item > li:nth-child(5) {
+  width: 12%;
+}
+.accessor_log .subject > li:nth-child(6),
+.accessor_log .result_item > li:nth-child(6) {
+  width: 12%;
+}
+.accessor_log .subject > li:nth-child(7),
+.accessor_log .result_item > li:nth-child(7) {
+  width: 12%;
+}
+.accessor_log .subject > li:nth-child(8),
+.accessor_log .result_item > li:nth-child(8) {
+  width: 16%;
+}
+
+/* 공사장 관리 (관리자) */
+.const_mgt.mgr .title_wrap .title_icon {
+  background-image: none;
+}
+.const_mgt.mgr .form_container .search_form {
+  padding-top: 0;
+}
+
+/* 점검 카드 관리 */
+.checkCard_wrap {
+  position: relative;
+}
+.checkCard_wrap .tab_index {
+  display: flex;
+}
+.checkCard_wrap .tab_index li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  margin-right: 15px;
+  background: #fff;
+  border: 1px solid #6e6e6e;
+  transition: all .13s;
+}
+.checkCard_wrap .tab_index li.active {
+  color: #fff;
+  background: #192b80;
+  border: none;
+}
+.checkCard_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.checkCard {
+  position: relative;
+  /* width: 28%; */
+  width: 408px;
+  height: 500px;
+  overflow: hidden;
+  /* margin: 50px 2.6666%; */
+  margin: 50px 0;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 10%);
+  transition: all .3s;
+}
+.checkCard:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+  box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 20%);
+}
+.checkCard .text_wrap {
+  width: 100%;
+  height: 40%;
+  padding: 0 20px;
+  padding-top: 30px;
+}
+.checkCard .text_wrap h2 {
+  font-family: 'NotoSansKR-Bold';
+  line-height: 1.2;
+  font-size: 32px;
+  margin-top: 20px;
+}
+.checkCard .img_wrap {
+  width: 100%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.checkCard:nth-child(1) .img_wrap {
+  background-image: url(../images/checkCard/checkCard0.jpg);
+}
+.checkCard:nth-child(2) .img_wrap {
+  background-image: url(../images/checkCard/checkCard1.jpg);
+}
+.checkCard:nth-child(3) .img_wrap {
+  background-image: url(../images/checkCard/checkCard2.jpg);
+}
+.checkCard:nth-child(4) .img_wrap {
+  background-image: url(../images/checkCard/checkCard3.jpg);
+}
+.checkCard:nth-child(5) .img_wrap {
+  background-image: url(../images/checkCard/checkCard4.jpg);
+}
+.checkCard:nth-child(6) .img_wrap {
+  background-image: url(../images/checkCard/checkCard5.jpg);
+}
+.checkCard .img_wrap .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkCard .img_wrap .btn button {
+  width: 100px;
+  height: 30px;
+  margin-top: 200px;
+  border-radius: 3px;
+}
+.checkCard .img_wrap .btn button:first-child {
+  margin-right: 10px;
+}
+.checkCard .menu_btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+.checkCard .menu_btn button {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #b0b0b0;
+  background: transparent;
+}
+.checkCard .menu {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 50px 15px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.checkCard .menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+}
+.checkCard .menu li button {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  color: #333;
+  background: #fff;
+  border-radius: 100px;
+  transition: all .2s;
+}
+.checkCard .menu button:hover {
+  color: #fff;
+  background: #333;
+}
+.checkCard .menu button.active {
+  color: #fff;
+  background: #3978fc;
+}
+.checkCard_wrap .addCard_btn {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.checkCard_wrap .addCard_btn button {
+  width: 100px;
+  height: 40px;
+}
+
+/* 점검 카드 등록 */
+.checkCard_enroll .cResult_top {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+  padding: 30px 50px;
+  background: #fff;
+  border: 1px solid #515463;
+}
+.checkCard_enroll h3 {
+  font-family: 'NanumSquareB';
+  font-size: 18px;
+}
+.checkCard_enroll .cResult_top .emergencyCheck {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.checkCard_enroll .cResult_top .emergencyCheck li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.checkCard_enroll .cResult_top .emergencyCheck label {
+  position: absolute;
+}
+.checkCard_enroll .cResult_top .emergencyCheck .checking {
+  margin-left: 10px;
+}
+.checkCard_enroll .cResult_top input {
+  height: 45px;
+  margin: 0 25px;
+}
+.checkCard_enroll .cResult_top .datepicker:last-child {
+  margin-right: 0;
+}
+.checkCard_enroll .cResult_top .cardName {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+.checkCard_enroll .cResult_top .input_wrap {
+  justify-content: space-between;
+  width: 60%;
+}
+.checkCard_enroll .cResult_top .input_wrap input {
+  width: 82%;
+  margin: 0;
+}
+.checkCard_enroll .cResult_top .addCheck {
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+}
+.checkCard_enroll .cResult_top .addCheck button {
+  width: 60px;
+  height: 30px;
+  font-size: 14px;
+  transition: background .13s;
+}
+.checkCard_enroll .cResult_top .addCheck button.active {
+  background: #5479f7;
+}
+.checkCard_enroll .cResult_top .addCheck button:last-child {
+  margin-left: 8px;
+}
+.checkCard_enroll .fieldAdd {
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.checkCard_enroll .fieldAdd button {
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+}
+.checkCard_enroll .fieldAdd img {
+  margin-right: 10px;
+}
+.checkCard_enroll .fieldAdd button:last-child {
+  margin-left: 8px;
+}
+.checkCard_enroll .cResult_menu .result_wrap {
+  padding: 15px !important;
+}
+.checkCard_enroll .cResult_menu .subject > li,
+.checkCard_enroll .cResult_menu .result_item > li {
+  width: 100%;
+  padding: 15px;
+  border-left: none;
+}
+.checkCard_enroll .cResult_menu .subject > li {
+  font-size: 16px;
+}
+.checkCard_enroll .cResult_menu .result_item > li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  background: #fff;
+}
+.checkCard_enroll .cResult_menu .result_item button {
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 900;
+  margin-right: 15px;
+  background: #464646;
+  border-radius: 3px;
+  transition: background .13s;
+}
+.checkCard_enroll .cResult_menu .result_item button:hover {
+  background: #5479f7;
+}
+.checkCard_enroll .cResult_menu input {
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+.checkCard_enroll .cResult_bottom h3 {
+  font-size: 18px;
+  margin-right: 20px;
+}
+.checkCard_enroll .cResult_bottom select {
+  width: 230px;
+  height: 45px;
+  background-color: #fff;
+}
+.checkCard_enroll .cResult_bottom .info_btn button {
+  width: 255px;
+  font-family: 'NotoSansKR-Medium';
+  font-size: 22px;
+}
+
+/* 공지사항 (관리자) */
+.notice_page.mgr .search_result .result_top {
+  justify-content: end;
+}
+.notice_page.mgr .result_top button {
+  padding: 10px 15px;
+}
+.notice_page.mgr .result_top button:last-child {
+  margin-left: 8px;
+}
+
+/* 공지사항 (관리자) 상세페이지 */
+.notice_view_mgr .form_wrap {
+  position: relative;
+}
+.notice_view_mgr .post_bottom {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.notice_view_mgr .post_bottom button {
+  width: 100px;
+  height: 40px;
+}
+.notice_view_mgr .post_bottom button:last-child {
+  margin-left: 8px;
 }

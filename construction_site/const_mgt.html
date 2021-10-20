@@ -6,9 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
-  <!-- includeHTML -->
-  <script src="asset/js/includeHTML.js"></script>
-
   <!-- Favicon -->
   <link rel="icon" href="asset/images/icon/favicon.ico" />
   <link rel="shortcut icon" href="asset/images/icon/favicon.ico" />
@@ -53,26 +50,11 @@
           <a href="index.html" class="home"></a>
         </div>
         <ul>
-          <li class="sideMenu_item toggle" value="0">
-            <a href="javascript: void(0);">
+          <li class="sideMenu_item" value="0">
+            <a href="const_mgt.html">
               <div class="sideMenu_icon"></div>
               <p>공사장관리</p>
-              <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
             </a>
-            <ul class="pc_submenu">
-              <li>
-                <a href="const_mgt.html">
-                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
-                  <span>공사장관리</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);">
-                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
-                  <span>사전작업허가</span>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="sideMenu_item" value="1">
             <a href="bldg_mgt.html">
@@ -139,6 +121,12 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="sideMenu_item" value="6">
+            <a href="my_work.html">
+              <div class="sideMenu_icon"></div>
+              <p>나의업무</p>
+            </a>
           </li>
         </ul>
         <div class="send_btn d-flex align-items-center justify-content-center">
@@ -1268,6 +1256,66 @@
       </div>
     </div>
 
+    <!-- 사전작업 허가 신청 -->
+    <div class="prework_permit modal_bg">
+      <div class="modal_wrap">
+        <div class="modal_top d-flex justify-content-center">
+          <h1 class="ns_b">사전작업 허가 신청</h1>
+          <button class="close_btn"></button>
+        </div>
+        <div class="cProgress_list">
+          <form action="">
+            <ul class="check_wrap">
+              <li>
+                <span>신청서 양식</span>
+                <div class="form_box">
+                  <a href="javascript:void(0);" class="download">
+                    사전작업 허가 신청서.hwp
+                  </a>
+                </div>
+              </li>
+              <li>
+                <span>첨부파일</span>
+                <div class="form_box">
+                  <input type="file" id="status_board" />
+                  <input type="text" class="upload_name" />
+                  <label class="file_btn" for="status_board">파일선택</label>
+                </div>
+              </li>
+              <li>
+                <span>파일목록</span>
+                <div class="form_box">
+                  <ol>
+                    <li>
+                      1. 
+                      <span>첨부파일01.hwp</span>
+                      <button></button>
+                    </li>
+                    <li>
+                      2. 
+                      <span>첨부파일02.hwp</span>
+                      <button></button>
+                    </li>
+                    <li>
+                      3. 
+                      <span>첨부파일03.hwp</span>
+                      <button></button>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="modal_bottom">
+          <div class="modal_submit nt_b d-flex justify-content-center">
+            <button>취소</button>
+            <button>신청</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 담당업무 설정 -->
     <div class="responsibility modal_bg">
       <div class="modal_wrap">
@@ -1608,6 +1656,48 @@
                   <form action="">
                     <ul class="check_wrap">
                       <li>
+                        <h3>공정 입력 여부</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <label for="cctv_check0"></label>
+                            <input type="radio" name="cctv_check" id="cctv_check0" checked />
+                            <div class="checking active">
+                              <div class="radio_inner"></div>
+                            </div>
+                            <p>입력</p>
+                          </li>
+                          <li>
+                            <label for="cctv_check1"></label>
+                            <input type="radio" name="cctv_check" id="cctv_check1" />
+                            <div class="checking">
+                              <div class="radio_inner"></div>
+                            </div>
+                            <p>미입력</p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>개선권고 여부</h3>
+                        <ul class="check_list d-flex">
+                          <li>
+                            <label for="cctv_check0"></label>
+                            <input type="radio" name="cctv_check" id="cctv_check0" checked />
+                            <div class="checking active">
+                              <div class="radio_inner"></div>
+                            </div>
+                            <p>유</p>
+                          </li>
+                          <li>
+                            <label for="cctv_check1"></label>
+                            <input type="radio" name="cctv_check" id="cctv_check1" />
+                            <div class="checking">
+                              <div class="radio_inner"></div>
+                            </div>
+                            <p>무</p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
                         <h3>주용도</h3>
                         <ul class="check_list">
                           <li>
@@ -1847,7 +1937,6 @@
                   <img src="asset/images/icon/search_add_m.png" alt="검색조건 선택_아이콘" />
                   검색조건 선택
                 </button>
-
               </div>
               <!-- 검색 결정 -->
               <div class="search_decision">
@@ -1970,8 +2059,9 @@
                   <p>총 <strong class="ns_b">289</strong> 건</p>
                 </div>
                 <div class="result_option d-flex">
-                  <button class="resp_btn">담당업무</button>
-                  <button class="groupMgt_btn">재난관리 그룹추가</button>
+                  <button class="preworkPermit_btn dimgray_btn">사전작업허가요청</button>
+                  <button class="resp_btn white_btn">담당업무</button>
+                  <button class="groupMgt_btn white_btn">재난관리 그룹추가</button>
                 </div>
               </div>
               <!-- 검색결과 리스트 -->
@@ -1987,7 +2077,9 @@
                     <li>착공일</li>
                     <li>준공예정일</li>
                     <li>공정기/경과일</li>
+                    <li>최종수정일</li>
                     <li>공정율</li>
+                    <li>개선권고<br/>시정조치</li>
                     <li>점검횟수</li>
                   </ul>
                 </div>
@@ -2006,7 +2098,9 @@
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li>2021-09-21</li>
                         <li>10%</li>
+                        <li>무</li>
                         <li>1회</li>
                       </ul>
                     </li>
@@ -2019,11 +2113,13 @@
                         </li>
                         <li>서울시 구로구 경인로 382 (개봉동)</li>
                         <li>중형</li>
-                        <li>기초</li>
+                        <li></li>
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li></li>
                         <li>10%</li>
+                        <li>유</li>
                         <li>3회</li>
                       </ul>
                     </li>
@@ -2040,8 +2136,10 @@
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li>2021-09-21</li>
                         <li>10%</li>
-                        <li>2회</li>
+                        <li></li>
+                        <li>0회</li>
                       </ul>
                     </li>
                     <li>
@@ -2057,7 +2155,9 @@
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li>2021-09-21</li>
                         <li>10%</li>
+                        <li style="color: red;">유</li>
                         <li>1회</li>
                       </ul>
                     </li>
@@ -2074,7 +2174,9 @@
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li>2021-09-21</li>
                         <li>10%</li>
+                        <li>무</li>
                         <li>3회</li>
                       </ul>
                     </li>
@@ -2087,12 +2189,14 @@
                         </li>
                         <li>서울시 구로구 경인로 382 (개봉동)</li>
                         <li>소형</li>
-                        <li>골조</li>
+                        <li></li>
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li></li>
                         <li>10%</li>
-                        <li>2회</li>
+                        <li></li>
+                        <li>0회</li>
                       </ul>
                     </li>
                     <li>
@@ -2108,7 +2212,9 @@
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li>2021-09-21</li>
                         <li>10%</li>
+                        <li>무</li>
                         <li>1회</li>
                       </ul>
                     </li>
@@ -2125,7 +2231,9 @@
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li>2021-09-21</li>
                         <li>10%</li>
+                        <li style="color: red;">유</li>
                         <li>3회</li>
                       </ul>
                     </li>
@@ -2138,11 +2246,13 @@
                         </li>
                         <li>서울시 구로구 경인로 382 (개봉동)</li>
                         <li>소형</li>
-                        <li>골조</li>
+                        <li></li>
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li></li>
                         <li>10%</li>
+                        <li>유</li>
                         <li>2회</li>
                       </ul>
                     </li>
@@ -2159,8 +2269,10 @@
                         <li>2021-11-10</li>
                         <li>2021-11-10</li>
                         <li>1000/50</li>
+                        <li>2021-09-21</li>
                         <li>10%</li>
-                        <li>1회</li>
+                        <li></li>
+                        <li>0회</li>
                       </ul>
                     </li>
                   </ul>

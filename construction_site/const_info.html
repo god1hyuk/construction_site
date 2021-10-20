@@ -50,26 +50,11 @@
           <a href="index.html" class="home"></a>
         </div>
         <ul>
-          <li class="sideMenu_item toggle" value="0">
-            <a href="javascript: void(0);">
+          <li class="sideMenu_item" value="0">
+            <a href="const_mgt.html">
               <div class="sideMenu_icon"></div>
               <p>공사장관리</p>
-              <img class="accordion_btn" src="asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
             </a>
-            <ul class="pc_submenu">
-              <li>
-                <a href="const_mgt.html">
-                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
-                  <span>공사장관리</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);">
-                  <img src="asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
-                  <span>사전작업허가</span>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="sideMenu_item" value="1">
             <a href="bldg_mgt.html">
@@ -136,6 +121,12 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="sideMenu_item" value="6">
+            <a href="my_work.html">
+              <div class="sideMenu_icon"></div>
+              <p>나의업무</p>
+            </a>
           </li>
         </ul>
         <div class="send_btn d-flex align-items-center justify-content-center">
@@ -1210,6 +1201,66 @@
       </div>
     </div>
 
+    <!-- 사전작업 허가 신청 -->
+    <div class="prework_permit modal_bg">
+      <div class="modal_wrap">
+        <div class="modal_top d-flex justify-content-center">
+          <h1 class="ns_b">사전작업 허가 신청</h1>
+          <button class="close_btn"></button>
+        </div>
+        <div class="cProgress_list">
+          <form action="">
+            <ul class="check_wrap">
+              <li>
+                <span>신청서 양식</span>
+                <div class="form_box">
+                  <a href="javascript:void(0);" class="download">
+                    사전작업 허가 신청서.hwp
+                  </a>
+                </div>
+              </li>
+              <li>
+                <span>첨부파일</span>
+                <div class="form_box">
+                  <input type="file" id="status_board" />
+                  <input type="text" class="upload_name" />
+                  <label class="file_btn" for="status_board">파일선택</label>
+                </div>
+              </li>
+              <li>
+                <span>파일목록</span>
+                <div class="form_box">
+                  <ol>
+                    <li>
+                      1. 
+                      <span>첨부파일01.hwp</span>
+                      <button></button>
+                    </li>
+                    <li>
+                      2. 
+                      <span>첨부파일02.hwp</span>
+                      <button></button>
+                    </li>
+                    <li>
+                      3. 
+                      <span>첨부파일03.hwp</span>
+                      <button></button>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="modal_bottom">
+          <div class="modal_submit nt_b d-flex justify-content-center">
+            <button>취소</button>
+            <button>신청</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 공사장 진행사항 수정 -->
     <div class="constProgress modal_bg">
       <div class="modal_wrap">
@@ -2225,8 +2276,123 @@
                 </li>
               </ul>
               <div class="cInfoList_btn d-flex justify-content-end">
+                <button class="preworkPermit_btn white_btn">사전작업허가요청</button>
                 <button class="cProgress_btn blue_btn">진행사항 수정</button>
                 <button class="backToList dimgray_btn" onclick="location.href='const_mgt.html'">목록</button>
+              </div>
+            </div>
+
+            <!-- 공사관계자 리스트 -->
+            <div class="constInsider_list result_container">
+              <div class="result_top">
+                <div class="total">
+                  <p>총 <strong class="ns_b">102</strong> 명</p>
+                </div>
+                <!-- <div class="result_option d-flex">
+                  <button class="resp_btn">담당업무</button>
+                  <button class="groupMgt_btn">재난관리 그룹추가</button>
+                </div> -->
+              </div>
+              <div class="result_list text-center">
+                <div class="subject_wrap">
+                  <ul class="subject d-flex align-items-center">
+                    <li>
+                      <div class="checking"></div>
+                    </li>
+                    <li>이름</li>
+                    <li>구분</li>
+                    <li>소속</li>
+                    <li>연락처</li>
+                  </ul>
+                </div>
+                <div class="result_wrap">
+                  <ul class="result">
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>김우대</li>
+                        <li>건축주</li>
+                        <li></li>
+                        <li>010-1234-5678</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>박칼스</li>
+                        <li>시공자</li>
+                        <li>건축사</li>
+                        <li style="color: red;">02-765-4321</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>홍길동</li>
+                        <li>감리자</li>
+                        <li>건축사</li>
+                        <li>010-5252-3388</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>최욱</li>
+                        <li>시공자</li>
+                        <li>건축사</li>
+                        <li>010-6655-7788</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="result_item">
+                        <li>
+                          <label for="result_checking0"></label>
+                          <input type="checkbox" name="result_checking" id="result_checking0" />
+                          <div class="checking"></div>
+                        </li>
+                        <li>이기환</li>
+                        <li>건축주</li>
+                        <li></li>
+                        <li style="color: red;">02-956-1324</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="result_bottom d-flex align-items-center justify-content-center">
+                  <!-- 페이지네이션 -->
+                  <ul class="pagination">
+                    <li class="prev move"></li>
+                    <li class="page_item active">1</li>
+                    <li class="page_item">2</li>
+                    <li class="page_item">3</li>
+                    <li class="page_item">4</li>
+                    <li class="page_item">5</li>
+                    <li class="next move"></li>
+                    <li class="superNext move"></li>
+                  </ul>
+                  <div class="result_btn">
+                    <button class="sms white_btn">
+                      <img src="asset/images/icon/message_icon.png" alt="문자전송_아이콘" />
+                      문자전송
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- 공사장 점검 탭 -->
