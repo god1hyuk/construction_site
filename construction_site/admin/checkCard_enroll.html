@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../asset/images/icon/favicon.ico" />
+    <link rel="shortcut icon" href="../asset/images/icon/favicon.ico" />
+
+    <!-- jQuery UI for datepicker -->
+    <link rel="stylesheet" href="../asset/css/jquery-ui.min.css" />
+
+    <!-- Font -->
+    <link rel="stylesheet" href="../asset/css/font.css" />
+
+    <!-- Reset -->
+    <link rel="stylesheet" href="../asset/css/_reset_v7.0.4.css" />
+
+    <!-- Form -->
+    <link rel="stylesheet" href="../asset/css/layout_v8.0.5.css" />
+
+    <!-- Common -->
+    <link rel="stylesheet" href="../asset/css/common.css" />
+
+    <!-- Header -->
+    <link rel="stylesheet" id="changeStyle1" href="../asset/css/header.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" id="changeStyle2" href="../asset/css/style.css" />
+
+    <!-- Responsive -->
+    <link rel="stylesheet" id="changeStyle3" href="../asset/css/responsive.css" />
+
+    <script>spellcheck = false;</script>
+
+    <title>서울시 민간건축공사장 안전관리 정보화시스템</title>
+
+</head>
+
+<body>
+    <!-- 점검 카드 등록 서브페이지 -->
+    <div class="checkCard_enroll sub_page d-flex">
+
+        <!-- 서브페이지 사이드 메뉴 (PC) -->
+        <aside>
+            <nav class="side_menu ns_b">
+                <div class="menu_title d-flex align-items-center">
+                    <span>Menu</span>
+                    <a href="index.html" class="home"></a>
+                </div>
+                <ul>
+                    <li class="sideMenu_item" value="0">
+                        <a href="user_approval.html">
+                            <!-- <div class="sideMenu_icon"></div> -->
+                            <p>사용자 승인</p>
+                        </a>
+                    </li>
+                    <li class="sideMenu_item" value="1">
+                        <a href="accessor_log.html">
+                            <!-- <div class="sideMenu_icon"></div> -->
+                            <p>접속자 로그</p>
+                        </a>
+                    </li>
+                    <li class="sideMenu_item toggle" value="2">
+                        <a href="javascript: void(0);">
+                            <!-- <div class="sideMenu_icon"></div> -->
+                            <p>공사장 관리</p>
+                            <img class="accordion_btn" src="../asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+                        </a>
+                        <ul class="pc_submenu">
+                            <li>
+                                <a href="const_mgt_admin.html">
+                                    <img src="../asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                                    <span>공사장 관리</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="checkCard_mgt.html">
+                                    <img src="../asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
+                                    <span>점검 카드 관리</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sideMenu_item" value="3">
+                        <a href="javascript:void(0);">
+                            <!-- <div class="sideMenu_icon"></div> -->
+                            <p>점검관리</p>
+                        </a>
+                    </li>
+                    <li class="sideMenu_item" value="4">
+                        <a href="aGroup_mgt.html">
+                            <!-- <div class="sideMenu_icon"></div> -->
+                            <p>자문단관리</p>
+                        </a>
+                    </li>
+                    <li class="sideMenu_item" value="5">
+                        <a href="notice_page_admin.html">
+                            <!-- <div class="sideMenu_icon"></div> -->
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+                    <li class="sideMenu_item" value="6">
+                        <a href="data_share_admin.html">
+                            <!-- <div class="sideMenu_icon"></div> -->
+                            <p>자료공유</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 헤더 (PC) -->
+        <header class="header_pc d-flex">
+            <nav class="d-flex align-items-center justify-content-between">
+                <div class="logo_wrap d-flex align-items-center">
+                    <a href="javascript:void(0);">
+                        <img src="../asset/images/logo.png" alt="서울시_로고_이미지" />
+                    </a>
+                    <h1 class="title">서울시 민간건축공사장 안전관리 정보화시스템</h1>
+                </div>
+                <div class="nav_right d-flex">
+                    <div class="sub_title d-flex align-items-center">
+                        <p>서울시 지역건축안전센터</p>
+                        <span class="user_name">관리자</span>
+                    </div>
+                    <ul class="d-flex align-items-center">
+                        <!-- 로그인 버튼 -->
+                        <li class="login">
+                            <button class="d-flex align-items-center" onclick="location.href='login_page.html'">
+                                <div class="log_icon"></div>
+                                <p>로그인</p>
+                            </button>
+                        </li>
+                        <!-- 로그아웃 버튼 -->
+                        <li class="logout">
+                            <button class="d-flex align-items-center" href="javascript: void(0);">
+                                <div class="log_icon"></div>
+                                <p>로그아웃</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 헤더 (테블릿 & 모바일) -->
+        <header class="header_m">
+            <div class="logo_wrap d-flex align-items-center">
+                <h1 class="title">서울시 민간건축공사장 안전관리 정보화시스템</h1>
+            </div>
+            <nav>
+                <button class="burger_btn"></button>
+            </nav>
+        </header>
+
+        <!-- 모바일 메뉴 -->
+        <div class="mobile_menu nt_m">
+            <!-- 로그인 버전 -->
+            <div class="m_login">
+                <div class="m_menu_top">
+                    <div class="login_text d-flex align-items-center">
+                        <div class="login_icon"></div>
+                        <span><strong>로그인</strong>이 필요합니다.</span>
+                    </div>
+                    <a href="login_page.html" class="login">
+                        로그인하기
+                        <img src="../asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
+                    </a>
+                    <button class="close_btn"></button>
+                </div>
+                <div class="m_menu_lists nt_m">
+                    <ul>
+                        <li>
+                            <a href="const_mgt.html">
+                                <p>공사장 관리</p>
+                                <img src="../asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bldg_mgt.html">
+                                <p>건축물 관리</p>
+                                <img src="../asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="acdnt_info.html">
+                                <p>사고정보</p>
+                                <img src="../asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <p>CCTV</p>
+                                <img src="../asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+                            </a>
+                        </li>
+                        <li class="accordion_menu">
+                            <a href="javascript: void(0);">
+                                <p>자문단관리</p>
+                                <div class="accordion_btn"></div>
+                            </a>
+                            <ul class="m_submenu nt_rg">
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>자문단 점검이력</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>공고관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion_menu">
+                            <a href="javascript: void(0);">
+                                <p>알림마당</p>
+                                <div class="accordion_btn"></div>
+                            </a>
+                            <ul class="m_submenu nt_rg">
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>공지사항</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>홍보/보도자료</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>관련법규/지침</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m_menu_bottom">
+                    <div class="bottom_menu d-flex justify-content-between">
+                        <a href="index.html" class="home_btn d-flex align-items-center">
+                            <img src="../asset/images/icon/home_btn_dark.png" alt="홈버튼_아이콘" />
+                            홈화면
+                        </a>
+                        <div class="night_mode_m d-flex align-items-center nt_rg">
+                            <p>야간모드</p>
+                            <div class="switch_wrap">
+                                <img class="switch_btn" src="../asset/images/switch_btn_m.png" alt="스위치버튼_이미지" />
+                                <div class="switch_body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account_wrap d-flex">
+                        <button onclick="location.href='info_modify.html'">로그인</button>
+                        <button>사용자등록</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 로그아웃 버전 -->
+            <div class="m_logout">
+                <div class="m_menu_top">
+                    <div class="login_text d-flex align-items-center">
+                        <div class="login_icon"></div>
+                        <span><strong class="user_name">홍길동</strong>서울시 지역건축안전센터</span>
+                    </div>
+                    <a href="javascript: void(0);" class="logout">
+                        로그아웃하기
+                        <img src="../asset/images/icon/arrow_white.png" alt="로그인화살표_아이콘" />
+                    </a>
+                    <button class="close_btn"></button>
+                </div>
+                <div class="m_menu_lists">
+                    <ul>
+                        <li>
+                            <a href="const_mgt.html">
+                                <p>공사장 관리</p>
+                                <img src="../asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bldg_mgt.html">
+                                <p>건축물 관리</p>
+                                <img src="../asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="acdnt_info.html">
+                                <p>사고정보</p>
+                                <img src="../asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <p>CCTV</p>
+                                <img src="../asset/images/icon/arrow_grey_dark.png" alt="메뉴화살표_아이콘" />
+                            </a>
+                        </li>
+                        <li class="accordion_menu">
+                            <a href="javascript: void(0);">
+                                <p>자문단관리</p>
+                                <div class="accordion_btn"></div>
+                            </a>
+                            <ul class="m_submenu nt_rg">
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>자문단 점검이력</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>공고관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion_menu">
+                            <a href="javascript: void(0);">
+                                <p>알림마당</p>
+                                <div class="accordion_btn"></div>
+                            </a>
+                            <ul class="m_submenu nt_rg">
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>공지사항</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>홍보/보도자료</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <img src="../asset/images/icon/arrow_grey_light.png" alt="서브메뉴_아이콘" />
+                                        <span>관련법규/지침</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m_menu_bottom">
+                    <div class="bottom_menu d-flex justify-content-between">
+                        <a href="index.html" class="home_btn d-flex align-items-center">
+                            <img src="../asset/images/icon/home_btn_dark.png" alt="홈버튼_아이콘" />
+                            홈화면
+                        </a>
+                        <div class="night_mode_m d-flex align-items-center nt_rg">
+                            <p>야간모드</p>
+                            <div class="switch_wrap">
+                                <img class="switch_btn" src="../asset/images/switch_btn_m.png" alt="스위치버튼_이미지" />
+                                <div class="switch_body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account_wrap d-flex">
+                        <button>로그아웃</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 내 정보 보기 -->
+        <div class="myInfo modal_bg">
+            <div class="modal_wrap">
+                <div class="modal_top d-flex justify-content-center">
+                    <h1 class="ns_b">내 정보 보기</h1>
+                    <button class="close_btn"></button>
+                </div>
+                <div class="table_wrap">
+                    <table>
+                        <colgroup>
+                            <col width="30%">
+                            <col widht="70%">
+                        </colgroup>
+                        <tr>
+                            <th style="border-top: 1px solid #192b80;">
+                                <h3>아이디</h3>
+                            </th>
+                            <td style="border-top: 2px solid #5479f7;">
+                                <p>Test</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h3>이름</h3>
+                            </th>
+                            <td>
+                                <p>홍길동</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h3>휴대폰 번호</h3>
+                            </th>
+                            <td>
+                                <p>010-1234-5678</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h3>소속기관</h3>
+                            </th>
+                            <td>
+                                <p>서울시 지역건축안전센터</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h3>부서명</h3>
+                            </th>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h3>권한</h3>
+                            </th>
+                            <td>
+                                <p>총괄관리자</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="border-bottom: 1px solid #192b80;">
+                                <h3>SSO key</h3>
+                            </th>
+                            <td style="border-bottom: 2px solid #5479f7;">
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="info_btn nt_b d-flex justify-content-center">
+                    <button>취소</button>
+                    <button onclick="location.href='info_modify.html'">수정</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_content">
+            <div class="container">
+                <div class="row">
+                    <div class="title_wrap">
+                        <div class="title_icon"></div>
+                        <h2 class="ns_eb">점검 카드 관리</h2>
+                    </div>
+                    <div class="form_container constResult_enroll">
+                        <div class="form_wrap">
+                            <div class="cResult_top">
+                                <ul class="emergencyCheck">
+                                    <li>
+                                        <h3 class="content_title">긴급점검 여부</h3>
+                                        <label for="mAdress_mountain"></label>
+                                        <input type="checkbox" name="mAdress_mountain" id="mAdress_mountain" />
+                                        <div class="checking"></div>
+                                    </li>
+                                    <li>
+                                        <h3 class="content_title">기간</h3>
+                                        <input type="text" name="datepicker" class="datepicker" />
+                                        ~
+                                        <input type="text" name="datepicker" class="datepicker" />
+                                    </li>
+                                </ul>
+                                <div class="cardName">
+                                    <div class="input_wrap">
+                                        <h3 class="content_title">점검카드 명칭</h3>
+                                        <input type="text" />
+                                    </div>
+                                    <div class="btn addCheck">
+                                        <button class="dimgray_btn active">ON</button>
+                                        <button class="dimgray_btn">OFF</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn fieldAdd">
+                                <button class="blue_btn">
+                                    <img src="../asset/images/icon/cResult_add0.png" alt="분야추가_아이콘" />
+                                    분야 추가
+                                </button>
+                                <button class="dimgray_btn">분야 불러오기</button>
+                            </div>
+                            <ul class="cResult_menu">
+                                <li>
+                                    <button>
+                                        <img src="../asset/images/icon/cResult_menu0.png" alt="점겸결과_아이콘" />
+                                        철거공사(전문가)
+                                        <img src="../asset/images/icon/cResult_arrow0.png" alt="점검결과_화살표" />
+                                    </button>
+                                    <div class="result_container">
+                                        <div class="result_list">
+                                            <div class="subject_wrap">
+                                                <ul class="subject d-flex">
+                                                    <li>점검항목</li>
+                                                </ul>
+                                            </div>
+                                            <div class="result_wrap">
+                                                <ul class="result">
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="가림막, 울타리등 안전조치 선행여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="층별, 위치별, 해체작업 순서 준수여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="자체 미 정기안전점검 실시여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="기타 안전 관련 현장 위해요인 여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="철거공종 안전관리 계획서 작성 및 준수 여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button>
+                                            <img src="../asset/images/icon/cResult_add1.png" alt="항목추가_아이콘" />
+                                            항목 추가
+                                        </button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button>
+                                        <img src="../asset/images/icon/cResult_menu1.png" alt="점검결과_아이콘" />
+                                        굴토공사(전문가)
+                                        <img src="../asset/images/icon/cResult_arrow1.png" alt="점검결과_화살표" />
+                                    </button>
+                                    <div class="result_container">
+                                        <div class="result_list">
+                                            <div class="subject_wrap">
+                                                <ul class="subject d-flex">
+                                                    <li>점검항목</li>
+                                                </ul>
+                                            </div>
+                                            <div class="result_wrap">
+                                                <ul class="result">
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="가림막, 울타리등 안전조치 선행여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="층별, 위치별, 해체작업 순서 준수여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="자체 미 정기안전점검 실시여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="기타 안전 관련 현장 위해요인 여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="result_item">
+                                                            <li>
+                                                                <button>ㅡ</button>
+                                                                <input type="text" value="철거공종 안전관리 계획서 작성 및 준수 여부" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button>
+                                            <img src="../asset/images/icon/cResult_add1.png" alt="항목추가_아이콘" />
+                                            항목 추가
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <form action="">
+                                <ul class="cResult_bottom">
+                                    <li>
+                                        <div class="input_wrap">
+                                            <p>신청일자</p>
+                                            <input type="text" name="datepicker" class="datepicker" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <ul class="signature">
+                                            <li>
+                                                <p>점검자 : <span>○○○기술사 <strong>○○○</strong></span></p>
+                            
+                                                <button class="signBoard">
+                                                    <img src="../asset/images/icon/signature.png" alt="서명_이미지" />
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="cResult_submit d-flex justify-content-between">
+                                    <div class="select_wrap">
+                                        <h3 class="content_title">키워드</h3>
+                                        <select name="" id="">
+                                            <option value="">공사장</option>
+                                            <option value="">건축물</option>
+                                            <option value="">자치구</option>
+                                            <option value="">동</option>
+                                            <option value="">긴급점검</option>
+                                        </select>
+                                    </div>
+                                    <div class="btn info_btn d-flex">
+                                        <button>미리보기</button>
+                                        <button onclick="location.href='checkCard_mgt.html'">저장</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 카피라이트 -->
+                    <p class="copyright">Copyrightⓒ Seoul Metropolitan Government All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../asset/js/plugin/jquery-3.2.1.min.js"></script>
+    <script src="../asset/js/plugin/jquery-ui.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="../asset/js/main.js"></script>
+</body>
+
+</html>

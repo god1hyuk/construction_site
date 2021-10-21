@@ -1134,7 +1134,7 @@
 .sub_page .search_form .search_name form {
   width: 90%;
 }
-.sub_page .search_form .search_name ul li:not(:last-child) {
+.sub_page .search_form .adress ul li:not(:last-child) {
   width: 19%;
   margin-right: 1%;
 }
@@ -1502,9 +1502,16 @@ a.ui-button:active,
   align-items: center;
   justify-content: space-between;
 }
-.sub_page .result_container .total p {
+.sub_page .result_container .total p,
+.sub_page .result_container h4,
+.sub_page .cInfo_wrap h4 {
   font-size: 22px;
   color: #585858;
+}
+.sub_page .result_container h4 span {
+  font-size: 14px;
+  color: #5479f7;
+  margin-left: 5px;
 }
 .sub_page .result_container .total strong {
   color: #5479f7;
@@ -1522,7 +1529,7 @@ a.ui-button:active,
   margin-top: 50px;
 }
 .sub_page .search_result .result_list,
-.check_tab .result_container .result_list {
+.sub_info .result_container .result_list {
   margin-top: 14px;
 }
 .sub_page .result_container .subject_wrap,
@@ -1870,7 +1877,7 @@ a.ui-button:active,
   height: 40px;
   padding: 0 15px;
 }
-.group_mgt .dimgray_btn {
+.group_mgt .diadminay_btn {
   margin-right: 10px;
 }
 .group_mgt .pagination {
@@ -2642,7 +2649,7 @@ input[type="file"] {
   position: relative;
   width: 25%;
   height: 100%;
-  padding-left: 22px;
+  padding: 0 22px;
   background: #d1e0f5;
   border-bottom: 1px solid #9aa0ab;
   border-right: 1px solid #9aa0ab;
@@ -2665,11 +2672,11 @@ input[type="file"] {
 .sub_info .cInfo_list > li > p,
 .sub_info .cInfo_list > li > ul {
   width: 75%;
-  height: 100%;
 }
 .sub_info .cInfo_list > li > p {
   display: flex;
   align-items: center;
+  height: 100%;
   border-bottom: 1px solid #ddd;
 }
 .sub_info .cInfo_list > li p {
@@ -2692,9 +2699,6 @@ input[type="file"] {
 }
 
 /* 공사관계자 리스트 */
-.const_info .constInsider_list {
-  margin-top: 60px;
-}
 .const_info .constInsider_list .result_list {
   margin-top: 14px;
 }
@@ -2749,7 +2753,7 @@ input[type="file"] {
 }
 
 /* 공사장 점검 결과 */
-.sub_page .insp_result {
+.sub_page .result_container {
   margin-top: 60px;
 }
 .sub_page .insp_result .subject li:nth-child(1),
@@ -3499,7 +3503,7 @@ input[type="file"] {
 }
 
 /* 건축물 정보보기 */
-.bldg_info .form_container > .dimgray_btn {
+.bldg_info .form_container > .diadminay_btn {
   font-size: 15px;
   margin-left: auto;
   margin-bottom: 10px;
@@ -3926,6 +3930,9 @@ table th.th_sub {
 .noticeField .search_form ul li {
   width: auto !important;
 }
+.noticeField .search_form ul li:not(:last-child) {
+  margin-right: 1%;
+}
 .noticeField .search_form .search_name select {
   width: 150px;
 }
@@ -3934,7 +3941,7 @@ table th.th_sub {
 }
 .noticeField .search_form .blue_btn {
   width: 100px;
-  height: 100%;
+  height: 45px;
 }
 .noticeField .subject > li:nth-child(1),
 .noticeField .result_item > li:nth-child(1) {
@@ -4086,23 +4093,23 @@ table th.th_sub {
 .accessor_log .title_wrap .title_icon {
   background-image: none;
 }
-.accessor_log .search_form .search_name {
-  /* justify-content: start; */
-}
-.accessor_log .search_form .search_name form {
+.noticeField.admin .search_form .search_name form {
   width: 100%;
 }
-.accessor_log .search_name li {
+.accessor_log .search_name li,
+.aGroup_mgt .search_name li {
   display: flex;
   align-items: center;
   position: relative;
   font-size: 18px;
   margin-right: 0 !important;
 }
-.accessor_log .search_name li:last-child {
+.accessor_log .search_name li:last-child,
+.aGroup_mgt .search_name li:last-child {
   margin-top: 20px;
 }
-.accessor_log .search_name li > * {
+.accessor_log .search_name li select, 
+.accessor_log .search_name li input {
   margin: 0 15px;
 }
 .accessor_log .search_name li:first-child input {
@@ -4117,7 +4124,8 @@ table th.th_sub {
 .accessor_log .search_form .search_name .datepicker {
   background: #f3f5f6;
 }
-.accessor_log .search_name button {
+.accessor_log .search_name li button,
+.aGroup_mgt .search_name li button {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -4158,10 +4166,10 @@ table th.th_sub {
 }
 
 /* 공사장 관리 (관리자) */
-.const_mgt.mgr .title_wrap .title_icon {
+.const_mgt.admin .title_wrap .title_icon {
   background-image: none;
 }
-.const_mgt.mgr .form_container .search_form {
+.const_mgt.admin .form_container .search_form {
   padding-top: 0;
 }
 
@@ -4396,7 +4404,7 @@ table th.th_sub {
 .checkCard_enroll .fieldAdd {
   display: flex;
   justify-content: end;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 .checkCard_enroll .fieldAdd button {
@@ -4448,46 +4456,145 @@ table th.th_sub {
   background: transparent;
   border: none;
 }
-.checkCard_enroll .cResult_bottom h3 {
+.checkCard_enroll .cResult_bottom {
+  justify-content: space-between;
+}
+.checkCard_enroll .cResult_bottom > li {
+  width: auto;
+}
+.checkCard_enroll .cResult_bottom .input_wrap p {
+  width: auto;
+  margin-right: 25px;
+}
+.checkCard_enroll .cResult_bottom .datepicker {
+  width: 200px;
+  height: 45px;
+}
+.checkCard_enroll .signBoard {
+  width: 120px;
+  height: 45px;
+  margin-left: 30px;
+}
+.checkCard_enroll .signBoard img {
+  width: auto;
+}
+.checkCard_enroll .cResult_submit {
+  margin-top: 50px;
+}
+.checkCard_enroll .cResult_submit h3 {
   font-size: 18px;
   margin-right: 20px;
 }
-.checkCard_enroll .cResult_bottom select {
-  width: 230px;
+.checkCard_enroll .cResult_submit select {
+  width: 220px;
   height: 45px;
   background-color: #fff;
 }
-.checkCard_enroll .cResult_bottom .info_btn button {
+.checkCard_enroll .cResult_submit .info_btn button {
   width: 255px;
   font-family: 'NotoSansKR-Medium';
   font-size: 22px;
 }
 
+/* 자문단 관리 (관리자) */
+.aGroup_mgt .search_form .search_name {
+  width: 100% !important;
+}
+.aGroup_mgt .search_form .search_name ul {
+  width: 100% !important;
+}
+.aGroup_mgt .search_form .search_name li {
+  width: 100% !important;
+}
+.aGroup_mgt .search_form .search_name select,
+.aGroup_mgt .search_form .search_name input {
+  width: 200px;
+  margin: 0 15px;
+}
+.aGroup_mgt .subject > li:not(:first-child), 
+.aGroup_mgt .result_item > li:not(:first-child) {
+  width: 11.625%;
+  text-align: center;
+}
+.aGroup_mgt .result_item button {
+  width: 80px;
+  margin: 0 auto;
+}
+/* 자문단 정보 */
+.aGroup_info .cInfo_list {
+  margin-top: 14px;
+}
+.aGroup_info .cInfo_list > li:nth-child(11),
+.aGroup_info .cInfo_list > li:nth-child(12) {
+  width: 100%;
+}
+.aGroup_info .cInfo_list > li:nth-child(12) {
+  border-left: none;
+}
+.aGroup_info .cInfo_list > li:nth-child(11) > span,
+.aGroup_info .cInfo_list > li:nth-child(12) > span {
+  width: 12.5%;
+}
+.aGroup_info .cInfo_list > li:nth-child(11) > ul,
+.aGroup_info .cInfo_list > li:nth-child(12) > ul {
+  width: 87.5%;
+}
+.aGroup_info .cInfo_list > li:nth-child(11) p,
+.aGroup_info .cInfo_list > li:nth-child(12) p {
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.aGroup_info .cInfo_list > li p a:hover {
+  text-decoration: underline;
+}
+.aGroup_info .aGroup_career .result_item li:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aGroup_info .aGroup_career .result_item li:last-child button {
+  color: #5479f7;
+  margin-left: 5px;
+  padding: 0;
+}
+.aGroup_info .aGroup_career .result_item li:last-child button:hover {
+  opacity: 70%;
+}
+.aGroup_info .subject > li:nth-child(1), 
+.aGroup_info .result_item > li:nth-child(1) {
+  width: 7%;
+}
+.aGroup_info .subject > li:not(:first-child), 
+.aGroup_info .result_item > li:not(:first-child) {
+  width: 15.5%;
+  text-align: center;
+}
+
 /* 공지사항 (관리자) */
-.notice_page.mgr .search_result .result_top {
+.notice_page.admin .search_result .result_top {
   justify-content: end;
 }
-.notice_page.mgr .result_top button {
+.notice_page.admin .result_top button {
   padding: 10px 15px;
 }
-.notice_page.mgr .result_top button:last-child {
+.notice_page.admin .result_top button:last-child {
   margin-left: 8px;
 }
 
 /* 공지사항 (관리자) 상세페이지 */
-.notice_view_mgr .form_wrap {
+.notice_view_admin .form_wrap {
   position: relative;
 }
-.notice_view_mgr .post_bottom {
+.notice_view_admin .post_bottom {
   display: flex;
   position: absolute;
   bottom: 0;
   right: 0;
 }
-.notice_view_mgr .post_bottom button {
+.notice_view_admin .post_bottom button {
   width: 100px;
   height: 40px;
 }
-.notice_view_mgr .post_bottom button:last-child {
+.notice_view_admin .post_bottom button:last-child {
   margin-left: 8px;
 }

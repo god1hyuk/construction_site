@@ -204,6 +204,9 @@ input:focus, select:focus {
 label:hover {
   cursor: pointer;
 }
+label:hover ~ .checking {
+  border-color: #5479f7 !important;
+}
 .input_wrap,
 .select_wrap {
   display: flex;
@@ -329,6 +332,10 @@ a.home {
   border-radius: 5px;
   border: 1px solid #c0c9cb;
 }
+.file_btn:hover {
+  background: linear-gradient(180deg, rgba(244,246,249,1) 0%, rgba(255,255,255,1) 100%);
+  opacity: 100%;
+}
 
 /* check_list */
 .check_list {
@@ -348,6 +355,7 @@ input[type="checkbox"] + .checking,
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid #eaeaea;
+  transition: border .1s;
 }
 input[type="checkbox"] + .checking.active {
   background-color: #5479f7;
@@ -615,14 +623,24 @@ input[type="radio"] + .checking.active .radio_inner {
   background: #f7f9fd;
   cursor: pointer;
 }
+.result_container.readonly .result > li:hover {
+  cursor: initial;
+}
+.result_container .result .checking:hover {
+  cursor: pointer;
+}
 .result_container .result_item {
   display: flex;
   align-items: center;
+}
+.result_container .result_item li {
+  position: relative;
 }
 .result_container .result_item li label {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100% !important;
 }
 .search_container .checking {
   display: inline-block;
@@ -651,6 +669,7 @@ input[type="radio"] + .checking.active .radio_inner {
   width: 10.1852vh;
   height: 3.7037vh;
   padding: 0;
+  background-color: #fff;
   border: 1px solid #cb0000;
 }
 .signBoard img {
