@@ -4207,7 +4207,6 @@ table th.th_sub {
   transition: all .3s;
 }
 .checkCard:hover {
-  cursor: pointer;
   transform: translateY(-8px);
   box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 20%);
 }
@@ -4229,6 +4228,9 @@ table th.th_sub {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.checkCard .img_wrap:hover {
+  cursor: pointer;
 }
 .checkCard:nth-child(1) .img_wrap {
   background-image: url(../images/checkCard/checkCard0.jpg);

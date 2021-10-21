@@ -1066,7 +1066,7 @@ $(function () {
   });
 });
 $(function () {
-  $(".checkCard, .addCard_btn button").click(function () {
+  $(".checkCard .img_wrap, .addCard_btn button").click(function () {
     location.href = "checkCard_enroll.html";
   });
 });
