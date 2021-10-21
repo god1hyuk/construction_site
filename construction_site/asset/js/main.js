@@ -1065,3 +1065,8 @@ $(function () {
     $(this).addClass("active");
   });
 });
+$(function () {
+  $(".checkCard, .addCard_btn button").click(function () {
+    location.href = "checkCard_enroll.html";
+  });
+});
