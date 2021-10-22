@@ -1497,12 +1497,18 @@
                 <span>시공자</span>
                 <div class="form_box">
                   <input type="text" placeholder="업체명 / 현장대리인 / 연락처" />
+                  <button class="add_btn plus">
+                    <img src="../asset/images/icon/add_btn.png" alt="추가_아이콘" />
+                  </button>
                 </div>
               </li>
               <li>
                 <span>감리자</span>
                 <div class="form_box">
                   <input type="text" placeholder="업체명 / 감리자 / 연락처" />
+                  <button class="add_btn plus">
+                    <img src="../asset/images/icon/add_btn.png" alt="추가_아이콘" />
+                  </button>
                 </div>
               </li>
               <li>
@@ -2197,635 +2203,676 @@
               <div class="map"></div>
               <div class="road_view"></div>
             </div>
-            <!-- 공사장 정보 리스트 -->
-            <div class="cInfo_wrap">
-              <ul class="cInfo_list d-flex justify-content-between">
-                <li>
-                  <span>자치구</span>
-                  <p>○○구 ○○과 ○○팀</p>
-                </li>
-                <li>
-                  <span>시행방법</span>
-                  <p>&nbsp;</p>
-                </li>
-                <li>
-                  <span>대지위치</span>
-                  <p>서울시 ○○구 ○○동 ○○○번지 (도로명 주소: )</p>
-                </li>
-                <li>
-                  <span>건축규모</span>
-                  <ul>
+            <ul class="cResult_menu">
+              <li>
+                <button>
+                  <img src="../asset/images/icon/cResult_menu0.png" alt="점겸결과_아이콘" />
+                  철거공사(전문가)
+                  <img src="../asset/images/icon/cResult_arrow0.png" alt="점검결과_화살표" />
+                </button>
+                <!-- 공사장 정보 리스트 -->
+                <div class="cInfo_wrap result_container">
+                  <ul class="cInfo_list d-flex justify-content-between">
                     <li>
-                      <p>○동, 지하○층/지상○층, 연면적 ○○○m²</p>
+                      <span>자치구</span>
+                      <p>○○구 ○○과 ○○팀</p>
                     </li>
                     <li>
-                      <p>○동, 지하○층/지상○층, 연면적 ○○○m²</p>
+                      <span>시행방법</span>
+                      <p>&nbsp;</p>
                     </li>
                     <li>
-                      <p>○동, 지하○층/지상○층, 연면적 ○○○m²</p>
+                      <span>대지위치</span>
+                      <p>서울시 ○○구 ○○동 ○○○번지 (도로명 주소: )</p>
+                    </li>
+                    <li>
+                      <span>건축규모</span>
+                      <ul>
+                        <li>
+                          <p>○동, 지하○층/지상○층, 연면적 ○○○m²</p>
+                        </li>
+                        <li>
+                          <p>○동, 지하○층/지상○층, 연면적 ○○○m²</p>
+                        </li>
+                        <li>
+                          <p>○동, 지하○층/지상○층, 연면적 ○○○m²</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span>주용도</span>
+                      <p>단독주택</p>
+                    </li>
+                    <li>
+                      <span>구조</span>
+                      <p>철근콘크리트조</p>
+                    </li>
+                    <li>
+                      <span>착공일자</span>
+                      <p>2021-09-21</p>
+                    </li>
+                    <li>
+                      <span>안전계획서</span>
+                      <p>안전관리 계획서</p>
+                    </li>
+                    <li>
+                      <span>CCTV 설치여부</span>
+                      <p>설치</p>
+                    </li>
+                    <li>
+                      <span>CCTV 정보</span>
+                      <p>&nbsp;</p>
+                    </li>
+                    <li>
+                      <span>위험등급</span>
+                      <p>상</p>
+                    </li>
+                    <li>
+                      <span>심의일<strong>(위험등급결정일)</strong></span>
+                      <p>&nbsp;</p>
+                    </li>
+                    <li>
+                      <span>시공자</span>
+                      <p>○○종합개발 / 홍길동 / 010-0000-0000</p>
+                    </li>
+                    <li>
+                      <span>감리자</span>
+                      <p>○○종합개발 / 홍길동 / 010-0000-0000</p>
+                    </li>
+                    <li>
+                      <span>공정률</span>
+                      <p>60%</p>
+                    </li>
+                    <li>
+                      <span>진행공정</span>
+                      <p>철거</p>
                     </li>
                   </ul>
-                </li>
-                <li>
-                  <span>주용도</span>
-                  <p>단독주택</p>
-                </li>
-                <li>
-                  <span>구조</span>
-                  <p>철근콘크리트조</p>
-                </li>
-                <li>
-                  <span>착공일자</span>
-                  <p>2021-09-21</p>
-                </li>
-                <li>
-                  <span>안전계획서</span>
-                  <p>안전관리 계획서</p>
-                </li>
-                <li>
-                  <span>CCTV 설치여부</span>
-                  <p>설치</p>
-                </li>
-                <li>
-                  <span>CCTV 정보</span>
-                  <p>&nbsp;</p>
-                </li>
-                <li>
-                  <span>위험등급</span>
-                  <p>상</p>
-                </li>
-                <li>
-                  <span>심의일<strong>(위험등급결정일)</strong></span>
-                  <p>&nbsp;</p>
-                </li>
-                <li>
-                  <span>시공자</span>
-                  <p>○○종합개발 / 홍길동 / 010-0000-0000</p>
-                </li>
-                <li>
-                  <span>감리자</span>
-                  <p>○○종합개발 / 홍길동 / 010-0000-0000</p>
-                </li>
-                <li>
-                  <span>공정률</span>
-                  <p>60%</p>
-                </li>
-                <li>
-                  <span>진행공정</span>
-                  <p>철거</p>
-                </li>
-              </ul>
-              <div class="cInfoList_btn d-flex justify-content-end">
-                <button class="preworkPermit_btn white_btn">사전작업허가요청</button>
-                <button class="cProgress_btn blue_btn">진행사항 수정</button>
-                <button class="backToList dimgray_btn" onclick="location.href='const_mgt.html'">목록</button>
-              </div>
-            </div>
+                  <div class="cInfoList_btn d-flex justify-content-end">
+                    <button class="preworkPermit_btn white_btn">사전작업허가요청</button>
+                    <button class="cProgress_btn blue_btn">진행사항 수정</button>
+                    <button class="backToList dimgray_btn" onclick="location.href='const_mgt.html'">목록</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button>
+                  <img src="../asset/images/icon/cResult_menu1.png" alt="점검결과_아이콘" />
+                  굴토공사(전문가)
+                  <img src="../asset/images/icon/cResult_arrow1.png" alt="점검결과_화살표" />
+                </button>
+                <!-- 공사관계자 리스트 -->
+                <div class="constInsider_list result_container">
+                  <div class="result_top">
+                    <div class="total">
+                      <p>총 <strong class="ns_b">102</strong> 명</p>
+                    </div>
+                    <!-- <div class="result_option d-flex">
+                      <button class="resp_btn">담당업무</button>
+                      <button class="groupMgt_btn">재난관리 그룹추가</button>
+                    </div> -->
+                  </div>
+                  <div class="result_list text-center">
+                    <div class="subject_wrap">
+                      <ul class="subject d-flex align-items-center">
+                        <li>
+                          <div class="checking"></div>
+                        </li>
+                        <li>이름</li>
+                        <li>구분</li>
+                        <li>소속</li>
+                        <li>연락처</li>
+                      </ul>
+                    </div>
+                    <div class="result_wrap">
+                      <ul class="result">
+                        <li>
+                          <ul class="result_item">
+                            <li>
+                              <label for="result_checking0"></label>
+                              <input type="checkbox" name="result_checking" id="result_checking0" />
+                              <div class="checking"></div>
+                            </li>
+                            <li>김우대</li>
+                            <li>건축주</li>
+                            <li></li>
+                            <li>
+                              <input type="text" value="010-1234-5678" disabled />
+                              <button>[수정]</button>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <ul class="result_item">
+                            <li>
+                              <label for="result_checking0"></label>
+                              <input type="checkbox" name="result_checking" id="result_checking0" />
+                              <div class="checking"></div>
+                            </li>
+                            <li>박갈수</li>
+                            <li>시공자</li>
+                            <li>건축사</li>
+                            <li>
+                              <input type="text" value="02-765-4321" disabled style="color: red;" />
+                              <button>[수정]</button>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <ul class="result_item">
+                            <li>
+                              <label for="result_checking0"></label>
+                              <input type="checkbox" name="result_checking" id="result_checking0" />
+                              <div class="checking"></div>
+                            </li>
+                            <li>홍길동</li>
+                            <li>감리자</li>
+                            <li>건축사</li>
+                            <li>
+                              <input type="text" value="010-5252-3388" disabled />
+                              <button>[수정]</button>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <ul class="result_item">
+                            <li>
+                              <label for="result_checking0"></label>
+                              <input type="checkbox" name="result_checking" id="result_checking0" />
+                              <div class="checking"></div>
+                            </li>
+                            <li>최욱</li>
+                            <li>시공자</li>
+                            <li>건축사</li>
+                            <li>
+                              <input type="text" value="010-6655-7788" disabled />
+                              <button>[수정]</button>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <ul class="result_item">
+                            <li>
+                              <label for="result_checking0"></label>
+                              <input type="checkbox" name="result_checking" id="result_checking0" />
+                              <div class="checking"></div>
+                            </li>
+                            <li>이기환</li>
+                            <li>건축주</li>
+                            <li></li>
+                            <li>
+                              <input type="text" value="02-956-1324" disabled style="color: red;" />
+                              <button>[수정]</button>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="result_bottom d-flex align-items-center justify-content-center">
+                      <!-- 페이지네이션 -->
+                      <ul class="pagination">
+                        <li class="prev move"></li>
+                        <li class="page_item active">1</li>
+                        <li class="page_item">2</li>
+                        <li class="page_item">3</li>
+                        <li class="page_item">4</li>
+                        <li class="page_item">5</li>
+                        <li class="next move"></li>
+                        <li class="superNext move"></li>
+                      </ul>
+                      <div class="result_btn">
+                        <button class="sms white_btn">
+                          <img src="../asset/images/icon/message_icon.png" alt="문자전송_아이콘" />
+                          문자전송
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button>
+                  <img src="../asset/images/icon/cResult_menu0.png" alt="점겸결과_아이콘" />
+                  철거공사(전문가)
+                  <img src="../asset/images/icon/cResult_arrow0.png" alt="점검결과_화살표" />
+                </button>
+                <!-- 공사장 점검 탭 -->
+                <div class="check_tab tab_wrap">
+                  <ul class="tab_index nt_b d-flex align-items-center">
+                    <li data-tab="constCheck_tab0" class="active">공사장 점검 결과</li>
+                    <li data-tab="constCheck_tab1">공사장 점검 계획</li>
+                  </ul>
+                  <!-- 공사장 점검 결과 -->
+                  <div id="constCheck_tab0" class="insp_result result_container tab_content active">
+                    <div class="result_top">
+                      <div class="total">
+                        <p>총 <strong class="ns_b">29</strong> 건</p>
+                      </div>
+                    </div>
+                    <!-- 점검 결과 리스트 -->
+                    <div class="result_list text-center">
+                      <div class="subject_wrap">
+                        <ul class="subject d-flex align-items-center">
+                          <li>연번</li>
+                          <li>점검일자</li>
+                          <li>점검종류</li>
+                          <li class="d-flex flex-column">
+                            점검내역
+                            <ul class="d-flex">
+                              <li>적합</li>
+                              <li>부적합</li>
+                              <li>미조치</li>
+                            </ul>
+                          </li>
+                          <li>점검자</li>
+                          <li>관리출처</li>
+                        </ul>
+                      </div>
+                      <div class="result_wrap">
+                        <ul class="result">
+                          <li>
+                            <ul class="result_item">
+                              <li>10</li>
+                              <li>2021-05-21</li>
+                              <li>정기안전점검</li>
+                              <li>
+                                <ul>
+                                  <li>2건</li>
+                                  <li>1건</li>
+                                  <li>1건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>9</li>
+                              <li>2021-03-11</li>
+                              <li>특별점검</li>
+                              <li>
+                                <ul>
+                                  <li>0건</li>
+                                  <li>1건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>8</li>
+                              <li>2021-12-15</li>
+                              <li>수시점검</li>
+                              <li>
+                                <ul>
+                                  <li>1건</li>
+                                  <li>2건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>7</li>
+                              <li>2021-12-15</li>
+                              <li>집중안전점검</li>
+                              <li>
+                                <ul>
+                                  <li>0건</li>
+                                  <li>3건</li>
+                                  <li>1건</li>
+                                </ul>
+                              </li>
+                              <li>김재율</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>6</li>
+                              <li>2021-03-30</li>
+                              <li>수시점검</li>
+                              <li>
+                                <ul>
+                                  <li>1건</li>
+                                  <li>0건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>5</li>
+                              <li>2021-05-21</li>
+                              <li>정기안전점검</li>
+                              <li>
+                                <ul>
+                                  <li>2건</li>
+                                  <li>1건</li>
+                                  <li>1건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>4</li>
+                              <li>2021-03-11</li>
+                              <li>특별점검</li>
+                              <li>
+                                <ul>
+                                  <li>0건</li>
+                                  <li>1건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>3</li>
+                              <li>2021-12-15</li>
+                              <li>수시점검</li>
+                              <li>
+                                <ul>
+                                  <li>1건</li>
+                                  <li>2건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>2</li>
+                              <li>2021-12-15</li>
+                              <li>집중안전점검</li>
+                              <li>
+                                <ul>
+                                  <li>0건</li>
+                                  <li>3건</li>
+                                  <li>1건</li>
+                                </ul>
+                              </li>
+                              <li>김재율</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>1</li>
+                              <li>2021-03-30</li>
+                              <li>수시점검</li>
+                              <li>
+                                <ul>
+                                  <li>1건</li>
+                                  <li>0건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="result_bottom d-flex align-items-center justify-content-center">
+                        <!-- 페이지네이션 -->
+                        <ul class="pagination">
+                          <li class="prev move"></li>
+                          <li class="page_item active">1</li>
+                          <li class="page_item">2</li>
+                          <li class="page_item">3</li>
+                          <li class="page_item">4</li>
+                          <li class="page_item">5</li>
+                          <li class="next move"></li>
+                          <li class="superNext move"></li>
+                        </ul>
+                        <div class="result_btn">
+                          <button class="white_btn exel" type="button">
+                            <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                            엑셀
+                          </button>
+                          <button type="button" class="cResultEnroll_btn">등록</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 공사장 점검 계획 -->
+                  <div id="constCheck_tab1" class="insp_result result_container tab_content">
+                    <div class="result_top">
+                      <div class="total">
+                        <p>총 <strong class="ns_b">32</strong> 건</p>
+                      </div>
+                    </div>
+                    <!-- 점검 결과 리스트 -->
+                    <div class="result_list text-center">
+                      <div class="subject_wrap">
+                        <ul class="subject d-flex align-items-center">
+                          <li>연번</li>
+                          <li>점검일자</li>
+                          <li>점검종류</li>
+                          <li class="d-flex flex-column">
+                            점검내역
+                            <ul class="d-flex">
+                              <li>적합</li>
+                              <li>부적합</li>
+                              <li>미조치</li>
+                            </ul>
+                          </li>
+                          <li>점검자</li>
+                          <li>관리출처</li>
+                        </ul>
+                      </div>
+                      <div class="result_wrap">
+                        <ul class="result">
+                          <li>
+                            <ul class="result_item">
+                              <li>10</li>
+                              <li>2021-05-21</li>
+                              <li>정기안전점검</li>
+                              <li>
+                                <ul>
+                                  <li>2건</li>
+                                  <li>1건</li>
+                                  <li>1건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>9</li>
+                              <li>2021-03-11</li>
+                              <li>특별점검</li>
+                              <li>
+                                <ul>
+                                  <li>0건</li>
+                                  <li>1건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>8</li>
+                              <li>2021-12-15</li>
+                              <li>수시점검</li>
+                              <li>
+                                <ul>
+                                  <li>1건</li>
+                                  <li>2건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>7</li>
+                              <li>2021-12-15</li>
+                              <li>집중안전점검</li>
+                              <li>
+                                <ul>
+                                  <li>0건</li>
+                                  <li>3건</li>
+                                  <li>1건</li>
+                                </ul>
+                              </li>
+                              <li>김재율</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>6</li>
+                              <li>2021-03-30</li>
+                              <li>수시점검</li>
+                              <li>
+                                <ul>
+                                  <li>1건</li>
+                                  <li>0건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>5</li>
+                              <li>2021-05-21</li>
+                              <li>정기안전점검</li>
+                              <li>
+                                <ul>
+                                  <li>2건</li>
+                                  <li>1건</li>
+                                  <li>1건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>4</li>
+                              <li>2021-03-11</li>
+                              <li>특별점검</li>
+                              <li>
+                                <ul>
+                                  <li>0건</li>
+                                  <li>1건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>3</li>
+                              <li>2021-12-15</li>
+                              <li>수시점검</li>
+                              <li>
+                                <ul>
+                                  <li>1건</li>
+                                  <li>2건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>2</li>
+                              <li>2021-12-15</li>
+                              <li>집중안전점검</li>
+                              <li>
+                                <ul>
+                                  <li>0건</li>
+                                  <li>3건</li>
+                                  <li>1건</li>
+                                </ul>
+                              </li>
+                              <li>김재율</li>
+                              <li>세움터</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="result_item">
+                              <li>1</li>
+                              <li>2021-03-30</li>
+                              <li>수시점검</li>
+                              <li>
+                                <ul>
+                                  <li>1건</li>
+                                  <li>0건</li>
+                                  <li>0건</li>
+                                </ul>
+                              </li>
+                              <li>배상현</li>
+                              <li>안전총괄실 시설안전과</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="result_bottom d-flex align-items-center justify-content-center">
+                        <!-- 페이지네이션 -->
+                        <ul class="pagination">
+                          <li class="prev move"></li>
+                          <li class="page_item active">1</li>
+                          <li class="page_item">2</li>
+                          <li class="page_item">3</li>
+                          <li class="page_item">4</li>
+                          <li class="page_item">5</li>
+                          <li class="next move"></li>
+                          <li class="superNext move"></li>
+                        </ul>
+                        <div class="result_btn">
+                          <button class="white_btn exel" type="button">
+                            <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                            엑셀
+                          </button>
+                          <button type="button" class="cPlanEnroll_btn">등록</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
 
-            <!-- 공사관계자 리스트 -->
-            <div class="constInsider_list result_container">
-              <div class="result_top">
-                <div class="total">
-                  <p>총 <strong class="ns_b">102</strong> 명</p>
-                </div>
-                <!-- <div class="result_option d-flex">
-                  <button class="resp_btn">담당업무</button>
-                  <button class="groupMgt_btn">재난관리 그룹추가</button>
-                </div> -->
-              </div>
-              <div class="result_list text-center">
-                <div class="subject_wrap">
-                  <ul class="subject d-flex align-items-center">
-                    <li>
-                      <div class="checking"></div>
-                    </li>
-                    <li>이름</li>
-                    <li>구분</li>
-                    <li>소속</li>
-                    <li>연락처</li>
-                  </ul>
-                </div>
-                <div class="result_wrap">
-                  <ul class="result">
-                    <li>
-                      <ul class="result_item">
-                        <li>
-                          <label for="result_checking0"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking0" />
-                          <div class="checking"></div>
-                        </li>
-                        <li>김우대</li>
-                        <li>건축주</li>
-                        <li></li>
-                        <li>010-1234-5678</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <ul class="result_item">
-                        <li>
-                          <label for="result_checking0"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking0" />
-                          <div class="checking"></div>
-                        </li>
-                        <li>박칼스</li>
-                        <li>시공자</li>
-                        <li>건축사</li>
-                        <li style="color: red;">02-765-4321</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <ul class="result_item">
-                        <li>
-                          <label for="result_checking0"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking0" />
-                          <div class="checking"></div>
-                        </li>
-                        <li>홍길동</li>
-                        <li>감리자</li>
-                        <li>건축사</li>
-                        <li>010-5252-3388</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <ul class="result_item">
-                        <li>
-                          <label for="result_checking0"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking0" />
-                          <div class="checking"></div>
-                        </li>
-                        <li>최욱</li>
-                        <li>시공자</li>
-                        <li>건축사</li>
-                        <li>010-6655-7788</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <ul class="result_item">
-                        <li>
-                          <label for="result_checking0"></label>
-                          <input type="checkbox" name="result_checking" id="result_checking0" />
-                          <div class="checking"></div>
-                        </li>
-                        <li>이기환</li>
-                        <li>건축주</li>
-                        <li></li>
-                        <li style="color: red;">02-956-1324</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                <div class="result_bottom d-flex align-items-center justify-content-center">
-                  <!-- 페이지네이션 -->
-                  <ul class="pagination">
-                    <li class="prev move"></li>
-                    <li class="page_item active">1</li>
-                    <li class="page_item">2</li>
-                    <li class="page_item">3</li>
-                    <li class="page_item">4</li>
-                    <li class="page_item">5</li>
-                    <li class="next move"></li>
-                    <li class="superNext move"></li>
-                  </ul>
-                  <div class="result_btn">
-                    <button class="sms white_btn">
-                      <img src="../asset/images/icon/message_icon.png" alt="문자전송_아이콘" />
-                      문자전송
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 공사장 점검 탭 -->
-            <div class="check_tab tab_wrap">
-              <ul class="tab_index nt_b d-flex align-items-center">
-                <li data-tab="constCheck_tab0" class="active">공사장 점검 결과</li>
-                <li data-tab="constCheck_tab1">공사장 점검 계획</li>
-              </ul>
-              <!-- 공사장 점검 결과 -->
-              <div id="constCheck_tab0" class="insp_result result_container tab_content active">
-                <div class="result_top">
-                  <div class="total">
-                    <p>총 <strong class="ns_b">29</strong> 건</p>
-                  </div>
-                </div>
-                <!-- 점검 결과 리스트 -->
-                <div class="result_list text-center">
-                  <div class="subject_wrap">
-                    <ul class="subject d-flex align-items-center">
-                      <li>연번</li>
-                      <li>점검일자</li>
-                      <li>점검종류</li>
-                      <li class="d-flex flex-column">
-                        점검내역
-                        <ul class="d-flex">
-                          <li>적합</li>
-                          <li>부적합</li>
-                          <li>미조치</li>
-                        </ul>
-                      </li>
-                      <li>점검자</li>
-                      <li>관리출처</li>
-                    </ul>
-                  </div>
-                  <div class="result_wrap">
-                    <ul class="result">
-                      <li>
-                        <ul class="result_item">
-                          <li>10</li>
-                          <li>2021-05-21</li>
-                          <li>정기안전점검</li>
-                          <li>
-                            <ul>
-                              <li>2건</li>
-                              <li>1건</li>
-                              <li>1건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>9</li>
-                          <li>2021-03-11</li>
-                          <li>특별점검</li>
-                          <li>
-                            <ul>
-                              <li>0건</li>
-                              <li>1건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>8</li>
-                          <li>2021-12-15</li>
-                          <li>수시점검</li>
-                          <li>
-                            <ul>
-                              <li>1건</li>
-                              <li>2건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>7</li>
-                          <li>2021-12-15</li>
-                          <li>집중안전점검</li>
-                          <li>
-                            <ul>
-                              <li>0건</li>
-                              <li>3건</li>
-                              <li>1건</li>
-                            </ul>
-                          </li>
-                          <li>김재율</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>6</li>
-                          <li>2021-03-30</li>
-                          <li>수시점검</li>
-                          <li>
-                            <ul>
-                              <li>1건</li>
-                              <li>0건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>5</li>
-                          <li>2021-05-21</li>
-                          <li>정기안전점검</li>
-                          <li>
-                            <ul>
-                              <li>2건</li>
-                              <li>1건</li>
-                              <li>1건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>4</li>
-                          <li>2021-03-11</li>
-                          <li>특별점검</li>
-                          <li>
-                            <ul>
-                              <li>0건</li>
-                              <li>1건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>3</li>
-                          <li>2021-12-15</li>
-                          <li>수시점검</li>
-                          <li>
-                            <ul>
-                              <li>1건</li>
-                              <li>2건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>2</li>
-                          <li>2021-12-15</li>
-                          <li>집중안전점검</li>
-                          <li>
-                            <ul>
-                              <li>0건</li>
-                              <li>3건</li>
-                              <li>1건</li>
-                            </ul>
-                          </li>
-                          <li>김재율</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>1</li>
-                          <li>2021-03-30</li>
-                          <li>수시점검</li>
-                          <li>
-                            <ul>
-                              <li>1건</li>
-                              <li>0건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="result_bottom d-flex align-items-center justify-content-center">
-                    <!-- 페이지네이션 -->
-                    <ul class="pagination">
-                      <li class="prev move"></li>
-                      <li class="page_item active">1</li>
-                      <li class="page_item">2</li>
-                      <li class="page_item">3</li>
-                      <li class="page_item">4</li>
-                      <li class="page_item">5</li>
-                      <li class="next move"></li>
-                      <li class="superNext move"></li>
-                    </ul>
-                    <div class="result_btn">
-                      <button class="white_btn exel" type="button">
-                        <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
-                        엑셀
-                      </button>
-                      <button type="button" class="cResultEnroll_btn">등록</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- 공사장 점검 계획 -->
-              <div id="constCheck_tab1" class="insp_result result_container tab_content">
-                <div class="result_top">
-                  <div class="total">
-                    <p>총 <strong class="ns_b">32</strong> 건</p>
-                  </div>
-                </div>
-                <!-- 점검 결과 리스트 -->
-                <div class="result_list text-center">
-                  <div class="subject_wrap">
-                    <ul class="subject d-flex align-items-center">
-                      <li>연번</li>
-                      <li>점검일자</li>
-                      <li>점검종류</li>
-                      <li class="d-flex flex-column">
-                        점검내역
-                        <ul class="d-flex">
-                          <li>적합</li>
-                          <li>부적합</li>
-                          <li>미조치</li>
-                        </ul>
-                      </li>
-                      <li>점검자</li>
-                      <li>관리출처</li>
-                    </ul>
-                  </div>
-                  <div class="result_wrap">
-                    <ul class="result">
-                      <li>
-                        <ul class="result_item">
-                          <li>10</li>
-                          <li>2021-05-21</li>
-                          <li>정기안전점검</li>
-                          <li>
-                            <ul>
-                              <li>2건</li>
-                              <li>1건</li>
-                              <li>1건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>9</li>
-                          <li>2021-03-11</li>
-                          <li>특별점검</li>
-                          <li>
-                            <ul>
-                              <li>0건</li>
-                              <li>1건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>8</li>
-                          <li>2021-12-15</li>
-                          <li>수시점검</li>
-                          <li>
-                            <ul>
-                              <li>1건</li>
-                              <li>2건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>7</li>
-                          <li>2021-12-15</li>
-                          <li>집중안전점검</li>
-                          <li>
-                            <ul>
-                              <li>0건</li>
-                              <li>3건</li>
-                              <li>1건</li>
-                            </ul>
-                          </li>
-                          <li>김재율</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>6</li>
-                          <li>2021-03-30</li>
-                          <li>수시점검</li>
-                          <li>
-                            <ul>
-                              <li>1건</li>
-                              <li>0건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>5</li>
-                          <li>2021-05-21</li>
-                          <li>정기안전점검</li>
-                          <li>
-                            <ul>
-                              <li>2건</li>
-                              <li>1건</li>
-                              <li>1건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>4</li>
-                          <li>2021-03-11</li>
-                          <li>특별점검</li>
-                          <li>
-                            <ul>
-                              <li>0건</li>
-                              <li>1건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>3</li>
-                          <li>2021-12-15</li>
-                          <li>수시점검</li>
-                          <li>
-                            <ul>
-                              <li>1건</li>
-                              <li>2건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>2</li>
-                          <li>2021-12-15</li>
-                          <li>집중안전점검</li>
-                          <li>
-                            <ul>
-                              <li>0건</li>
-                              <li>3건</li>
-                              <li>1건</li>
-                            </ul>
-                          </li>
-                          <li>김재율</li>
-                          <li>세움터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="result_item">
-                          <li>1</li>
-                          <li>2021-03-30</li>
-                          <li>수시점검</li>
-                          <li>
-                            <ul>
-                              <li>1건</li>
-                              <li>0건</li>
-                              <li>0건</li>
-                            </ul>
-                          </li>
-                          <li>배상현</li>
-                          <li>안전총괄실 시설안전과</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="result_bottom d-flex align-items-center justify-content-center">
-                    <!-- 페이지네이션 -->
-                    <ul class="pagination">
-                      <li class="prev move"></li>
-                      <li class="page_item active">1</li>
-                      <li class="page_item">2</li>
-                      <li class="page_item">3</li>
-                      <li class="page_item">4</li>
-                      <li class="page_item">5</li>
-                      <li class="next move"></li>
-                      <li class="superNext move"></li>
-                    </ul>
-                    <div class="result_btn">
-                      <button class="white_btn exel" type="button">
-                        <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
-                        엑셀
-                      </button>
-                      <button type="button" class="cPlanEnroll_btn">등록</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
+
           </div>
           <!-- 카피라이트 -->
           <p class="copyright">Copyrightⓒ Seoul Metropolitan Government All Rights Reserved.</p>

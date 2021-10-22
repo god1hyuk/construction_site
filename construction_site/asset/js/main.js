@@ -15,6 +15,7 @@ $(function () {
 
   $(function () {
     $("input[name='datepicker']").datepicker().datepicker('setDate', new Date());
+    $(".aGroup_info input[name='datepicker']").datepicker().datepicker('setDate', '2020-09-09');
   });
 });
 
@@ -539,6 +540,29 @@ $(function () {
   $(".data_share_admin .result_item li:not(:first-child)").click(function () {
     location.href = "share_view_admin.html";
   });
+  $(".notice_page.admin .delete_btn, .data_share_page.admin .delete_btn").click(function () {
+    if(confirm("해당 게시물을 삭제하시겠습니까?")) {
+      alert("삭제되었습니다.");
+    } else {
+      return false;
+    }
+  });
+  $(".share_view_admin .delete_btn").click(function () {
+    if(confirm("해당 게시물을 삭제하시겠습니까?")) {
+      alert("삭제되었습니다.");
+      location.href = "data_share_admin.html";
+    } else {
+      return false;
+    }
+  });
+  $(".notice_view_admin .delete_btn").click(function () {
+    if(confirm("해당 게시물을 삭제하시겠습니까?")) {
+      alert("삭제되었습니다.");
+      location.href = "data_share_admin.html";
+    } else {
+      return false;
+    }
+  });
   $(".pagination li.page_item").click(function () {
     $(".pagination li.page_item").removeClass("active");
     $(this).addClass("active");
@@ -763,6 +787,16 @@ $(function () {
       $("body").css("overflow", "visible");
     });
   });
+  // 공사관계자 리스트
+  $(".constInsider_list .result_item button").click(function () {
+    if($(this).text() == "[저장]") {
+      $(this).text("[수정]");
+      $(this).prev().attr("disabled", "disabled");
+    } else {
+      $(this).text("[저장]");
+      $(this).prev().removeAttr("disabled");
+    }
+  }); 
   // 공사장 점검 결과 등록
   $(".check_tab .tab_index > li").click(function () {
     var tab_id = $(this).attr('data-tab');
@@ -790,6 +824,7 @@ $(function () {
       }
     });
   });
+  $(".cResult_menu > li > button + *").hide();
   $(".cResult_menu > li > button").click(function () {
     $(this).next().slideToggle(300);
     $(this).toggleClass("active");
@@ -1071,5 +1106,15 @@ $(function () {
 $(function () {
   $(".checkCard .img_wrap, .addCard_btn button").click(function () {
     location.href = "checkCard_enroll.html";
+  });
+});
+// 자문단 정보
+$(function () {
+  $(".aGroup_info .cInfo_top button").click(function () {
+    $(this).text($(this).text() == "수정완료" ? "정보수정" : "수정완료");
+    $(this).toggleClass("active");
+    $(this).text() == "수정완료" ? 
+      $(".aGroup_info .cInfo_list input, .aGroup_info .cInfo_list textarea").removeAttr("disabled") :
+      $(".aGroup_info .cInfo_list input, .aGroup_info .cInfo_list textarea").attr("disabled", "disabled");
   });
 });

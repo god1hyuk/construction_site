@@ -468,91 +468,111 @@
                     <div class="form_container">
                         <!-- 자문단 정보 리스트 -->
                         <div class="cInfo_wrap">
-                            <h4>기본정보</h4>
-                            <ul class="cInfo_list d-flex justify-content-between">
-                                <li>
-                                    <span>이름</span>
-                                    <p>홍길동</p>
-                                </li>
-                                <li>
-                                    <span>모집 선정일</span>
-                                    <p>2020-09-09</p>
-                                </li>
-                                <li>
-                                    <span>부문</span>
-                                    <p>건축구조</p>
-                                </li>
-                                <li>
-                                    <span>성별</span>
-                                    <p>남</p>
-                                </li>
-                                <li>
-                                    <span>소속</span>
-                                    <p>건축회사</p>
-                                </li>
-                                <li>
-                                    <span>직위</span>
-                                    <p>대표이사</p>
-                                </li>
-                                <li>
-                                    <span>출신대학</span>
-                                    <p>○○대학교</p>
-                                </li>
-                                <li>
-                                    <span>전공</span>
-                                    <p>건축과</p>
-                                </li>
-                                <li>
-                                    <span>자격증</span>
-                                    <p>기술사</p>
-                                </li>
-                                <li>
-                                    <span>자격증 종목</span>
-                                    <p>건축구조</p>
-                                </li>
-                                <li>
-                                    <span>주요경력</span>
-                                    <ul>
-                                        <li>
-                                            <p>1. 대학연구소</p>
-                                        </li>
-                                        <li>
-                                            <p>2. 공무원 강사</p>
-                                        </li>
-                                        <li>
-                                            <p>3. ○○ 건설 본부장</p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span>타위원 및 시민단체 경력 여부</span>
-                                    <ul>
-                                        <li>
-                                            <p>1. 건설기술 심의위원</p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span>직장전화</span>
-                                    <p>00-0000-0000</p>
-                                </li>
-                                <li>
-                                    <span>핸드폰</span>
-                                    <p>010-0000-0000</p>
-                                </li>
-                                <li>
-                                    <span>E-Mail</span>
-                                    <p>
-                                        <a href="mailto:00@naver.com">
-                                            00@naver.com
-                                        </a>
-                                    </p>
-                                </li>
-                                <li>
-                                    <span>직장주소</span>
-                                    <p>서울시 은평구 신사동</p>
-                                </li>
-                            </ul>
+                            <div class="cInfo_top d-flex align-items-center justify-content-between">
+                                <h4>기본정보</h4>
+                                <button class="dimgray_btn">정보수정</button>
+                            </div>
+                            <form action="">
+                                <ul class="cInfo_list d-flex justify-content-between">
+                                    <li>
+                                        <span>이름</span>
+                                        <p>
+                                            <input type="text" value="홍길동" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>모집 선정일</span>
+                                        <p>
+                                            <input type="text" name="datepicker" value="2020-09-09" class="datepicker" disabled />
+                                            <!-- 2020-09-09 -->
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>부문</span>
+                                        <p>
+                                            <input type="text" value="건축구조" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>성별</span>
+                                        <p>
+                                            <input type="text" value="남" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>소속</span>
+                                        <p>
+                                            <input type="text" value="건축회사" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직위</span>
+                                        <p>
+                                            <input type="text" value="대표이사" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>출신대학</span>
+                                        <p>
+                                            <input type="text" value="○○대학교" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>전공</span>
+                                        <p>
+                                            <input type="text" value="건축과" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>자격증</span>
+                                        <p>
+                                            <input type="text" value="기술사" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>자격증 종목</span>
+                                        <p>
+                                            <input type="text" value="건축구조" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>주요경력</span>
+                                        <p>
+                                            <textarea name="" id="" cols="30" rows="10" disabled>1. 대학 연구소&#10;2. 공무원 강사&#10;3. ○○ 건설 본부장</textarea>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>타위원 및 시민단체 경력 여부</span>
+                                        <p>
+                                            <textarea name="" id="" cols="30" rows="10" disabled>1. 건설기술 심의위원</textarea>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직장전화</span>
+                                        <p>
+                                            <input type="text" value="00-0000-0000" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>핸드폰</span>
+                                        <p>
+                                            <input type="text" value="010-0000-0000" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>E-Mail</span>
+                                        <p>
+                                            <input type="text" value="00@naver.com" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직장주소</span>
+                                        <p>
+                                            <input type="text" value="서울시 은평구 신사동" disabled />
+                                        </p>
+                                    </li>
+                                </ul>
+                            </form>
                         </div>
                         <!-- 활동 이력 -->
                         <div class="aGroup_career result_container">

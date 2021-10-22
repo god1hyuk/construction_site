@@ -241,9 +241,26 @@ label {
   background-repeat: no-repeat !important;
   background-position: 10px center !important;
 }
+/* .ui-widget-header .ui-icon {
+  background-image: none;
+}
+.ui-widget-header .ui-icon-circle-triangle-w {
+  background-image: url(../images/icon/prev_arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ui-widget-header .ui-icon-circle-triangle-e {
+  background-image: url(../images/icon/next_arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
 .ui-datepicker {
   /* position: absolute !important; */
   z-index: 990 !important;
+}
+.btn {
+  display: flex;
+  align-items: center;
 }
 button {
   display: flex;
@@ -640,7 +657,7 @@ input[type="radio"] + .checking.active .radio_inner {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100% !important;
+  width: 100%;
 }
 .search_container .checking {
   display: inline-block;

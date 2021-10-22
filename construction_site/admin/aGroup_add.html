@@ -39,8 +39,8 @@
 </head>
 
 <body>
-    <!-- 자료공유 (관리자) 상세페이지 -->
-    <div class="share_view_admin admin notice_view noticeField sub_page d-flex">
+    <!-- 자문단 정보 서브페이지 -->
+    <div class="aGroup_add sub_page sub_info d-flex">
 
         <!-- 서브페이지 사이드 메뉴 (PC) -->
         <aside>
@@ -66,7 +66,8 @@
                         <a href="javascript: void(0);">
                             <!-- <div class="sideMenu_icon"></div> -->
                             <p>공사장 관리</p>
-                            <img class="accordion_btn" src="../asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+                            <img class="accordion_btn" src="../asset/images/icon/sub_accordion_arrow.png"
+                                alt="아코디언_아이콘" />
                         </a>
                         <ul class="pc_submenu">
                             <li>
@@ -110,7 +111,7 @@
                 </ul>
             </nav>
         </aside>
-        
+
         <!-- 헤더 (PC) -->
         <header class="header_pc d-flex">
             <nav class="d-flex align-items-center justify-content-between">
@@ -138,6 +139,12 @@
                             <button class="d-flex align-items-center" href="javascript: void(0);">
                                 <div class="log_icon"></div>
                                 <p>로그아웃</p>
+                            </button>
+                        </li>
+                        <li class="go_map nt_b">
+                            <button class="d-flex align-items-center justify-content-center">
+                                지도이동
+                                <div class="go_map_icon"></div>
                             </button>
                         </li>
                     </ul>
@@ -456,46 +463,115 @@
                 <div class="row">
                     <div class="title_wrap">
                         <div class="title_icon"></div>
-                        <h2 class="ns_eb">자료공유</h2>
+                        <h2 class="ns_eb">자문단 추가</h2>
                     </div>
                     <div class="form_container">
-                        <div class="form_wrap">
-                            <!-- 자료공유 게시글 -->
-                            <div class="post_wrap">
-                                <div class="post_title">
-                                    <h2 class="nt_b">건설공사 안전점검 수행기관 모집 공고(서울특별시 도시기반시설본부)</h2>
-                                    <div class="wrapper d-flex align-items-center justify-content-between">
-                                        <p>2020-09-10</p>
-                                        <span>지역건축안전센터 홍길동</span>
-                                    </div>
+                        <!-- 자문단 정보 리스트 -->
+                        <div class="cInfo_wrap">
+                            <form action="">
+                                <ul class="cInfo_list d-flex justify-content-between">
+                                    <li>
+                                        <span>이름</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>모집 선정일</span>
+                                        <p>
+                                            <input type="text" name="datepicker" class="datepicker" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>부문</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>성별</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>소속</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직위</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>출신대학</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>전공</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>자격증</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>자격증 종목</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>주요경력</span>
+                                        <p>
+                                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>타위원 및 시민단체 경력 여부</span>
+                                        <p>
+                                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직장전화</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>핸드폰</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>E-Mail</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직장주소</span>
+                                        <p>
+                                            <input type="text" />
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="btn info_btn justify-content-center">
+                                    <button type="button" onclick="confirm('저장하지 않고 취소하시겠습니까?') ? location.href='aGroup_mgt.html' : false;">취소</button>
+                                    <button type="button" onclick="alert('저장되었습니다.'); location.href='aGroup_mgt.html';">저장</button>
                                 </div>
-                                <div class="post_content text-center">
-                                    <h3 class="nt_b">건설공사 안전점검 수행기관 모집 공고</h3>
-                                    <p>「건설기술진흥법」제62조 및 동법 시행령 제100조의 2항에 따라 서울특별시 도시기반시설본부에서 발주하는
-                                        건설공사의 안전점검 수행기관 명부 작성을 위하여 아래와 같이 모집 공고합니다.</p>
-                                    <h4>2020년 9월 23일</h4>
-                                    <h5 class="nt_m">서울특별시 도시기반시설본부장</h5>
-                                    <div class="attach_file d-flex align-items-center">
-                                        <span class="nt_b">첨부파일</span>
-                                        <div class="file_temp">> 210 x 297(A4 사이즈).jpg</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post_navigation d-flex align-items-center justify-content-between">
-                                <button>
-                                    <span>< Prev</span>
-                                    <p>건설일자리 혁신방안(고용개선지원비)...</p>
-                                </button>
-                                <button>
-                                    <p>외국인 주요 취업분야(건설업) 대상...</p>
-                                    <span>Next ></span>
-                                </button>
-                            </div>
-                            <button class="backToList" onclick="location.href='data_share_admin.html'">목록</button>
-                            <div class="post_bottom">
-                                <button class="dimgray_btn">수정</button>
-                                <button class="delete_btn">삭제</button>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <!-- 카피라이트 -->
@@ -508,7 +584,7 @@
     <!-- jQuery -->
     <script src="../asset/js/plugin/jquery-3.2.1.min.js"></script>
     <script src="../asset/js/plugin/jquery-ui.min.js"></script>
-
+    
     <!-- Main JS -->
     <script src="../asset/js/main.js"></script>
 </body>
