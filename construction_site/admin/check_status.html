@@ -40,7 +40,7 @@
 
 <body>
     <!-- 공지사항 서브페이지 -->
-    <div class="const_mgt admin sub_page d-flex">
+    <div class="check_status admin sub_page d-flex">
 
         <!-- 서브페이지 사이드 메뉴 (PC) -->
         <aside>
@@ -65,14 +65,14 @@
                     <li class="sideMenu_item toggle" value="2">
                         <a href="javascript: void(0);">
                             <!-- <div class="sideMenu_icon"></div> -->
-                            <p>공사장 관리</p>
+                            <p>공사장 현황</p>
                             <img class="accordion_btn" src="../asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
                         </a>
                         <ul class="pc_submenu">
                             <li>
-                                <a href="const_mgt_admin.html">
+                                <a href="const_status.html">
                                     <img src="../asset/images/icon/pc_submenu.png" alt="서브메뉴_아이콘" />
-                                    <span>공사장 관리</span>
+                                    <span>공사장 현황</span>
                                 </a>
                             </li>
                             <li>
@@ -84,15 +84,15 @@
                         </ul>
                     </li>
                     <li class="sideMenu_item" value="3">
-                        <a href="javascript:void(0);">
+                        <a href="check_status.html">
                             <!-- <div class="sideMenu_icon"></div> -->
-                            <p>점검관리</p>
+                            <p>점검 현황</p>
                         </a>
                     </li>
                     <li class="sideMenu_item" value="4">
                         <a href="aGroup_mgt.html">
                             <!-- <div class="sideMenu_icon"></div> -->
-                            <p>자문단관리</p>
+                            <p>자문단 관리</p>
                         </a>
                     </li>
                     <li class="sideMenu_item" value="5">
@@ -456,28 +456,25 @@
                 <div class="row">
                     <div class="title_wrap">
                         <div class="title_icon"></div>
-                        <h2 class="ns_eb">공사장 관리</h2>
+                        <h2 class="ns_eb">점검 현황</h2>
                     </div>
                     <div class="form_container">
                         <div class="form_wrap">
                             <!-- 검색 폼 영역 -->
                             <div class="search_form content_form">
                                 <div class="adress search_name">
-                                    <h3 class="ns_b">주소</h3>
+                                    <h3 class="ns_b">점검부서</h3>
                                     <form action="">
                                         <ul class="d-flex">
                                             <li>
-                                                <select name="adress_gu" id="gu">
-                                                    <option value="">팔달구</option>
+                                                <select name="" id="">
+                                                    <option value="">종로구</option>
                                                 </select>
                                             </li>
                                             <li>
-                                                <select name="adress_dong" id="dong">
-                                                    <option value="">인계동</option>
+                                                <select name="" id="">
+                                                    <option value="">건축과</option>
                                                 </select>
-                                            </li>
-                                            <li>
-                                                <input type="text" placeholder="상세주소를 입력하세요." />
                                             </li>
                                         </ul>
                                     </form>
@@ -485,227 +482,286 @@
                             </div>
                         </div>
                         <!-- 검색 결과 -->
-                        <div class="search_result result_container">
-                            <div class="result_top">
-                                <div class="total">
-                                    <p>총 <strong class="ns_b">289</strong> 건</p>
+                        <div class="wrapper d-flex">
+                            <div class="search_result result_container">
+                                <div class="result_top">
+                                    <h4>부서별</h4>
                                 </div>
-                                <div class="result_option d-flex">
-                                    <button class="white_btn">공사장 추가</button>
+                                <!-- 검색결과 리스트 -->
+                                <div class="result_list text-center">
+                                    <div class="subject_wrap">
+                                        <ul class="subject d-flex align-items-center">
+                                            <li>연번</li>
+                                            <li>위치</li>
+                                            <li>점검계획</li>
+                                            <li>점검결과</li>
+                                        </ul>
+                                    </div>
+                                    <div class="result_wrap">
+                                        <ul class="result">
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>5</li>
+                                                    <li>강남구</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>4</li>
+                                                    <li>강동구</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>3</li>
+                                                    <li>강북구</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>2</li>
+                                                    <li>강동구</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>1</li>
+                                                    <li>강서구</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="result_bottom d-flex align-items-center justify-content-center">
+                                        <!-- 페이지네이션 -->
+                                        <ul class="pagination">
+                                            <li class="prev move"></li>
+                                            <li class="page_item active">1</li>
+                                            <li class="page_item">2</li>
+                                            <li class="page_item">3</li>
+                                            <li class="page_item">4</li>
+                                            <li class="page_item">5</li>
+                                            <li class="next move"></li>
+                                            <li class="superNext move"></li>
+                                        </ul>
+                                        <div class="result_btn">
+                                            <button class="white_btn exel" type="button">
+                                                <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                                                엑셀
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- 검색결과 리스트 -->
-                            <div class="result_list text-center">
-                                <div class="subject_wrap">
-                                    <ul class="subject d-flex align-items-center">
-                                        <li>
-                                            <div class="checking"></div>
-                                        </li>
-                                        <li>위치</li>
-                                        <li>유형</li>
-                                        <li>공종</li>
-                                        <li>착공일</li>
-                                        <li>준공예정일</li>
-                                        <li>공정기/경과일</li>
-                                        <li>공정율</li>
-                                        <li>점검횟수</li>
-                                    </ul>
+                            <div class="search_result result_container">
+                                <div class="result_top">
+                                    <h4>강남구 점검현황</h4>
                                 </div>
-                                <div class="result_wrap">
-                                    <ul class="result">
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking0"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking0" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>대형</li>
-                                                <li>철거</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>1회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking1"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking1" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>중형</li>
-                                                <li>기초</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>3회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking2"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking2" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>소형</li>
-                                                <li>골조</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>2회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking3"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking3" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>대형</li>
-                                                <li>철거</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>1회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking4"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking4" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>중형</li>
-                                                <li>기초</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>3회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking5"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking5" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>소형</li>
-                                                <li>골조</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>2회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking6"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking6" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>대형</li>
-                                                <li>철거</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>1회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking7"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking7" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>중형</li>
-                                                <li>기초</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>3회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking8"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking8" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>소형</li>
-                                                <li>골조</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>2회</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>서울시 구로구 경인로 382 (개봉동)</li>
-                                                <li>대형</li>
-                                                <li>철거</li>
-                                                <li>2021-11-10</li>
-                                                <li>2021-11-10</li>
-                                                <li>1000/50</li>
-                                                <li>10%</li>
-                                                <li>1회</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <!-- 검색결과 리스트 -->
+                                <div class="result_list text-center">
+                                    <div class="subject_wrap">
+                                        <ul class="subject d-flex align-items-center">
+                                            <li>연번</li>
+                                            <li>부서명</li>
+                                            <li>점검계획</li>
+                                            <li>점검결과</li>
+                                        </ul>
+                                    </div>
+                                    <div class="result_wrap">
+                                        <ul class="result">
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>5</li>
+                                                    <li>건축과</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>4</li>
+                                                    <li>공동주택과</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>3</li>
+                                                    <li>문화체육과</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>2</li>
+                                                    <li>위생과</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>1</li>
+                                                    <li>건축과</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="result_bottom d-flex align-items-center justify-content-center">
+                                        <!-- 페이지네이션 -->
+                                        <ul class="pagination">
+                                            <li class="prev move"></li>
+                                            <li class="page_item active">1</li>
+                                            <li class="page_item">2</li>
+                                            <li class="page_item">3</li>
+                                            <li class="page_item">4</li>
+                                            <li class="page_item">5</li>
+                                            <li class="next move"></li>
+                                            <li class="superNext move"></li>
+                                        </ul>
+                                        <div class="result_btn">
+                                            <button class="white_btn exel" type="button">
+                                                <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                                                엑셀
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="result_bottom d-flex align-items-center justify-content-center">
-                                    <!-- 페이지네이션 -->
-                                    <ul class="pagination">
-                                        <li class="prev move"></li>
-                                        <li class="page_item active">1</li>
-                                        <li class="page_item">2</li>
-                                        <li class="page_item">3</li>
-                                        <li class="page_item">4</li>
-                                        <li class="page_item">5</li>
-                                        <li class="next move"></li>
-                                        <li class="superNext move"></li>
-                                    </ul>
-                                    <div class="result_btn">
-                                        <button class="white_btn exel" type="button">
-                                            <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
-                                            엑셀
-                                        </button>
+                            </div>
+                            <div class="safechk_occu">
+                                <div class="safechk_wrap">
+                                    <div class="tab_wrap tab_sub">
+                                        <ul class="tab_index d-flex justify-content-between text-center nt_b">
+                                            <li class="active">유형별</li>
+                                            <li>공종별</li>
+                                        </ul>
+                                        <div class="tab_content d-flex align-items-center justify-content-between">
+                                            <div class="safechk_circle">
+                                                <canvas id="myChart"></canvas>
+                                                <div class="text_wrap">
+                                                    <strong class="nt_b">56</strong>
+                                                    <p class="nt_m">건</p>
+                                                </div>
+                                            </div>
+                                            <div class="safechk_result nt_rg">
+                                                <ul>
+                                                    <li class="d-flex align-items-center justify-content-between">
+                                                        <span class="d-flex align-items-center"><sub></sub>철거</span>
+                                                        <p><strong>19</strong>건</p>
+                                                    </li>
+                                                    <li class="d-flex align-items-center justify-content-between">
+                                                        <span class="d-flex align-items-center"><sub></sub>굴토</span>
+                                                        <p><strong>10</strong>건</p>
+                                                    </li>
+                                                    <li class="d-flex align-items-center justify-content-between">
+                                                        <span class="d-flex align-items-center"><sub></sub>골조</span>
+                                                        <p><strong>13</strong>건</p>
+                                                    </li>
+                                                    <li class="d-flex align-items-center justify-content-between">
+                                                        <span class="d-flex align-items-center"><sub></sub>기초</span>
+                                                        <p><strong>14</strong>건</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_result result_container">
+                                <div class="result_top">
+                                    <h4>세부 점검현황</h4>
+                                </div>
+                                <!-- 검색결과 리스트 -->
+                                <div class="result_list text-center">
+                                    <div class="subject_wrap">
+                                        <ul class="subject d-flex align-items-center">
+                                            <li>연번</li>
+                                            <li>공종</li>
+                                            <li>점검계획</li>
+                                            <li>점검결과</li>
+                                        </ul>
+                                    </div>
+                                    <div class="result_wrap">
+                                        <ul class="result">
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>5</li>
+                                                    <li>철거</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>4</li>
+                                                    <li>굴토</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>3</li>
+                                                    <li>골조</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>2</li>
+                                                    <li>기초</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="result_item">
+                                                    <li>1</li>
+                                                    <li>철거</li>
+                                                    <li>○○</li>
+                                                    <li>○○</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="result_bottom d-flex align-items-center justify-content-center">
+                                        <!-- 페이지네이션 -->
+                                        <ul class="pagination">
+                                            <li class="prev move"></li>
+                                            <li class="page_item active">1</li>
+                                            <li class="page_item">2</li>
+                                            <li class="page_item">3</li>
+                                            <li class="page_item">4</li>
+                                            <li class="page_item">5</li>
+                                            <li class="next move"></li>
+                                            <li class="superNext move"></li>
+                                        </ul>
+                                        <div class="result_btn">
+                                            <button class="white_btn exel" type="button">
+                                                <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                                                엑셀
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="wrapper d-flex">
+                        </div> -->
                     </div>
                     <!-- 카피라이트 -->
                     <p class="copyright">Copyrightⓒ Seoul Metropolitan Government All Rights Reserved.</p>

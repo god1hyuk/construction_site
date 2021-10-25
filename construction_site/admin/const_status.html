@@ -40,7 +40,7 @@
 
 <body>
     <!-- 공지사항 서브페이지 -->
-    <div class="user_approval noticeField sub_page d-flex">
+    <div class="const_status admin sub_page d-flex">
 
         <!-- 서브페이지 사이드 메뉴 (PC) -->
         <aside>
@@ -115,7 +115,7 @@
         <header class="header_pc d-flex">
             <nav class="d-flex align-items-center justify-content-between">
                 <div class="logo_wrap d-flex align-items-center">
-                    <a href="javascript:void(0);">
+                    <a href="index.html">
                         <img src="../asset/images/logo.png" alt="서울시_로고_이미지" />
                     </a>
                     <h1 class="title">서울시 민간건축공사장 안전관리 정보화시스템</h1>
@@ -123,7 +123,7 @@
                 <div class="nav_right d-flex">
                     <div class="sub_title d-flex align-items-center">
                         <p>서울시 지역건축안전센터</p>
-                        <span class="user_name">관리자</span>
+                        <span class="user_name">홍길동</span>
                     </div>
                     <ul class="d-flex align-items-center">
                         <!-- 로그인 버튼 -->
@@ -456,186 +456,184 @@
                 <div class="row">
                     <div class="title_wrap">
                         <div class="title_icon"></div>
-                        <h2 class="ns_eb">사용자 승인</h2>
+                        <h2 class="ns_eb">공사장 현황</h2>
                     </div>
                     <div class="form_container">
                         <div class="form_wrap">
                             <!-- 검색 폼 영역 -->
                             <div class="search_form content_form">
-                                <div class="search_name">
+                                <div class="adress search_name">
+                                    <h3 class="ns_b">주소</h3>
                                     <form action="">
                                         <ul class="d-flex">
                                             <li>
-                                                <select name="" id="">
-                                                    <option value="">아이디</option>
+                                                <select name="adress_gu" id="gu">
+                                                    <option value="">팔달구</option>
                                                 </select>
                                             </li>
                                             <li>
-                                                <input type="text" />
+                                                <select name="adress_dong" id="dong">
+                                                    <option value="">인계동</option>
+                                                </select>
                                             </li>
                                             <li>
-                                                <button class="blue_btn">검색</button>
+                                                <input type="text" placeholder="상세주소를 입력하세요." />
                                             </li>
                                         </ul>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <!-- 사용자승인 리스트 -->
+                        <!-- 검색 결과 -->
                         <div class="search_result result_container">
+                            <div class="result_top">
+                                <h4>공정별 공사현황</h4>
+                            </div>
+                            <!-- 검색결과 리스트 -->
                             <div class="result_list text-center">
                                 <div class="subject_wrap">
                                     <ul class="subject d-flex align-items-center">
-                                        <li>
-                                            <div class="checking"></div>
-                                        </li>
-                                        <li>아이디</li>
-                                        <li>이름</li>
-                                        <li>소속지역</li>
-                                        <li>부서명</li>
-                                        <li>등록일자</li>
+                                        <li>연번</li>
+                                        <li>자치구</li>
+                                        <li>철거</li>
+                                        <li>굴토</li>
+                                        <li>가시설</li>
+                                        <li>골조</li>
+                                        <li>크레인</li>
+                                        <li>마감</li>
+                                        <li>기타</li>
                                     </ul>
                                 </div>
                                 <div class="result_wrap">
                                     <ul class="result">
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>김우대</li>
-                                                <li>중구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>10</li>
+                                                <li>강남구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>정관리</li>
-                                                <li>중구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>9</li>
+                                                <li>강동구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>박영수</li>
-                                                <li>중구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>8</li>
+                                                <li>강북구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>이예은</li>
-                                                <li>중구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>7</li>
+                                                <li>서초구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>정욱진</li>
-                                                <li>중구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>6</li>
+                                                <li>강서구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>고훈정</li>
-                                                <li>용산구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>5</li>
+                                                <li>관악구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>장승조</li>
-                                                <li>용산구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>4</li>
+                                                <li>광진구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>민우혁</li>
-                                                <li>용산구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>3</li>
+                                                <li>구로구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>정승민</li>
-                                                <li>용산구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>2</li>
+                                                <li>금천구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
-                                                <li>
-                                                    <label for="result_checking9"></label>
-                                                    <input type="checkbox" name="result_checking" id="result_checking9" />
-                                                    <div class="checking"></div>
-                                                </li>
-                                                <li>test01</li>
-                                                <li>김지우</li>
-                                                <li>용산구청</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>1</li>
+                                                <li>노원구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -652,8 +650,185 @@
                                         <li class="next move"></li>
                                         <li class="superNext move"></li>
                                     </ul>
-                                    <div class="btn approval_btn">
-                                        <button class="blue_btn" onclick="confirm('선택 항목을 승인하시겠습니까?') ? alert('승인되었습니다.') : false;">승인</button>
+                                    <div class="result_btn">
+                                        <button class="white_btn exel" type="button">
+                                            <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                                            엑셀
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search_result result_container">
+                            <div class="result_top">
+                                <h4>사고현황</h4>
+                            </div>
+                            <!-- 검색결과 리스트 -->
+                            <div class="result_list text-center">
+                                <div class="subject_wrap">
+                                    <ul class="subject d-flex align-items-center">
+                                        <li>연번</li>
+                                        <li>위치</li>
+                                        <li>추락</li>
+                                        <li>전도</li>
+                                        <li>추돌</li>
+                                        <li>낙하</li>
+                                        <li>붕괴</li>
+                                        <li>화재</li>
+                                        <li>기타</li>
+                                    </ul>
+                                </div>
+                                <div class="result_wrap">
+                                    <ul class="result">
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>10</li>
+                                                <li>강남구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>9</li>
+                                                <li>강동구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>8</li>
+                                                <li>강북구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>7</li>
+                                                <li>서초구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>6</li>
+                                                <li>강서구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>5</li>
+                                                <li>관악구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>4</li>
+                                                <li>광진구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>3</li>
+                                                <li>구로구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>2</li>
+                                                <li>금천구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="result_item">
+                                                <li>1</li>
+                                                <li>노원구</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                                <li>○○</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="result_bottom d-flex align-items-center justify-content-center">
+                                    <!-- 페이지네이션 -->
+                                    <ul class="pagination">
+                                        <li class="prev move"></li>
+                                        <li class="page_item active">1</li>
+                                        <li class="page_item">2</li>
+                                        <li class="page_item">3</li>
+                                        <li class="page_item">4</li>
+                                        <li class="page_item">5</li>
+                                        <li class="next move"></li>
+                                        <li class="superNext move"></li>
+                                    </ul>
+                                    <div class="result_btn">
+                                        <button class="white_btn exel" type="button">
+                                            <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
+                                            엑셀
+                                        </button>
                                     </div>
                                 </div>
                             </div>

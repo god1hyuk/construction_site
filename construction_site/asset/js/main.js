@@ -830,9 +830,9 @@ $(function () {
     $(this).toggleClass("active");
   });
   $(".constResult_enroll .close_btn, .constResult_enroll .modal_submit button:first-child").click(function () {
-    $(".cResult_menu > li > button").next().slideUp();
-    $(".cResult_menu > li > button").removeClass("active");
-    $(".constResult_enroll").fadeOut(300);
+    $(".modal_bg .cResult_menu > li > button").next().slideUp();
+    $(".modal_bg .cResult_menu > li > button").removeClass("active");
+    $(".constResult_enroll.modal_bg").fadeOut(300);
     if ($(window).width() <= 1024) {
       $(".send_btn_m").fadeIn(300);
     }
@@ -1061,6 +1061,18 @@ $(document).ready(function () {
   });
 });
 
+// 점검 현황
+$(function () {
+  // $(".check_status .result_container, .check_status .safechk_occu").hide();
+  $(".check_status .result_container:first-child .result_item > li").click(function () {
+    $(".check_status .result_container:first-child").css("width", "45%");
+    $(".check_status .result_container:nth-child(2)").delay(1000).fadeIn(1000);
+  });
+  $(".check_status .result_container:nth-child(2) .result_item > li").click(function () {
+    $(".check_status .result_container:nth-child(4)").fadeIn(1000);
+    $(".check_status .safechk_occu").fadeIn(1000);
+  });
+});
 
 // 점검 카드
 $(function () {
