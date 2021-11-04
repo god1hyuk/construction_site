@@ -1133,7 +1133,8 @@
 .sub_page .search_form .search_name form {
   width: 90%;
 }
-.sub_page .search_form .adress ul li:not(:last-child) {
+.sub_page .search_form .adress ul li:nth-child(1),
+.sub_page .search_form .adress ul li:nth-child(2) {
   width: 19%;
   margin-right: 1%;
 }
@@ -1142,7 +1143,7 @@
   height: 45px;
   font-size: 16px;
 }
-.sub_page .search_form .search_name ul li:last-child {
+.sub_page .search_form .search_name ul li:nth-child(3) {
   width: 60%;
 }
 .sub_page .search_form .search_name input {
@@ -3513,20 +3514,27 @@ input[type="file"] {
 .bldg_mgt .form_wrap {
   overflow: visible !important;
 }
-.bldg_mgt .search_form .search_name ul li {
+/* .bldg_mgt .search_form .search_name ul li {
   width: auto !important;
-}
-.bldg_mgt .search_form .search_name select {
+} */
+/* .bldg_mgt .search_form .search_name select {
   width: 200px;
+} */
+.bldg_mgt .search_form .search_name ul li:nth-child(3) {
+  width: 43%;
+  margin-right: 1%;
 }
-.bldg_mgt .search_form .search_name input[type="text"] {
-  width: 635px;
+.bldg_mgt .search_form .search_name ul li:nth-child(4),
+.bldg_mgt .search_form .search_name ul li:nth-child(5) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8%;
 }
 .acdnt_info .search_form .search_name ul li:first-child {
   width: 86%;
   margin-right: 15px;
 }
-.bldg_mgt .search_form .search_name ul li:not(:first-child),
 .acdnt_info .search_form .search_name ul li:not(:first-child) {
   display: flex;
   align-items: center;
