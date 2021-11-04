@@ -75,7 +75,7 @@
             </a>
           </li>
           <li class="sideMenu_item" value="4">
-            <a href="aGroupHistory.html">
+            <a href="aGroup_mgt.html">
               <div class="sideMenu_icon"></div>
               <p>자문단 관리</p>
             </a>
@@ -1262,7 +1262,26 @@
               </li>
               <li>
                 <span>시행방법</span>
-                <p>○○구 ○○과 ○○팀 ( Tel : 02-123-4567)</p>
+                <ul class="check_list">
+                  <li>
+                    <label for="operWay_check0"></label>
+                    <input type="checkbox" name="operWay_check" id="operWay_check0" />
+                    <div class="checking"></div>
+                    <p>해체</p>
+                  </li>
+                  <li>
+                    <label for="operWay_check1"></label>
+                    <input type="checkbox" name="operWay_check" id="operWay_check1" />
+                    <div class="checking"></div>
+                    <p>건축법</p>
+                  </li>
+                  <li>
+                    <label for="operWay_check2"></label>
+                    <input type="checkbox" name="operWay_check" id="operWay_check2" />
+                    <div class="checking"></div>
+                    <p>건축법 외</p>
+                  </li>
+                </ul>
               </li>
               <li>
                 <span>대지위치</span>
@@ -1566,6 +1585,31 @@
                   <input type="file" id="status_board" />
                   <input type="text" class="upload_name" />
                   <label class="file_btn" for="status_board">파일선택</label>
+                </div>
+              </li>
+              <li>
+                <span>사전작업</span>
+                <div class="form_box">
+                  <ul>
+                    <li>
+                      <input type="file" id="pre_work0" />
+                      <input type="text" class="upload_name" value="사전작업허가신청서01.pdf" />
+                      <label class="file_btn" for="pre_work0">파일선택</label>
+                    </li>
+                    <li>
+                      <input type="file" id="pre_work1" />
+                      <input type="text" class="upload_name" value="사전작업허가신청서02.pdf" />
+                      <label class="file_btn" for="pre_work1">파일선택</label>
+                    </li>
+                    <li>
+                      <input type="file" id="pre_work2" />
+                      <input type="text" class="upload_name" />
+                      <label class="file_btn" for="pre_work2">파일선택</label>
+                    </li>
+                  </ul>
+                  <button class="add" type="button">
+                    <img src="../asset/images/icon/search_save.png" alt="추가버튼_아이콘" />
+                  </button>
                 </div>
               </li>
             </ul>
@@ -2020,40 +2064,37 @@
               </div>
             </li>
           </ul>
-          <form action="">
-            <textarea name="" id="" cols="30" rows="10" placeholder="점검결과 총평을 입력하세요."></textarea>
-            <ul class="cResult_bottom">
-              <li>
-                <div class="input_wrap">
-                  <p>점검일자</p>
-                  <input type="text" name="datepicker" class="datepicker" />
-                </div>
-              </li>
-              <li>
-                <ul class="signature">
-                  <li>
-                    <p>점검자 : <span>○○○기술사 <strong>○○○</strong></span></p>
-
-                    <button class="signBoard">
-                      <img src="../asset/images/icon/signature.png" alt="서명_이미지" />
-                    </button>
-                  </li>
-                  <li>
-                    <p>점검자 : <span>○○구청 ○○○과 <strong>○○○</strong></span></p>
-                    <button class="signBoard">
-                      <img src="../asset/images/icon/signature.png" alt="서명_이미지" />
-                    </button>
-                  </li>
-                  <li>
-                    <p>확인자 : <span>감리자○○○ <strong>건축사사무소 ○○○</strong></span></p>
-                    <button class="signBoard">
-                      <img src="../asset/images/icon/signature.png" alt="서명_이미지" />
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </form>
+          <textarea name="" id="" cols="30" rows="10" placeholder="점검결과 총평을 입력하세요."></textarea>
+          <ul class="cResult_bottom">
+            <li>
+              <div class="input_wrap">
+                <p>점검일자</p>
+                <input type="text" name="datepicker" class="datepicker" />
+              </div>
+            </li>
+            <li>
+              <ul class="signature">
+                <li>
+                  <p>점검자 : <span>○○○기술사 <strong>○○○</strong></span></p>
+                  <button class="signBoard">
+                    <img src="../asset/images/icon/signature.png" alt="서명_이미지" />
+                  </button>
+                </li>
+                <li>
+                  <p>점검자 : <span>○○구청 ○○○과 <strong>○○○</strong></span></p>
+                  <button class="signBoard">
+                    <img src="../asset/images/icon/signature.png" alt="서명_이미지" />
+                  </button>
+                </li>
+                <li>
+                  <p>확인자 : <span>감리자○○○ <strong>건축사사무소 ○○○</strong></span></p>
+                  <button class="signBoard">
+                    <img src="../asset/images/icon/signature.png" alt="서명_이미지" />
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
         <div class="modal_bottom">
           <div class="modal_submit nt_b d-flex justify-content-center">
@@ -2392,7 +2433,7 @@
               <li>
                 <button>
                   <img src="../asset/images/icon/cResult_menu0.png" alt="점겸결과_아이콘" />
-                  철거공사(전문가)
+                  공사장 진행상태
                   <img src="../asset/images/icon/cResult_arrow0.png" alt="점검결과_화살표" />
                 </button>
                 <!-- 공사장 정보 리스트 -->
@@ -2483,7 +2524,7 @@
               <li>
                 <button>
                   <img src="../asset/images/icon/cResult_menu1.png" alt="점검결과_아이콘" />
-                  굴토공사(전문가)
+                  공사 관계자
                   <img src="../asset/images/icon/cResult_arrow1.png" alt="점검결과_화살표" />
                 </button>
                 <!-- 공사관계자 리스트 -->
@@ -2614,7 +2655,7 @@
               <li>
                 <button>
                   <img src="../asset/images/icon/cResult_menu0.png" alt="점겸결과_아이콘" />
-                  철거공사(전문가)
+                  점검관리
                   <img src="../asset/images/icon/cResult_arrow0.png" alt="점검결과_화살표" />
                 </button>
                 <!-- 공사장 점검 탭 -->

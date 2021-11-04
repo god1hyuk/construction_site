@@ -423,7 +423,6 @@ $(function () {
     if ($("ul li a").not(this).children(".accordion_btn").hasClass("active")) {
       $("ul li a").not(this).children(".accordion_btn").removeClass("active");
     }
-    return false;
   });
 });
 // 모바일 메뉴
@@ -522,8 +521,8 @@ $(function () {
   $(".acdnt_info .result_item li:not(:first-child)").click(function () {
     location.href = "acdnt_view.html";
   });
-  $(".aGroupHistory .result_item li:not(:first-child)").click(function () {
-    location.href = "aGroupHistory_view.html";
+  $(".aGroup_mgt.official .result_item li:not(:first-child)").click(function () {
+    location.href = "aGroup_info.html";
   });
   $(".notice_page.official .result_item li:not(:first-child)").click(function () {
     location.href = "notice_view.html";
@@ -531,8 +530,8 @@ $(function () {
   $(".promotion_page .result_item li:not(:first-child)").click(function () {
     location.href = "promotion_view.html";
   });
-  $(".aGroup_mgt .result_item li:not(:first-child, :last-child)").click(function () {
-    location.href = "aGroup_info.html";
+  $(".aGroup_mgt.admin .result_item li:not(:first-child, :last-child)").click(function () {
+    location.href = "aGroup_info_admin.html";
   });
   $(".notice_page_admin .result_item li:not(:first-child)").click(function () {
     location.href = "notice_view_admin.html";
@@ -566,6 +565,21 @@ $(function () {
   $(".pagination li.page_item").click(function () {
     $(".pagination li.page_item").removeClass("active");
     $(this).addClass("active");
+  });
+});
+
+// 진행사항 수정
+$(function () {
+  let count = 3;
+  let preWorkList = `<li>
+  <input type="file" id="pre_work` + count + `" />
+  <input type="text" class="upload_name" />
+  <label class="file_btn" for="pre_work` + count + `">파일선택</label>
+  </li>`;
+
+  $(".cProgress_list .check_wrap .form_box button.add").click(function () {
+    count++;
+    $(this).prev('ul').append(preWorkList);
   });
 });
 
@@ -779,7 +793,7 @@ $(function () {
     $(".constProgress").fadeIn(300);
     $(".send_btn_m").fadeOut(300);
     $("body").css("overflow", "hidden");
-    $(".constProgress button").click(function () {
+    $(".constProgress .modal_submit button").click(function () {
       $(".constProgress").fadeOut(300);
       if ($(window).width() <= 1024) {
         $(".send_btn_m").fadeIn(300);
@@ -929,7 +943,7 @@ $(function () {
 // });
 
 // 파일 업로드
-$(function(){ 
+$(function () { 
   let fileTarget = $('input[type="file"]');
   fileTarget.on('change', function () {
     let fileName = $(this).val().split('\\');
@@ -1122,11 +1136,11 @@ $(function () {
 });
 // 자문단 정보
 $(function () {
-  $(".aGroup_info .cInfo_top button").click(function () {
+  $(".aGroup_info.admin .cInfo_top button").click(function () {
     $(this).text($(this).text() == "수정완료" ? "정보수정" : "수정완료");
     $(this).toggleClass("active");
     $(this).text() == "수정완료" ? 
-      $(".aGroup_info .cInfo_list input, .aGroup_info .cInfo_list textarea").removeAttr("disabled") :
-      $(".aGroup_info .cInfo_list input, .aGroup_info .cInfo_list textarea").attr("disabled", "disabled");
+      $(".aGroup_info.admin .cInfo_list input, .aGroup_info .cInfo_list textarea").removeAttr("disabled") :
+      $(".aGroup_info.admin .cInfo_list input, .aGroup_info .cInfo_list textarea").attr("disabled", "disabled");
   });
 });

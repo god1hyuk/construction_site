@@ -39,8 +39,8 @@
 </head>
 
 <body>
-    <!-- 자문단 점검이력 서브페이지 -->
-    <div class="aGroupHistory sub_page sub_info d-flex">
+    <!-- 자문단 정보 서브페이지 -->
+    <div class="aGroup_info sub_page sub_info d-flex">
 
         <!-- 서브페이지 사이드 메뉴 (PC) -->
         <aside>
@@ -75,7 +75,7 @@
                         </a>
                     </li>
                     <li class="sideMenu_item" value="4">
-                        <a href="aGroupHistory.html">
+                        <a href="aGroup_mgt.html">
                             <div class="sideMenu_icon"></div>
                             <p>자문단 관리</p>
                         </a>
@@ -1196,27 +1196,132 @@
                 <div class="row">
                     <div class="title_wrap">
                         <div class="title_icon"></div>
-                        <h2 class="ns_eb">자문단 관리</h2>
+                        <h2 class="ns_eb">자문단 정보</h2>
                     </div>
                     <div class="form_container">
-                        <!-- 자문단 점검이력 리스트 -->
-                        <div class="search_result result_container">
+                        <!-- 자문단 정보 리스트 -->
+                        <div class="cInfo_wrap">
+                            <div class="cInfo_top d-flex align-items-center justify-content-between">
+                                <h4>기본정보</h4>
+                                <button class="dimgray_btn">점검요청</button>
+                            </div>
+                            <form action="">
+                                <ul class="cInfo_list d-flex justify-content-between">
+                                    <li>
+                                        <span>이름</span>
+                                        <p>
+                                            <input type="text" value="홍길동" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>모집 선정일</span>
+                                        <p>
+                                            <input type="text" name="datepicker" value="2020-09-09" class="datepicker" disabled />
+                                            <!-- 2020-09-09 -->
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>부문</span>
+                                        <p>
+                                            <input type="text" value="건축구조" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>성별</span>
+                                        <p>
+                                            <input type="text" value="남" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>소속</span>
+                                        <p>
+                                            <input type="text" value="건축회사" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직위</span>
+                                        <p>
+                                            <input type="text" value="대표이사" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>출신대학</span>
+                                        <p>
+                                            <input type="text" value="○○대학교" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>전공</span>
+                                        <p>
+                                            <input type="text" value="건축과" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>자격증</span>
+                                        <p>
+                                            <input type="text" value="기술사" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>자격증 종목</span>
+                                        <p>
+                                            <input type="text" value="건축구조" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>주요경력</span>
+                                        <p>
+                                            <textarea name="" id="" cols="30" rows="10" disabled>1. 대학 연구소&#10;2. 공무원 강사&#10;3. ○○ 건설 본부장</textarea>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>타위원 및 시민단체 경력 여부</span>
+                                        <p>
+                                            <textarea name="" id="" cols="30" rows="10" disabled>1. 건설기술 심의위원</textarea>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직장전화</span>
+                                        <p>
+                                            <input type="text" value="00-0000-0000" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>핸드폰</span>
+                                        <p>
+                                            <input type="text" value="010-0000-0000" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>E-Mail</span>
+                                        <p>
+                                            <input type="text" value="00@naver.com" disabled />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>직장주소</span>
+                                        <p>
+                                            <input type="text" value="서울시 은평구 신사동" disabled />
+                                        </p>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <!-- 활동 이력 -->
+                        <div class="aGroup_career result_container">
                             <div class="result_top">
-                                <div class="total">
-                                    <p>총 <strong class="ns_b">153</strong> 건</p>
-                                </div>
+                                <h4>활동이력<span>참여 3회 / 불응 1회</span></h4>
                             </div>
                             <div class="result_list text-center">
                                 <div class="subject_wrap">
                                     <ul class="subject d-flex align-items-center">
-                                        <li>#</li>
-                                        <li>분야</li>
-                                        <li>성명</li>
-                                        <li>소속</li>
-                                        <li>점검자치구</li>
-                                        <li>점검종류</li>
-                                        <li>점검위치</li>
-                                        <li>점검일자</li>
+                                        <li>순번</li>
+                                        <li>자치구</li>
+                                        <li>점검일</li>
+                                        <li>위치</li>
+                                        <li>공종</li>
+                                        <li>요청자</li>
+                                        <li>참여여부</li>
                                     </ul>
                                 </div>
                                 <div class="result_wrap">
@@ -1224,121 +1329,111 @@
                                         <li>
                                             <ul class="result_item">
                                                 <li>10</li>
-                                                <li>공사장 - 소형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>정기안전점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-11-10</li>
+                                                <li>강남구</li>
+                                                <li>2020-10-10</li>
+                                                <li>강남구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>참여</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>9</li>
-                                                <li>공사장 - 중형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>집중안전점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-11-16</li>
+                                                <li>은평구</li>
+                                                <li>2020-10-10</li>
+                                                <li>은평구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>참여</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>8</li>
-                                                <li>공사장 - 중형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>특별점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-11-04</li>
+                                                <li>서초구</li>
+                                                <li>2020-10-10</li>
+                                                <li>서초구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>참여</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>7</li>
-                                                <li>공사장 - 대형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>수시점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-08-21</li>
+                                                <li>동대문구</li>
+                                                <li>2020-10-10</li>
+                                                <li>동대문구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>불참<button class="reason">[사유보기]</button></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>6</li>
-                                                <li>건축물 - 중형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>집중안전점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-11-10</li>
+                                                <li>강남구</li>
+                                                <li>2020-10-10</li>
+                                                <li>강남구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>참여</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>5</li>
-                                                <li>건축물 - 소형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>정기안전점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-06-08</li>
+                                                <li>은평구</li>
+                                                <li>2020-10-10</li>
+                                                <li>은평구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>참여</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>4</li>
-                                                <li>공사장 - 소형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>정기안전점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-11-10</li>
+                                                <li>서초구</li>
+                                                <li>2020-10-10</li>
+                                                <li>서초구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>불참<button class="reason">[사유보기]</button></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>3</li>
-                                                <li>건축물 - 소형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>수시점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-02-30</li>
+                                                <li>동대문구</li>
+                                                <li>2020-10-10</li>
+                                                <li>동대구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>참여</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>2</li>
-                                                <li>공사장 - 대형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>특별점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-11-11</li>
+                                                <li>강남구</li>
+                                                <li>2020-10-10</li>
+                                                <li>강남구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>참여</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="result_item">
                                                 <li>1</li>
-                                                <li>건축물 - 소형</li>
-                                                <li>홍길동</li>
-                                                <li>○○과 ○○팀</li>
-                                                <li>○○구</li>
-                                                <li>집중안전점검</li>
-                                                <li>○○○○○</li>
-                                                <li>2021-11-10</li>
+                                                <li>은평구</li>
+                                                <li>2020-10-10</li>
+                                                <li>은평구 ○○○동</li>
+                                                <li>굴토</li>
+                                                <li>○○○ 담당자</li>
+                                                <li>참여</li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -1355,13 +1450,6 @@
                                         <li class="next move"></li>
                                         <li class="superNext move"></li>
                                     </ul>
-                                    <div class="result_btn">
-                                        <button class="white_btn exel" type="button">
-                                            <img src="../asset/images/icon/exel.png" alt="엑셀_아이콘" />
-                                            엑셀
-                                        </button>
-                                        <button class="aGroupEnroll_btn blue_btn">등록</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>

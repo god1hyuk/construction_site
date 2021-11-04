@@ -78,7 +78,7 @@
                         </a>
                     </li>
                     <li class="sideMenu_item" value="4">
-                        <a href="aGroupHistory.html">
+                        <a href="aGroup_mgt.html">
                             <div class="sideMenu_icon"></div>
                             <p>자문단 관리</p>
                         </a>
@@ -87,7 +87,8 @@
                         <a href="javascript: void(0);">
                             <div class="sideMenu_icon"></div>
                             <p>알림마당</p>
-                            <img class="accordion_btn" src="../asset/images/icon/sub_accordion_arrow.png" alt="아코디언_아이콘" />
+                            <img class="accordion_btn" src="../asset/images/icon/sub_accordion_arrow.png"
+                                alt="아코디언_아이콘" />
                         </a>
                         <ul class="pc_submenu">
                             <li>
@@ -1478,13 +1479,23 @@
                         <div class="form_wrap">
                             <!-- 검색 폼 영역 -->
                             <div class="search_form content_form">
-                                <!-- 건축물명 -->
-                                <div class="bldg_name search_name">
-                                    <h3 class="ns_b">건축물명</h3>
+                                <!-- 주소선택 -->
+                                <div class="adress search_name">
+                                    <h3 class="ns_b">주소</h3>
                                     <form action="">
-                                        <ul class="d-flex">
+                                        <ul class="d-flex check_list">
                                             <li>
-                                                <input type="text" />
+                                                <select name="adress_gu" id="gu">
+                                                    <option value="">마포구</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select name="adress_dong" id="dong">
+                                                    <option value="">가양1동</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="상세주소를 입력하세요." />
                                             </li>
                                             <li>
                                                 <label for="cctv_check0"></label>

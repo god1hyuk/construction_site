@@ -1977,21 +1977,48 @@ a.ui-button:active,
 .cProgress_list .check_wrap > li > p,
 .cProgress_list .form_box,
 .cProgress_list .check_list {
-  width: 68% !important;
+  width: 68%;
   font-size: 0.7813vw;
   padding: 1.1979vw 0.7813vw;
 }
 .cProgress_list .check_wrap > li:nth-child(5),
-.cProgress_list .check_wrap > li:nth-child(6) {
+.cProgress_list .check_wrap > li:nth-child(6),
+.cProgress_list .check_wrap > li:last-child {
   width: 100%;
 }
 .cProgress_list .check_wrap > li:nth-child(5) > span,
-.cProgress_list .check_wrap > li:nth-child(6) > span {
+.cProgress_list .check_wrap > li:nth-child(6) > span,
+.cProgress_list .check_wrap > li:last-child > span {
   width: 16%;
 }
 .cProgress_list .check_wrap > li:nth-child(5) > ul,
-.cProgress_list .check_wrap > li:nth-child(6) > ul {
+.cProgress_list .check_wrap > li:nth-child(6) > ul,
+.cProgress_list .check_wrap > li:last-child > .form_box {
   width: 84%;
+}
+.cProgress_list .check_wrap > li:last-child > .form_box {
+  display: block;
+}
+.cProgress_list .check_wrap > li:last-child > .form_box ul {
+  width: 100%;
+}
+.cProgress_list .check_wrap > li:last-child > .form_box li {
+  display: flex;
+  align-items: flex-end;
+}
+.cProgress_list .check_wrap > li:last-child > .form_box .upload_name {
+  width: 88%;
+}
+.cProgress_list .check_wrap > li:last-child > .form_box .file_btn {
+  width: 12%;
+}
+.cProgress_list .check_wrap > li:last-child > .form_box button.add {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0;
+}
+.cProgress_list .check_wrap > li:last-child > .form_box li:not(:first-child) {
+  margin-top: 30px;
 }
 .cProgress_list .check_list {
   display: flex;
@@ -2064,8 +2091,8 @@ input[type="file"] {
   justify-content: space-between;
   width: 100%;
 }
-.upload_name {
-  width: 70% !important;
+.cProgress_list .form_box .upload_name {
+  width: 85%;
   font-size: 0.7813vw;
   margin-right: 10px;
   padding: 0 10px;
@@ -2073,8 +2100,8 @@ input[type="file"] {
   border: none;
   border-bottom: 1px solid #000;
 }
-.file_btn {
-  width: 30%;
+.cProgress_list .form_box .file_btn {
+  width: 25%;
   height: 32px;
   font-size: 0.6771vw;
 }
@@ -3486,7 +3513,15 @@ input[type="file"] {
 .bldg_mgt .form_wrap {
   overflow: visible !important;
 }
-.bldg_mgt .search_form .search_name ul li:first-child,
+.bldg_mgt .search_form .search_name ul li {
+  width: auto !important;
+}
+.bldg_mgt .search_form .search_name select {
+  width: 200px;
+}
+.bldg_mgt .search_form .search_name input[type="text"] {
+  width: 635px;
+}
 .acdnt_info .search_form .search_name ul li:first-child {
   width: 86%;
   margin-right: 15px;
@@ -3920,49 +3955,12 @@ table th.th_sub {
   opacity: 80%;
 }
 
-/* 자문단 점검이력 */
-.aGroupHistory .title_wrap .title_icon,
-.aGroupHistory_view .title_wrap .title_icon {
+/* 자문단 관리 */
+.aGroup_mgt .title_wrap .title_icon,
+.aGroup_info .title_wrap .title_icon {
   background-image: url(../images/icon/advs_group_title.png);
 }
-.aGroupHistory .search_result {
-  margin-top: 0;
-}
-.aGroupHistory .search_result .subject li:nth-child(1), 
-.aGroupHistory .search_result .result_item li:nth-child(1) {
-  width: 7%;
-}
-.aGroupHistory .search_result .subject li:nth-child(2), 
-.aGroupHistory .search_result .result_item li:nth-child(2) {
-  width: 13%;
-}
-.aGroupHistory .search_result .subject li:nth-child(3), 
-.aGroupHistory .search_result .result_item li:nth-child(3) {
-  width: 13%;
-}
-.aGroupHistory .search_result .subject li:nth-child(4), 
-.aGroupHistory .search_result .result_item li:nth-child(4) {
-  width: 13%;
-}
-.aGroupHistory .search_result .subject li:nth-child(5), 
-.aGroupHistory .search_result .result_item li:nth-child(5) {
-  width: 13%;
-}
-.aGroupHistory .search_result .subject li:nth-child(6), 
-.aGroupHistory .search_result .result_item li:nth-child(6) {
-  width: 15%;
-}
-.aGroupHistory .search_result .subject li:nth-child(7), 
-.aGroupHistory .search_result .result_item li:nth-child(7) {
-  width: 13%;
-}
-.aGroupHistory .search_result .subject li:nth-child(8), 
-.aGroupHistory .search_result .result_item li:nth-child(8) {
-  width: 15%;
-}
-.sub_page .result_container .result_btn button:not(:first-child) {
-  margin-left: 8px;
-}
+
 /* 자문단 점검이력 등록 */
 .aGroup_enroll textarea {
   height: 7.8125vw;
@@ -4147,7 +4145,7 @@ table th.th_sub {
 .accessor_log .title_wrap .title_icon {
   background-image: none;
 }
-.noticeField.admin .search_form .search_name form {
+.noticeField .search_form .search_name form {
   width: 100%;
 }
 .accessor_log .search_name li,
@@ -4543,6 +4541,9 @@ table th.th_sub {
 .check_status .search_form .search_name li {
   width: 19% !important;
 }
+.check_status .form_container .search_form {
+  padding-top: 0;
+}
 .check_status .form_container .wrapper {
   width: 100%;
 }
@@ -4645,6 +4646,7 @@ table th.th_sub {
 }
 .aGroup_mgt .result_bottom .result_btn button {
   width: auto;
+  margin-left: 8px;
   padding: 0 10px;
 }
 /* 자문단 정보 */

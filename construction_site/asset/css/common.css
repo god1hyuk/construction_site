@@ -227,6 +227,9 @@ select::-ms-expand {
 input[type="checkbox"], input[type="radio"] {
   display: none;
 }
+.check_list > li {
+  position: relative;
+}
 label {
   display: flex;
   align-items: center;
